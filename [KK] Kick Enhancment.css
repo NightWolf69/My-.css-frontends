@@ -1,0 +1,249 @@
+/* ==UserStyle==
+@name           [KK] Kick Enhancment
+@namespace      github.com/openstyles/stylus
+@version        1.0.1
+@description    Набор мелких улучшений/исправлений/дополнений для kick.com
+@author         NightWolf_69
+==/UserStyle== */
+
+@-moz-document domain("kick.com"), domain("dashboard.kick.com") {
+
+/* ############################## */
+/* ##### Верхняя часть чата ##### */
+/* ############################## */
+
+/* Кнопка Свернуть/Развернуть чат */
+	div#channel-chatroom button:has(svg > path[d="M19.4905 6H2.03409V9.49127H19.4905V6Z"]), /* свернуть */
+	main button:has(svg > path[d="M29.9643 6H12.5079V9.49127H29.9643V6Z"])
+	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen)!important;}
+	
+/* Окно с закреплённым сообщением */
+	/* Иконка булавки */
+	div[data-testid="pinned-message-modal"] svg > path[d="M25 17C24.997 14.406 23.348 12.198 21.042 11.363L21 11.35V3.85C22.732 3.392 23.989 1.844 24 0.001V0H8C8.001 1.853 9.262 3.41 10.972 3.864L11 3.87V11.37C8.658 12.215 7.012 14.414 7 16.999V19.5H14V28.5L16 32L18 28.5V19.5H25V17Z"]
+	{color: orange !important;fill: orange !important;}
+	
+	/* Иконка перечёркнутой булавки */
+	div[data-testid="pinned-message-modal"] svg > path[d="M20.01 4.0025H22.3515L24.0125 2.34146V0H8.0025V4.0025H12.005V10.8468C8.4828 12.3877 6.00125 15.9099 6.00125 20.0125V20.3527L20.01 6.34397V4.0025Z"],
+	div[data-testid="pinned-message-modal"] svg > path[d="M30.8368 6.82427L28.015 4.0025L4 28.0175L6.82176 30.8393L14.0063 23.6548V29.9987L16.0075 32L18.0088 29.9987V21.9937H26.0138V19.9925C26.0138 17.651 25.1932 15.5097 23.8324 13.8086L30.8368 6.80425V6.82427Z"]
+	{color: #F30 !important;filter: drop-shadow(0px 0px 4px brown) !important;}
+	
+	/* Кнопка вызова контекстного меню */
+	div[data-testid="pinned-message-modal"] button:has(svg > path[d="M19 4H13V10H19V4Z"])
+	{color: #9048ff !important;filter: drop-shadow(0px 0px 4px rebeccapurple) !important;}
+	
+	/* Кнопка Развернуть/Свернуть весь текст закреплённого сообщения */
+	div[data-testid="pinned-message-modal"] button:has(svg > path[d="M9 25.804L18.7962 16L9 6.19598L11.2038 4L23.2038 16L11.2038 28L9 25.804Z"])
+	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen)!important;}
+	
+	/* Кнопка "Скрыть" для себя закреплённое сообщение */
+	div[data-testid="pinned-message-modal"] div.flex.items-center.gap-2 div[dir="ltr"] > div > button
+	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen)!important;}
+	
+	/* Кнопка "Показать скрытое закреплённое сообщение" */
+	div#channel-chatroom div[data-variant="visible"] > button {
+		color: orange !important;
+		filter: drop-shadow(0px 0px 4px orange) !important;
+		margin-top: -.5rem !important;
+	}
+	
+/* ############################################# */
+/* ##### Кнопки модерации сообщений в чате ##### */
+/* ############################################# */
+	
+/* УДАЛИТЬ СООБЩЕНИЕ */
+	/* Активные */
+	div.inline-flex > button:has(svg > path[d *="M22.6786 6.21429V3H9.82143V6.21429H5V9.42857H27.5V6.21429H22.6786Z"])
+	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen)!important;}
+	/* Неактивные */
+	div.inline-flex > button[disabled]:has(svg > path[d *="M22.6786 6.21429V3H9.82143V6.21429H5V9.42857H27.5V6.21429H22.6786Z"])
+	{color: grey !important;}
+	
+	
+/* ТАЙМАЧНУТЬ */
+	/* Активные */
+	div.inline-flex > button:has(svg > path[d *="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"])
+	{color: #9048ff !important;filter: drop-shadow(0px 0px 4px #9048ff) !important;}
+	/* Неактивные */
+	div.inline-flex > button[disabled]:has(svg > path[d *="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"])
+	{color: grey !important;}
+	
+	
+/* ЗАБАНИТЬ */
+	/* Активные */
+	div.inline-flex > button:has(svg > path[d *="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"])
+	{color: #F30 !important;filter: drop-shadow(0px 0px 4px brown) !important;}
+	/* Неактивные */
+	div.inline-flex > button[disabled]:has(svg > path[d *="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"])
+	{color: grey !important;}
+	
+	
+/* ################################################################## */
+/* ##### Кнопки появляющиеся при наведении курсора на сообщение ##### */
+/* ################################################################## */
+	
+/* Ответить на сообщение */
+	div#chat-message-actions > button[aria-label="Ответить"]
+	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen)!important;}
+	
+/* Закрепить сообщение */
+	div#chat-message-actions > button[aria-label="Закрепить"]
+	{color: orange !important;filter: drop-shadow(0px 0px 4px orange)!important;}
+	
+/* Удалить сообщение */
+	div#chat-message-actions > button[aria-label="Удалить"]
+	{color: lightgrey !important;filter: drop-shadow(0px 0px 4px lightgrey)!important; display: none !important;}
+	
+/* Вертикальный разделитель между кнопками → | */
+	div#chat-message-actions > div[class ="h-[18px] w-px bg-neutral-600"]
+	{display: none !important;}
+	
+/* Отзеркаленный порядок кнопок, чтоб было как на твиче */
+	div#chat-message-actions {flex-direction: row-reverse !important;}
+	
+	
+/* ############################# */
+/* ##### Нижняя часть чата ##### */
+/* ############################# */
+	
+	/* Убирает текст из всплывающего сообщение о приостоновки чата, из-за прокрутки */
+	div#channel-chatroom > div > div > div > div > button:has(svg) > span {font-size: 0 !important;}
+	div#channel-chatroom > div > div > div > div > button:has(svg) {
+    	border-radius: .5em !important;
+		filter: drop-shadow(0px 0px 4px lightgreen) !important;
+		gap: 0 !important;
+		padding: .2rem .3rem .2rem .3rem !important;
+	}
+	
+	/* Всплывающая подсказка, при наведении на кнопку смены значка */
+	/*div[data-radix-popper-content-wrapper] > div[class *="z-tooltip"]:has(span[id *="radix"][role="tooltip"])
+	{display: none !important;}*/
+	
+	/* Кнопка вызова меня смайлов 7tv */
+	button.seventv-emote-menu-button
+	{color: darkcyan !important;filter: drop-shadow(0px 0px 4px darkcyan)!important;}
+	
+	/* Кнопка вызова меню дефолтных смайлов */
+	div#chatroom-footer button:has(svg > path[d="M11 2H5L2 5V11L5 14H11L14 11V5L11 2ZM10.25 5C10.8725 5 11.375 5.5025 11.375 6.125C11.375 6.7475 10.8725 7.25 10.25 7.25C9.6275 7.25 9.125 6.7475 9.125 6.125C9.125 5.5025 9.6275 5 10.25 5ZM5.75 5C6.3725 5 6.875 5.5025 6.875 6.125C6.875 6.7475 6.3725 7.25 5.75 7.25C5.1275 7.25 4.625 6.7475 4.625 6.125C4.625 5.5025 5.1275 5 5.75 5ZM11.75 9.875C11.0188 10.6062 10.6062 11.0188 9.875 11.75H6.125C5.39375 11.0188 4.98125 10.6062 4.25 9.875V8.75H11.75V9.875Z"])
+	{color: yellow !important;filter: drop-shadow(0px 0px 4px yellow)!important;}
+	
+	/* Кнопка "Настроек" чата */
+	div#chatroom-footer button:has(svg > path[d="M25.7,17.3c0.1-0.4,0.1-0.8,0.1-1.3c0-0.4,0-0.9-0.1-1.3l2.7-2.1c0.2-0.2,0.3-0.6,0.2-0.8L26,7.3  C25.8,7,25.5,6.9,25.2,7l-3.2,1.3c-0.7-0.5-1.4-0.9-2.2-1.3l-0.5-3.4C19.2,3.3,18.9,3,18.6,3h-5.2c-0.3,0-0.6,0.2-0.6,0.6L12.3,7  c-0.8,0.3-1.5,0.8-2.2,1.3L6.9,7C6.6,6.9,6.2,7,6.1,7.3l-2.6,4.5c-0.2,0.3-0.1,0.6,0.2,0.8l2.7,2.1c-0.1,0.4-0.1,0.8-0.1,1.3  c0,0.4,0,0.9,0.1,1.3l-2.7,2.1c-0.2,0.2-0.3,0.6-0.2,0.8L6,24.7C6.2,25,6.5,25.1,6.8,25l3.2-1.3c0.7,0.5,1.4,0.9,2.2,1.3l0.5,3.4  c0.1,0.3,0.3,0.6,0.6,0.6h5.2c0.3,0,0.6-0.2,0.6-0.6l0.5-3.4c0.8-0.3,1.5-0.8,2.2-1.3l3.2,1.3c0.3,0.1,0.6,0,0.8-0.3l2.6-4.5  c0.2-0.3,0.1-0.6-0.2-0.8L25.7,17.3z M16,20.9c-2.7,0-4.9-2.2-4.9-4.9s2.2-4.9,4.9-4.9s4.9,2.2,4.9,4.9S18.7,20.9,16,20.9z"])
+	{color: orange !important;filter: drop-shadow(0px 0px 4px orange) !important;}
+	
+	
+/* ################# */
+/* ##### Плеер ##### */
+/* ################# */
+	
+	/* Кнопка Пауза/Плей */
+	div#injected-embedded-channel-player-video button:has(svg > path[d="M8.4,3.2v25.9l20.4-13L8.4,3.2z"]),
+	div#injected-embedded-channel-player-video button:has(svg > path[d="M4.9,28.9h7.4V3.1H4.9V28.9z M19.7,3.1v25.8h7.4V3.1H19.7z"])
+	{color: #C39BFF !important;filter: drop-shadow(0px 0px 4px #C39BFF) !important;}
+	
+	/* Кнопка звука Размючен */
+	div#injected-embedded-channel-player-video button:has(svg > path[d="M20.14 2.38V6.54C23.85 7.82 26.47 11.37 26.47 15.43C26.47 19.49 23.85 23.03 20.14 24.32V28.48C26.11 27.07 30.47 21.67 30.47 15.43C30.47 9.19001 26.11 3.78 20.14 2.38ZM11.01 9.01H3.65002V22.99H11L17.14 28.96V22.97V7.88V3.03L11.01 9.01ZM20.14 9.01001C22.25 10.37 23.64 12.74 23.64 15.43C23.64 18.12 22.25 20.48 20.14 21.83V9.01001Z"])
+	{color: #A0FF48 !important;filter: drop-shadow(0px 0px 4px #A0FF48) !important;}
+	
+	/* Кнопка звука Замючен */
+	div#injected-embedded-channel-player-video button:has(svg > path[d="M25.6 19.36C26.16 18.16 26.47 16.83 26.47 15.43C26.47 11.37 23.85 7.82 20.14 6.54V2.38C26.11 3.78 30.47 9.18001 30.47 15.43C30.47 17.92 29.77 20.28 28.55 22.31L25.6 19.36ZM13.16 6.92L17.14 3.03V10.9L13.16 6.92ZM23.64 15.43C23.64 12.74 22.25 10.37 20.14 9.01001V13.9L23.43 17.19C23.57 16.63 23.64 16.04 23.64 15.43ZM22.41 19.58L24.28 21.45L24.29 21.46L27.12 24.29L29.28 26.45L26.45 29.28L24.04 26.87C22.85 27.61 21.54 28.16 20.14 28.49V24.33C20.47 24.22 20.79 24.09 21.1 23.93L17.14 19.97V28.97L11 22.99H3.65002V9.01999H6.19002L2.71002 5.53999L5.54002 2.70999L11.43 8.59999L17.14 14.31L20.14 17.31L22.41 19.58Z"])
+	{color: #FF6262 !important;filter: drop-shadow(0px 0px 4px #FF6262) !important;}
+	
+	/* Ползунок регулировки громкости */
+	div#injected-embedded-channel-player-video div[class *="group-hover/volume"]
+	{color: #A0FF48 !important;filter: drop-shadow(0px 0px 4px #A0FF48) !important;}
+	
+	/* Кнопка Картинка в картинке */
+	div#injected-embedded-channel-player-video button:has(svg > path[d="M3.03 28.96V3.03H28.96V28.96H3.03ZM7.03 24.96H24.96V7.03H7.03V24.96ZM14.59 14.42H23.05V22.88H14.59V14.42Z"])
+	{color: #578FFE !important;filter: drop-shadow(0px 0px 4px #578FFE) !important;display: none !important;}
+	
+	/* Кнопка Создать клип */
+	div#injected-embedded-channel-player-video button:has(svg > path[d="M1.82739 7.28856L27.0598 1.71777L28.2433 7.07867L3.01097 12.6495L1.82739 7.28856ZM3.03003 28.9699V13.6999H28.96V28.9699H3.03003ZM19.98 21.3299L13.47 16.7299V25.9299L19.98 21.3299Z"])
+	{color: #A0FF48 !important;filter: drop-shadow(0px 0px 4px #A0FF48) !important;}
+	
+	/* Кнопка Театральный режим */
+	div#injected-embedded-channel-player-video button:has(svg > path[d="M2.17999 28.96V3.03H29.82V28.96H2.17999ZM6.17999 24.96H25.82V7.03H6.17999V24.96ZM8.06 11.24H23.95V20.77H8.06V11.24Z"])
+	{color: #C39BFF !important;filter: drop-shadow(0px 0px 4px #C39BFF) !important;}
+	
+	/* Кнопка Полный экран */
+	div#injected-embedded-channel-player-video button:has(svg  > path[d="M7.03003 13.4H3.03003V3.03003H13.41V7.03003H7.03003V13.4ZM18.59 7.03003V3.03003H28.97V13.4H24.97V7.03003H18.59ZM7.03003 18.6H3.03003V28.97H13.41V24.97H7.03003V18.6ZM18.59 24.97H24.97V18.6H28.97V28.97H18.59V24.97Z"])
+	{color: #C39BFF !important;filter: drop-shadow(0px 0px 4px #C39BFF) !important;}
+	
+	/* Кнопка Скорость воспроизведения */
+	div#injected-embedded-channel-player-video button:has(svg > g > path)
+	{color: #48FFF0 !important;filter: drop-shadow(0px 0px 4px #48FFF0) !important;}
+	
+	/* Кнопка "Настройки" */
+	div#injected-embedded-channel-player-video button:has(svg  > path[d="M25.7,17.3c0.1-0.4,0.1-0.8,0.1-1.3c0-0.4,0-0.9-0.1-1.3l2.7-2.1c0.2-0.2,0.3-0.6,0.2-0.8L26,7.3  C25.8,7,25.5,6.9,25.2,7l-3.2,1.3c-0.7-0.5-1.4-0.9-2.2-1.3l-0.5-3.4C19.2,3.3,18.9,3,18.6,3h-5.2c-0.3,0-0.6,0.2-0.6,0.6L12.3,7  c-0.8,0.3-1.5,0.8-2.2,1.3L6.9,7C6.6,6.9,6.2,7,6.1,7.3l-2.6,4.5c-0.2,0.3-0.1,0.6,0.2,0.8l2.7,2.1c-0.1,0.4-0.1,0.8-0.1,1.3  c0,0.4,0,0.9,0.1,1.3l-2.7,2.1c-0.2,0.2-0.3,0.6-0.2,0.8L6,24.7C6.2,25,6.5,25.1,6.8,25l3.2-1.3c0.7,0.5,1.4,0.9,2.2,1.3l0.5,3.4  c0.1,0.3,0.3,0.6,0.6,0.6h5.2c0.3,0,0.6-0.2,0.6-0.6l0.5-3.4c0.8-0.3,1.5-0.8,2.2-1.3l3.2,1.3c0.3,0.1,0.6,0,0.8-0.3l2.6-4.5  c0.2-0.3,0.1-0.6-0.2-0.8L25.7,17.3z M16,20.9c-2.7,0-4.9-2.2-4.9-4.9s2.2-4.9,4.9-4.9s4.9,2.2,4.9,4.9S18.7,20.9,16,20.9z"])
+	{color: #FF9D1B !important;filter: drop-shadow(0px 0px 4px #FF9D1B) !important;}
+	
+	
+/* ####################### */
+/* ##### Под плеером ##### */
+/* ####################### */
+	
+	button[aria-label="Отключить уведомления"]
+	{color: skyblue !important;filter: drop-shadow(0px 0px 4px skyblue) !important;}
+	
+	button[aria-label="Перестать отслеживать"]
+	{color: magenta !important;filter: drop-shadow(0px 0px 4px magenta) !important;}
+	
+	button[aria-label="Поделиться через"]
+	{color: cyan !important;filter: drop-shadow(0px 0px 4px cyan) !important;}
+	
+	a[aria-label="Открыть панель модератора"]
+	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;}
+	
+	
+/* ########################## */
+/* ##### Создание клипа ##### */
+/* ########################## */
+	
+	/* Убирает аватарку и никнейм меня, делающего клип — из окна создания клипа */
+	div#clip-creator-dialog form div > label:has(img) {display: none !important}
+	
+	/* Изменение размеров окна создания клипа, и плеера предпросмотра создаваемого клипа */
+	div#clip-creator-dialog[role="dialog"] {
+    width: 50% !important;
+    height: 50% !important;
+    max-width: 40% !important;
+    min-height: 82% !important;
+	}
+	
+	
+/* ############################ */
+/* ##### Режим модератора ##### */
+/* ############################ */
+	
+/* ДЕЙСТВИЯ МОДЕРАТОРОВ */
+	/* Бан */
+	div[data-grid="col"] div > svg:has(path[d="M16 2C8.27 2 2 8.27 2 16C2 23.73 8.27 30 16 30C23.73 30 30 23.73 30 16C30 8.27 23.73 2 16 2ZM9.98 24.85L7.15 22.02L22.02 7.15L24.85 9.98L9.98 24.85Z"])
+	{fill: #f30 !important;filter: drop-shadow(0px 0px 4px brown) !important;}
+	
+	/* Таймач */
+	div[data-grid="col"] div > svg:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"])
+	{fill: #9048ff !important;filter: drop-shadow(0px 0px 4px rebeccapurple) !important;}
+	
+	/* Удаление */
+	div[data-grid="col"] div > svg:has(path[d="M22.6786 6.21429V3H9.82143V6.21429H5V9.42857H27.5V6.21429H22.6786Z"]),
+	div[data-grid="col"] div > svg:has(path[d="M8.21429 12.6429V28.7143H24.2857V12.6429H8.21429ZM11.4286 25.5V15.8571H14.6429V25.5H11.4286ZM17.8571 25.5V15.8571H21.0714V25.5H17.8571Z"])
+	{fill: darkgrey !important;filter: drop-shadow(0px 0px 4px darkgrey) !important;}
+	
+	/* Снятие Таймача/Бана/Изменения в запретных словах */
+	div[data-grid="col"] div > svg:has(path[d="M16 3.43994C12.45 3.43994 9.25 4.90994 6.96 7.27994L3.44 3.75994V13.4999H13.18L12.29 12.6099L9.8 10.1199C11.35 8.46994 13.56 7.43994 16 7.43994C20.71 7.43994 24.55 11.2799 24.55 15.9999C24.55 17.8299 23.97 19.5399 22.97 20.9299L16.95 14.9099L15.94 15.9299L14.13 17.7399L14.19 17.8099L19.96 23.5699C18.77 24.1999 17.43 24.5499 16 24.5499C13.64 24.5499 11.51 23.5899 9.96 22.0399L7.13 24.8699C9.4 27.1499 12.53 28.5499 16 28.5499C22.93 28.5499 28.55 22.9299 28.55 15.9999C28.55 9.06994 22.93 3.43994 16 3.43994Z"])
+	{fill: cyan !important;filter: drop-shadow(0px 0px 4px cyan) !important;}
+	
+	/* Закрепление сообщения в чате */
+	div[data-grid="col"] div > svg:has(path[d=""]),
+	{fill: lightgreen !important;filter: drop-shadow(0px 0px 4px #FF6262) !important;}
+	
+	/* Снятие закреплённого сообщения в чате */
+	div[data-grid="col"] div > svg:has(path[d="M20.01 4.0025H22.3515L24.0125 2.34146V0H8.0025V4.0025H12.005V10.8468C8.4828 12.3877 6.00125 15.9099 6.00125 20.0125V20.3527L20.01 6.34397V4.0025Z"]),
+	div[data-grid="col"] div > svg:has(path[d="M30.8368 6.82427L28.015 4.0025L4 28.0175L6.82176 30.8393L14.0063 23.6548V29.9987L16.0075 32L18.0088 29.9987V21.9937H26.0138V19.9925C26.0138 17.651 25.1932 15.5097 23.8324 13.8086L30.8368 6.80425V6.82427Z"])
+	{fill: orange !important;filter: drop-shadow(0px 0px 4px #FF6262) !important;}
+	
+	
+/* ЛЕНТА АКТИВНОСТИ */
+	/* Фолов */
+	div[data-grid="col"] div > svg:has(path[d="M12.375 1.5H10.1875L8 3.25L5.8125 1.5H3.625L1 4.125V8.0625L8 14.625L15 8.0625V4.125L12.375 1.5Z"])
+	{fill: magenta !important;filter: drop-shadow(0px 0px 4px magenta) !important;}
+}
