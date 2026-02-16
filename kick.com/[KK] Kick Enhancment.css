@@ -1,9 +1,11 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
-@namespace      github.com/openstyles/stylus
+@namespace      https://github.com/NightWolf69
 @version        1.0.3
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com
 @author         NightWolf_69
+@homepageURL    https://github.com/NightWolf69/My-.css-frontends
+@supportURL     https://github.com/NightWolf69/My-.css-frontends/issues
 ==/UserStyle== */
 
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
@@ -282,3 +284,4 @@
 	div[data-grid="col"] div > svg:has(path[d="M12.375 1.5H10.1875L8 3.25L5.8125 1.5H3.625L1 4.125V8.0625L8 14.625L15 8.0625V4.125L12.375 1.5Z"])
 	{fill: magenta !important;filter: drop-shadow(0px 0px 4px magenta) !important;}
 }
+
