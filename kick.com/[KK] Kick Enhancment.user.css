@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        1.0.5
+@version        1.0.6
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -298,6 +298,30 @@
 /* ############################ */
 /* ##### Режим модератора ##### */
 /* ############################ */
+	
+/* Правое боковое меню → выпадающее при наведении курсора */
+	/* Скрыто когда курсор не наведён */
+	body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) > div[class *="bg-surface-base"] {display: none !important;}
+	body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) > div button {display: none !important;}
+	body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) > button {display: none !important;}
+	body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) {
+		background-color: #53FC18A8 !important; /* #53fc18 */
+		width: 5px !important;
+    	padding-left: 0rem !important;
+    	padding-right: 0rem !important;
+	}
+	
+	/* Выпадает когда курсор наведён */
+	body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) > div[class *="bg-surface-base"]:hover {display: flex !important;}
+	body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button):hover > div button {display: flex !important;}
+	body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button):hover > button {display: flex !important;}
+	body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button):hover {
+		background-color: #171a1c !important;
+		width: 4em !important;
+    	padding-left: .75rem !important;
+    	padding-right: .75rem !important;
+	}
+	
 	
 /* ДЕЙСТВИЯ МОДЕРАТОРОВ */
 	/* Бан */
