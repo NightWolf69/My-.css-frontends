@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        1.0.6
+@version        1.0.7
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -62,6 +62,7 @@
 	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen)!important;}
 	
 	/* Кнопка "Скрыть" для себя закреплённое сообщение */
+	div[data-testid="pinned-message-modal"] div.flex.items-center.gap-2 button,
 	div[data-testid="pinned-message-modal"] div.flex.items-center.gap-2 div[dir="ltr"] > div > button
 	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen)!important;}
 	
@@ -240,7 +241,13 @@
 /* ####################### */
 	
 	/* Кнопка Включения/Отключения уведомлений о начале стрима */
-	button[aria-label="Отключить уведомления"] {color: skyblue !important;filter: drop-shadow(0px 0px 4px skyblue) !important;}
+	button[aria-label="Включить уведомления"],
+	button[aria-label="Отключить уведомления"]:hover
+	{color: #FF6262 !important;filter: drop-shadow(0px 0px 4px skyblue) !important;}
+	
+	button[aria-label="Отключить уведомления"],
+	button[aria-label="Включить уведомления"]:hover
+	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px skyblue) !important;}
 	
 	/* Кнопка Фолов/Анфолов на канал */
 	button[aria-label="Перестать отслеживать"] {color: magenta !important;filter: drop-shadow(0px 0px 4px magenta) !important;}
@@ -251,6 +258,8 @@
 	/* Кнопка перехода на страничку модератора канала (только для модераторов) */
 	a[aria-label="Открыть панель модератора"] {color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;}
 	
+	/* Счётчик зрителей */
+	div[data-testid="viewer-count"]:has(span) > svg:has(path) {fill: #FF6262 !important;filter: drop-shadow(0px 0px 4px #FF6262) !important;}
 }
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
 	
