@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        1.1.0
+@version        1.1.1
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -116,6 +116,15 @@
 	
 	
 /* Текст сообщения */
+	/* Иконка ответа в ветку, в сообщении отвечающего в вветку сообщений */
+	div#channel-chatroom div[data-index] div > svg > path[d="M18.64 8.82996H15.02V2.57996L2.82996 11.33L15.02 20.08V13.83H18.64C21.61 13.83 24.02 16.25 24.02 19.21C24.02 22.17 21.6 24.59 18.64 24.59H8.91996V29.59H18.64C24.37 29.59 29.02 24.93 29.02 19.21C29.02 13.49 24.36 8.82996 18.64 8.82996Z"], /* в чате */
+	div#chatroom-footer div > svg > path[d="M18.64 8.82996H15.02V2.57996L2.82996 11.33L15.02 20.08V13.83H18.64C21.61 13.83 24.02 16.25 24.02 19.21C24.02 22.17 21.6 24.59 18.64 24.59H8.91996V29.59H18.64C24.37 29.59 29.02 24.93 29.02 19.21C29.02 13.49 24.36 8.82996 18.64 8.82996Z"] /* в окне ввобда сообщения */
+	{color: skyblue !important;fill: skyblue !important;filter: drop-shadow(0px 0px 4px skyblue) !important;}
+	
+	/* Имя пользователя которому отвечают в ветке сообщений */
+	div#channel-chatroom div[data-index] button[class *="inline"][class *="cursor-pointer"] {color: lightgrey !important}
+	div#channel-chatroom div[data-index] button[class *="inline"][class *="cursor-pointer"]:hover {color: #53fc18 !important;text-decoration: underline !important;}
+	
 	/* Форматирование текста сообщения, которое было удалено/таймачнуто/забанено модератором */
 	div#channel-chatroom span.text-neutral > span.line-through {color: darkgrey !important;text-decoration: italic !important;}
 	div#channel-chatroom span.text-neutral > span.line-through:hover {color: darkgrey !important;text-decoration: none !important;}
@@ -444,4 +453,3 @@
 	div[data-grid="col"] div > svg:has(path[d="M12.375 1.5H10.1875L8 3.25L5.8125 1.5H3.625L1 4.125V8.0625L8 14.625L15 8.0625V4.125L12.375 1.5Z"])
 	{fill: magenta !important;filter: drop-shadow(0px 0px 4px magenta) !important;}
 }
-
