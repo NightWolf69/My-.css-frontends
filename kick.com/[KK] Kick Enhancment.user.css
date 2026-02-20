@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        1.0.7
+@version        1.0.8
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -16,6 +16,9 @@
 	/* Фоновый цвет верхней панеле сайта */
 	body nav {background-color: #1d1d1d !important}
 	
+	/* Кнопка от аддона Enhancer */
+	div > span.enhancer-settings-button > button {color: #9048ff !important;filter: drop-shadow(0px 0px 4px rebeccapurple) !important;}
+	
 	/* Убирает текст из кнопки Получить KICKs */
 	nav > div.flex.items-center.gap-2 > button:has(svg) {
 		border-radius: 9px !important;
@@ -23,7 +26,7 @@
 		padding: .3rem .1rem .3rem .5rem !important;
 	}
 }
-@-moz-document domain("kick.com") {
+@-moz-document domain("kick.com"), domain("dashboard.kick.com") {
 	
 /* ######################## */
 /* ##### Боковое меню ##### */
@@ -41,7 +44,7 @@
 /* Кнопка Свернуть/Развернуть чат */
 	div#channel-chatroom button:has(svg > path[d="M19.4905 6H2.03409V9.49127H19.4905V6Z"]), /* свернуть */
 	main button:has(svg > path[d="M29.9643 6H12.5079V9.49127H29.9643V6Z"])
-	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen)!important;}
+	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;}
 	
 /* Окно с закреплённым сообщением */
 	/* Иконка булавки */
@@ -55,16 +58,16 @@
 	
 	/* Кнопка вызова контекстного меню */
 	div[data-testid="pinned-message-modal"] button:has(svg > path[d="M19 4H13V10H19V4Z"])
-	{color: #9048ff !important;filter: drop-shadow(0px 0px 4px rebeccapurple) !important;}
+	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;} /* {color: #9048ff !important;filter: drop-shadow(0px 0px 4px rebeccapurple) !important;} */
 	
 	/* Кнопка Развернуть/Свернуть весь текст закреплённого сообщения */
 	div[data-testid="pinned-message-modal"] button:has(svg > path[d="M9 25.804L18.7962 16L9 6.19598L11.2038 4L23.2038 16L11.2038 28L9 25.804Z"])
-	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen)!important;}
+	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;}
 	
 	/* Кнопка "Скрыть" для себя закреплённое сообщение */
 	div[data-testid="pinned-message-modal"] div.flex.items-center.gap-2 button,
 	div[data-testid="pinned-message-modal"] div.flex.items-center.gap-2 div[dir="ltr"] > div > button
-	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen)!important;}
+	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen )!important;}
 	
 	/* Кнопка "Показать скрытое закреплённое сообщение" */
 	div#channel-chatroom div[data-variant="visible"] > button {
@@ -89,7 +92,7 @@
 /* Кнопки модерации сообщений: УДАЛИТЬ СООБЩЕНИЕ */
 	/* Активные */
 	div.inline-flex > button:has(svg > path[d *="M22.6786 6.21429V3H9.82143V6.21429H5V9.42857H27.5V6.21429H22.6786Z"])
-	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen)!important;}
+	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;}
 	/* Неактивные */
 	div.inline-flex > button[disabled]:has(svg > path[d *="M22.6786 6.21429V3H9.82143V6.21429H5V9.42857H27.5V6.21429H22.6786Z"])
 	{color: grey !important;}
@@ -236,9 +239,53 @@
 }
 @-moz-document domain("kick.com") {
 	
+/* ######################################## */
+/* ##### Личная карточка пользователя ##### */
+/* ######################################## */
+	
+	/* Внешней цвет рамки карточки пользователя за которую её можно двигать, при наведении курсора */
+	div#user-identity:hover {background-color:#343F34 !important;filter: drop-shadow(0px 0px 4px lightgreen)!important;}
+	
+	/* Ник в карточке пользователя при наведении курсора */
+	div#user-identity div:has(a) > a:hover {color: #53fc18 !important;text-decoration: underline !important;}
+	
+	/* Кнопка Фолов/Анфолов на пользователя */
+	div#user-identity > div > div > div > div > button[aria-label *="Отслеживать"] {color: magenta !important;filter: drop-shadow(0px 0px 4px magenta) !important;}
+	
+	/* Кнопка отправки в ЧС пользователя */
+	div#user-identity > div > div > div > div > button[data-state="closed"]:has(svg > path[d="M10.5 3.3 12 2l1 1-9.7 10L2 11.8l1.6-1.6a5 5 0 0 1-.8-2.5v-2h1.3v2c0 .6.1 1.1.4 1.6l.7-.7v-5c0-1.1 1-2 2.1-2h1c1.1 0 2 .7 2.1 1.7ZM11.7 6v1.8a3.8 3.8 0 0 1-5.2 3.5l-1 .9a5 5 0 0 0 1.8.5v.6H4.7v1.3h6.5v-1.3H8.5v-.6a5 5 0 0 0 4.4-5v-2H12l-.3.3Zm-1.1 2.2V7l-3.1 3.1h1c1.1 0 2-1 2-2.1Z"])
+	{color: #FF6262 !important;filter: drop-shadow(0px 0px 4px #FF6262) !important;}
+	div#user-identity > div > div > div > div > button[data-state="closed"]:has(svg > path[d="M15.6 3h.7a5 5 0 0 1 5 5v7.4a5 5 0 0 1-5 5h-.7a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5Zm7.8 12.3v-4h2.7v4a10 10 0 0 1-9 10v1.2h5.3V29H9.5v-2.5h5.2v-1.2a10 10 0 0 1-8.7-10v-4h2.5v4a7.5 7.5 0 0 0 15 0Z"])
+	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;}
+	
+	
+	/* Переключатель выдачи Бана */
+	div#user-identity div.contents > div[class] > button[aria-checked="true"] {background-color: #FF6262 !important;}
+	div#user-identity div.contents > div[class] > div:has(svg > path),
+	div#user-identity div.contents > div[class] > div > svg > path,
+	div#user-identity div.contents > div[class] > button {
+		color: #FF6262 !important;
+		fill: #FF6262 !important;
+		filter: drop-shadow(0px 0px 4px #FF6262) !important;
+	}
+	
+	/* Переключатель выдачи Таймача */
+	div#user-identity div.contents > div[data-orientation] > div[data-orientation] > h3 > div[type="button"] > button[aria-checked="true"] {background-color: #9048ff !important;}
+	div#user-identity div.contents > div[data-orientation] > div[data-orientation] > h3 > div > svg > path,
+	div#user-identity div.contents > div[data-orientation] > div[data-orientation] > h3 > div {
+		color: #9048ff !important;
+		fill: #9048ff !important;
+		filter: drop-shadow(0px 0px 4px rebeccapurple) !important;
+	}
+}
+@-moz-document domain("kick.com") {
+	
 /* ####################### */
 /* ##### Под плеером ##### */
 /* ####################### */
+	
+	/* Ссылки при наведении на них курсора (по всему сайту) */
+	a[target="_blank"]:hover {color: #53fc18 !important;text-decoration: underline !important;}
 	
 	/* Кнопка Включения/Отключения уведомлений о начале стрима */
 	button[aria-label="Включить уведомления"],
@@ -250,16 +297,26 @@
 	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px skyblue) !important;}
 	
 	/* Кнопка Фолов/Анфолов на канал */
+	button[data-testid="sub-button"] {background-color: #42474d !important;background-image: none !important;color: #53fc18 !important;filter: drop-shadow(0px 0px 4px #53fc18) !important;}
+	button[data-testid="sub-button"]:hover {background-color: #484e53 !important;background-image: none !important;color: #53fc18 !important;filter: drop-shadow(0px 0px 4px #53fc18) !important;}
+	
+	/* Кнопка Подарить подписку */
+	button[data-testid="gift-sub-button"] {color: gold !important;filter: drop-shadow(0px 0px 4px gold) !important;}
+	
+	/* Кнопка Подписаться */
 	button[aria-label="Перестать отслеживать"] {color: magenta !important;filter: drop-shadow(0px 0px 4px magenta) !important;}
 	
 	/* Кнопка Поделиться ссылкой на канал */
 	button[aria-label="Поделиться через"] {color: cyan !important;filter: drop-shadow(0px 0px 4px cyan) !important;}
 	
+	/* Кнопка Пожаловаться на канал */
+	button[aria-label="Пожаловаться"] {color: yellow !important;filter: drop-shadow(0px 0px 4px yellow) !important;}
+	
 	/* Кнопка перехода на страничку модератора канала (только для модераторов) */
 	a[aria-label="Открыть панель модератора"] {color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;}
 	
 	/* Счётчик зрителей */
-	div[data-testid="viewer-count"]:has(span) > svg:has(path) {fill: #FF6262 !important;filter: drop-shadow(0px 0px 4px #FF6262) !important;}
+	div[data-testid="viewer-count"]:has(span) > svg:has(path) {fill: #FF6262 !important;}
 }
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
 	
@@ -307,6 +364,9 @@
 /* ############################ */
 /* ##### Режим модератора ##### */
 /* ############################ */
+	
+	/* Ссылки при наведении на них курсора (по всему сайту) */
+	a[target="_blank"]:hover {color: #53fc18 !important;text-decoration: underline !important;}
 	
 /* Правое боковое меню → выпадающее при наведении курсора */
 	/* Скрыто когда курсор не наведён */
