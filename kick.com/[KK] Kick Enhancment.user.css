@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        1.0.8
+@version        1.0.9
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -75,7 +75,6 @@
 		filter: drop-shadow(0px 0px 4px orange) !important;
 		margin-top: -.5rem !important;
 	}
-	
 }
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
 	
@@ -95,7 +94,7 @@
 	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;}
 	/* Неактивные */
 	div.inline-flex > button[disabled]:has(svg > path[d *="M22.6786 6.21429V3H9.82143V6.21429H5V9.42857H27.5V6.21429H22.6786Z"])
-	{color: grey !important;}
+	{color: #80808000 !important;}
 	
 	
 /* Кнопки модерации сообщений: ТАЙМАЧНУТЬ */
@@ -115,6 +114,32 @@
 	div.inline-flex > button[disabled]:has(svg > path[d *="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"])
 	{color: grey !important;}
 	
+	
+/* Текст сообщения */
+	/* Форматирование текста сообщения, которое было удалено/таймачнуто/забанено модератором */
+	div#channel-chatroom span.text-neutral > span.line-through {color: darkgrey !important;text-decoration: italic !important;}
+	div#channel-chatroom span.text-neutral > span.line-through:hover {color: darkgrey !important;text-decoration: none !important;}
+	
+	/* Информационное сообщение в скобках, о том, что сделал модератор с сообщение чаттерса (удалил, выдал таймач, забанил) */
+	div#channel-chatroom span.text-neutral > span.font-semibold	{color: #53fc18 !important}
+	
+	/* Цвет фона ячейки с сообщением, если это сообщение был удалено, таймачнуто, забанено модератором */
+	div#channel-chatroom div[data-index]:has(div span.text-neutral > span.line-through) {background-color: #FF000020 !important;}
+	
+	
+/* Сообщение о действии модератора в чате */
+	/* Фон системного сообщения о действии модератора */
+	div#chatroom-messages div[data-index] > div > div:has(span.text-surface-onSurfaceSecondary) {background-color: #00FF0020 !important;}
+	
+	/* Иконка выдачи таймача в системном собщении о действии модератора */
+	div#channel-chatroom div:has(span) > svg > path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"] {fill: #9048ff !important}
+	
+	/* Иконка выдачи бана в системном собщении о действии модератора */
+	div#channel-chatroom div:has(span) > svg > path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"] {fill: #F30 !important}
+	
+	/* Цвета ников Модератора и Пользователя, к которому модератор пременил Удаление/Таймач/Бан, в системном собщении о действии модератора */
+	div#channel-chatroom span.text-surface-onSurfaceSecondary > button {color: lightgrey !important}
+	div#channel-chatroom span.text-surface-onSurfaceSecondary > button:hover {color: #53fc18 !important;text-decoration: underline !important;}
 }
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
 	
@@ -124,11 +149,11 @@
 	
 /* Ответить на сообщение */
 	div#chat-message-actions > button[aria-label="Ответить"]
-	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen)!important;}
+	{border-radius: 0em 2em 2em 0em  !important;color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen)!important;}
 	
 /* Закрепить сообщение */
 	div#chat-message-actions > button[aria-label="Закрепить"]
-	{color: orange !important;filter: drop-shadow(0px 0px 4px orange)!important;}
+	{border-radius: 2em 0em 0em 2em !important;color: orange !important;filter: drop-shadow(0px 0px 4px orange)!important;}
 	
 /* Удалить сообщение */
 	div#chat-message-actions > button[aria-label="Удалить"]
@@ -140,7 +165,6 @@
 	
 /* Отзеркаленный порядок кнопок, чтоб было как на твиче */
 	div#chat-message-actions {flex-direction: row-reverse !important;}
-	
 }
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
 	
@@ -172,7 +196,6 @@
 	/* Кнопка "Настроек" чата */
 	div#chatroom-footer button:has(svg > path[d="M25.7,17.3c0.1-0.4,0.1-0.8,0.1-1.3c0-0.4,0-0.9-0.1-1.3l2.7-2.1c0.2-0.2,0.3-0.6,0.2-0.8L26,7.3  C25.8,7,25.5,6.9,25.2,7l-3.2,1.3c-0.7-0.5-1.4-0.9-2.2-1.3l-0.5-3.4C19.2,3.3,18.9,3,18.6,3h-5.2c-0.3,0-0.6,0.2-0.6,0.6L12.3,7  c-0.8,0.3-1.5,0.8-2.2,1.3L6.9,7C6.6,6.9,6.2,7,6.1,7.3l-2.6,4.5c-0.2,0.3-0.1,0.6,0.2,0.8l2.7,2.1c-0.1,0.4-0.1,0.8-0.1,1.3  c0,0.4,0,0.9,0.1,1.3l-2.7,2.1c-0.2,0.2-0.3,0.6-0.2,0.8L6,24.7C6.2,25,6.5,25.1,6.8,25l3.2-1.3c0.7,0.5,1.4,0.9,2.2,1.3l0.5,3.4  c0.1,0.3,0.3,0.6,0.6,0.6h5.2c0.3,0,0.6-0.2,0.6-0.6l0.5-3.4c0.8-0.3,1.5-0.8,2.2-1.3l3.2,1.3c0.3,0.1,0.6,0,0.8-0.3l2.6-4.5  c0.2-0.3,0.1-0.6-0.2-0.8L25.7,17.3z M16,20.9c-2.7,0-4.9-2.2-4.9-4.9s2.2-4.9,4.9-4.9s4.9,2.2,4.9,4.9S18.7,20.9,16,20.9z"])
 	{color: orange !important;filter: drop-shadow(0px 0px 4px orange) !important;}
-	
 }
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
 	
@@ -235,7 +258,6 @@
 	div#injected-embedded-channel-player-video button:has(svg > path[d="M25.7,17.3c0.1-0.4,0.1-0.8,0.1-1.3c0-0.4,0-0.9-0.1-1.3l2.7-2.1c0.2-0.2,0.3-0.6,0.2-0.8L26,7.3  C25.8,7,25.5,6.9,25.2,7l-3.2,1.3c-0.7-0.5-1.4-0.9-2.2-1.3l-0.5-3.4C19.2,3.3,18.9,3,18.6,3h-5.2c-0.3,0-0.6,0.2-0.6,0.6L12.3,7  c-0.8,0.3-1.5,0.8-2.2,1.3L6.9,7C6.6,6.9,6.2,7,6.1,7.3l-2.6,4.5c-0.2,0.3-0.1,0.6,0.2,0.8l2.7,2.1c-0.1,0.4-0.1,0.8-0.1,1.3  c0,0.4,0,0.9,0.1,1.3l-2.7,2.1c-0.2,0.2-0.3,0.6-0.2,0.8L6,24.7C6.2,25,6.5,25.1,6.8,25l3.2-1.3c0.7,0.5,1.4,0.9,2.2,1.3l0.5,3.4  c0.1,0.3,0.3,0.6,0.6,0.6h5.2c0.3,0,0.6-0.2,0.6-0.6l0.5-3.4c0.8-0.3,1.5-0.8,2.2-1.3l3.2,1.3c0.3,0.1,0.6,0,0.8-0.3l2.6-4.5  c0.2-0.3,0.1-0.6-0.2-0.8L25.7,17.3z M16,20.9c-2.7,0-4.9-2.2-4.9-4.9s2.2-4.9,4.9-4.9s4.9,2.2,4.9,4.9S18.7,20.9,16,20.9z"]), /* обычный */
 	div#injected-channel-player button:has(svg > path[d="M25.7,17.3c0.1-0.4,0.1-0.8,0.1-1.3c0-0.4,0-0.9-0.1-1.3l2.7-2.1c0.2-0.2,0.3-0.6,0.2-0.8L26,7.3  C25.8,7,25.5,6.9,25.2,7l-3.2,1.3c-0.7-0.5-1.4-0.9-2.2-1.3l-0.5-3.4C19.2,3.3,18.9,3,18.6,3h-5.2c-0.3,0-0.6,0.2-0.6,0.6L12.3,7  c-0.8,0.3-1.5,0.8-2.2,1.3L6.9,7C6.6,6.9,6.2,7,6.1,7.3l-2.6,4.5c-0.2,0.3-0.1,0.6,0.2,0.8l2.7,2.1c-0.1,0.4-0.1,0.8-0.1,1.3  c0,0.4,0,0.9,0.1,1.3l-2.7,2.1c-0.2,0.2-0.3,0.6-0.2,0.8L6,24.7C6.2,25,6.5,25.1,6.8,25l3.2-1.3c0.7,0.5,1.4,0.9,2.2,1.3l0.5,3.4  c0.1,0.3,0.3,0.6,0.6,0.6h5.2c0.3,0,0.6-0.2,0.6-0.6l0.5-3.4c0.8-0.3,1.5-0.8,2.2-1.3l3.2,1.3c0.3,0.1,0.6,0,0.8-0.3l2.6-4.5  c0.2-0.3,0.1-0.6-0.2-0.8L25.7,17.3z M16,20.9c-2.7,0-4.9-2.2-4.9-4.9s2.2-4.9,4.9-4.9s4.9,2.2,4.9,4.9S18.7,20.9,16,20.9z"]) /* в модерке */
 	{color: #FF9D1B !important;filter: drop-shadow(0px 0px 4px #FF9D1B) !important;}
-	
 }
 @-moz-document domain("kick.com") {
 	
@@ -334,7 +356,6 @@
     	max-width: 40% !important;
     	min-height: 82% !important;
 	}
-	
 }
 @-moz-document domain("kick.com") {
 	
@@ -357,7 +378,6 @@
 	/* Пункт контекстного меню "Скачать" */
 	div[data-radix-popper-content-wrapper] > div > button:has(svg > polygon[points="8.93 8.24 8.93 0 6.94 0 6.94 8.12 5.71 6.89 4.3 8.3 8 12 11.7 8.3 10.29 6.89 8.93 8.24"])
 	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen)!important;}
-	
 }
 @-moz-document domain("dashboard.kick.com") {
 	
