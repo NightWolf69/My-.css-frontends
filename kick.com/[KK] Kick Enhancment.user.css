@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        1.1.1
-@description    Набор мелких улучшений/исправлений/дополнений для kick.com
+@version        2.0.0
+@description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддона Mo'Kick (установка этого аддона опциональна
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
 @supportURL     https://github.com/NightWolf69/My-.css-frontends/issues
@@ -20,11 +20,18 @@
 	div > span.enhancer-settings-button > button {color: #9048ff !important;filter: drop-shadow(0px 0px 4px rebeccapurple) !important;}
 	
 	/* Убирает текст из кнопки Получить KICKs */
-	nav > div.flex.items-center.gap-2 > button:has(svg) {
+	nav > div.flex.items-center.gap-2 > button[data-testid="kicks-top-nav"] {
 		border-radius: 9px !important;
 		font-size: 0 !important;
 		padding: .3rem .1rem .3rem .5rem !important;
-	}
+	} /* дефолт */
+	:root[style *="--navbar_kicks_fix: 1;"] nav .flex button[data-testid="kicks-top-nav"]:has([d="M7.67318 0.0611465L3.07733 1.75287C2.86614 1.8344 2.68512 1.98726 2.5745 2.18089L0.130751 6.47134C0.0201286 6.67516 -0.0200977 6.89936 0.0201286 7.13376L0.86488 12.0051C0.905107 12.2293 1.02579 12.4331 1.19675 12.586L4.93779 15.7656C5.10875 15.9083 5.33 15.9898 5.5613 15.9898H10.4488C10.6801 15.9898 10.8913 15.9083 11.0723 15.7656L14.8133 12.586C14.9843 12.4433 15.105 12.2293 15.1452 12.0051L15.99 7.13376C16.0302 6.90955 15.99 6.67516 15.8793 6.47134L13.4356 2.18089C13.325 1.97707 13.1439 1.8344 12.9328 1.75287L8.32685 0.0611465C8.11566 -0.0203822 7.88436 -0.0203822 7.66312 0.0611465H7.67318Z"])
+	{padding: 0em !important;} /* (Mo'Kick) */
+	
+/* New Channel Profile (Mo'Kick) */
+	/* Кнопка Create a Profile for %Имя_Канала% */
+	div[role="dialog"][data-state="open"] button:has(span > svg > path[d="M32.3168 2.66764C31.4266 1.77746 29.9836 1.77744 29.0934 2.66764L14.4074 17.3537C13.5175 18.2439 13.5173 19.687 14.4074 20.5771L18.3477 24.5174C19.2379 25.4076 20.6808 25.4074 21.5712 24.5174L21.7516 24.3371L27.1232 29.711L3.48359 53.3529C1.50555 55.3314 1.50539 58.5385 3.48359 60.5168C5.46187 62.4943 8.66927 62.4945 10.6474 60.5168L34.287 36.8749L39.6609 42.2488L39.4829 42.427C38.5927 43.3172 38.5927 44.7602 39.4829 45.6504L43.4232 49.5907C44.3133 50.4808 45.7566 50.4808 46.6467 49.5907L61.3325 34.9048C62.2225 34.0147 62.2225 32.5714 61.3325 31.6813L57.3923 27.741C56.5023 26.8508 55.0591 26.851 54.1689 27.741L53.9886 27.919L48.6168 22.5474C50.5945 20.5692 50.5943 17.3618 48.6168 15.3835C46.6385 13.4053 43.4314 13.4055 41.4529 15.3835L36.079 10.0096L36.257 9.83145C37.1475 8.94122 37.1475 7.49822 36.257 6.60797L32.3168 2.66764Z"])
+	{background-color: #42474d !important;color: #e5e7eb !important;filter: drop-shadow(0px 0px 0px #0000) !important;}
 }
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
 	
@@ -40,11 +47,141 @@
 /* ############################## */
 /* ##### Верхняя часть чата ##### */
 /* ############################## */
-
+	
+/* Выпадающее контекстное меню из троеточия (Mo'Kick) */
+	/* Кнопка Change Chat Size */
+	div[id *="context-menu-"] > button:has(div > svg > path[d="M28 14H54V50H28H22V56H28H54H60V50V14V8H54H28H22V14H28Z"]),
+	div[id *="context-menu-"] > button:has(div > svg > path[d="M28 14H54V50H28H22V56H28H54H60V50V14V8H54H28H22V14H28Z"]) > div > svg > path
+	{color: lightgreen !important;fill: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;}
+	
+	
+	/* Кнопка Popout Chat */
+	div[id *="context-menu-"] > button:has(div > svg > path[d="M7 25V4H4V28H28V25H7Z"])
+	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;}
+	
+	/* Кнопка Community */
+	div[id *="context-menu-"] > button:has(div > svg > g > path[d="M4.5 9C6.985 9 9 6.985 9 4.5C9 2.015 6.985 0 4.5 0C2.015 0 0 2.015 0 4.5C0 6.985 2.015 9 4.5 9ZM4.5 2C5.88 2 7 3.12 7 4.5C7 5.88 5.88 7 4.5 7C3.12 7 2 5.88 2 4.5C2 3.12 3.12 2 4.5 2ZM8 10H0V12V16H2V12H8V16H16V10H10H8ZM16 6C16 7.65685 14.6569 9 13 9C11.3431 9 10 7.65685 10 6C10 4.34315 11.3431 3 13 3C14.6569 3 16 4.34315 16 6Z"])
+	{color: cyan !important;filter: drop-shadow(0px 0px 4px cyan) !important;}
+	
+	/* Кнопка Statistics */
+	div[id *="context-menu-"] > button:has(div > svg > path[d="M4 4V28H28V4H4ZM11.8525 23.5H8.1025V13H11.8525V23.5ZM17.8525 23.5H14.1025V17.5H17.8525V23.5ZM23.8525 23.5H20.1025V8.5H23.8525V23.5Z"])
+	{color: #C39BFF !important;filter: drop-shadow(0px 0px 4px #C39BFF) !important;}
+	
+	/* Кнопка Chat Rules */
+	div[id *="context-menu-"] > button:has(div > svg > path[d="M32 10C22.0589 10 14 18.0589 14 28V46C14 50.4183 17.5817 54 22 54H42C46.4183 54 50 50.4183 50 46V18C50 13.5817 46.4183 10 42 10H32ZM24.1538 31C21.8597 31 20 32.8597 20 35.1538C20 36.1734 20.8266 37 21.8462 37H41C42.6569 37 44 35.6569 44 34C44 32.3431 42.6569 31 41 31H24.1538ZM20 47.1538C20 44.8597 21.8597 43 24.1538 43H41C42.6569 43 44 44.3431 44 46C44 47.6569 42.6569 49 41 49H21.8462C20.8266 49 20 48.1735 20 47.1538ZM24.1538 19C21.8597 19 20 20.8597 20 23.1538C20 24.1734 20.8266 25 21.8462 25H41C42.6569 25 44 23.6569 44 22C44 20.3431 42.6569 19 41 19H24.1538Z"]),
+	div[id *="context-menu-"] > button:has(div > svg > path[d="M32 10C22.0589 10 14 18.0589 14 28V46C14 50.4183 17.5817 54 22 54H42C46.4183 54 50 50.4183 50 46V18C50 13.5817 46.4183 10 42 10H32ZM24.1538 31C21.8597 31 20 32.8597 20 35.1538C20 36.1734 20.8266 37 21.8462 37H41C42.6569 37 44 35.6569 44 34C44 32.3431 42.6569 31 41 31H24.1538ZM20 47.1538C20 44.8597 21.8597 43 24.1538 43H41C42.6569 43 44 44.3431 44 46C44 47.6569 42.6569 49 41 49H21.8462C20.8266 49 20 48.1735 20 47.1538ZM24.1538 19C21.8597 19 20 20.8597 20 23.1538C20 24.1734 20.8266 25 21.8462 25H41C42.6569 25 44 23.6569 44 22C44 20.3431 42.6569 19 41 19H24.1538Z"]) > div > svg > path
+	{color: skyblue !important;fill: skyblue !important;filter: drop-shadow(0px 0px 4px lightblue) !important;}
+	
+	/* Кнопка Find User */
+	div[id *="context-menu-"] > button:has(div > svg > path[d="M14.5 4C20.2975 4 25 8.7025 25 14.5C25 16.855 24.2125 19.0225 22.9 20.7775L28 25.8775L25.8775 28L20.7775 22.9C19.0225 24.2125 16.855 25 14.5 25C8.7025 25 4 20.2975 4 14.5C4 8.7025 8.7025 4 14.5 4ZM14.5 22C18.6325 22 22 18.6325 22 14.5C22 10.3675 18.6325 7 14.5 7C10.3675 7 7 10.3675 7 14.5C7 18.6325 10.3675 22 14.5 22Z"])
+	{color: lightyellow !important;filter: drop-shadow(0px 0px 4px pink) !important;}
+	
+	/* Кнопка Mass Ban */
+	div[id *="context-menu-"] > button:has(div > svg > path[d="M32.3168 2.66764C31.4266 1.77746 29.9836 1.77744 29.0934 2.66764L14.4074 17.3537C13.5175 18.2439 13.5173 19.687 14.4074 20.5771L18.3477 24.5174C19.2379 25.4076 20.6808 25.4074 21.5712 24.5174L21.7516 24.3371L27.1232 29.711L3.48359 53.3529C1.50555 55.3314 1.50539 58.5385 3.48359 60.5168C5.46187 62.4943 8.66927 62.4945 10.6474 60.5168L34.287 36.8749L39.6609 42.2488L39.4829 42.427C38.5927 43.3172 38.5927 44.7602 39.4829 45.6504L43.4232 49.5907C44.3133 50.4808 45.7566 50.4808 46.6467 49.5907L61.3325 34.9048C62.2225 34.0147 62.2225 32.5714 61.3325 31.6813L57.3923 27.741C56.5023 26.8508 55.0591 26.851 54.1689 27.741L53.9886 27.919L48.6168 22.5474C50.5945 20.5692 50.5943 17.3618 48.6168 15.3835C46.6385 13.4053 43.4314 13.4055 41.4529 15.3835L36.079 10.0096L36.257 9.83145C37.1475 8.94122 37.1475 7.49822 36.257 6.60797L32.3168 2.66764Z"]),
+	div[id *="context-menu-"] > button:has(div > svg > path[d="M32.3168 2.66764C31.4266 1.77746 29.9836 1.77744 29.0934 2.66764L14.4074 17.3537C13.5175 18.2439 13.5173 19.687 14.4074 20.5771L18.3477 24.5174C19.2379 25.4076 20.6808 25.4074 21.5712 24.5174L21.7516 24.3371L27.1232 29.711L3.48359 53.3529C1.50555 55.3314 1.50539 58.5385 3.48359 60.5168C5.46187 62.4943 8.66927 62.4945 10.6474 60.5168L34.287 36.8749L39.6609 42.2488L39.4829 42.427C38.5927 43.3172 38.5927 44.7602 39.4829 45.6504L43.4232 49.5907C44.3133 50.4808 45.7566 50.4808 46.6467 49.5907L61.3325 34.9048C62.2225 34.0147 62.2225 32.5714 61.3325 31.6813L57.3923 27.741C56.5023 26.8508 55.0591 26.851 54.1689 27.741L53.9886 27.919L48.6168 22.5474C50.5945 20.5692 50.5943 17.3618 48.6168 15.3835C46.6385 13.4053 43.4314 13.4055 41.4529 15.3835L36.079 10.0096L36.257 9.83145C37.1475 8.94122 37.1475 7.49822 36.257 6.60797L32.3168 2.66764Z"]) > div > svg > path
+	{color: #F30 !important;fill: #F30 !important;filter: drop-shadow(0px 0px 4px brown) !important;}
+	
+	
+/* Выпадающие менюшки от Mo'Kick аддона */
+	/* Moderation Log */
+	div#channel-chatroom button:has(span > svg > path[d="M32.3168 2.66764C31.4266 1.77746 29.9836 1.77744 29.0934 2.66764L14.4074 17.3537C13.5175 18.2439 13.5173 19.687 14.4074 20.5771L18.3477 24.5174C19.2379 25.4076 20.6808 25.4074 21.5712 24.5174L21.7516 24.3371L27.1232 29.711L3.48359 53.3529C1.50555 55.3314 1.50539 58.5385 3.48359 60.5168C5.46187 62.4943 8.66927 62.4945 10.6474 60.5168L34.287 36.8749L39.6609 42.2488L39.4829 42.427C38.5927 43.3172 38.5927 44.7602 39.4829 45.6504L43.4232 49.5907C44.3133 50.4808 45.7566 50.4808 46.6467 49.5907L61.3325 34.9048C62.2225 34.0147 62.2225 32.5714 61.3325 31.6813L57.3923 27.741C56.5023 26.8508 55.0591 26.851 54.1689 27.741L53.9886 27.919L48.6168 22.5474C50.5945 20.5692 50.5943 17.3618 48.6168 15.3835C46.6385 13.4053 43.4314 13.4055 41.4529 15.3835L36.079 10.0096L36.257 9.83145C37.1475 8.94122 37.1475 7.49822 36.257 6.60797L32.3168 2.66764Z"]),
+	div#channel-chatroom button > span > svg > path[d="M32.3168 2.66764C31.4266 1.77746 29.9836 1.77744 29.0934 2.66764L14.4074 17.3537C13.5175 18.2439 13.5173 19.687 14.4074 20.5771L18.3477 24.5174C19.2379 25.4076 20.6808 25.4074 21.5712 24.5174L21.7516 24.3371L27.1232 29.711L3.48359 53.3529C1.50555 55.3314 1.50539 58.5385 3.48359 60.5168C5.46187 62.4943 8.66927 62.4945 10.6474 60.5168L34.287 36.8749L39.6609 42.2488L39.4829 42.427C38.5927 43.3172 38.5927 44.7602 39.4829 45.6504L43.4232 49.5907C44.3133 50.4808 45.7566 50.4808 46.6467 49.5907L61.3325 34.9048C62.2225 34.0147 62.2225 32.5714 61.3325 31.6813L57.3923 27.741C56.5023 26.8508 55.0591 26.851 54.1689 27.741L53.9886 27.919L48.6168 22.5474C50.5945 20.5692 50.5943 17.3618 48.6168 15.3835C46.6385 13.4053 43.4314 13.4055 41.4529 15.3835L36.079 10.0096L36.257 9.83145C37.1475 8.94122 37.1475 7.49822 36.257 6.60797L32.3168 2.66764Z"]
+	{fill: #F30 !important;filter: drop-shadow(0px 0px 4px brown) !important;}
+	
+	/* Информационное сообщение в скобках, о том, что сделал модератор с сообщение чаттерса (удалил, выдал таймач, забанил) */
+	div[data-type="chat"] div[class *="z-dropdown"] span[class *="mokick_deleted-message"] > span[data-deleted-message-exclude],
+	div#channel-chatroom div[class *="z-dropdown"] span[class *="mokick_deleted-message"] > span[data-deleted-message-exclude],
+	div[data-type="chat"] div[class *="z-dropdown"] span[class *="mokick_deleted-message"] > span.lowercase.text-white,
+	div#channel-chatroom div[class *="z-dropdown"] span[class *="mokick_deleted-message"] > span.lowercase.text-white
+	{color: #53fc18 !important}
+	
+	/* Фон системного сообщения о действии модератора */
+	div#channel-chatroom div[class *="bg-surface-base"] div[class *="bg-surface-highest"]:has(span.text-surface-onSurfaceSecondary) {background-color: #00FF0020 !important;}
+	
+	/* Иконка удаления сообщения в системном собщении о действии модератора */
+	div#channel-chatroom div[class *="bg-surface-base"] div[class *="bg-surface-highest"] > svg > path[d="M8.21429 12.6429V28.7143H24.2857V12.6429H8.21429ZM11.4286 25.5V15.8571H14.6429V25.5H11.4286ZM17.8571 25.5V15.8571H21.0714V25.5H17.8571Z"],
+	div#channel-chatroom div[class *="bg-surface-base"] div[class *="bg-surface-highest"] > svg > path[d="M22.6786 6.21429V3H9.82143V6.21429H5V9.42857H27.5V6.21429H22.6786Z"],
+	div#chatroom-messages div[data-index] svg > path[d="M8.21429 12.6429V28.7143H24.2857V12.6429H8.21429ZM11.4286 25.5V15.8571H14.6429V25.5H11.4286ZM17.8571 25.5V15.8571H21.0714V25.5H17.8571Z"],
+	div#chatroom-messages div[data-index] svg > path[d="M22.6786 6.21429V3H9.82143V6.21429H5V9.42857H27.5V6.21429H22.6786Z"]
+	{fill: lightgrey !important}
+	
+	/* Иконка выдачи таймача в системном собщении о действии модератора */
+	div#channel-chatroom div[class *="bg-surface-base"] div[class *="bg-surface-highest"] > svg > path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"],
+	div#chatroom-messages div[data-index] svg > path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]
+	{fill: #9048ff !important}
+	
+	/* Иконка выдачи бана в системном собщении о действии модератора */
+	div#channel-chatroom div[class *="bg-surface-base"] div[class *="bg-surface-highest"] > svg:has(path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]) > path,
+	div#chatroom-messages div[data-index] svg:has(path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]) > path
+	{fill: #F30 !important}
+	
+	/* Иконка выдачи таймача в системном собщении о действии модератора */
+	div#channel-chatroom div[class *="bg-surface-base"] div[class *="bg-surface-highest"] > svg > path[d="M16 3.43994C12.45 3.43994 9.25 4.90994 6.96 7.27994L3.44 3.75994V13.4999H13.18L12.29 12.6099L9.8 10.1199C11.35 8.46994 13.56 7.43994 16 7.43994C20.71 7.43994 24.55 11.2799 24.55 15.9999C24.55 17.8299 23.97 19.5399 22.97 20.9299L16.95 14.9099L15.94 15.9299L14.13 17.7399L14.19 17.8099L19.96 23.5699C18.77 24.1999 17.43 24.5499 16 24.5499C13.64 24.5499 11.51 23.5899 9.96 22.0399L7.13 24.8699C9.4 27.1499 12.53 28.5499 16 28.5499C22.93 28.5499 28.55 22.9299 28.55 15.9999C28.55 9.06994 22.93 3.43994 16 3.43994Z"],
+	div#chatroom-messages div[data-index] svg > path[d="M16 3.43994C12.45 3.43994 9.25 4.90994 6.96 7.27994L3.44 3.75994V13.4999H13.18L12.29 12.6099L9.8 10.1199C11.35 8.46994 13.56 7.43994 16 7.43994C20.71 7.43994 24.55 11.2799 24.55 15.9999C24.55 17.8299 23.97 19.5399 22.97 20.9299L16.95 14.9099L15.94 15.9299L14.13 17.7399L14.19 17.8099L19.96 23.5699C18.77 24.1999 17.43 24.5499 16 24.5499C13.64 24.5499 11.51 23.5899 9.96 22.0399L7.13 24.8699C9.4 27.1499 12.53 28.5499 16 28.5499C22.93 28.5499 28.55 22.9299 28.55 15.9999C28.55 9.06994 22.93 3.43994 16 3.43994Z"]
+	{fill: #53fc18 !important}
+	
+	/* Цвета ников Модератора, и Пользователя к которому модератор пременил Удаление/Таймач/Бан, в системном собщении о действии модератора */
+	/* Без наведения курсора */
+	div#channel-chatroom span.text-surface-onSurfaceSecondary > span[data-username-bannedby],
+	div#channel-chatroom span.text-surface-onSurfaceSecondary > span[data-username-eventuser]
+	{color: lightgrey !important}
+	
+	/* При наведении куросора */
+	div#channel-chatroom span.text-surface-onSurfaceSecondary > span[data-username-bannedby]:hover,
+	div#channel-chatroom span.text-surface-onSurfaceSecondary > span[data-username-eventuser]:hover
+	{color: #53fc18 !important;text-decoration: underline !important;}
+	
+	
+	/* Message Log */
+	div[data-type="chat"] button:has(path[d="M11.3393 3.10714V1.5H4.91071V3.10714H2.5V4.71429H13.75V3.10714H11.3393Z"]),
+	div#channel-chatroom button:has(path[d="M11.3393 3.10714V1.5H4.91071V3.10714H2.5V4.71429H13.75V3.10714H11.3393Z"])
+	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;}
+	
+	
+	/* Иконка ответа в ветку, в сообщении отвечающего в вветку сообщений */
+	div#channel-chatroom div.z-dropdown svg > path[d="M18.64 8.82996H15.02V2.57996L2.82996 11.33L15.02 20.08V13.83H18.64C21.61 13.83 24.02 16.25 24.02 19.21C24.02 22.17 21.6 24.59 18.64 24.59H8.91996V29.59H18.64C24.37 29.59 29.02 24.93 29.02 19.21C29.02 13.49 24.36 8.82996 18.64 8.82996Z"], /* в чате */
+	div#chatroom-footer div.z-dropdown svg > path[d="M18.64 8.82996H15.02V2.57996L2.82996 11.33L15.02 20.08V13.83H18.64C21.61 13.83 24.02 16.25 24.02 19.21C24.02 22.17 21.6 24.59 18.64 24.59H8.91996V29.59H18.64C24.37 29.59 29.02 24.93 29.02 19.21C29.02 13.49 24.36 8.82996 18.64 8.82996Z"] /* в окне ввобда сообщения */
+	{color: skyblue !important;fill: skyblue !important;filter: drop-shadow(0px 0px 4px skyblue) !important;}
+	
+	/* Имя пользователя которому отвечают в ветке сообщений */
+	div#channel-chatroom div.z-dropdown span[class *="inline"][class *="cursor-pointer"] {color: lightgrey !important}
+	div#channel-chatroom div.z-dropdown span[class *="inline"][class *="cursor-pointer"]:hover {color: #53fc18 !important;text-decoration: underline !important;}
+	
+	/* Убирает зачёркивание текста у удалённого сообщения */
+	div#channel-chatroom div[class *="break-words"] span.mokick_deleted-message,
+	div[data-type="chat"] div[class *="break-words"] span.mokick_deleted-message
+	{color: darkgrey !important;text-decoration: none !important;}
+	
+	
+	/* Chat Clears */
+	div[data-type="chat"] button:has(path[d="M10.115 2.73999H5.885C2.98 2.73999 0.625 5.09499 0.625 7.99999C0.625 9.96999 1.71 11.685 3.31 12.585V14.59L6.8 13.26H10.115C13.02 13.26 15.375 10.905 15.375 7.99999C15.375 5.09499 13.02 2.73999 10.115 2.73999ZM4.55 9.23999C3.865 9.23999 3.31 8.68499 3.31 7.99999C3.31 7.31499 3.865 6.75999 4.55 6.75999C5.235 6.75999 5.785 7.31499 5.785 7.99999C5.785 8.68499 5.235 9.23999 4.55 9.23999ZM8 9.23999C7.315 9.23999 6.76 8.68499 6.76 7.99999C6.76 7.31499 7.315 6.75999 8 6.75999C8.685 6.75999 9.24 7.31499 9.24 7.99999C9.24 8.68499 8.685 9.23999 8 9.23999ZM11.45 9.23999C10.765 9.23999 10.215 8.68499 10.215 7.99999C10.215 7.31499 10.765 6.75999 11.45 6.75999C12.135 6.75999 12.69 7.31499 12.69 7.99999C12.69 8.68499 12.135 9.23999 11.45 9.23999Z"]),
+	div#channel-chatroom button:has(path[d="M10.115 2.73999H5.885C2.98 2.73999 0.625 5.09499 0.625 7.99999C0.625 9.96999 1.71 11.685 3.31 12.585V14.59L6.8 13.26H10.115C13.02 13.26 15.375 10.905 15.375 7.99999C15.375 5.09499 13.02 2.73999 10.115 2.73999ZM4.55 9.23999C3.865 9.23999 3.31 8.68499 3.31 7.99999C3.31 7.31499 3.865 6.75999 4.55 6.75999C5.235 6.75999 5.785 7.31499 5.785 7.99999C5.785 8.68499 5.235 9.23999 4.55 9.23999ZM8 9.23999C7.315 9.23999 6.76 8.68499 6.76 7.99999C6.76 7.31499 7.315 6.75999 8 6.75999C8.685 6.75999 9.24 7.31499 9.24 7.99999C9.24 8.68499 8.685 9.23999 8 9.23999ZM11.45 9.23999C10.765 9.23999 10.215 8.68499 10.215 7.99999C10.215 7.31499 10.765 6.75999 11.45 6.75999C12.135 6.75999 12.69 7.31499 12.69 7.99999C12.69 8.68499 12.135 9.23999 11.45 9.23999Z"])
+	{color: lightyellow !important;filter: drop-shadow(0px 0px 4px pink) !important;}
+	
+	
+	/* Active Timeouts */
+	div[data-type="chat"] button:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]),
+	div#channel-chatroom > div > button:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"])
+	{color: #9048ff !important;filter: drop-shadow(0px 0px 4px #9048ff) !important;}
+	
+	/* В списке текущих таймачей, цвет ника таймачнутого */
+	/* Без наведения курсора */
+	div#channel-chatroom div.flex.items-center:has(svg > path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span
+	{color: lightgrey !important}
+	/* При наведении курсора */
+	div#channel-chatroom div.flex.items-center:has(svg > path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span:hover
+	{color: #53fc18 !important;text-decoration: underline !important;}
+	
+	
 /* Кнопка Свернуть/Развернуть чат */
 	div#channel-chatroom button:has(svg > path[d="M19.4905 6H2.03409V9.49127H19.4905V6Z"]), /* свернуть */
 	main button:has(svg > path[d="M29.9643 6H12.5079V9.49127H29.9643V6Z"])
 	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;}
+	
+/* Список гифтеров за день/месяц итд */
+	div#channel-chatroom div.overflow-hidden:has(button[aria-label="Expand leaderboard"]),
+	div#channel-chatroom div.overflow-hidden:has(button > div > svg > path[d="M30 25H2V28.5H30V25Z"])
+	{display: none !important}
 	
 /* Окно с закреплённым сообщением */
 	/* Иконка булавки */
@@ -103,7 +240,7 @@
 	{color: #9048ff !important;filter: drop-shadow(0px 0px 4px #9048ff) !important;}
 	/* Неактивные */
 	div.inline-flex > button[disabled]:has(svg > path[d *="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"])
-	{color: grey !important;}
+	{color: #80808000 !important;}
 	
 	
 /* Кнопки модерации сообщений: ЗАБАНИТЬ */
@@ -112,7 +249,7 @@
 	{color: #F30 !important;filter: drop-shadow(0px 0px 4px brown) !important;}
 	/* Неактивные */
 	div.inline-flex > button[disabled]:has(svg > path[d *="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"])
-	{color: grey !important;}
+	{color: #80808000 !important;}
 	
 	
 /* Текст сообщения */
@@ -126,14 +263,27 @@
 	div#channel-chatroom div[data-index] button[class *="inline"][class *="cursor-pointer"]:hover {color: #53fc18 !important;text-decoration: underline !important;}
 	
 	/* Форматирование текста сообщения, которое было удалено/таймачнуто/забанено модератором */
-	div#channel-chatroom span.text-neutral > span.line-through {color: darkgrey !important;text-decoration: italic !important;}
-	div#channel-chatroom span.text-neutral > span.line-through:hover {color: darkgrey !important;text-decoration: none !important;}
+	div#channel-chatroom span.text-neutral > span.line-through, /* дефолтные */
+	div#channel-chatroom div[data-index] seventv-container[class *="mokick_deleted-message"] /* 7tv */
+	{color: darkgrey !important;text-decoration: italic !important;}
+	
+	div#channel-chatroom span.text-neutral > span.line-through:hover, /* дефолтные */
+	div#channel-chatroom div[data-index] seventv-container[class *="mokick_deleted-message"]:hover
+	{color: darkgrey !important;text-decoration: none !important;}
 	
 	/* Информационное сообщение в скобках, о том, что сделал модератор с сообщение чаттерса (удалил, выдал таймач, забанил) */
-	div#channel-chatroom span.text-neutral > span.font-semibold	{color: #53fc18 !important}
+	div#channel-chatroom span.text-neutral > span.font-semibold,
+	div#channel-chatroom div[data-index] seventv-container[class *="mokick_deleted-message"] > span[data-deleted-message-exclude],
+	div#channel-chatroom div[data-index] seventv-container[class *="mokick_deleted-message"] > span.lowercase.text-white,
+	div#channel-chatroom div[data-index] span[class *="mokick_deleted-message"] > span[data-deleted-message-exclude],
+	div#channel-chatroom div[data-index] span[class *="mokick_deleted-message"] > span.lowercase.text-white
+	{color: #53fc18 !important}
 	
 	/* Цвет фона ячейки с сообщением, если это сообщение был удалено, таймачнуто, забанено модератором */
-	div#channel-chatroom div[data-index]:has(div span.text-neutral > span.line-through) {background-color: #FF000020 !important;}
+	div#channel-chatroom div[data-index]:has(div span.text-neutral > span.line-through), /* дефолтные */
+	div#channel-chatroom div[data-index]:has(seventv-container[class *="mokick_deleted-message"]), /* 7tv */
+	div#channel-chatroom div[data-index]:has(span[class *="mokick_deleted-message"]) /* 7tv */
+	{background-color: #FF000020 !important;}
 	
 	
 /* Сообщение о действии модератора в чате */
@@ -156,20 +306,46 @@
 /* ##### Кнопки появляющиеся при наведении курсора на сообщение ##### */
 /* ################################################################## */
 	
+/* Свернуть/Развернуть все кнопки */
+	div#chat-message-actions > button[data-action="collapse"]
+	{border-radius: 2em  !important;filter: drop-shadow(0px 0px 4px #53fc18) !important;}
+	
+/* Показать время отправки этого сообщения */
+	div#chat-message-actions > button[data-action="timestamp"]
+	{border-radius: 2em  !important;filter: drop-shadow(0px 0px 4px cyan) !important;}
+	
+/* Спрятать это сообщение */
+	div#chat-message-actions > button[data-action="hide"]
+	{border-radius: 2em  !important;color: skyblue !important;filter: drop-shadow(0px 0px 4px lightblue) !important;}
+	
+/* Скопировать ник пользователя в буфер обмена */
+	div#chat-message-actions > button[data-action="username"]
+	{border-radius: 2em  !important;color: #53fc18 !important;filter: drop-shadow(0px 0px 4px #53fc18) !important;}
+	
+/* Упомянуть ник в сообщении */
+	div#chat-message-actions > button[data-action="mention"]
+	{border-radius: 2em  !important;filter: drop-shadow(0px 0px 4px #53fc18) !important;}
+	
+/* Копировать текст сообщения (Mo'Kick) */
+	div#chat-message-actions > button[data-action="copy"]
+	{color: lightyellow !important;filter: drop-shadow(0px 0px 4px pink) !important;}
+	
 /* Ответить на сообщение */
 	div#chat-message-actions > button[aria-label="Ответить"]
-	{border-radius: 0em 2em 2em 0em  !important;color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen)!important;}
+	{border-radius: 2em  !important;color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;}
 	
 /* Закрепить сообщение */
 	div#chat-message-actions > button[aria-label="Закрепить"]
-	{border-radius: 2em 0em 0em 2em !important;color: orange !important;filter: drop-shadow(0px 0px 4px orange)!important;}
+	{border-radius: 2em !important;color: orange !important;filter: drop-shadow(0px 0px 4px orange) !important;}
 	
 /* Удалить сообщение */
 	div#chat-message-actions > button[aria-label="Удалить"]
-	{color: lightgrey !important;filter: drop-shadow(0px 0px 4px lightgrey)!important; display: none !important;}
+	{color: lightgrey !important;filter: drop-shadow(0px 0px 4px lightgrey) !important; display: none !important;}
 	
-/* Вертикальный разделитель между кнопками → | */
-	div#chat-message-actions > div[class ="h-[18px] w-px bg-neutral-600"]
+/* Вертикальные разделители между кнопками → | */
+	div#chat-message-actions > div[class ="h-[18px] w-px bg-neutral-600"], /* дефолтный */
+	div#chat-message-actions > div[class ="bg-gray-600 h-[18px] w-px actions-collapse-local actions-collapse-global"], /* от Mo'Kick */
+	div#chat-message-actions > div[class ="bg-gray-600 h-[18px] w-px actions-collapse-button"] /* от Mo'Kick */
 	{display: none !important;}
 	
 /* Отзеркаленный порядок кнопок, чтоб было как на твиче */
@@ -182,8 +358,8 @@
 /* ############################# */
 	
 	/* Убирает текст из всплывающего сообщение о приостоновки чата, из-за прокрутки */
-	div#channel-chatroom > div > div > div > div > button:has(svg) > span {font-size: 0 !important;}
-	div#channel-chatroom > div > div > div > div > button:has(svg) {
+	div#channel-chatroom > div > div > div > div > button:has(svg > path[d="M4.9,28.9h7.4V3.1H4.9V28.9z M19.7,3.1v25.8h7.4V3.1H19.7z"]) > span {font-size: 0 !important;}
+	div#channel-chatroom > div > div > div > div > button:has(svg > path[d="M4.9,28.9h7.4V3.1H4.9V28.9z M19.7,3.1v25.8h7.4V3.1H19.7z"]) {
     	border-radius: .5em !important;
 		filter: drop-shadow(0px 0px 4px lightgreen) !important;
 		gap: 0 !important;
@@ -194,17 +370,171 @@
 	/*div[data-radix-popper-content-wrapper] > div[class *="z-tooltip"]:has(span[id *="radix"][role="tooltip"])
 	{display: none !important;}*/
 	
+	/* Индикация, что в чат нельзя писать из-за каких-либо ограничительных режимов */
+	div#chat-input-wrapper:has(svg > path[d="M11.8 6.3V1h-7v5.3H3V15h10.5V6.2h-1.8ZM6.5 2.8H10v3.5H6.5V2.8Zm4 7.8H9v1.8H7.4v-1.8H6V9h4.3v1.7Z"]) {background-color: darkred !important;}
+	
 	/* Кнопка вызова меня смайлов 7tv */
 	button.seventv-emote-menu-button
-	{color: darkcyan !important;filter: drop-shadow(0px 0px 4px darkcyan)!important;}
+	{color: darkcyan !important;filter: drop-shadow(0px 0px 4px darkcyan) !important;}
 	
 	/* Кнопка вызова меню дефолтных смайлов */
 	div#chatroom-footer button:has(svg > path[d="M11 2H5L2 5V11L5 14H11L14 11V5L11 2ZM10.25 5C10.8725 5 11.375 5.5025 11.375 6.125C11.375 6.7475 10.8725 7.25 10.25 7.25C9.6275 7.25 9.125 6.7475 9.125 6.125C9.125 5.5025 9.6275 5 10.25 5ZM5.75 5C6.3725 5 6.875 5.5025 6.875 6.125C6.875 6.7475 6.3725 7.25 5.75 7.25C5.1275 7.25 4.625 6.7475 4.625 6.125C4.625 5.5025 5.1275 5 5.75 5ZM11.75 9.875C11.0188 10.6062 10.6062 11.0188 9.875 11.75H6.125C5.39375 11.0188 4.98125 10.6062 4.25 9.875V8.75H11.75V9.875Z"])
-	{color: yellow !important;filter: drop-shadow(0px 0px 4px yellow)!important;}
+	{color: yellow !important;filter: drop-shadow(0px 0px 4px yellow) !important;}
+	
+	/* Кнопка Баллов канала */
+	div#chatroom-footer button[data-testid="channel-points-button"]
+	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;}
+	
+	/* Кнопка Магазин подарков */
+	div#chatroom-footer button[data-testid="gift-shop-button"]
+	{color: #53fc18 !important;filter: drop-shadow(0px 0px 4px #53fc18) !important;}
+	
+	/* Кнопка Find User (Mo'Kick) */
+	div#chatroom-footer button:has(span > svg > path[d*="M14.5 4C20.2975 4 25 8.7025 25 14.5C25 16.855 24.2125 19.0225 22.9 20.7775L28 25.8775L25.8775 28L20.7775 22.9C19.0225 24.2125 16.855 25 14.5 25C8.7025 25 4 20.2975 4 14.5C4 8.7025 8.7025 4 14.5 4ZM14.5 22C18.6325 22 22 18.6325 22 14.5C22 10.3675 18.6325 7 14.5 7C10.3675 7 7 10.3675 7 14.5C7 18.6325 10.3675 22 14.5 22Z"])
+	{color: lightyellow !important;filter: drop-shadow(0px 0px 4px pink) !important;}
+	/* Текст на кнопке поиска (Mo'Kick) */
+	div#chatroom-footer button:has(span > svg > path[d*="M14.5 4C20.2975 4 25 8.7025 25 14.5C25 16.855 24.2125 19.0225 22.9 20.7775L28 25.8775L25.8775 28L20.7775 22.9C19.0225 24.2125 16.855 25 14.5 25C8.7025 25 4 20.2975 4 14.5C4 8.7025 8.7025 4 14.5 4ZM14.5 22C18.6325 22 22 18.6325 22 14.5C22 10.3675 18.6325 7 14.5 7C10.3675 7 7 10.3675 7 14.5C7 18.6325 10.3675 22 14.5 22Z"]) > span[data-role="button-text"]
+	{color: #0b0b0c !important;}
 	
 	/* Кнопка "Настроек" чата */
 	div#chatroom-footer button:has(svg > path[d="M25.7,17.3c0.1-0.4,0.1-0.8,0.1-1.3c0-0.4,0-0.9-0.1-1.3l2.7-2.1c0.2-0.2,0.3-0.6,0.2-0.8L26,7.3  C25.8,7,25.5,6.9,25.2,7l-3.2,1.3c-0.7-0.5-1.4-0.9-2.2-1.3l-0.5-3.4C19.2,3.3,18.9,3,18.6,3h-5.2c-0.3,0-0.6,0.2-0.6,0.6L12.3,7  c-0.8,0.3-1.5,0.8-2.2,1.3L6.9,7C6.6,6.9,6.2,7,6.1,7.3l-2.6,4.5c-0.2,0.3-0.1,0.6,0.2,0.8l2.7,2.1c-0.1,0.4-0.1,0.8-0.1,1.3  c0,0.4,0,0.9,0.1,1.3l-2.7,2.1c-0.2,0.2-0.3,0.6-0.2,0.8L6,24.7C6.2,25,6.5,25.1,6.8,25l3.2-1.3c0.7,0.5,1.4,0.9,2.2,1.3l0.5,3.4  c0.1,0.3,0.3,0.6,0.6,0.6h5.2c0.3,0,0.6-0.2,0.6-0.6l0.5-3.4c0.8-0.3,1.5-0.8,2.2-1.3l3.2,1.3c0.3,0.1,0.6,0,0.8-0.3l2.6-4.5  c0.2-0.3,0.1-0.6-0.2-0.8L25.7,17.3z M16,20.9c-2.7,0-4.9-2.2-4.9-4.9s2.2-4.9,4.9-4.9s4.9,2.2,4.9,4.9S18.7,20.9,16,20.9z"])
 	{color: orange !important;filter: drop-shadow(0px 0px 4px orange) !important;}
+}
+@-moz-document domain("kick.com") {
+	
+/* ######################################## */
+/* ##### Личная карточка пользователя ##### */
+/* ######################################## */
+	
+	/* Внешней цвет рамки карточки пользователя за которую её можно двигать */
+	/* Без наведённого курсора */
+	div#user-identity,
+	div#user-identity_pinned
+	{background-color:#171a1c !important;}
+	
+	/* При наведении курсора */
+	div#user-identity:hover,
+	div#user-identity_pinned:hover
+	{background-color:#171a1c !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;}
+	
+	
+	/* Ник в карточке пользователя при наведении курсора */
+	div#user-identity div:has(a) > a:hover {color: #53fc18 !important;text-decoration: underline !important;}
+	
+	/* Кнопка скопировать имя пользователя в буфер обмена (Mo'Kick) */
+	div#user-identity.moKick-expanded button:has(span > svg > path[d="M27.4672 28H9.3336V9.1944H27.4672V28ZM4 4V22.1864H6.6456V6.6024H22.2296V4H4Z"]),
+	div#user-identity_pinned.moKick-expanded button:has(span > svg > path[d="M27.4672 28H9.3336V9.1944H27.4672V28ZM4 4V22.1864H6.6456V6.6024H22.2296V4H4Z"])
+	{color: #53fc18 !important;filter: drop-shadow(0px 0px 4px #53fc18) !important;}
+	
+	/* Оставить заметку о пользователе (Mo'Kick) */
+	div#user-identity.moKick-expanded button:has(span > svg > path[d="M13 8C10.2386 8 8 10.2386 8 13V51C8 53.7614 10.2386 56 13 56H51C53.7614 56 56 53.7614 56 51V13C56 10.2386 53.7614 8 51 8H13ZM30.5 16C29.1193 16 28 17.1193 28 18.5V21.5C28 22.8807 29.1193 24 30.5 24H49.5C50.8807 24 52 22.8807 52 21.5V18.5C52 17.1193 50.8807 16 49.5 16H30.5ZM12 30.5C12 29.1193 13.1193 28 14.5 28H49.5C50.8807 28 52 29.1193 52 30.5V33.5C52 34.8807 50.8807 36 49.5 36H14.5C13.1193 36 12 34.8807 12 33.5V30.5ZM14.5 40C13.1193 40 12 41.1193 12 42.5V45.5C12 46.8807 13.1193 48 14.5 48H33.5C34.8807 48 36 46.8807 36 45.5V42.5C36 41.1193 34.8807 40 33.5 40H14.5Z"]),
+	div#user-identity_pinned.moKick-expanded button:has(span > svg > path[d="M13 8C10.2386 8 8 10.2386 8 13V51C8 53.7614 10.2386 56 13 56H51C53.7614 56 56 53.7614 56 51V13C56 10.2386 53.7614 8 51 8H13ZM30.5 16C29.1193 16 28 17.1193 28 18.5V21.5C28 22.8807 29.1193 24 30.5 24H49.5C50.8807 24 52 22.8807 52 21.5V18.5C52 17.1193 50.8807 16 49.5 16H30.5ZM12 30.5C12 29.1193 13.1193 28 14.5 28H49.5C50.8807 28 52 29.1193 52 30.5V33.5C52 34.8807 50.8807 36 49.5 36H14.5C13.1193 36 12 34.8807 12 33.5V30.5ZM14.5 40C13.1193 40 12 41.1193 12 42.5V45.5C12 46.8807 13.1193 48 14.5 48H33.5C34.8807 48 36 46.8807 36 45.5V42.5C36 41.1193 34.8807 40 33.5 40H14.5Z"])
+	{color: lightyellow !important;filter: drop-shadow(0px 0px 4px pink) !important;}
+	
+	/* Отображение технической иныф, в развёрнутой карточке (Mo'Kick) */
+	div#user-identity_pinned.moKick-expanded button:has(span > svg > path[d="M12.625 7.3H9.32188L10.2188 1L3 8.7H6.12375L5.40625 15L12.625 7.3Z"])
+	{color: yellow !important;filter: drop-shadow(0px 0px 4px yellow) !important;}
+	
+	/* Ссылки на соц.сети, в развёрнутой карточке (Mo'Kick) */
+	div#user-identity_pinned.moKick-expanded button:has(span > svg > path[d="M61.2656 30C61.2656 36 60.0156 40.5469 57.5156 43.6406C55.0469 46.7344 51.3906 48.3125 46.5469 48.375C44.7031 48.4375 43.0938 48.3281 41.7188 48.0469C40.3438 47.7344 39.1875 47.3594 38.25 46.9219C37.3125 46.4531 36.5781 45.9531 36.0469 45.4219C35.5469 44.8906 35.2344 44.4062 35.1094 43.9688C34.4531 45 33.5938 45.7031 32.5312 46.0781C31.5 46.4219 30.4844 46.5938 29.4844 46.5938C27.9219 46.5938 26.4375 46.375 25.0312 45.9375C23.6562 45.5 22.4531 44.8281 21.4219 43.9219C20.3906 42.9844 19.5625 41.8125 18.9375 40.4062C18.3438 38.9688 18.0469 37.2812 18.0469 35.3438C18.0469 33.5625 18.3281 32.0156 18.8906 30.7031C19.4844 29.3594 20.2969 28.25 21.3281 27.375C22.3594 26.4688 23.5625 25.7969 24.9375 25.3594C26.3438 24.8906 27.8594 24.6562 29.4844 24.6562C30.7031 24.6562 31.8906 24.9688 33.0469 25.5938C34.2031 26.1875 35.1406 27.2188 35.8594 28.6875V23.9062L45.7969 23.8125L45.5156 40.7812L46.7344 40.5938C47.2031 40.4688 47.625 40.125 48 39.5625C48.3125 39.0938 48.5938 38.3594 48.8438 37.3594C49.125 36.3594 49.2656 34.9688 49.2656 33.1875C49.2656 30.4062 48.8594 28.0312 48.0469 26.0625C47.2344 24.0938 46.0625 22.4844 44.5312 21.2344C43 19.9844 41.125 19.0781 38.9062 18.5156C36.6875 17.9219 34.1719 17.625 31.3594 17.625C28.2969 17.6563 25.5625 18.25 23.1562 19.4062C22.125 19.9062 21.1094 20.5469 20.1094 21.3281C19.1406 22.1094 18.2656 23.0938 17.4844 24.2812C16.7344 25.4375 16.125 26.8281 15.6562 28.4531C15.1875 30.0781 14.9531 31.9688 14.9531 34.125C14.9531 36.7812 15.2344 39.0469 15.7969 40.9219C16.3906 42.7969 17.1562 44.375 18.0938 45.6562C19.0312 46.9062 20.0938 47.9062 21.2812 48.6562C22.5 49.375 23.75 49.9219 25.0312 50.2969C27.9688 51.1406 31.3281 51.2188 35.1094 50.5312V59.4375C30.6094 60.375 26.3906 60.4844 22.4531 59.7656C18.5156 59.0469 15.0781 57.5938 12.1406 55.4062C9.20312 53.2188 6.89062 50.3594 5.20312 46.8281C3.51562 43.2969 2.67188 39.1875 2.67188 34.5C2.67188 29.9062 3.28125 25.9844 4.5 22.7344C5.71875 19.4844 7.28125 16.7656 9.1875 14.5781C11.125 12.3906 13.2656 10.6719 15.6094 9.42188C17.9844 8.14063 20.3281 7.17188 22.6406 6.51562C24.9531 5.85938 27.0938 5.4375 29.0625 5.25C31.0625 5.0625 32.6406 4.96875 33.7969 4.96875C38.0156 4.96875 41.8125 5.625 45.1875 6.9375C48.5938 8.25 51.4844 10.0312 53.8594 12.2812C56.2344 14.5312 58.0625 17.1875 59.3438 20.25C60.625 23.2812 61.2656 26.5312 61.2656 30ZM28.3594 34.9688C28.3594 36.1562 28.5938 37.1406 29.0625 37.9219C29.5625 38.7031 30.3281 39.0938 31.3594 39.0938C32.3906 39.0938 33.2344 38.7031 33.8906 37.9219C34.5781 37.1406 34.9219 36.1562 34.9219 34.9688C34.9219 33.875 34.5781 33.0781 33.8906 32.5781C33.2344 32.0469 32.3906 31.7812 31.3594 31.7812C29.3594 31.7812 28.3594 32.8438 28.3594 34.9688Z"]),
+	div#user-identity_pinned.moKick-expanded button:has(span > svg > path[d="M61.2656 30C61.2656 36 60.0156 40.5469 57.5156 43.6406C55.0469 46.7344 51.3906 48.3125 46.5469 48.375C44.7031 48.4375 43.0938 48.3281 41.7188 48.0469C40.3438 47.7344 39.1875 47.3594 38.25 46.9219C37.3125 46.4531 36.5781 45.9531 36.0469 45.4219C35.5469 44.8906 35.2344 44.4062 35.1094 43.9688C34.4531 45 33.5938 45.7031 32.5312 46.0781C31.5 46.4219 30.4844 46.5938 29.4844 46.5938C27.9219 46.5938 26.4375 46.375 25.0312 45.9375C23.6562 45.5 22.4531 44.8281 21.4219 43.9219C20.3906 42.9844 19.5625 41.8125 18.9375 40.4062C18.3438 38.9688 18.0469 37.2812 18.0469 35.3438C18.0469 33.5625 18.3281 32.0156 18.8906 30.7031C19.4844 29.3594 20.2969 28.25 21.3281 27.375C22.3594 26.4688 23.5625 25.7969 24.9375 25.3594C26.3438 24.8906 27.8594 24.6562 29.4844 24.6562C30.7031 24.6562 31.8906 24.9688 33.0469 25.5938C34.2031 26.1875 35.1406 27.2188 35.8594 28.6875V23.9062L45.7969 23.8125L45.5156 40.7812L46.7344 40.5938C47.2031 40.4688 47.625 40.125 48 39.5625C48.3125 39.0938 48.5938 38.3594 48.8438 37.3594C49.125 36.3594 49.2656 34.9688 49.2656 33.1875C49.2656 30.4062 48.8594 28.0312 48.0469 26.0625C47.2344 24.0938 46.0625 22.4844 44.5312 21.2344C43 19.9844 41.125 19.0781 38.9062 18.5156C36.6875 17.9219 34.1719 17.625 31.3594 17.625C28.2969 17.6563 25.5625 18.25 23.1562 19.4062C22.125 19.9062 21.1094 20.5469 20.1094 21.3281C19.1406 22.1094 18.2656 23.0938 17.4844 24.2812C16.7344 25.4375 16.125 26.8281 15.6562 28.4531C15.1875 30.0781 14.9531 31.9688 14.9531 34.125C14.9531 36.7812 15.2344 39.0469 15.7969 40.9219C16.3906 42.7969 17.1562 44.375 18.0938 45.6562C19.0312 46.9062 20.0938 47.9062 21.2812 48.6562C22.5 49.375 23.75 49.9219 25.0312 50.2969C27.9688 51.1406 31.3281 51.2188 35.1094 50.5312V59.4375C30.6094 60.375 26.3906 60.4844 22.4531 59.7656C18.5156 59.0469 15.0781 57.5938 12.1406 55.4062C9.20312 53.2188 6.89062 50.3594 5.20312 46.8281C3.51562 43.2969 2.67188 39.1875 2.67188 34.5C2.67188 29.9062 3.28125 25.9844 4.5 22.7344C5.71875 19.4844 7.28125 16.7656 9.1875 14.5781C11.125 12.3906 13.2656 10.6719 15.6094 9.42188C17.9844 8.14063 20.3281 7.17188 22.6406 6.51562C24.9531 5.85938 27.0938 5.4375 29.0625 5.25C31.0625 5.0625 32.6406 4.96875 33.7969 4.96875C38.0156 4.96875 41.8125 5.625 45.1875 6.9375C48.5938 8.25 51.4844 10.0312 53.8594 12.2812C56.2344 14.5312 58.0625 17.1875 59.3438 20.25C60.625 23.2812 61.2656 26.5312 61.2656 30ZM28.3594 34.9688C28.3594 36.1562 28.5938 37.1406 29.0625 37.9219C29.5625 38.7031 30.3281 39.0938 31.3594 39.0938C32.3906 39.0938 33.2344 38.7031 33.8906 37.9219C34.5781 37.1406 34.9219 36.1562 34.9219 34.9688C34.9219 33.875 34.5781 33.0781 33.8906 32.5781C33.2344 32.0469 32.3906 31.7812 31.3594 31.7812C29.3594 31.7812 28.3594 32.8438 28.3594 34.9688Z"]) > span > svg > path
+	{color: magenta !important;fill: magenta !important;filter: drop-shadow(0px 0px 4px magenta) !important;}
+	
+	/* Просмотр истории сообщений, в развёрнутой карточке (Mo'Kick) */
+	div#user-identity_pinned.moKick-expanded button:has(span > svg > path[d="M10.115 2.73999H5.885C2.98 2.73999 0.625 5.09499 0.625 7.99999C0.625 9.96999 1.71 11.685 3.31 12.585V14.59L6.8 13.26H10.115C13.02 13.26 15.375 10.905 15.375 7.99999C15.375 5.09499 13.02 2.73999 10.115 2.73999ZM4.55 9.23999C3.865 9.23999 3.31 8.68499 3.31 7.99999C3.31 7.31499 3.865 6.75999 4.55 6.75999C5.235 6.75999 5.785 7.31499 5.785 7.99999C5.785 8.68499 5.235 9.23999 4.55 9.23999ZM8 9.23999C7.315 9.23999 6.76 8.68499 6.76 7.99999C6.76 7.31499 7.315 6.75999 8 6.75999C8.685 6.75999 9.24 7.31499 9.24 7.99999C9.24 8.68499 8.685 9.23999 8 9.23999ZM11.45 9.23999C10.765 9.23999 10.215 8.68499 10.215 7.99999C10.215 7.31499 10.765 6.75999 11.45 6.75999C12.135 6.75999 12.69 7.31499 12.69 7.99999C12.69 8.68499 12.135 9.23999 11.45 9.23999Z"])
+	{color: lightyellow !important;filter: drop-shadow(0px 0px 4px pink) !important;}
+	
+	/* Кнопки Отстранения/Бана пользователя, в развёрнутой карточке (Mo'Kick) */
+	div#user-identity_pinned.moKick-expanded button:has(span > svg > path[d="M32.3168 2.66764C31.4266 1.77746 29.9836 1.77744 29.0934 2.66764L14.4074 17.3537C13.5175 18.2439 13.5173 19.687 14.4074 20.5771L18.3477 24.5174C19.2379 25.4076 20.6808 25.4074 21.5712 24.5174L21.7516 24.3371L27.1232 29.711L3.48359 53.3529C1.50555 55.3314 1.50539 58.5385 3.48359 60.5168C5.46187 62.4943 8.66927 62.4945 10.6474 60.5168L34.287 36.8749L39.6609 42.2488L39.4829 42.427C38.5927 43.3172 38.5927 44.7602 39.4829 45.6504L43.4232 49.5907C44.3133 50.4808 45.7566 50.4808 46.6467 49.5907L61.3325 34.9048C62.2225 34.0147 62.2225 32.5714 61.3325 31.6813L57.3923 27.741C56.5023 26.8508 55.0591 26.851 54.1689 27.741L53.9886 27.919L48.6168 22.5474C50.5945 20.5692 50.5943 17.3618 48.6168 15.3835C46.6385 13.4053 43.4314 13.4055 41.4529 15.3835L36.079 10.0096L36.257 9.83145C37.1475 8.94122 37.1475 7.49822 36.257 6.60797L32.3168 2.66764Z"])
+	{color: #F30 !important;filter: drop-shadow(0px 0px 4px #F30) !important;}
+	
+	
+	/* Кнопка переключения карточки пользователя в расширенный режим (Mo'Kick) */
+	div#user-identity.moKick-expanded  button:has(span > svg > path[d="M25 17C24.997 14.406 23.348 12.198 21.042 11.363L21 11.35V3.85C22.732 3.392 23.989 1.844 24 0.001V0H8C8.001 1.853 9.262 3.41 10.972 3.864L11 3.87V11.37C8.658 12.215 7.012 14.414 7 16.999V19.5H14V28.5L16 32L18 28.5V19.5H25V17Z"])
+	{color: orange !important;filter: drop-shadow(0px 0px 4px orange) !important;}
+	
+	
+	/* Кнопка Фолов/Анфолов на пользователя */
+	div#user-identity > div > div > div > div > button[aria-label *="Отслеживать"], /* дефолтная */
+	div#user-identity_pinned.moKick-expanded button:has(span > svg > path[d="M23.2975 6.5L26.5 9.7025V14.6112L16 24.455L5.5 14.6112V9.7025L8.7025 6.5H10.4L16 10.98L21.6 6.5H23.2975ZM24.75 3H20.375L16 6.5L11.625 3H7.25L2 8.25V16.125L16 29.25L30 16.125V8.25L24.75 3Z"]), /* фолов (Mo'Kick) */
+	div#user-identity_pinned.moKick-expanded button:has(span > svg > path[d="M12.375 1.5H10.1875L8 3.25L5.8125 1.5H3.625L1 4.125V8.0625L8 14.625L15 8.0625V4.125L12.375 1.5Z"]) /* анфолов (Mo'Kick) */
+	{color: magenta !important;filter: drop-shadow(0px 0px 4px magenta) !important;}
+	
+	/* Кнопка Подарить подписку */
+	div#user-identity button[dir="ltr"]:has(svg > g > path[d="M17.5 20H2.5V40H17.5V20Z"])
+	{color: gold !important;filter: drop-shadow(0px 0px 4px gold) !important;}
+	
+	/* Кнопка Add To Priority (Mo'Kick) */
+	div#user-identity button:has(span > svg > g[clip-path]),  /* дефолтная */
+	div#user-identity_pinned.moKick-expanded button:has(span > svg > g > path[d="M4.5 9C6.985 9 9 6.985 9 4.5C9 2.015 6.985 0 4.5 0C2.015 0 0 2.015 0 4.5C0 6.985 2.015 9 4.5 9ZM4.5 2C5.88 2 7 3.12 7 4.5C7 5.88 5.88 7 4.5 7C3.12 7 2 5.88 2 4.5C2 3.12 3.12 2 4.5 2ZM8 10H0V12V16H2V12H8V16H16V10H10H8ZM16 6C16 7.65685 14.6569 9 13 9C11.3431 9 10 7.65685 10 6C10 4.34315 11.3431 3 13 3C14.6569 3 16 4.34315 16 6Z"]) /* (Mo'Kick) */
+	{background-color: #42474d !important;color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;}
+	
+	/* Кнопка Reveal/Unreveal Message (Mo'Kick) */
+	div#user-identity button:has(span > svg > path[d="M50.2178 18.5771L60 28.3604V35.3604L46 49.3604H18.0166L8.83008 40.1729L4 35.3428V28.3428L18 14.3604H46L50.2178 18.5771ZM32 20C25.3726 20 20 25.3726 20 32C20 38.6274 25.3726 44 32 44C38.6274 44 44 38.6274 44 32C44 25.3726 38.6274 20 32 20ZM32 25C35.866 25 39 28.134 39 32C39 35.866 35.866 39 32 39C28.134 39 25 35.866 25 32C25 28.134 28.134 25 32 25Z"]),
+	div#user-identity button:has(span > svg > path[d="M34.6426 14.3604H18L4 28.3429V35.3429L8.83 40.1729L34.6426 14.3604Z"]),  /* дефолтная */
+	div#user-identity_pinned.moKick-expanded button:has(span > svg > path[d="M50.2178 18.5771L60 28.3604V35.3604L46 49.3604H18.0166L8.83008 40.1729L4 35.3428V28.3428L18 14.3604H46L50.2178 18.5771ZM32 20C25.3726 20 20 25.3726 20 32C20 38.6274 25.3726 44 32 44C38.6274 44 44 38.6274 44 32C44 25.3726 38.6274 20 32 20ZM32 25C35.866 25 39 28.134 39 32C39 35.866 35.866 39 32 39C28.134 39 25 35.866 25 32C25 28.134 28.134 25 32 25Z"]) /* (Mo'Kick) */
+	{background-color: #42474d !important;color: skyblue !important;filter: drop-shadow(0px 0px 4px lightblue) !important;}
+	
+	/* Кнопка отправки в ЧС пользователя */
+	div#user-identity > div > div > div > div > button[data-state="closed"]:has(svg > path[d="M10.5 3.3 12 2l1 1-9.7 10L2 11.8l1.6-1.6a5 5 0 0 1-.8-2.5v-2h1.3v2c0 .6.1 1.1.4 1.6l.7-.7v-5c0-1.1 1-2 2.1-2h1c1.1 0 2 .7 2.1 1.7ZM11.7 6v1.8a3.8 3.8 0 0 1-5.2 3.5l-1 .9a5 5 0 0 0 1.8.5v.6H4.7v1.3h6.5v-1.3H8.5v-.6a5 5 0 0 0 4.4-5v-2H12l-.3.3Zm-1.1 2.2V7l-3.1 3.1h1c1.1 0 2-1 2-2.1Z"])
+	{color: #FF6262 !important;filter: drop-shadow(0px 0px 4px #FF6262) !important;}
+	div#user-identity > div > div > div > div > button[data-state="closed"]:has(svg > path[d="M15.6 3h.7a5 5 0 0 1 5 5v7.4a5 5 0 0 1-5 5h-.7a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5Zm7.8 12.3v-4h2.7v4a10 10 0 0 1-9 10v1.2h5.3V29H9.5v-2.5h5.2v-1.2a10 10 0 0 1-8.7-10v-4h2.5v4a7.5 7.5 0 0 0 15 0Z"])
+	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;}
+	
+	
+	/* Переключатель выдачи Бана */
+	div#user-identity div.contents > div[class] > button[aria-checked="true"] {background-color: #FF6262 !important;}
+	div#user-identity_pinned.moKick-expanded div > svg:has(path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]), /* (Mo'Kick) */
+	div[username] div > svg:has(path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]), /* (Mo'Kick) */
+	div#user-identity_pinned.moKick-expanded div:has(path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]) > span, /* (Mo'Kick) */
+	div[username] div:has(path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]) > span, /* (Mo'Kick) */
+	div#user-identity div.contents > div[class] > div:has(svg > path),
+	div#user-identity div.contents > div[class] > div > svg > path,
+	div#user-identity div.contents > div[class] > button {
+		color: #FF6262 !important;
+		fill: #FF6262 !important;
+		filter: drop-shadow(0px 0px 4px #FF6262) !important;
+	}
+	
+	/* Кнопка выдачи Бана (Mo'Kick) */
+	div#user-identity button:has(span > svg > path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]),
+	div#user-identity_pinned.moKick-expanded button:has(span > svg > path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"])
+	{background-color: #4D4242 !important;color: #FF6262 !important;}
+	
+	/* Кнопка выдачи Разбана (Mo'Kick) */
+	div#user-identity button:has(span > svg > path[d="M16 3.43994C12.45 3.43994 9.25 4.90994 6.96 7.27994L3.44 3.75994V13.4999H13.18L12.29 12.6099L9.8 10.1199C11.35 8.46994 13.56 7.43994 16 7.43994C20.71 7.43994 24.55 11.2799 24.55 15.9999C24.55 17.8299 23.97 19.5399 22.97 20.9299L16.95 14.9099L15.94 15.9299L14.13 17.7399L14.19 17.8099L19.96 23.5699C18.77 24.1999 17.43 24.5499 16 24.5499C13.64 24.5499 11.51 23.5899 9.96 22.0399L7.13 24.8699C9.4 27.1499 12.53 28.5499 16 28.5499C22.93 28.5499 28.55 22.9299 28.55 15.9999C28.55 9.06994 22.93 3.43994 16 3.43994Z"]),
+	div#user-identity_pinned.moKick-expanded button:has(span > svg > path[d="M16 3.43994C12.45 3.43994 9.25 4.90994 6.96 7.27994L3.44 3.75994V13.4999H13.18L12.29 12.6099L9.8 10.1199C11.35 8.46994 13.56 7.43994 16 7.43994C20.71 7.43994 24.55 11.2799 24.55 15.9999C24.55 17.8299 23.97 19.5399 22.97 20.9299L16.95 14.9099L15.94 15.9299L14.13 17.7399L14.19 17.8099L19.96 23.5699C18.77 24.1999 17.43 24.5499 16 24.5499C13.64 24.5499 11.51 23.5899 9.96 22.0399L7.13 24.8699C9.4 27.1499 12.53 28.5499 16 28.5499C22.93 28.5499 28.55 22.9299 28.55 15.9999C28.55 9.06994 22.93 3.43994 16 3.43994Z"])
+	{background-color: #424D45 !important;color: lightgreen !important;}
+	
+	/* Кнопка выдачи Таймача (Mo'Kick) */
+	div#user-identity button:has(span > svg > path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]),
+	div#user-identity_pinned.moKick-expanded button:has(span > svg > path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"])
+	{background-color: #48424D !important;color: #9048ff !important;}
+	
+	/* Переключатель выдачи Таймача */
+	div#user-identity div.contents button[type="button"][aria-checked="true"],
+	div#user-identity div.contents > div[data-orientation] > div[data-orientation] > button[data-state="checked"]{background-color: #9048ff !important;}
+	div#user-identity_pinned.moKick-expanded div > svg:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]), /* (Mo'Kick) */
+	div[username] div > svg:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]), /* (Mo'Kick) */
+	div#user-identity_pinned.moKick-expanded div:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span, /* (Mo'Kick) */
+	div[username] div:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span, /* (Mo'Kick) */
+	div#user-identity div.contents > div[data-orientation] > div[data-orientation] > h3 > div > svg > path,
+	div#user-identity div.contents > div[data-orientation] > div[data-orientation] > h3 > div {
+		color: #9048ff !important;
+		fill: #9048ff !important;
+		filter: drop-shadow(0px 0px 4px rebeccapurple) !important;
+	}
+}
+@-moz-document domain("kick.com") {
+	
+/* ############################## */
+/* ##### Меню баллов канала ##### */
+/* ############################## */
+	
+	/* Выравнивание кликабельных кнопок, и подсветка при наведении курсора */
+	div#rewards-panel button:has(div > span) {margin-left: .4rem !important;margin-top: .4rem !important;}
+	div#rewards-panel button:has(div > span):hover
+	{filter: drop-shadow(0px 0px 4px lightgreen) !important;} 
 }
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
 	
@@ -212,19 +542,38 @@
 /* ##### Плеер ##### */
 /* ################# */
 	
+	/* Кнопка Rewind (Mo'Kick) */
+	div#injected-embedded-channel-player-video button:has(svg > path[d="M52.6104 15.5822C53.6742 14.873 55.0419 14.8069 56.1691 15.4102C57.2963 16.0135 58 17.1882 58 18.4667V46.2C58 47.4785 57.2963 48.6533 56.1691 49.2565C55.0419 49.8597 53.6742 49.7935 52.6104 49.0846L33.7333 36.4999V46.2C33.7333 47.4785 33.0296 48.6533 31.9026 49.2565C30.7752 49.8597 29.4076 49.7935 28.3437 49.0846L7.5437 35.2179C6.57928 34.5749 6 33.4926 6 32.3333C6 31.1742 6.57928 30.0918 7.5437 29.4489L28.3437 15.5822C29.4076 14.873 30.7752 14.8069 31.9026 15.4102C33.0296 16.0135 33.7333 17.1882 33.7333 18.4667V28.1669L52.6104 15.5822Z"]), /* обычный */
+	div#injected-channel-player button:has(svg > path[d="M52.6104 15.5822C53.6742 14.873 55.0419 14.8069 56.1691 15.4102C57.2963 16.0135 58 17.1882 58 18.4667V46.2C58 47.4785 57.2963 48.6533 56.1691 49.2565C55.0419 49.8597 53.6742 49.7935 52.6104 49.0846L33.7333 36.4999V46.2C33.7333 47.4785 33.0296 48.6533 31.9026 49.2565C30.7752 49.8597 29.4076 49.7935 28.3437 49.0846L7.5437 35.2179C6.57928 34.5749 6 33.4926 6 32.3333C6 31.1742 6.57928 30.0918 7.5437 29.4489L28.3437 15.5822C29.4076 14.873 30.7752 14.8069 31.9026 15.4102C33.0296 16.0135 33.7333 17.1882 33.7333 18.4667V28.1669L52.6104 15.5822Z"]) /* в модерке */
+	{color: #C39BFF !important;filter: drop-shadow(0px 0px 4px #C39BFF) !important;}
+	div#injected-embedded-channel-player-video button:has(svg > path[d="M52.6104 15.5822C53.6742 14.873 55.0419 14.8069 56.1691 15.4102C57.2963 16.0135 58 17.1882 58 18.4667V46.2C58 47.4785 57.2963 48.6533 56.1691 49.2565C55.0419 49.8597 53.6742 49.7935 52.6104 49.0846L33.7333 36.4999V46.2C33.7333 47.4785 33.0296 48.6533 31.9026 49.2565C30.7752 49.8597 29.4076 49.7935 28.3437 49.0846L7.5437 35.2179C6.57928 34.5749 6 33.4926 6 32.3333C6 31.1742 6.57928 30.0918 7.5437 29.4489L28.3437 15.5822C29.4076 14.873 30.7752 14.8069 31.9026 15.4102C33.0296 16.0135 33.7333 17.1882 33.7333 18.4667V28.1669L52.6104 15.5822Z"]) > svg path,/* обычный */
+	div#injected-channel-player button:has(svg > path[d="M52.6104 15.5822C53.6742 14.873 55.0419 14.8069 56.1691 15.4102C57.2963 16.0135 58 17.1882 58 18.4667V46.2C58 47.4785 57.2963 48.6533 56.1691 49.2565C55.0419 49.8597 53.6742 49.7935 52.6104 49.0846L33.7333 36.4999V46.2C33.7333 47.4785 33.0296 48.6533 31.9026 49.2565C30.7752 49.8597 29.4076 49.7935 28.3437 49.0846L7.5437 35.2179C6.57928 34.5749 6 33.4926 6 32.3333C6 31.1742 6.57928 30.0918 7.5437 29.4489L28.3437 15.5822C29.4076 14.873 30.7752 14.8069 31.9026 15.4102C33.0296 16.0135 33.7333 17.1882 33.7333 18.4667V28.1669L52.6104 15.5822Z"]) > svg path /* в модерке */
+	{fill: #C39BFF !important;}
+	
 	/* Кнопка Пауза/Плей */
 	div#injected-embedded-channel-player-video button:has(svg > path[d="M8.4,3.2v25.9l20.4-13L8.4,3.2z"]), /* обычный */
 	div#injected-embedded-channel-player-video button:has(svg > path[d="M4.9,28.9h7.4V3.1H4.9V28.9z M19.7,3.1v25.8h7.4V3.1H19.7z"]), /* обычный */
 	div#injected-channel-player button:has(svg > path[d="M8.4,3.2v25.9l20.4-13L8.4,3.2z"]), /* в модерке */
 	div#injected-channel-player button:has(svg > path[d="M4.9,28.9h7.4V3.1H4.9V28.9z M19.7,3.1v25.8h7.4V3.1H19.7z"]), /* в модерке */
 	div:has(video#clip-creator-player) button:has(svg > path[d="M8.4,3.2v25.9l20.4-13L8.4,3.2z"]), /* при создании клипа */
-	div:has(video#clip-creator-player) button:has(svg > path[d="M4.9,28.9h7.4V3.1H4.9V28.9z M19.7,3.1v25.8h7.4V3.1H19.7z"]) /* при создании клипа */
+	div:has(video#clip-creator-player) button:has(svg > path[d="M4.9,28.9h7.4V3.1H4.9V28.9z M19.7,3.1v25.8h7.4V3.1H19.7z"]), /* при создании клипа */
+	div[role="dialog"]:has(h2) button:has(svg > path[d="M8.4,3.2v25.9l20.4-13L8.4,3.2z"]), /* при просмотре клипа */
+	div[role="dialog"]:has(h2) button:has(svg > path[d="M4.9,28.9h7.4V3.1H4.9V28.9z M19.7,3.1v25.8h7.4V3.1H19.7z"]) /* при просмотре клипа */
+	{color: #a970ff !important;filter: drop-shadow(0px 0px 4px #9048ff) !important;}
+	
+	/* Кнопка Fast Forward (Mo'Kick) */
+	div#injected-embedded-channel-player-video button:has(svg > path[d="M11.3896 15.5822C10.3258 14.873 8.95811 14.8069 7.83089 15.4102C6.70366 16.0135 6 17.1882 6 18.4667V46.2C6 47.4785 6.70366 48.6533 7.83089 49.2565C8.95811 49.8597 10.3258 49.7935 11.3896 49.0846L30.2667 36.4999V46.2C30.2667 47.4785 30.9704 48.6533 32.0974 49.2565C33.2248 49.8597 34.5924 49.7935 35.6563 49.0846L56.4563 35.2179C57.4207 34.5749 58 33.4926 58 32.3333C58 31.1742 57.4207 30.0918 56.4563 29.4489L35.6563 15.5822C34.5924 14.873 33.2248 14.8069 32.0974 15.4102C30.9704 16.0135 30.2667 17.1882 30.2667 18.4667V28.1669L11.3896 15.5822Z"]), /* обычный */
+	div#injected-channel-player button:has(svg > path[d="M11.3896 15.5822C10.3258 14.873 8.95811 14.8069 7.83089 15.4102C6.70366 16.0135 6 17.1882 6 18.4667V46.2C6 47.4785 6.70366 48.6533 7.83089 49.2565C8.95811 49.8597 10.3258 49.7935 11.3896 49.0846L30.2667 36.4999V46.2C30.2667 47.4785 30.9704 48.6533 32.0974 49.2565C33.2248 49.8597 34.5924 49.7935 35.6563 49.0846L56.4563 35.2179C57.4207 34.5749 58 33.4926 58 32.3333C58 31.1742 57.4207 30.0918 56.4563 29.4489L35.6563 15.5822C34.5924 14.873 33.2248 14.8069 32.0974 15.4102C30.9704 16.0135 30.2667 17.1882 30.2667 18.4667V28.1669L11.3896 15.5822Z"]) /* в модерке */
 	{color: #C39BFF !important;filter: drop-shadow(0px 0px 4px #C39BFF) !important;}
+	div#injected-embedded-channel-player-video button:has(svg > path[d="M11.3896 15.5822C10.3258 14.873 8.95811 14.8069 7.83089 15.4102C6.70366 16.0135 6 17.1882 6 18.4667V46.2C6 47.4785 6.70366 48.6533 7.83089 49.2565C8.95811 49.8597 10.3258 49.7935 11.3896 49.0846L30.2667 36.4999V46.2C30.2667 47.4785 30.9704 48.6533 32.0974 49.2565C33.2248 49.8597 34.5924 49.7935 35.6563 49.0846L56.4563 35.2179C57.4207 34.5749 58 33.4926 58 32.3333C58 31.1742 57.4207 30.0918 56.4563 29.4489L35.6563 15.5822C34.5924 14.873 33.2248 14.8069 32.0974 15.4102C30.9704 16.0135 30.2667 17.1882 30.2667 18.4667V28.1669L11.3896 15.5822Z"]) > svg path,/* обычный */
+	div#injected-channel-player button:has(svg > path[d="M11.3896 15.5822C10.3258 14.873 8.95811 14.8069 7.83089 15.4102C6.70366 16.0135 6 17.1882 6 18.4667V46.2C6 47.4785 6.70366 48.6533 7.83089 49.2565C8.95811 49.8597 10.3258 49.7935 11.3896 49.0846L30.2667 36.4999V46.2C30.2667 47.4785 30.9704 48.6533 32.0974 49.2565C33.2248 49.8597 34.5924 49.7935 35.6563 49.0846L56.4563 35.2179C57.4207 34.5749 58 33.4926 58 32.3333C58 31.1742 57.4207 30.0918 56.4563 29.4489L35.6563 15.5822C34.5924 14.873 33.2248 14.8069 32.0974 15.4102C30.9704 16.0135 30.2667 17.1882 30.2667 18.4667V28.1669L11.3896 15.5822Z"]) > svg path /* в модерке */
+	{fill: #C39BFF !important;}
 	
 	/* Кнопка звук Размючен */
 	div#injected-embedded-channel-player-video button:has(svg > path[d="M20.14 2.38V6.54C23.85 7.82 26.47 11.37 26.47 15.43C26.47 19.49 23.85 23.03 20.14 24.32V28.48C26.11 27.07 30.47 21.67 30.47 15.43C30.47 9.19001 26.11 3.78 20.14 2.38ZM11.01 9.01H3.65002V22.99H11L17.14 28.96V22.97V7.88V3.03L11.01 9.01ZM20.14 9.01001C22.25 10.37 23.64 12.74 23.64 15.43C23.64 18.12 22.25 20.48 20.14 21.83V9.01001Z"]), /* обычный */
 	div#injected-channel-player button:has(svg > path[d="M20.14 2.38V6.54C23.85 7.82 26.47 11.37 26.47 15.43C26.47 19.49 23.85 23.03 20.14 24.32V28.48C26.11 27.07 30.47 21.67 30.47 15.43C30.47 9.19001 26.11 3.78 20.14 2.38ZM11.01 9.01H3.65002V22.99H11L17.14 28.96V22.97V7.88V3.03L11.01 9.01ZM20.14 9.01001C22.25 10.37 23.64 12.74 23.64 15.43C23.64 18.12 22.25 20.48 20.14 21.83V9.01001Z"]), /* в модерке */
 	div:has(video#clip-creator-player) button:has(svg > path[d="M20.14 2.38V6.54C23.85 7.82 26.47 11.37 26.47 15.43C26.47 19.49 23.85 23.03 20.14 24.32V28.48C26.11 27.07 30.47 21.67 30.47 15.43C30.47 9.19001 26.11 3.78 20.14 2.38ZM11.01 9.01H3.65002V22.99H11L17.14 28.96V22.97V7.88V3.03L11.01 9.01ZM20.14 9.01001C22.25 10.37 23.64 12.74 23.64 15.43C23.64 18.12 22.25 20.48 20.14 21.83V9.01001Z"]), /* при создании клипа */
+	div[role="dialog"]:has(h2) button:has(svg > path[d="M20.14 2.38V6.54C23.85 7.82 26.47 11.37 26.47 15.43C26.47 19.49 23.85 23.03 20.14 24.32V28.48C26.11 27.07 30.47 21.67 30.47 15.43C30.47 9.19001 26.11 3.78 20.14 2.38ZM11.01 9.01H3.65002V22.99H11L17.14 28.96V22.97V7.88V3.03L11.01 9.01ZM20.14 9.01001C22.25 10.37 23.64 12.74 23.64 15.43C23.64 18.12 22.25 20.48 20.14 21.83V9.01001Z"]), /* при просмотре клипа */
 	div[class *="group/card"] button:has(svg > path[d="M20.14 2.38V6.54C23.85 7.82 26.47 11.37 26.47 15.43C26.47 19.49 23.85 23.03 20.14 24.32V28.48C26.11 27.07 30.47 21.67 30.47 15.43C30.47 9.19001 26.11 3.78 20.14 2.38ZM11.01 9.01H3.65002V22.99H11L17.14 28.96V22.97V7.88V3.03L11.01 9.01ZM20.14 9.01001C22.25 10.37 23.64 12.74 23.64 15.43C23.64 18.12 22.25 20.48 20.14 21.83V9.01001Z"]) /* предпросмотр клипа */
 	{color: #A0FF48 !important;filter: drop-shadow(0px 0px 4px #A0FF48) !important;}
 	
@@ -232,13 +581,39 @@
 	div#injected-embedded-channel-player-video button:has(svg > path[d="M25.6 19.36C26.16 18.16 26.47 16.83 26.47 15.43C26.47 11.37 23.85 7.82 20.14 6.54V2.38C26.11 3.78 30.47 9.18001 30.47 15.43C30.47 17.92 29.77 20.28 28.55 22.31L25.6 19.36ZM13.16 6.92L17.14 3.03V10.9L13.16 6.92ZM23.64 15.43C23.64 12.74 22.25 10.37 20.14 9.01001V13.9L23.43 17.19C23.57 16.63 23.64 16.04 23.64 15.43ZM22.41 19.58L24.28 21.45L24.29 21.46L27.12 24.29L29.28 26.45L26.45 29.28L24.04 26.87C22.85 27.61 21.54 28.16 20.14 28.49V24.33C20.47 24.22 20.79 24.09 21.1 23.93L17.14 19.97V28.97L11 22.99H3.65002V9.01999H6.19002L2.71002 5.53999L5.54002 2.70999L11.43 8.59999L17.14 14.31L20.14 17.31L22.41 19.58Z"]), /* обычный */
 	div#injected-channel-player button:has(svg > path[d="M25.6 19.36C26.16 18.16 26.47 16.83 26.47 15.43C26.47 11.37 23.85 7.82 20.14 6.54V2.38C26.11 3.78 30.47 9.18001 30.47 15.43C30.47 17.92 29.77 20.28 28.55 22.31L25.6 19.36ZM13.16 6.92L17.14 3.03V10.9L13.16 6.92ZM23.64 15.43C23.64 12.74 22.25 10.37 20.14 9.01001V13.9L23.43 17.19C23.57 16.63 23.64 16.04 23.64 15.43ZM22.41 19.58L24.28 21.45L24.29 21.46L27.12 24.29L29.28 26.45L26.45 29.28L24.04 26.87C22.85 27.61 21.54 28.16 20.14 28.49V24.33C20.47 24.22 20.79 24.09 21.1 23.93L17.14 19.97V28.97L11 22.99H3.65002V9.01999H6.19002L2.71002 5.53999L5.54002 2.70999L11.43 8.59999L17.14 14.31L20.14 17.31L22.41 19.58Z"]), /* в модерке */
 	div:has(video#clip-creator-player) button:has(svg > path[d="M25.6 19.36C26.16 18.16 26.47 16.83 26.47 15.43C26.47 11.37 23.85 7.82 20.14 6.54V2.38C26.11 3.78 30.47 9.18001 30.47 15.43C30.47 17.92 29.77 20.28 28.55 22.31L25.6 19.36ZM13.16 6.92L17.14 3.03V10.9L13.16 6.92ZM23.64 15.43C23.64 12.74 22.25 10.37 20.14 9.01001V13.9L23.43 17.19C23.57 16.63 23.64 16.04 23.64 15.43ZM22.41 19.58L24.28 21.45L24.29 21.46L27.12 24.29L29.28 26.45L26.45 29.28L24.04 26.87C22.85 27.61 21.54 28.16 20.14 28.49V24.33C20.47 24.22 20.79 24.09 21.1 23.93L17.14 19.97V28.97L11 22.99H3.65002V9.01999H6.19002L2.71002 5.53999L5.54002 2.70999L11.43 8.59999L17.14 14.31L20.14 17.31L22.41 19.58Z"]), /* при создании клипа */
-	div[class *="group/card"] button:has(svg > path[d="M25.6 19.36C26.16 18.16 26.47 16.83 26.47 15.43C26.47 11.37 23.85 7.82 20.14 6.54V2.38C26.11 3.78 30.47 9.18001 30.47 15.43C30.47 17.92 29.77 20.28 28.55 22.31L25.6 19.36ZM13.16 6.92L17.14 3.03V10.9L13.16 6.92ZM23.64 15.43C23.64 12.74 22.25 10.37 20.14 9.01001V13.9L23.43 17.19C23.57 16.63 23.64 16.04 23.64 15.43ZM22.41 19.58L24.28 21.45L24.29 21.46L27.12 24.29L29.28 26.45L26.45 29.28L24.04 26.87C22.85 27.61 21.54 28.16 20.14 28.49V24.33C20.47 24.22 20.79 24.09 21.1 23.93L17.14 19.97V28.97L11 22.99H3.65002V9.01999H6.19002L2.71002 5.53999L5.54002 2.70999L11.43 8.59999L17.14 14.31L20.14 17.31L22.41 19.58Z"])
+	div[role="dialog"]:has(h2) button:has(svg > path[d="M25.6 19.36C26.16 18.16 26.47 16.83 26.47 15.43C26.47 11.37 23.85 7.82 20.14 6.54V2.38C26.11 3.78 30.47 9.18001 30.47 15.43C30.47 17.92 29.77 20.28 28.55 22.31L25.6 19.36ZM13.16 6.92L17.14 3.03V10.9L13.16 6.92ZM23.64 15.43C23.64 12.74 22.25 10.37 20.14 9.01001V13.9L23.43 17.19C23.57 16.63 23.64 16.04 23.64 15.43ZM22.41 19.58L24.28 21.45L24.29 21.46L27.12 24.29L29.28 26.45L26.45 29.28L24.04 26.87C22.85 27.61 21.54 28.16 20.14 28.49V24.33C20.47 24.22 20.79 24.09 21.1 23.93L17.14 19.97V28.97L11 22.99H3.65002V9.01999H6.19002L2.71002 5.53999L5.54002 2.70999L11.43 8.59999L17.14 14.31L20.14 17.31L22.41 19.58Z"]), /* при просмотре клипа */
+	div[class *="group/card"] button:has(svg > path[d="M25.6 19.36C26.16 18.16 26.47 16.83 26.47 15.43C26.47 11.37 23.85 7.82 20.14 6.54V2.38C26.11 3.78 30.47 9.18001 30.47 15.43C30.47 17.92 29.77 20.28 28.55 22.31L25.6 19.36ZM13.16 6.92L17.14 3.03V10.9L13.16 6.92ZM23.64 15.43C23.64 12.74 22.25 10.37 20.14 9.01001V13.9L23.43 17.19C23.57 16.63 23.64 16.04 23.64 15.43ZM22.41 19.58L24.28 21.45L24.29 21.46L27.12 24.29L29.28 26.45L26.45 29.28L24.04 26.87C22.85 27.61 21.54 28.16 20.14 28.49V24.33C20.47 24.22 20.79 24.09 21.1 23.93L17.14 19.97V28.97L11 22.99H3.65002V9.01999H6.19002L2.71002 5.53999L5.54002 2.70999L11.43 8.59999L17.14 14.31L20.14 17.31L22.41 19.58Z"]) /* карточка предпросмотра клипа */
 	{color: #FF6262 !important;filter: drop-shadow(0px 0px 4px #FF6262) !important;}
 	
-	/* Ползунок регулировки громкости */
-	div#injected-embedded-channel-player-video div[class *="group-hover/volume"], /* обычный */
-	div#injected-channel-player div[class *="group-hover/volume"] /* в модерке */
+	/* Ползунок регулировки громкости при уровне громкости 1-100% */
+	div#injected-embedded-channel-player-video div[class *="group-hover/volume"]:has(span[aria-label="Volume"][aria-valuenow]), /* обычный */
+	div[role="dialog"]:has(h2) span:has(span[aria-label="Volume"][aria-valuenow]), /* при просмотре клипа */
+	div#injected-channel-player div[class *="group-hover/volume"]:has(span[aria-label="Volume"][aria-valuenow]) /* в модерке */
 	{color: #A0FF48 !important;filter: drop-shadow(0px 0px 4px #A0FF48) !important;}
+	
+	/* Ползунок регулировки громкости, при уровне громкости 0% */
+	div#injected-embedded-channel-player-video div[class *="group-hover/volume"]:has(span[aria-label="Volume"][aria-valuenow="0"]), /* обычный */
+	div[role="dialog"]:has(h2) span:has(span[aria-label="Volume"][aria-valuenow="0"]), /* при просмотре клипа */
+	div#injected-channel-player div[class *="group-hover/volume"]:has(span[aria-label="Volume"][aria-valuenow="0"]) /* в модерке */
+	{color: #FF6262 !important;filter: drop-shadow(0px 0px 4px #FF6262) !important;}
+	
+	/* Кнопка Instant Screenshot (Mo'Kick) */
+	div#injected-embedded-channel-player-video button:has(svg > path[d="M13 7C13 7 13 29.9615 13 47.0048C13 49.2139 14.7909 51 17 51H57"]), /* обычный */
+	div#injected-channel-player button:has(svg > path[d="M13 7C13 7 13 29.9615 13 47.0048C13 49.2139 14.7909 51 17 51H57"]) /* в модерке */
+	{color: #FF6262 !important;filter: drop-shadow(0px 0px 4px #FF6262) !important;}
+	
+	/* Кнопка Filters (Mo'Kick) */
+	div#injected-embedded-channel-player-video button:has(svg > path[d="M6.01822 31.9999L21.9076 24.6624C23.1271 24.098 24.1099 23.1148 24.6741 21.8949L32.0091 6L39.344 21.8949C39.9084 23.1148 40.8911 24.098 42.1105 24.6624L58 31.9999L42.1105 39.3375C40.8911 39.9019 39.9084 40.8851 39.344 42.105L32.0091 58L24.6741 42.105C24.1099 40.8851 23.1271 39.9019 21.9076 39.3375L6 31.9999H6.01822Z"]), /* обычный */
+	div#injected-channel-player button:has(svg > path[d="M6.01822 31.9999L21.9076 24.6624C23.1271 24.098 24.1099 23.1148 24.6741 21.8949L32.0091 6L39.344 21.8949C39.9084 23.1148 40.8911 24.098 42.1105 24.6624L58 31.9999L42.1105 39.3375C40.8911 39.9019 39.9084 40.8851 39.344 42.105L32.0091 58L24.6741 42.105C24.1099 40.8851 23.1271 39.9019 21.9076 39.3375L6 31.9999H6.01822Z"]) /* в модерке */
+	{color: yellow !important;filter: drop-shadow(0px 0px 4px yellow) !important;}
+	div#injected-embedded-channel-player-video button:has(svg > path[d="M6.01822 31.9999L21.9076 24.6624C23.1271 24.098 24.1099 23.1148 24.6741 21.8949L32.0091 6L39.344 21.8949C39.9084 23.1148 40.8911 24.098 42.1105 24.6624L58 31.9999L42.1105 39.3375C40.8911 39.9019 39.9084 40.8851 39.344 42.105L32.0091 58L24.6741 42.105C24.1099 40.8851 23.1271 39.9019 21.9076 39.3375L6 31.9999H6.01822Z"]) > svg > path, /* обычный */
+	div#injected-channel-player button:has(svg > path[d="M6.01822 31.9999L21.9076 24.6624C23.1271 24.098 24.1099 23.1148 24.6741 21.8949L32.0091 6L39.344 21.8949C39.9084 23.1148 40.8911 24.098 42.1105 24.6624L58 31.9999L42.1105 39.3375C40.8911 39.9019 39.9084 40.8851 39.344 42.105L32.0091 58L24.6741 42.105C24.1099 40.8851 23.1271 39.9019 21.9076 39.3375L6 31.9999H6.01822Z"]) > svg > path /* в модерке */
+	{fill: yellow !important;}
+	
+	/* Кнопка Statistics (Mo'Kick) */
+	div#injected-embedded-channel-player-video button:has(svg > path[d="M4 4V28H28V4H4ZM11.8525 23.5H8.1025V13H11.8525V23.5ZM17.8525 23.5H14.1025V17.5H17.8525V23.5ZM23.8525 23.5H20.1025V8.5H23.8525V23.5Z"]), /* обычный */
+	div#injected-channel-player button:has(svg > path[d="M4 4V28H28V4H4ZM11.8525 23.5H8.1025V13H11.8525V23.5ZM17.8525 23.5H14.1025V17.5H17.8525V23.5ZM23.8525 23.5H20.1025V8.5H23.8525V23.5Z"]) /* в модерке */
+	{color: #a970ff !important;filter: drop-shadow(0px 0px 4px #a970ff) !important;}
 	
 	/* Кнопка Картинка в картинке */
 	div#injected-embedded-channel-player-video button:has(svg > path[d="M3.03 28.96V3.03H28.96V28.96H3.03ZM7.03 24.96H24.96V7.03H7.03V24.96ZM14.59 14.42H23.05V22.88H14.59V14.42Z"]), /* обычный */
@@ -256,6 +631,7 @@
 	
 	/* Кнопка Полный экран */
 	div#injected-embedded-channel-player-video button:has(svg > path[d="M7.03003 13.4H3.03003V3.03003H13.41V7.03003H7.03003V13.4ZM18.59 7.03003V3.03003H28.97V13.4H24.97V7.03003H18.59ZM7.03003 18.6H3.03003V28.97H13.41V24.97H7.03003V18.6ZM18.59 24.97H24.97V18.6H28.97V28.97H18.59V24.97Z"]), /* обычный */
+	div[role="dialog"]:has(h2) button:has(svg > path[d="M7.03003 13.4H3.03003V3.03003H13.41V7.03003H7.03003V13.4ZM18.59 7.03003V3.03003H28.97V13.4H24.97V7.03003H18.59ZM7.03003 18.6H3.03003V28.97H13.41V24.97H7.03003V18.6ZM18.59 24.97H24.97V18.6H28.97V28.97H18.59V24.97Z"]), /* при просмотре клипа */
 	div#injected-channel-player button:has(svg  > path[d="M7.03003 13.4H3.03003V3.03003H13.41V7.03003H7.03003V13.4ZM18.59 7.03003V3.03003H28.97V13.4H24.97V7.03003H18.59ZM7.03003 18.6H3.03003V28.97H13.41V24.97H7.03003V18.6ZM18.59 24.97H24.97V18.6H28.97V28.97H18.59V24.97Z"]) /* в модерке */
 	{color: #C39BFF !important;filter: drop-shadow(0px 0px 4px #C39BFF) !important;}
 	
@@ -270,47 +646,6 @@
 }
 @-moz-document domain("kick.com") {
 	
-/* ######################################## */
-/* ##### Личная карточка пользователя ##### */
-/* ######################################## */
-	
-	/* Внешней цвет рамки карточки пользователя за которую её можно двигать, при наведении курсора */
-	div#user-identity:hover {background-color:#343F34 !important;filter: drop-shadow(0px 0px 4px lightgreen)!important;}
-	
-	/* Ник в карточке пользователя при наведении курсора */
-	div#user-identity div:has(a) > a:hover {color: #53fc18 !important;text-decoration: underline !important;}
-	
-	/* Кнопка Фолов/Анфолов на пользователя */
-	div#user-identity > div > div > div > div > button[aria-label *="Отслеживать"] {color: magenta !important;filter: drop-shadow(0px 0px 4px magenta) !important;}
-	
-	/* Кнопка отправки в ЧС пользователя */
-	div#user-identity > div > div > div > div > button[data-state="closed"]:has(svg > path[d="M10.5 3.3 12 2l1 1-9.7 10L2 11.8l1.6-1.6a5 5 0 0 1-.8-2.5v-2h1.3v2c0 .6.1 1.1.4 1.6l.7-.7v-5c0-1.1 1-2 2.1-2h1c1.1 0 2 .7 2.1 1.7ZM11.7 6v1.8a3.8 3.8 0 0 1-5.2 3.5l-1 .9a5 5 0 0 0 1.8.5v.6H4.7v1.3h6.5v-1.3H8.5v-.6a5 5 0 0 0 4.4-5v-2H12l-.3.3Zm-1.1 2.2V7l-3.1 3.1h1c1.1 0 2-1 2-2.1Z"])
-	{color: #FF6262 !important;filter: drop-shadow(0px 0px 4px #FF6262) !important;}
-	div#user-identity > div > div > div > div > button[data-state="closed"]:has(svg > path[d="M15.6 3h.7a5 5 0 0 1 5 5v7.4a5 5 0 0 1-5 5h-.7a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5Zm7.8 12.3v-4h2.7v4a10 10 0 0 1-9 10v1.2h5.3V29H9.5v-2.5h5.2v-1.2a10 10 0 0 1-8.7-10v-4h2.5v4a7.5 7.5 0 0 0 15 0Z"])
-	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;}
-	
-	
-	/* Переключатель выдачи Бана */
-	div#user-identity div.contents > div[class] > button[aria-checked="true"] {background-color: #FF6262 !important;}
-	div#user-identity div.contents > div[class] > div:has(svg > path),
-	div#user-identity div.contents > div[class] > div > svg > path,
-	div#user-identity div.contents > div[class] > button {
-		color: #FF6262 !important;
-		fill: #FF6262 !important;
-		filter: drop-shadow(0px 0px 4px #FF6262) !important;
-	}
-	
-	/* Переключатель выдачи Таймача */
-	div#user-identity div.contents > div[data-orientation] > div[data-orientation] > h3 > div[type="button"] > button[aria-checked="true"] {background-color: #9048ff !important;}
-	div#user-identity div.contents > div[data-orientation] > div[data-orientation] > h3 > div > svg > path,
-	div#user-identity div.contents > div[data-orientation] > div[data-orientation] > h3 > div {
-		color: #9048ff !important;
-		fill: #9048ff !important;
-		filter: drop-shadow(0px 0px 4px rebeccapurple) !important;
-	}
-}
-@-moz-document domain("kick.com") {
-	
 /* ####################### */
 /* ##### Под плеером ##### */
 /* ####################### */
@@ -318,36 +653,78 @@
 	/* Ссылки при наведении на них курсора (по всему сайту) */
 	a[target="_blank"]:hover {color: #53fc18 !important;text-decoration: underline !important;}
 	
+	
+	/* Кнопка Notes */
+	div#channel-content button:has(span[data-role="button-icon"]),
+	div#channel-content button:has(span[data-role="button-icon"]) > span
+	{color: lightyellow !important;filter: drop-shadow(0px 0px 4px pink) !important;}
+	
 	/* Кнопка Включения/Отключения уведомлений о начале стрима */
-	button[aria-label="Включить уведомления"],
-	button[aria-label="Отключить уведомления"]:hover
+	div#channel-content button[aria-label="Включить уведомления"], /* под стримом */
+	div#channel-content button[aria-label="Отключить уведомления"]:hover, /* под стримом */
+	main[data-theatre-mode-container] button[aria-label="Включить уведомления"], /* под VOD'ом*/
+	main[data-theatre-mode-container] button[aria-label="Отключить уведомления"]:hover /* под VOD'ом*/
 	{color: #FF6262 !important;filter: drop-shadow(0px 0px 4px skyblue) !important;}
 	
-	button[aria-label="Отключить уведомления"],
-	button[aria-label="Включить уведомления"]:hover
+	div#channel-content button[aria-label="Отключить уведомления"], /* под стримом */
+	div#channel-content button[aria-label="Включить уведомления"]:hover, /* под стримом */
+	main[data-theatre-mode-container] button[aria-label="Отключить уведомления"], /* под VOD'ом*/
+	main[data-theatre-mode-container] button[aria-label="Включить уведомления"]:hover /* под VOD'ом*/
 	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px skyblue) !important;}
 	
 	/* Кнопка Фолов/Анфолов на канал */
-	button[data-testid="sub-button"] {background-color: #42474d !important;background-image: none !important;color: #53fc18 !important;filter: drop-shadow(0px 0px 4px #53fc18) !important;}
-	button[data-testid="sub-button"]:hover {background-color: #484e53 !important;background-image: none !important;color: #53fc18 !important;filter: drop-shadow(0px 0px 4px #53fc18) !important;}
+	div#channel-content button[data-testid="follow-button"], /* под стримом */
+	main[data-theatre-mode-container] button[data-testid="follow-button"], /* под VOD'ом */
+	div#channel-content button[data-testid="follow-button"][data-state="closed"], /* под стримом */
+	main[data-theatre-mode-container] button[data-testid="follow-button"][data-state="closed"] /* под VOD'ом */
+	{background-color: #484e53 !important;color: magenta !important;filter: drop-shadow(0px 0px 4px magenta) !important;}
 	
 	/* Кнопка Подарить подписку */
-	button[data-testid="gift-sub-button"] {color: gold !important;filter: drop-shadow(0px 0px 4px gold) !important;}
+	div#channel-content button[data-testid="gift-sub-button"], /* под стримом */
+	main[data-theatre-mode-container] button[data-testid="gift-sub-button"] /* под VOD'ом */
+	{color: gold !important;filter: drop-shadow(0px 0px 4px gold) !important;}
 	
 	/* Кнопка Подписаться */
-	button[aria-label="Перестать отслеживать"] {color: magenta !important;filter: drop-shadow(0px 0px 4px magenta) !important;}
+	div#channel-content button[data-testid="sub-button"] /* под стримом */
+	{background-color: #42474d !important;background-image: none !important;color: #53fc18 !important;filter: drop-shadow(0px 0px 4px #53fc18) !important;}
+	div#channel-content button[data-testid="sub-button"]:hover /* под стримом */
+	{background-color: #484e53 !important;background-image: none !important;color: #53fc18 !important;filter: drop-shadow(0px 0px 4px #53fc18) !important;}
+	main[data-theatre-mode-container]  button[data-testid="sub-button"] /* под VOD'ом */
+	{background-color: #42474d !important;background-image: none !important;color: #53fc18 !important;filter: drop-shadow(0px 0px 4px #53fc18) !important;}
+	main[data-theatre-mode-container]  button[data-testid="sub-button"]:hover /* под VOD'ом */
+	{background-color: #484e53 !important;background-image: none !important;color: #53fc18 !important;filter: drop-shadow(0px 0px 4px #53fc18) !important;}
 	
-	/* Кнопка Поделиться ссылкой на канал */
-	button[aria-label="Поделиться через"] {color: cyan !important;filter: drop-shadow(0px 0px 4px cyan) !important;}
-	
-	/* Кнопка Пожаловаться на канал */
-	button[aria-label="Пожаловаться"] {color: yellow !important;filter: drop-shadow(0px 0px 4px yellow) !important;}
-	
-	/* Кнопка перехода на страничку модератора канала (только для модераторов) */
-	a[aria-label="Открыть панель модератора"] {color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;}
 	
 	/* Счётчик зрителей */
-	div[data-testid="viewer-count"]:has(span) > svg:has(path) {fill: #FF6262 !important;}
+	div#channel-content div[data-testid="viewer-count"]:has(span) > svg:has(path), /* дефолт */
+	div#channel-content div > svg:has(g > path) /* (Mo'Kick) */
+	{color: #FF6262 !important;fill: #FF6262 !important;filter: drop-shadow(0px 0px 4px #FF6262) !important;}
+	
+	/* Chatters In Avg. (Mo'Kick) */
+	div#channel-content div > svg:has(path[d="M10.115 2.73999H5.885C2.98 2.73999 0.625 5.09499 0.625 7.99999C0.625 9.96999 1.71 11.685 3.31 12.585V14.59L6.8 13.26H10.115C13.02 13.26 15.375 10.905 15.375 7.99999C15.375 5.09499 13.02 2.73999 10.115 2.73999ZM4.55 9.23999C3.865 9.23999 3.31 8.68499 3.31 7.99999C3.31 7.31499 3.865 6.75999 4.55 6.75999C5.235 6.75999 5.785 7.31499 5.785 7.99999C5.785 8.68499 5.235 9.23999 4.55 9.23999ZM8 9.23999C7.315 9.23999 6.76 8.68499 6.76 7.99999C6.76 7.31499 7.315 6.75999 8 6.75999C8.685 6.75999 9.24 7.31499 9.24 7.99999C9.24 8.68499 8.685 9.23999 8 9.23999ZM11.45 9.23999C10.765 9.23999 10.215 8.68499 10.215 7.99999C10.215 7.31499 10.765 6.75999 11.45 6.75999C12.135 6.75999 12.69 7.31499 12.69 7.99999C12.69 8.68499 12.135 9.23999 11.45 9.23999Z"])
+	{color: lightyellow !important;filter: drop-shadow(0px 0px 4px pink) !important;}
+	
+	/* % Participation (Mo'Kick) */
+	div#channel-content div > svg:has(path[d="M4 4V28H28V4H4ZM11.8525 23.5H8.1025V13H11.8525V23.5ZM17.8525 23.5H14.1025V17.5H17.8525V23.5ZM23.8525 23.5H20.1025V8.5H23.8525V23.5Z"])
+	{fill: #C39BFF !important;filter: drop-shadow(0px 0px 4px #C39BFF) !important;}
+	
+	
+	/* Кнопка Поделиться ссылкой на канал */
+	div#channel-content button[aria-label="Поделиться через"], /* под стримом */
+	main[data-theatre-mode-container] button[aria-label="Поделиться через"] /* под VOD'ом */
+	{color: cyan !important;filter: drop-shadow(0px 0px 4px cyan) !important;}
+	
+	/* Кнопка Пожаловаться на канал */
+	div#channel-content button[aria-label="Пожаловаться"] /* под стримом */
+	{color: yellow !important;filter: drop-shadow(0px 0px 4px yellow) !important;}
+	
+	/* Кнопка перехода на страничку модератора канала (только для модераторов) */
+	div#channel-content a[aria-label="Открыть панель модератора"]
+	{color: lightgreen !important;filter: drop-shadow(0px 0px 4px lightgreen) !important;}
+	
+	/* Кнопка троеточия */
+	main[data-theatre-mode-container] button[aria-label="More actions"]
+	{color: #53fc18 !important;filter: drop-shadow(0px 0px 4px #53fc18) !important;}
 }
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
 	
@@ -437,7 +814,7 @@
 	
 	/* Снятие Таймача/Бана/Изменения в запретных словах */
 	div[data-grid="col"] div > svg:has(path[d="M16 3.43994C12.45 3.43994 9.25 4.90994 6.96 7.27994L3.44 3.75994V13.4999H13.18L12.29 12.6099L9.8 10.1199C11.35 8.46994 13.56 7.43994 16 7.43994C20.71 7.43994 24.55 11.2799 24.55 15.9999C24.55 17.8299 23.97 19.5399 22.97 20.9299L16.95 14.9099L15.94 15.9299L14.13 17.7399L14.19 17.8099L19.96 23.5699C18.77 24.1999 17.43 24.5499 16 24.5499C13.64 24.5499 11.51 23.5899 9.96 22.0399L7.13 24.8699C9.4 27.1499 12.53 28.5499 16 28.5499C22.93 28.5499 28.55 22.9299 28.55 15.9999C28.55 9.06994 22.93 3.43994 16 3.43994Z"])
-	{fill: cyan !important;filter: drop-shadow(0px 0px 4px cyan) !important;}
+	{fill: #53fc18 !important;filter: drop-shadow(0px 0px 4px #53fc18) !important;}
 	
 	/* Закрепление сообщения в чате */
 	div[data-grid="col"] div > svg:has(path[d="M25 17C24.997 14.406 23.348 12.198 21.042 11.363L21 11.35V3.85C22.732 3.392 23.989 1.844 24 0.001V0H8C8.001 1.853 9.262 3.41 10.972 3.864L11 3.87V11.37C8.658 12.215 7.012 14.414 7 16.999V19.5H14V28.5L16 32L18 28.5V19.5H25V17Z"])
