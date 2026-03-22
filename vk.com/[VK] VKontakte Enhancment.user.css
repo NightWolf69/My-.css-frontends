@@ -1,0 +1,57 @@
+/* ==UserStyle==
+@name           [VK] VKontakte Enhancment
+@namespace      https://github.com/NightWolf69
+@version        1.0.0
+@description    Правки внешнего вида для ВК
+@author         NightWolf_69
+@homepageURL    https://github.com/NightWolf69/My-.css-frontends
+@supportURL     https://github.com/NightWolf69/My-.css-frontends/issues
+@preprocessor   stylus
+
+@var	checkbox	visible_space_between_posts_toggle				"Сделать границу между разными постами визуально видемой"	1
+@var	checkbox	visiblety_left-right_btn_in-photo_view_toggle	"Улучшить видимость стрелок перелистывания фото, добавив под них тенет"	1
+
+==/UserStyle== */
+
+/*@@var	number		empty0	""	[0,0,0]*/
+@-moz-document domain("vk.com") {
+	
+	/* Контекстное меню из аватарки профиля на верхнем баре сайта (VK Expert) */
+	span.top_profile_mrow {
+		background-color: #F000 !important;
+	}
+    
+	
+	/* Сделать границу между разными постами в Профиле/Feed ленте визуально видемой */
+	if visible_space_between_posts_toggle {
+		/* Фон тела ленты */
+		body[scheme] section[class *="modeCard"][class *="mode-card"]:has(div#page-wall),
+		body[scheme] div[data-testid="feed_wall"] > div[data-testid="feed_main_container"] > div[class *="modeCard"] {
+			background-color: transparent !important;
+		}
+	
+		/* Фон тела отдельных постов в feed ленте */
+		body[scheme] div[data-testid="feed_wall"] > div[data-testid="feed_main_container"] > div[class *="modeCard"] > div[role="feed"] > article,
+		/* Фон тела отдельных постов в ленте профиля/канала */
+		body[scheme] section[class *="modeCard"] div#page-wall > div[role="feed"] > article {
+			background-color: var(--vkui--color_background_content) !important;
+			border-radius: 1em !important;
+			padding-top: .7em !important;
+			margin-block: -.55em !important;
+		}
+	
+		/* Удаление пустых блоков от рекламы между постами, которые остаются после AdBlock'еров */
+		body[scheme] div#spa_layout_content div[data-testid="feed_main_container"] > div[class *="modeCard"] > div[role="feed"] > article:has(div[style="display: block;"] > div div[class *="vkuiDiv__host vkuiRootComponent__host"]) {
+			display: none !important
+		}
+	}
+	
+	
+	/* Тень под кнопками перелистывания фото, для улучшения их видимости */
+	if visiblety_left-right_btn_in-photo_view_toggle {
+		div#pv_nav_btn_left,
+		div#pv_nav_btn_right {
+			filter: drop-shadow(0px 0px 4px #000) !important;
+		}
+	}
+}
