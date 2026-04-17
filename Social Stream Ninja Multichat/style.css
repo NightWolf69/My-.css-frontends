@@ -1,0 +1,60 @@
+/* Делает имя пользователя TWITCH, не курсивным в чате */
+div[data-source-type="twitch"] > div.hl-message > div.hl-name {font-style: normal !important;}
+
+/* Делает сообщение пользователя TWITCH, не курсивным в чате */
+div[data-source-type="twitch"] > div.hl-message > span.hl-content {font-style: normal !important;}
+
+/* Цвет выделения сообщения, когда меня упоминают в чате */
+div.highlight-chat.special-highlight[style="background-color: rgb(255, 243, 135);"] {background-color: #FF000050 !important;}
+
+/* Цвет выделения сообщения, когда новый пользователь чата пишет своё первое сообщение в чате */
+div.highlight-chat.special-highlight[style="background-color: pink;"] {background-color: #FF00FF50 !important;}
+
+/* Меняет цвет ссылки в чате, при наведении курсора */
+div.hl-message > span.hl-content > a:hover {color: lightblue !important;}
+	
+/* Цвет фона у контекстного меню в чате */
+body#main > nav#context-menu {background-color: var(--menu-background-color) !important;}
+	
+/* Цвет фона у контекстного под меню "User Actions" в чате */
+body#main > nav#context-menu > ul.context-menu__items > li[data-action="UserActions"] > ul.context-menu__submenu {background-color: var(--menu-background-color) !important;}
+	
+/* Цвет фона у контекстного под меню "Timeout User", у контекстного под меню "User Actions" в чате */
+body#main > nav#context-menu > ul.context-menu__items > li[data-action="UserActions"] > ul.context-menu__submenu > li[data-action="Timeout"] > ul.context-menu__submenu {background-color: var(--menu-background-color) !important;}
+	
+/* Цвет крестика закрытия контекстного меню в чате */
+body#main > nav#context-menu > div.closeBtn {background-color: grey !important;border: 0px transparent !important; color: var(--menu-background-color) !important;}
+body#main > nav#context-menu > div.closeBtn:hover {background-color: darkgrey !important;}
+	
+/* Цвет текста у пунктов контекстного меню в чате */
+body#main > nav#context-menu > ul.context-menu__items > li.context-menu__item > ul.context-menu__submenu > li.context-menu__item > a.context-menu__link {color: white !important;}
+	
+/* Цвет текста у пунктов контекстного под меню "User Actions" в чате */
+body#main > nav#context-menu > ul.context-menu__items > li.context-menu__item > a.context-menu__link {color: white !important;}
+	
+/* Цвет фона у контекстного под меню "Timeout User", у контекстного под меню "User Actions" в чате */
+body#main > nav#context-menu > ul.context-menu__items > li[data-action="UserActions"] > ul.context-menu__submenu > li[data-action="Timeout"] > ul.context-menu__submenu > li.context-menu__item > a.context-menu__link {color: white !important;}
+
+/* Отключить отображение пункта контекстного меню "Feature" в чате */
+body#main > nav#context-menu > ul.context-menu__items > li[data-action="Feature"] {display: none !important;}
+
+/* Отключить отображение пункта контекстного меню "Queue" в чате */
+body#main > nav#context-menu > ul.context-menu__items > li[data-action="Queue"] {display: none !important;}
+
+/* Отключить отображение пункта контекстного меню "Text To Speech" в чате */
+body#main > nav#context-menu > ul.context-menu__items > li[data-action="TTS"] {display: none !important;}
+
+/* Отключить отображение пункта контекстного меню "Text To Speech" в чате */
+body#main > nav#context-menu > ul.context-menu__items > li[data-action="Copy"] {display: none !important;}
+
+/* Отключить отображение пункта контекстного под меню "VIP User" */
+body#main > nav#context-menu > ul.context-menu__items > li[data-action="UserActions"] > ul.context-menu__submenu > li[data-action="VIP"] {display: none !important;}
+	
+/* Отключить отображение пункта контекстного под меню "Mark as Host" */
+body#main > nav#context-menu > ul.context-menu__items > li[data-action="UserActions"] > ul.context-menu__submenu > li[data-action="MarkHost"] {display: none !important;}
+
+/* Отключить отображение пункта контекстного под меню "Mark as Mod" */
+body#main > nav#context-menu > ul.context-menu__items > li[data-action="UserActions"] > ul.context-menu__submenu > li[data-action="MarkMod"] {display: none !important;}
+
+/* Отключить отображение пункта контекстного под меню "Mark as Bot" */
+body#main > nav#context-menu > ul.context-menu__items > li[data-action="UserActions"] > ul.context-menu__submenu > li[data-action="MarkBot"] {display: none !important;}
