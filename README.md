@@ -10,4 +10,4 @@
 
 ## Установка `.user.css` на аддон:
 + <a href="https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/kick.com/%5BKK%5D%20Kick%20Enhancment.user.css" target="kick"><img src="https://kick.com/img/kick-logo.svg" alt="Description" width="86"></a> v2.1.0
-+ <a href="https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/vk.com/%5BVK%5D%20VKontakte%20Enhancment.user.css" target="vk"><img src="https://vk.ru/favicon.ico" alt="Description" width="32"></a> v1.0.0
++ <a href="https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/vk.com/%5BVK%5D%20VKontakte%20Enhancment.user.css" target="vk"><img src="https://vk.ru/favicon.ico" alt="Description" width="24"></a> v1.0.0
