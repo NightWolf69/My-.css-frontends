@@ -1,6 +1,6 @@
 # Данный репазиторий содержит файлы вёрстки `.user.css` — которые дополняют и улучшают визуальную составляющую сайтов.
 
-Для использования `.user.css` стилей, вам необходим аддон для браузера, способный агружать и применять *user .css* код. Таких аддонов есть несколько, но я писа код, проверял его работоспособность, прокидывал настройки в менеджер стилей, и делал этот стиль под «[![Stylus logo](https://avatars.githubusercontent.com/u/29350089?s=16&v=4) Stylus](https://github.com/openstyles/stylus)». По этому, полную работоспособность всего функционала могу гарантировать только с этим аддоном.
+Для использования `.user.css` стилей, вам необходим аддон для браузера, способный загружать и применять *user .css* код. Таких аддонов есть несколько, но я писал код, проверял его работаспособность, прокидывал настройки в менеджер стилей, и в целом делал этот стиль, конкретно под «[![Stylus logo](https://avatars.githubusercontent.com/u/29350089?s=16&v=4) Stylus](https://github.com/openstyles/stylus)». По этому, полную работаспособность всего функционала могу гарантировать только на нём.
 
 ## Установка аддона «[![Stylus logo](https://avatars.githubusercontent.com/u/29350089?s=24&v=4) Stylus](https://github.com/openstyles/stylus)» на браузер:
 + <a href="https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne" target="_blank"><img src="https://www.google.com/chrome/static/images/favicons/favicon-32x32.png" width="24px"> Chrome</a>
