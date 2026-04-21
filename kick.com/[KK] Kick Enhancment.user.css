@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        2.1.0-pre-release
+@version        2.1.0
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов 7tv и Mo'Kick (установка этих аддонов опциональна)
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -582,22 +582,22 @@
 @var	number  		header-5-line-divider-45										"║"														 								[0,0,0]
 @var	number  		header-5-divider-8												"╠═══════════════ КНОПКИ ДЕЙСТВИЙ МОДЕРАТОРА ════════════════╣" 						[0,0,0]
 @var	number  		header-5-line-divider-46										"║"														 								[0,0,0]
-@var	checkbox			chat_moderator_btn_delete-msg_toggle						"╠    Изменение иконки 🗑 Удалить сообщение:"														1
+@var	checkbox			chat_moderator_btn_delete-msg_toggle						"╠    Изменение иконки 🗑 Удалить сообщение:"											1
 @var	number				chat_moderator_btn_delete-msg_order							"╠═        Смещение кнопки:"															[1,-1,1]
 @var	color				chat_moderator_btn_delete-msg_color							"╠═        Цвет кнопки:"																lightgreen
-@var	checkbox			chat_moderator_btn_delete-msg_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
+@var	checkbox			chat_moderator_btn_delete-msg_bg_toggle						"╠═       Свой цвет фона кнопки:"														0
 @var	color				chat_moderator_btn_delete-msg_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
 @var	number  		header-5-line-divider-47										"║"														 								[0,0,0]
-@var	checkbox			chat_moderator_btn_timeout-user_toggle						"╠    Изменение иконки ⏳ Отстранить пользователя на 5 минут:"										1
+@var	checkbox			chat_moderator_btn_timeout-user_toggle						"╠    Изменение иконки ⏳ Отстранить пользователя на 5 минут:"							1
 @var	number				chat_moderator_btn_timeout-user_order						"╠═        Смещение кнопки:"															[0,-1,1]
 @var	color				chat_moderator_btn_timeout-user_color						"╠═        Цвет кнопки:"																#9048FF
-@var	checkbox			chat_moderator_btn_timeout-user_bg_toggle					"╠═       Свой цвет фона кнопки:"														1
+@var	checkbox			chat_moderator_btn_timeout-user_bg_toggle					"╠═       Свой цвет фона кнопки:"														0
 @var	color				chat_moderator_btn_timeout-user_bg_color					"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
 @var	number  		header-5-line-divider-48										"║"														 								[0,0,0]
-@var	checkbox			chat_moderator_btn_ban-user_toggle							"╠    Изменение иконки 🔨 Забанить пользователя:"													1
+@var	checkbox			chat_moderator_btn_ban-user_toggle							"╠    Изменение иконки 🔨 Забанить пользователя:"										1
 @var	number				chat_moderator_btn_ban-user_order							"╠═        Смещение кнопки:"															[-1,-1,1]
 @var	color				chat_moderator_btn_ban-user_color							"╠═        Цвет кнопки:"																#F30
-@var	checkbox			chat_moderator_btn_ban-user_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
+@var	checkbox			chat_moderator_btn_ban-user_bg_toggle						"╠═       Свой цвет фона кнопки:"														0
 @var	color				chat_moderator_btn_ban-user_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
 @var	number  		header-5-line-divider-49										"║"														 								[0,0,0]
 @var	number  		header-5-divider-9												"╠══════════════ ОБЛАСТЬ ВВОДА СООБЩЕНИЯ В ЧАТ ══════════════╣" 						[0,0,0]
@@ -616,7 +616,7 @@
 @var	checkbox			chat_input-area_btn_emoji-menu_disable_if-7tv				"╠═        Отключить отображение кнопки, если есть кнопка смайлов от 7tv:"				0
 @var	color				chat_input-area_btn_emoji-menu_color						"╠═        Цвет кнопки:"																yellow
 @var	number  		header-5-line-divider-53										"║"														 								[0,0,0]
-@var	checkbox			chat_under-input-area_btn_channel-points-menu_toggle		"╠    Изменение кнопки ✨ открытия меню Очков канала (ttv: баллы канала):"					1
+@var	checkbox			chat_under-input-area_btn_channel-points-menu_toggle		"╠    Изменение кнопки ✨ открытия меню Очков канала (ttv: баллы канала):"				1
 @var	checkbox			chat_under-input-area_btn_channel-points-menu_disable		"╠═        Отключить отображение кнопки:"												0
 @var	color				chat_under-input-area_btn_channel-points-menu_color			"╠═        Цвет кнопки:"																rgb(24, 251, 176)
 @var	checkbox			chat_under-input-area_btn_channel-points-menu_bg_toggle		"╠═       Свой цвет фона кнопки:"														1
@@ -668,25 +668,22 @@
 @var	checkbox			channel-points-menu_btn_info_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				channel-points-menu_btn_info_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
 @var	number  		header-5-line-divider-63										"║"														 								[0,0,0]
-@var	checkbox			channel-points-menu_btn_back_toggle							"╠    Изменение кнопки ◀️ Назад:"														1
-@var	color				channel-points-menu_btn_back_color							"╠═        Цвет кнопки:"																lightgreen
-@var	checkbox			channel-points-menu_btn_back_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
-@var	color				channel-points-menu_btn_back_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
+@var	checkbox			channel-points-menu_btn_prediction_toggle					"╠    Изменение плашки Активной/Завершенной ставки за баллы канала:"					1
+@var	checkbox			channel-points-menu_btn_prediction_grid_toggle				"╠═        Расположить содержимое внутри плашки, по людски:"							1
+@var	color				channel-points-menu_btn_prediction_hat-icon_color			"╠═        Цвет иконки шляпы:"															magenta
+@var	color				channel-points-menu_btn_prediction_timer-text_color			"╠═        Цвет таймера до конца приёма ставок:"										#53FC18
+@var	color				channel-points-menu_btn_prediction-settings_color			"╠═        Цвет кнопки Управление:"														lightgreen
+@var	checkbox			channel-points-menu_btn_prediction-settings_bg_toggle		"╠═       Свой цвет фона кнопки Управление:"											1
+@var	color				channel-points-menu_btn_prediction-settings_bg_color		"╠══               Цвет фона кнопки Управление:"										rgba(66, 71, 77, .2)
+@var	checkbox			channel-points-menu_btn_prediction_bg_toggle				"╠═       Свой цвет фона плашки:"														1
+@var	color				channel-points-menu_btn_prediction_bg_color					"╠══               Цвет фона плашки:"													rgba(35, 38, 41, 1)
+@var	color				channel-points-menu_btn_prediction_hover_bg_color			"╠══               Цвет фона плашки, при наведении курсора:"							rgba(40, 43, 46, 1)
 @var	number  		header-5-line-divider-64										"║"														 								[0,0,0]
-@var	checkbox			channel-points-menu_btn_close_toggle						"╠    Изменение кнопки ❌ Закрыть:"														1
-@var	color				channel-points-menu_btn_close_color							"╠═        Цвет кнопки:"																#F30
-@var	checkbox			channel-points-menu_btn_close_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
-@var	color				channel-points-menu_btn_close_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-65										"║"														 								[0,0,0]
-@var	checkbox			channel-points-menu_btns_grid_bet_bg_color_toggle			"╠    Сделать отступы по краям, для корректного отображения свечения:"					1
-@var	color				channel-points-menu_btns_grid_bet_bg_color					"╠═       Цвет фона у кнопки Текущей/Завершенной ставки на баллы:"						rgba(35, 38, 41, 1)
-@var	color				channel-points-menu_btns_grid_bet_hover_bg_color			"╠═       Цвет фона у кнопки Текущей/Завершенной ставки на баллы, при наведении курсора:"	rgba(40, 43, 46, 1)
-@var	number  		header-5-line-divider-66										"║"														 								[0,0,0]
 @var	checkbox			channel-points-menu_btns_grid_edge-glow_toggle				"╠    Сделать отступы по краям, для корректного отображения свечения:"					1
 @var	color				channel-points-menu_btns_grid_edge-glow_color				"╠═       Цвет внешнего свечения у покупаемых плиток с наградой:"						rgba(24, 251, 176, .4)
-@var	number  		header-5-line-divider-67										"║"														 								[0,0,0]
+@var	number  		header-5-line-divider-65										"║"														 								[0,0,0]
 @var	checkbox			channel-points-menu_btns_grid_compact_toggle				"╠    Сделать кнопки с наградами за баллы канала, компактнее:"							1
-@var	number  		header-5-line-divider-68										"║"														 								[0,0,0]
+@var	number  		header-5-line-divider-66										"║"														 								[0,0,0]
 @var	number  		header-5-divider-11												"╠════════════════ МЕНЮ: МАГАЗИН ПОДАРКОВ ═════════════════╣" 							[0,0,0]
 @var	number  		header-5-line-divider-00										"║"														 								[0,0,0]
 @var	checkbox  			header-5-WIP												"║ Планируется реализовать в будущем..."				 								0
@@ -5550,100 +5547,123 @@ purple3=#9048FF
 	}
 	
 	
-	/* Фон кнопки "Текущей/Завершенной ставки" за баллы канала */
-	if channel-points-menu_btns_grid_bet_bg_color_toggle {
-		/* Без наведения курсора */
-		div#rewards-panel > div > div > div > div > div.flex.flex-col > button:has(path#Vector) {
-			background-color: channel-points-menu_btns_grid_bet_bg_color !important;
-		}
+	/* Текущая/Завершенная ставка в меню баллов канала */
+	if channel-points-menu_btn_prediction_toggle {
+		/* Свой фон плашки */
+		if channel-points-menu_btn_prediction_bg_toggle {
+			/* Без наведения курсора */
+				/* Активная */
+				div#rewards-panel > div > div > div > div > div.flex.flex-col > div[role="button"]:has(path#Vector),
+				/* Завершенная */
+				div#rewards-panel > div > div > div > div > div.flex.flex-col > button:has(path#Vector) {
+					background-color: channel-points-menu_btn_prediction_bg_color !important;
+					background-image: none !important;
+				}
 	
-		/* При наведении курсора */
-		div#rewards-panel > div > div > div > div > div.flex.flex-col > button:has(path#Vector):hover {
-			background-color: channel-points-menu_btns_grid_bet_hover_bg_color !important;
-		}
-	}
-	
-	
-/* Активная/Завершенная ставка в меню баллов канала */
-	/* Делает расположение эллементы в плашке активной ставки, вертикально, вместо горизонтального по дефолту */
-	div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > div[role="button"] {
-		display: flex !important;
-		flex-wrap: wrap !important;
-	}
-	
-	
-	/* Перемещает иконку Шляпы, вверх */
-		/* Активная */
-		div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > div[role="button"] > div.flex.items-center,
-		/* Завершенная */
-		div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > button > div.flex.items-center {
-			display: flex !important;
-			align-items: flex-start !important;
+			/* При наведении курсора */
+				/* Активная */
+				div#rewards-panel > div > div > div > div > div.flex.flex-col > div[role="button"]:has(path#Vector):hover,
+				/* Завершенная */
+				div#rewards-panel > div > div > div > div > div.flex.flex-col > button:has(path#Vector):hover {
+					background-color: channel-points-menu_btn_prediction_hover_bg_color !important;
+					background-image: none !important;
+				}
 		}
 	
 	
-	/* Цвет иконки Шляпы */
-		/* Без наведения курсора */
-			/* Активная */
-			div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > div[role="button"] > div.flex.items-center g[id="mingcute:magic-hat-fill"] path,
-			/* Завершенная */
-			div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > button g[id="mingcute:magic-hat-fill"] path {
-				fill: magenta !important;
-			}
-	
-		/* При наведении курсора */
-			/* Активная */
-			div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > div[role="button"]:hover > div.flex.items-center g[id="mingcute:magic-hat-fill"] path,
-			/* Завершенная */
-			div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > button:hover g[id="mingcute:magic-hat-fill"] path {
-				filter: drop-shadow(0px 0px 4px magenta) !important;
+		/* Распологает эллементы внутри плашки, по человечески, горизонтально, и в несколько слоёв */
+		if channel-points-menu_btn_prediction_grid_toggle {
+			/* Делает расположение эллементы в плашке ставки, вертикально, вместо горизонтального по дефолту */
+			div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > div[role="button"] {
+				display: flex !important;
+				flex-wrap: wrap !important;
 			}
 	
 	
-	/* Выравнивает кнопку "Управление" по центру плашки */
-		div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > div[role="button"]:has(button[dir="ltr"]) {
-			display: flex !important;
-			justify-content: center !important;
+			/* Перемещает иконку Шляпы, вверх */
+				/* Активная */
+				div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > div[role="button"] > div.flex.items-center,
+				/* Завершенная */
+				div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > button > div.flex.items-center {
+					display: flex !important;
+					align-items: flex-start !important;
+				}
+	
+	
+			/* Выравнивает кнопку "Управление" по центру плашки */
+			div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > div[role="button"]:has(button[dir="ltr"]) {
+				display: flex !important;
+				justify-content: center !important;
+			}
 		}
 	
 	
-	/* Кнопка "Управление" в плашке */
-		div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > div[role="button"] > button[dir="ltr"] {
-				background-color: rgba(66, 71, 77, .2) !important;
-				background-image: none !important;
-		}
+		/* Цвет иконки Шляпы */
+			/* Без наведения курсора */
+				/* Активная */
+				div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > div[role="button"] > div.flex.items-center g[id="mingcute:magic-hat-fill"] path,
+				/* Завершенная */
+				div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > button g[id="mingcute:magic-hat-fill"] path {
+					fill: channel-points-menu_btn_prediction_hat-icon_color !important;
+				}
+	
+			/* При наведении курсора */
+				/* Активная */
+				div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > div[role="button"]:hover > div.flex.items-center g[id="mingcute:magic-hat-fill"] path,
+				/* Завершенная */
+				div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > button:hover g[id="mingcute:magic-hat-fill"] path {
+					filter: drop-shadow(0px 0px 4px channel-points-menu_btn_prediction_hat-icon_color) !important;
+				}
 	
 	
-		/* Без наведения курсора */
-		div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > div[role="button"] > button[dir="ltr"] {
-				color: lightgreen !important;
-		}
+		/* Таймер до конца приёма ставок */
+			div#rewards-panel > div > div > div > div > div > div[role="button"] > div > span:has(> p) > span:has(> span) {gap: .5rem !important;}
+			div#rewards-panel > div > div > div > div > div > div[role="button"] > div > span:has(> p) > span > span {
+				color: channel-points-menu_btn_prediction_timer-text_color !important;
+			}
 	
-		/* При наведении курсора */
-		div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > div[role="button"] > button[dir="ltr"]:hover {
-				filter: drop-shadow(0px 0px 4px lightgreen) !important;
-		}
+	
+		/* Кнопка "Управление" в плашке */
+			/* Свой фон кнопки */
+			if channel-points-menu_btn_prediction-settings_bg_toggle {
+				div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > div[role="button"] > button[dir="ltr"] {
+						background-color: channel-points-menu_btn_prediction-settings_bg_color !important;
+						background-image: none !important;
+				}
+			}
+	
+	
+			/* Без наведения курсора */
+			div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > div[role="button"] > button[dir="ltr"] {
+					color: channel-points-menu_btn_prediction-settings_color !important;
+			}
+	
+			/* При наведении курсора */
+			div#rewards-panel > div.relative.bg-surface-base > div > div > div > div > div[role="button"] > button[dir="ltr"]:hover {
+					filter: drop-shadow(0px 0px 4px channel-points-menu_btn_prediction-settings_color) !important;
+			}
+	}
 	
 	
 	/* Выравнивание кликабельных кнопок, и подсветка при наведении курсора */
 	if channel-points-menu_btns_grid_edge-glow_toggle {
 		/* Без наведения курсора */
-			/* Кнопка текущей/завершенный ставки */
+			/* Кнопка Активной/Завершенной ставки */
 			div#rewards-panel > div > div > div > div > div.flex.flex-col > button:has(path#Vector),
-			/* Кнопки плиток с товаром за баллы канала — Если кнопки "текущей/завершенный ставки" есть */
+			/* Кнопки плиток с товаром за баллы канала — Если кнопки "Активной/Завершенной ставки" есть */
 			div#rewards-panel > div > div > div > div > div.flex.flex-col > div.grid > button[type="button"]:has(p.text-ellipsis):has(div > span) {
 				margin-inline: .2rem !important;
 				margin-top: .4rem !important;
 			}
 	
-			/* Кнопки плиток с товаром за баллы канала — Если кнопки "текущей/завершенный ставки" нет */
+			/* Кнопки плиток с товаром за баллы канала — Если кнопки "Активной/Завершенной ставки" нет */
 			div#rewards-panel > div > div > div > div > div.flex.flex-col:has(> button path#Vector) > div.grid > button[type="button"]:has(p.text-ellipsis):has(div > span) {
-				margin-inline: .4rem !important;
+				margin-inline: .2rem !important;
 				margin-top: 0rem !important;
 			}
 	
 		/* При наведении курсора */
-			/* Кнопка текущей/завершенный ставки */
+			/* Кнопка Активной/Завершенной ставки */
 			/*div#rewards-panel > div > div > div > div > div.flex.flex-col > button:has(path#Vector):hover,*/
 			/* Кнопки плиток с товаром за баллы канала */
 			div#rewards-panel button[type="button"]:has(p.text-ellipsis):has(div > span):hover {
