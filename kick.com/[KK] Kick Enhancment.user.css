@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        2.1.0
+@version        2.1.1
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов 7tv и Mo'Kick (установка этих аддонов опциональна)
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -3752,12 +3752,12 @@ purple3=#9048FF
 		/* Пункт контекстного меню "👁 Отключить" */
 			/* Без наведения курсора */
 			div[data-radix-popper-content-wrapper] > div[role="menu"].z-dropdown button:has(> svg >path[d="M17.3213 7.18001H9L2 14.1713V17.6713L4.415 20.0863L17.3213 7.18001Z"]) {
-				color: prediction-msg_btn_context-menu_hide_color !important;
+				color: prediction-msg_btn_context-menu_hide_color;
 			}
 	
 			/* При наведении курсора */
 			div[data-radix-popper-content-wrapper] > div[role="menu"].z-dropdown button:has(> svg >path[d="M17.3213 7.18001H9L2 14.1713V17.6713L4.415 20.0863L17.3213 7.18001Z"]):hover {
-				filter: drop-shadow(0px 0px 4px prediction-msg_btn_context-menu_hide_color) !important;
+				filter: drop-shadow(0px 0px 4px prediction-msg_btn_context-menu_hide_color);
 			}
 	}
 }
