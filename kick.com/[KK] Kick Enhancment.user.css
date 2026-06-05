@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        2.1.2
+@version        2.1.3
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов 7tv и Mo'Kick (установка этих аддонов опциональна)
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -121,7 +121,7 @@
 @var	checkbox			player_in-tab_volume-slider_force							"╠    🎚 Ползунок регулировки громкости всегда видно в 📌 плеере In-Tab (Mo'Kick):"		1
 @var	checkbox			player_clip_volume-slider_force								"╠    🎚 Ползунок регулировки громкости всегда видно в 🎞 плеере Просмотра клипа:"		1
 @var	number  		header-3-line-divider-7											"║"														 								[0,0,0]
-@var	checkbox			player_btn_stream-record_toggle								"╠    Изменение кнопки 🎥 Stream Recorder аддона Mo'Kick:"								1
+@var	checkbox			player_btn_stream-record_toggle								"╠    Изменение кнопки 🎥 Stream Record аддона Mo'Kick:"								1
 @var	checkbox			player_btn_stream-record_disable							"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_stream-record_disable						"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_stream-record_order								"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-4,-10,10]
@@ -605,6 +605,7 @@
 @var	color				chat_moderator_btn_timeout-user_bg_color					"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
 @var	number  		header-5-line-divider-48										"║"														 								[0,0,0]
 @var	checkbox			chat_moderator_btn_ban-user_toggle							"╠    Изменение иконки 🔨 Забанить пользователя:"										1
+@var	checkbox			chat_moderator_btn_ban-user_hide-4-mod						"╠═        Спрятать кнопку бана 🛠 Модераторов:"										1
 @var	number				chat_moderator_btn_ban-user_order							"╠═        Смещение кнопки:"															[-1,-1,1]
 @var	color				chat_moderator_btn_ban-user_color							"╠═        Цвет кнопки:"																#F30
 @var	checkbox			chat_moderator_btn_ban-user_bg_toggle						"╠═       Свой цвет фона кнопки:"														0
@@ -5213,7 +5214,7 @@ purple3=#9048FF
 			order: chat_moderator_btn_timeout-user_order !important;
 		}
 	
-		/* Активная - Без наведения курсора */
+		/* Активная - При наведении курсора */
 		div#channel-chatroom div[data-index] div.inline-flex > button:has(svg > path[d *="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]):hover {
 			filter: drop-shadow(0px 0px 4px chat_moderator_btn_timeout-user_color) !important;
 		}
@@ -5234,6 +5235,15 @@ purple3=#9048FF
 				background-image: none !important;
 			}
 		}
+		
+		
+		/* Прячет кнопку "Забанить" у пользователей модераторов */
+		if chat_moderator_btn_ban-user_hide-4-mod {
+			div#channel-chatroom div[data-index]:has(svg g path[d="M30 0C31.1046 0 32 0.895431 32 2V30C32 31.1046 31.1046 32 30 32H2C0.895431 32 0 31.1046 0 30V2C0 0.895431 0.895431 0 2 0H30ZM16.2197 2.99316C15.8292 2.60266 15.1962 2.60265 14.8057 2.99316L8.36328 9.43555C7.97294 9.82608 7.97284 10.4591 8.36328 10.8496L10.0918 12.5781C10.4823 12.9686 11.1153 12.9685 11.5059 12.5781L11.585 12.499L13.9414 14.8564L3.57129 25.2275C2.70357 26.0954 2.7035 27.5023 3.57129 28.3701C4.43911 29.2376 5.84612 29.2377 6.71387 28.3701L17.084 17.999L19.4414 20.3564L19.3633 20.4346C18.9728 20.8251 18.9728 21.4581 19.3633 21.8486L21.0918 23.5771C21.4823 23.9676 22.1154 23.9676 22.5059 23.5771L28.9482 17.1348C29.3386 16.7443 29.3386 16.1112 28.9482 15.7207L27.2197 13.9922C26.8293 13.6017 26.1962 13.6018 25.8057 13.9922L25.7266 14.0703L23.3701 11.7139C24.2377 10.8461 24.2376 9.4391 23.3701 8.57129C22.5023 7.7035 21.0954 7.70357 20.2275 8.57129L17.8701 6.21387L17.9482 6.13574C18.3388 5.74522 18.3388 5.11221 17.9482 4.72168L16.2197 2.99316Z"]) div.inline-flex > button:has(svg > path[d *="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]) {
+				color: transparent !important;
+				z-index: -1 !important;
+			}
+		}
 	
 	
 		/* Активные - Без наведения курсора */
@@ -5242,7 +5252,7 @@ purple3=#9048FF
 			order: chat_moderator_btn_ban-user_order !important;
 		}
 	
-		/* Активные - Без наведения курсора */
+		/* Активные - При наведении курсора */
 		div#channel-chatroom div[data-index] div.inline-flex > button:has(svg > path[d *="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]):hover {
 			filter: drop-shadow(0px 0px 4px chat_moderator_btn_ban-user_color) !important;
 		}
@@ -6131,7 +6141,10 @@ purple3=#9048FF
 	if user-profile-card_btn_advanced-profile-card_toggle {
 		/* Свой фон кнопки */
 		if user-profile-card_btn_advanced-profile-card_bg_toggle {
-			div#user-identity  button:has(path[d="M25 17C24.997 14.406 23.348 12.198 21.042 11.363L21 11.35V3.85C22.732 3.392 23.989 1.844 24 0.001V0H8C8.001 1.853 9.262 3.41 10.972 3.864L11 3.87V11.37C8.658 12.215 7.012 14.414 7 16.999V19.5H14V28.5L16 32L18 28.5V19.5H25V17Z"]) {
+			/* Обычная карточка */
+			div#user-identity button:has(path[d="M25 17C24.997 14.406 23.348 12.198 21.042 11.363L21 11.35V3.85C22.732 3.392 23.989 1.844 24 0.001V0H8C8.001 1.853 9.262 3.41 10.972 3.864L11 3.87V11.37C8.658 12.215 7.012 14.414 7 16.999V19.5H14V28.5L16 32L18 28.5V19.5H25V17Z"]),
+			/* Когда чат в отдельной вкладке, и мало места */
+			div.moKick-expanded div.pin_holder button:has(path[d="M25 17C24.997 14.406 23.348 12.198 21.042 11.363L21 11.35V3.85C22.732 3.392 23.989 1.844 24 0.001V0H8C8.001 1.853 9.262 3.41 10.972 3.864L11 3.87V11.37C8.658 12.215 7.012 14.414 7 16.999V19.5H14V28.5L16 32L18 28.5V19.5H25V17Z"]) {
 				background-color: user-profile-card_btn_advanced-profile-card_bg_color !important;
 				background-image: none !important;
 			}
@@ -6139,14 +6152,22 @@ purple3=#9048FF
 	
 	
 		/* Без наведения курсора */
-		div#user-identity  button:has(path[d="M25 17C24.997 14.406 23.348 12.198 21.042 11.363L21 11.35V3.85C22.732 3.392 23.989 1.844 24 0.001V0H8C8.001 1.853 9.262 3.41 10.972 3.864L11 3.87V11.37C8.658 12.215 7.012 14.414 7 16.999V19.5H14V28.5L16 32L18 28.5V19.5H25V17Z"]) {
-			color: user-profile-card_btn_advanced-profile-card_color !important;
-		}
+			/* Обычная карточка */
+			div#user-identity button:has(path[d="M25 17C24.997 14.406 23.348 12.198 21.042 11.363L21 11.35V3.85C22.732 3.392 23.989 1.844 24 0.001V0H8C8.001 1.853 9.262 3.41 10.972 3.864L11 3.87V11.37C8.658 12.215 7.012 14.414 7 16.999V19.5H14V28.5L16 32L18 28.5V19.5H25V17Z"]),
+			/* Когда чат в отдельной вкладке, и мало места */
+			div.moKick-expanded div.pin_holder button:has(path[d="M25 17C24.997 14.406 23.348 12.198 21.042 11.363L21 11.35V3.85C22.732 3.392 23.989 1.844 24 0.001V0H8C8.001 1.853 9.262 3.41 10.972 3.864L11 3.87V11.37C8.658 12.215 7.012 14.414 7 16.999V19.5H14V28.5L16 32L18 28.5V19.5H25V17Z"])
+			{
+				color: user-profile-card_btn_advanced-profile-card_color !important;
+			}
 	
 		/* При наведении курсора */
-		div#user-identity  button:has(path[d="M25 17C24.997 14.406 23.348 12.198 21.042 11.363L21 11.35V3.85C22.732 3.392 23.989 1.844 24 0.001V0H8C8.001 1.853 9.262 3.41 10.972 3.864L11 3.87V11.37C8.658 12.215 7.012 14.414 7 16.999V19.5H14V28.5L16 32L18 28.5V19.5H25V17Z"]):hover {
-			filter: drop-shadow(0px 0px 4px user-profile-card_btn_advanced-profile-card_color) !important;
-		}
+			/* Обычная карточка */
+			div#user-identity button:has(path[d="M25 17C24.997 14.406 23.348 12.198 21.042 11.363L21 11.35V3.85C22.732 3.392 23.989 1.844 24 0.001V0H8C8.001 1.853 9.262 3.41 10.972 3.864L11 3.87V11.37C8.658 12.215 7.012 14.414 7 16.999V19.5H14V28.5L16 32L18 28.5V19.5H25V17Z"]):hover,
+			/* Когда чат в отдельной вкладке, и мало места */
+			div.moKick-expanded div.pin_holder button:has(path[d="M25 17C24.997 14.406 23.348 12.198 21.042 11.363L21 11.35V3.85C22.732 3.392 23.989 1.844 24 0.001V0H8C8.001 1.853 9.262 3.41 10.972 3.864L11 3.87V11.37C8.658 12.215 7.012 14.414 7 16.999V19.5H14V28.5L16 32L18 28.5V19.5H25V17Z"]):hover
+			{
+				filter: drop-shadow(0px 0px 4px user-profile-card_btn_advanced-profile-card_color) !important;
+			}
 	}
 	
 	
