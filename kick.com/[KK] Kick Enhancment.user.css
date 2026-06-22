@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        2.1.3
+@version        2.1.4
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов 7tv и Mo'Kick (установка этих аддонов опциональна)
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -91,22 +91,24 @@
 @var	color				player_lower_gradient_color									"╠    Градиент под кнопками плеера:"													rgba(0, 0, 0, 0.8)
 @var	checkbox			player_lower_info_readability_toggle						"╠    Улучшить видимость текста с инфой внизу плеера:"									1
 @var	number  		header-3-line-divider-1											"║"														 								[0,0,0]
+@var	checkbox			player_stream-recorder_widget_toggle						"╠    Компактный вид виджет «Stream Recorder» аддона Mo'Kick:"							1
+@var	number  		header-3-line-divider-2											"║"														 								[0,0,0]
 @var	checkbox			player_btn_rewind_toggle									"╠    Изменение кнопки ⏪ Rewind аддона Mo'Kick:"										1
 @var	checkbox			player_btn_rewind_disable									"╠═        Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"					0
 @var	checkbox			player_in_mod_btn_rewind_disable							"╠═        Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	color				player_btn_rewind_color										"╠═       Цвет внешнего свечения кнопки:"												#C39BFF
-@var	number  		header-3-line-divider-2											"║"														 								[0,0,0]
+@var	number  		header-3-line-divider-3											"║"														 								[0,0,0]
 @var	checkbox			player_btn_watch-again_toggle								"╠    Изменение кнопки 🔄 Повторное воспроизведение:"									1
 @var	color				player_btn_watch-again_color								"╠═        Цвет внешнего свечения кнопки:"												#53FC18
-@var	number  		header-3-line-divider-3											"║"														 								[0,0,0]
+@var	number  		header-3-line-divider-4											"║"														 								[0,0,0]
 @var	checkbox			player_btn_pause-play_toggle								"╠    Изменение кнопки ⏯ Пауза/Воспроизвести:"											1
 @var	color				player_btn_pause-play_color									"╠═        Цвет внешнего свечения кнопки:"												#A970FF
-@var	number  		header-3-line-divider-4											"║"														 								[0,0,0]
+@var	number  		header-3-line-divider-5											"║"														 								[0,0,0]
 @var	checkbox			player_btn_fast-forward_toggle								"╠    Изменение кнопки ⏩ Fast Forward аддона Mo'Kick:"									1
 @var	checkbox			player_btn_fast-forward_disable								"╠═        Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"					0
 @var	checkbox			player_in_mod_btn_fast-forward_disable						"╠═        Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	color				player_btn_fast-forward_color								"╠═       Цвет внешнего свечения кнопки:"												#C39BFF
-@var	number  		header-3-line-divider-5											"║"														 								[0,0,0]
+@var	number  		header-3-line-divider-6											"║"														 								[0,0,0]
 @var	checkbox			player_btn_mute-unmute_toggle								"╠    Изменение кнопки 🔈 Отключить звук / 🔇 Отменить отключение звука:"				1
 @var	checkbox			player_btn_mute-unmute_disable								"╠═        Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"					0
 @var	checkbox			player_in_mod_btn_mute-unmute_disable						"╠═        Отключить отображение кнопки в 🛠 плеере Модерки:"							0
@@ -114,69 +116,69 @@
 @var	checkbox			player_clip_btn_mute-unmute_disable							"╠═        Отключить отображение кнопки в 🎞 плеере Просмотра клипа:"					0
 @var	color				player_btn_unmuted_color									"╠═        Цвет внешнего свечения, когда звук 🔈 Включен:"								#A0FF48
 @var	color				player_btn_muted_color										"╠═        Цвет внешнего свечения, когда звук 🔇 Отключен:"								#FF6262
-@var	number  		header-3-line-divider-6											"║"														 								[0,0,0]
+@var	number  		header-3-line-divider-7											"║"														 								[0,0,0]
 @var	checkbox			player_volume-slider_fix									"╠    Фикс перекрытия 🎚 Ползунока регулировки громкости, шкалой перемотки:"			1
 @var	checkbox			player_volume-slider_force									"╠    🎚 Ползунок регулировки громкости всегда видно в ▶️ плеере Стрима и VOD'а:"		1
 @var	checkbox			player_in_mod_volume-slider_force							"╠    🎚 Ползунок регулировки громкости всегда видно в 🛠 плеере Модерки:"				1
 @var	checkbox			player_in-tab_volume-slider_force							"╠    🎚 Ползунок регулировки громкости всегда видно в 📌 плеере In-Tab (Mo'Kick):"		1
 @var	checkbox			player_clip_volume-slider_force								"╠    🎚 Ползунок регулировки громкости всегда видно в 🎞 плеере Просмотра клипа:"		1
-@var	number  		header-3-line-divider-7											"║"														 								[0,0,0]
+@var	number  		header-3-line-divider-8											"║"														 								[0,0,0]
 @var	checkbox			player_btn_stream-record_toggle								"╠    Изменение кнопки 🎥 Stream Record аддона Mo'Kick:"								1
 @var	checkbox			player_btn_stream-record_disable							"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_stream-record_disable						"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_stream-record_order								"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-4,-10,10]
 @var	number				player_in_mod_btn_stream-record_order						"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[-4,-10,10]
 @var	color				player_btn_stream-record_color								"╠═        Цвет внешнего свечения кнопки:"												#FF6262
-@var	number  		header-3-line-divider-8											"║"														 								[0,0,0]
+@var	number  		header-3-line-divider-9											"║"														 								[0,0,0]
 @var	checkbox			player_btn_screenshot_toggle								"╠    Изменение кнопки 📸 Instant Screenshot аддона Mo'Kick:"							1
 @var	checkbox			player_btn_screenshot_disable								"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_screenshot_disable						"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							0
 @var	number				player_btn_screenshot_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[3,-10,10]
 @var	number				player_in_mod_btn_screenshot_order							"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[3,-10,10]
 @var	color				player_btn_screenshot_color									"╠═        Цвет внешнего свечения кнопки:"												#FF6262
-@var	number  		header-3-line-divider-8											"║"														 								[0,0,0]
+@var	number  		header-3-line-divider-10										"║"														 								[0,0,0]
 @var	checkbox			player_btn_filters_toggle									"╠    Изменение кнопки ✨ Filters аддона Mo'Kick:"										1
 @var	checkbox			player_btn_filters_disable									"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_filters_disable							"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_filters_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-2,-10,10]
 @var	number				player_in_mod_btn_filters_order								"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[-2,-10,10]
 @var	color				player_btn_filters_color									"╠═        Цвет внешнего свечения кнопки:"												yellow
-@var	number  		header-3-line-divider-9											"║"														 								[0,0,0]
+@var	number  		header-3-line-divider-11											"║"														 								[0,0,0]
 @var	checkbox			player_btn_speed_toggle										"╠    Изменение кнопки 🎛 Playback Speed аддона Mo'Kick:"								1
 @var	checkbox			player_btn_speed_disable									"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_speed_disable								"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_speed_order										"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[1,-10,10]
 @var	number				player_in_mod_btn_speed_order								"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[1,-10,10]
 @var	color				player_btn_speed_color										"╠═        Цвет внешнего свечения кнопки:"												cyan
-@var	number  		header-3-line-divider-10										"║"														 								[0,0,0]
+@var	number  		header-3-line-divider-12										"║"														 								[0,0,0]
 @var	checkbox			player_btn_statistics_toggle								"╠    Изменение кнопки 📊 Statistics аддона Mo'Kick:"									1
 @var	checkbox			player_btn_statistics_disable								"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_statistics_disable						"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_statistics_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[0,-10,10]
 @var	number				player_in_mod_btn_statistics_order							"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[0,-10,10]
 @var	color				player_btn_statistics_color									"╠═        Цвет внешнего свечения кнопки:"												#C39BFF
-@var	number  		header-3-line-divider-11										"║"														 								[0,0,0]
+@var	number  		header-3-line-divider-13										"║"														 								[0,0,0]
 @var	checkbox			player_btn_pip_toggle										"╠    Изменение кнопки 🪟 Картинка в картинке:"											1
 @var	checkbox			player_btn_pip_disable										"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						1
 @var	checkbox			player_in_mod_btn_pip_disable								"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_pip_order										"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-1,-10,10]
 @var	number				player_in_mod_btn_pip_order									"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[-1,-10,10]
 @var	color				player_btn_pip_color										"╠═        Цвет внешнего свечения кнопки:"												#578FFE
-@var	number  		header-3-line-divider-12										"║"														 								[0,0,0]
+@var	number  		header-3-line-divider-14										"║"														 								[0,0,0]
 @var	checkbox			player_btn_clip_toggle										"╠    Изменение кнопки 🎬 Клип:"														1
 @var	checkbox			player_btn_clip_disable										"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_clip_disable								"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_clip_order										"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-4,-10,10]
 @var	number				player_in_mod_btn_clip_order								"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[-4,-10,10]
 @var	color				player_btn_clip_color										"╠═        Цвет внешнего свечения кнопки:"												#A0FF48
-@var	number  		header-3-line-divider-13										"║"														 								[0,0,0]
+@var	number  		header-3-line-divider-15										"║"														 								[0,0,0]
 @var	checkbox			player_btn_theatre_toggle									"╠    Изменение кнопки 🔛 Театральный режим:"											1
 @var	checkbox			player_btn_theatre_disable									"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_theatre_disable							"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_theatre_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[2,-10,10]
 @var	number				player_in_mod_btn_theatre_order								"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[2,-10,10]
 @var	color				player_btn_theatre_color									"╠═        Цвет внешнего свечения кнопки:"												#A970FF
-@var	number  		header-3-line-divider-14										"║"														 								[0,0,0]
+@var	number  		header-3-line-divider-16										"║"														 								[0,0,0]
 @var	checkbox			player_btn_fullscreen_toggle								"╠    Изменение кнопки ↗️ Полный экран:"												1
 @var	checkbox			player_btn_fullscreen_disable								"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_fullscreen_disable						"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
@@ -185,14 +187,14 @@
 @var	number				player_btn_fullscreen_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[4,-10,10]
 @var	number				player_in_mod_btn_fullscreen_order							"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[4,-10,10]
 @var	color				player_btn_fullscreen_color									"╠═        Цвет внешнего свечения кнопки:"												#9048FF
-@var	number  		header-3-line-divider-15										"║"														 								[0,0,0]
+@var	number  		header-3-line-divider-17										"║"														 								[0,0,0]
 @var	checkbox			player_btn_quality_toggle									"╠    Изменение кнопки ⚙️ Качество:"													1
 @var	checkbox			player_btn_quality_disable									"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_quality_disable							"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							0
 @var	number				player_btn_quality_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-3,-10,10]
 @var	number				player_in_mod_btn_quality_order								"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[-3,-10,10]
 @var	color				player_btn_quality_color									"╠═        Цвет внешнего свечения кнопки:"												orange
-@var	number  		header-3-line-divider-16										"║"														 								[0,0,0]
+@var	number  		header-3-line-divider-18										"║"														 								[0,0,0]
 @var	number  		header-3-end													"╚═══════════════════════════════════════════════════════╝" 							[0,0,0]
 
 @var	number  		empty3															"" 																						[0,0,0]
@@ -249,6 +251,7 @@
 @var	color				channel_info_btn_share_bg_color								"╠══               Цвет фона кнопки"													rgba(66, 71, 77, .2)
 @var	number  		header-4-line-divider-9											"║"														 								[0,0,0]
 @var	checkbox			channel_info_btn_download_toggle							"╠    Изменение кнопки ⬇️ Скачать:"														1
+@var	checkbox			channel_info_btn_download_text_disable						"╠═        Убрать текст в кнопке:"														1
 @var	color				channel_info_btn_download_color								"╠═        Цвет кнопки"																	lightgreen
 @var	checkbox			channel_info_btn_download_bg_toggle							"╠═       Свой цвет фона кнопки"														1
 @var	color				channel_info_btn_download_bg_color							"╠══               Цвет фона кнопки"													rgba(66, 71, 77, .2)
@@ -1385,6 +1388,85 @@ purple3=#9048FF
 			/* В плеере 🎞 Просмотра клипа */
 			div[role="dialog"]:has(h2) > div.flex > div.z-player > div.z-controls > div.flex > span.tabular-nums {
 					filter: drop-shadow(0px 0px 4px #000) !important;
+			}
+	}
+	
+	
+	/* Виджет записи стрима "Stream Recorder" (Mo'Kick) */
+	if player_stream-recorder_widget_toggle {
+		/* Без наведения курсора */
+			/* Фон виджета */
+			div#injected-embedded-channel-player-video > div:has(video#video-player) > div[data-state="open"]:has(> span) {
+				background: rgba(23, 26, 28, .6) !important;
+				filter: blur(.6px)
+			}
+	
+			/* Замена надписи "Stream Recorder" на состояние записи "Пауза записи" */
+			div#injected-embedded-channel-player-video > div:has(video#video-player) > div[data-state="open"]:has(span.text-orange-500) > span {
+				font-size: 0px !important;
+			}
+			div#injected-embedded-channel-player-video > div:has(video#video-player) > div[data-state="open"]:has(span.text-orange-500) > span:after {
+				content: "| |";
+				color: orange !important;
+				font-size: .75rem !important;
+			}
+	
+			/* Замена надписи "Stream Recorder" на состояние записи "Записи идёт" */
+			div#injected-embedded-channel-player-video > div:has(video#video-player) > div[data-state="open"]:has(span.text-danger-lower.animate-pulse) > span {
+				font-size: 0px !important;
+			}
+			div#injected-embedded-channel-player-video > div:has(video#video-player) > div[data-state="open"]:has(span.text-danger-lower.animate-pulse) > span:after {
+				content: "●";
+				color: red !important;
+				font-size: .75rem !important;
+			}
+	
+			/* Нижнее подчёркивание и нижний отступ */
+			div#injected-embedded-channel-player-video > div:has(video#video-player) > div[data-state="open"]:has(> span) > span {
+    			border-bottom-width: 0 !important;
+    			margin-bottom: -.3rem !important;
+    			padding-bottom: .0rem !important;
+			}
+
+			/* Содержимое виджета */
+			div#injected-embedded-channel-player-video > div:has(video#video-player) > div[data-state="open"]:has(> span) > div:has(> span) {
+				display: none;
+			}
+	
+	
+		/* При наведении курсора */
+			/* Фон виджета */
+			div#injected-embedded-channel-player-video > div:has(video#video-player) > div[data-state="open"]:has(> span):hover {
+				background: rgba(23, 26, 28, .8) !important;
+				filter: blur(0px)
+			}
+	
+			/* Замена надписи "Stream Recorder" на состояние записи "Пауза записи" */
+			div#injected-embedded-channel-player-video > div:has(video#video-player) > div[data-state="open"]:has(span.text-orange-500):hover > span:after {
+				content: "";
+			}
+			div#injected-embedded-channel-player-video > div:has(video#video-player) > div[data-state="open"]:has(span.text-orange-500):hover > span {
+				font-size: inherit !important;
+			}
+	
+			/* Замена надписи "Stream Recorder" на состояние записи "Записи идёт" */
+			div#injected-embedded-channel-player-video > div:has(video#video-player) > div[data-state="open"]:has(span.text-danger-lower.animate-pulse):hover > span:after {
+				content: "";
+			}
+			div#injected-embedded-channel-player-video > div:has(video#video-player) > div[data-state="open"]:has(span.text-danger-lower.animate-pulse):hover > span {
+				font-size: inherit !important;
+			}
+
+			/* Нижнее подчёркивание и нижний отступ */
+			div#injected-embedded-channel-player-video > div:has(video#video-player) > div[data-state="open"]:has(> span):hover > span {
+    			border-bottom-width: inherit !important;
+    			margin-bottom: inherit !important;
+    			padding-bottom: inherit !important;
+			}
+
+			/* Содержимое виджета */
+			div#injected-embedded-channel-player-video > div:has(video#video-player) > div[data-state="open"]:has(> span):hover > div:has(> span) {
+				display: flex;
 			}
 	}
 	
@@ -2634,10 +2716,24 @@ purple3=#9048FF
 				background-color: channel_info_btn_download_bg_color !important;
 				background-image: none !important;
 			}
+		}
 	
-			main[data-theatre-mode-container] div.overflow-hidden button:has(polygon[points="8.93 8.24 8.93 0 6.94 0 6.94 8.12 5.71 6.89 4.3 8.3 8 12 11.7 8.3 10.29 6.89 8.93 8.24"]) {
-				padding-top: .75rem !important;
-				padding-bottom: .75rem !important;
+	
+		/* Убрать текст в кнопке под VOD'ом */
+		if channel_info_btn_download_text_disable {
+			/* Уменшает размер иконки и текста */
+			main[data-theatre-mode-container] div.overflow-hidden button:not([aria-label]):has(polygon[points="8.93 8.24 8.93 0 6.94 0 6.94 8.12 5.71 6.89 4.3 8.3 8 12 11.7 8.3 10.29 6.89 8.93 8.24"]) span {
+				font-size: 0 !important;
+			}
+	
+			/* Возвращает размер для иконки */
+			main[data-theatre-mode-container] div.overflow-hidden button:not([aria-label]):has(polygon[points="8.93 8.24 8.93 0 6.94 0 6.94 8.12 5.71 6.89 4.3 8.3 8 12 11.7 8.3 10.29 6.89 8.93 8.24"]) span:has(polygon[points="8.93 8.24 8.93 0 6.94 0 6.94 8.12 5.71 6.89 4.3 8.3 8 12 11.7 8.3 10.29 6.89 8.93 8.24"]) {
+				font-size: inherit !important;
+			}
+	
+			/* Убирает зазор между икон6кой и текстом */
+			main[data-theatre-mode-container] div.overflow-hidden button:not([aria-label]):has(polygon[points="8.93 8.24 8.93 0 6.94 0 6.94 8.12 5.71 6.89 4.3 8.3 8 12 11.7 8.3 10.29 6.89 8.93 8.24"]) {
+				gap: 0rem !important;
 			}
 		}
 	
@@ -7419,7 +7515,7 @@ purple3=#9048FF
 	}
 	
 	
-	/* Виджет: "🔴 Информация о сессмм" */
+	/* Виджет: "🔴 Информация о сессии" */
 	if mod-dashboard_widgets-window_session-info_toggle {
 		/* Плавность анимаций */
 		div[data-type="session-info"] > div,
