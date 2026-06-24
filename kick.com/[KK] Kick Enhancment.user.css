@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        2.1.4
+@version        2.1.5
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов 7tv и Mo'Kick (установка этих аддонов опциональна)
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -2716,6 +2716,12 @@ purple3=#9048FF
 				background-color: channel_info_btn_download_bg_color !important;
 				background-image: none !important;
 			}
+		}
+		
+		/* Увеличить размер кнопки "Скачать" под клипом */
+		main[data-theatre-mode-container] div.overflow-hidden button:has(> div > svg polygon[points="8.93 8.24 8.93 0 6.94 0 6.94 8.12 5.71 6.89 4.3 8.3 8 12 11.7 8.3 10.29 6.89 8.93 8.24"]) {
+			padding-top: .75rem !important;
+			padding-bottom: .75rem !important;
 		}
 	
 	
