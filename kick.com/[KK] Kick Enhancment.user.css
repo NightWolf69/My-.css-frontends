@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        2.1.7
-@description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов 7tv и Mo'Kick (установка этих аддонов опциональна)
+@version        2.1.8
+@description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов 7tv и Mo'Kick (использование этих аддонов опционально)
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
 @supportURL     https://github.com/NightWolf69/My-.css-frontends/issues
@@ -176,12 +176,17 @@
 @var	number				player_in_mod_btn_pip_order									"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[-1,-10,10]
 @var	color				player_btn_pip_color										"╠═        Цвет внешнего свечения кнопки:"												#578FFE
 @var	number  		header-3-line-divider-14										"║"														 								[0,0,0]
-@var	checkbox			player_btn_clip_toggle										"╠    Изменение кнопки 🎬 Клип:"														1
+@var	checkbox			player_btn_clip_toggle										"╠    Изменение кнопки 🎬 Clip:"														1
 @var	checkbox			player_btn_clip_disable										"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_clip_disable								"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_clip_order										"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-4,-10,10]
 @var	number				player_in_mod_btn_clip_order								"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[-4,-10,10]
 @var	color				player_btn_clip_color										"╠═        Цвет внешнего свечения кнопки:"												#A0FF48
+@var	number  		header-3-line-divider-15										"║"														 								[0,0,0]
+@var	checkbox			player_btn_captions_toggle									"╠    Изменение кнопки 📟 Captions:"													1
+@var	checkbox			player_btn_captions_disable									"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
+@var	number				player_btn_captions_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[1,-10,10]
+@var	color				player_btn_captions_color									"╠═        Цвет внешнего свечения кнопки:"												rgb(69, 173, 252)
 @var	number  		header-3-line-divider-15										"║"														 								[0,0,0]
 @var	checkbox			player_btn_theatre_toggle									"╠    Изменение кнопки 🔛 Театральный режим:"											1
 @var	checkbox			player_btn_theatre_disable									"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
@@ -2246,7 +2251,7 @@ purple3=#9048FF
 	}
 	
 	
-	/* Кнопка 🎬 "Создать клип" в плеере канала */
+	/* Кнопка 🎬 "Clip" в плеере канала */
 	if player_btn_clip_toggle {
 		/* Отключение в плеере 🔴 Стрима и VOD'а */
 		if player_btn_clip_disable {
@@ -2290,6 +2295,49 @@ purple3=#9048FF
 		div[data-grid="element"] div#injected-channel-player button:has(svg > path[d="M1.82739 7.28856L27.0598 1.71777L28.2433 7.07867L3.01097 12.6495L1.82739 7.28856ZM3.03003 28.9699V13.6999H28.96V28.9699H3.03003ZM19.98 21.3299L13.47 16.7299V25.9299L19.98 21.3299Z"]):hover {
 			filter: drop-shadow(0px 0px 4px player_btn_clip_color) !important;
 		}
+	}
+	
+	
+	/* Кнопка 📟 "Captions" в плеере канала */
+	if player_btn_captions_toggle {
+		/* Отключение в плеере 🔴 Стрима и VOD'а */
+		if player_btn_captions_disable {
+			/* Субтитры Откл. */
+			div#injected-embedded-channel-player-video button:has(svg path[d="M20 17.9994H0V2.00049H20V17.9994ZM1.87494 16.1244H18.1251V3.87543H1.87494V16.1244Z"]),
+			/* Субтитры Вкл. */
+			div#injected-embedded-channel-player-video button:has(svg path[d="M20 17.999H0V2H20V17.999ZM4 5.2002V14.7998H9V12.4004H6V7.60059L9 7.59961V5.2002H4ZM11.001 5.2002V14.7988H16V12.3994H13V7.59961H16V5.2002H11.001Z"]) {
+				display: none !important;
+			}
+		}
+	
+	
+		/* Смещение в плеере 🔴 Стрима и VOD'а */
+			/* Субтитры Откл. */
+			div#injected-embedded-channel-player-video button:has(svg path[d="M20 17.9994H0V2.00049H20V17.9994ZM1.87494 16.1244H18.1251V3.87543H1.87494V16.1244Z"]),
+			/* Субтитры Вкл. */
+			div#injected-embedded-channel-player-video button:has(svg path[d="M20 17.999H0V2H20V17.999ZM4 5.2002V14.7998H9V12.4004H6V7.60059L9 7.59961V5.2002H4ZM11.001 5.2002V14.7988H16V12.3994H13V7.59961H16V5.2002H11.001Z"]) {
+				order: player_btn_captions_order !important;
+			}
+	
+	
+		/* Без наведения курсора */
+			/* В плеере 🔴 Стрима и VOD'а */
+				/* Субтитры Откл. */
+				div#injected-embedded-channel-player-video button:has(svg path[d="M20 17.9994H0V2.00049H20V17.9994ZM1.87494 16.1244H18.1251V3.87543H1.87494V16.1244Z"]) path,
+				/* Субтитры Вкл. */
+				div#injected-embedded-channel-player-video button:has(svg path[d="M20 17.999H0V2H20V17.999ZM4 5.2002V14.7998H9V12.4004H6V7.60059L9 7.59961V5.2002H4ZM11.001 5.2002V14.7988H16V12.3994H13V7.59961H16V5.2002H11.001Z"]) path {
+					fill: player_btn_captions_color !important;
+					filter: drop-shadow(0px 0px 4px #000) !important;
+				}
+	
+		/* При наведении курсора */
+			/* В плеере 🔴 Стрима и VOD'а */
+				/* Субтитры Откл. */
+				div#injected-embedded-channel-player-video button:has(svg path[d="M20 17.9994H0V2.00049H20V17.9994ZM1.87494 16.1244H18.1251V3.87543H1.87494V16.1244Z"]):hover,
+				/* Субтитры Вкл. */
+				div#injected-embedded-channel-player-video button:has(svg path[d="M20 17.999H0V2H20V17.999ZM4 5.2002V14.7998H9V12.4004H6V7.60059L9 7.59961V5.2002H4ZM11.001 5.2002V14.7988H16V12.3994H13V7.59961H16V5.2002H11.001Z"]):hover {
+					filter: drop-shadow(0px 0px 4px player_btn_captions_color) !important;
+				}
 	}
 	
 	
@@ -6263,7 +6311,7 @@ purple3=#9048FF
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
 /* ########################################################## */
-/* ##### Всплывающее Окно: Личная Капточка Пользователя ##### */
+/* ##### Всплывающее Окно: Личная Карточка Пользователя ##### */
 /* ########################################################## */
 	
 	/* Ник пользователя в его карточке пользователя */
