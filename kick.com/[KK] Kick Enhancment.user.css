@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        2.1.8
+@version        2.1.9
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов 7tv и Mo'Kick (использование этих аддонов опционально)
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -1149,7 +1149,7 @@ purple3=#9048FF
 	
 	/* Цвет скролбара */
 	if site_scrollbar_toggle {
-		body {
+		html {
 			scrollbar-color: site_scrollbar_color transparent !important;
 		}
 	}
@@ -3213,7 +3213,10 @@ purple3=#9048FF
 	if chat_btn_active-chatters_toggle {
 		/* Отключение кнопки в чате 🔴 Стрима и VOD'а */
 		if chat_btn_active-chatters_in-channel_disable {
-			div#channel-chatroom button:has(svg g path[d="M0 20v12h4v-8h12v8h16V20zM9 18A9 9 0 1 0 8.999-.001 9 9 0 0 0 9 18M9 4c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5M26 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12"]) {
+			/* Чат 🔴 Стрима и VOD'а */
+			div#channel-chatroom button:has(svg g path[d="M0 20v12h4v-8h12v8h16V20zM9 18A9 9 0 1 0 8.999-.001 9 9 0 0 0 9 18M9 4c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5M26 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12"]),
+		/* В отдельном 🪟 окне чате 🔴 Стрима и VOD'а */
+			div#channel-chatroom button:has(svg g path[d="M4.5 9C6.985 9 9 6.985 9 4.5C9 2.015 6.985 0 4.5 0C2.015 0 0 2.015 0 4.5C0 6.985 2.015 9 4.5 9ZM4.5 2C5.88 2 7 3.12 7 4.5C7 5.88 5.88 7 4.5 7C3.12 7 2 5.88 2 4.5C2 3.12 3.12 2 4.5 2ZM8 10H0V12V16H2V12H8V16H16V10H10H8ZM16 6C16 7.65685 14.6569 9 13 9C11.3431 9 10 7.65685 10 6C10 4.34315 11.3431 3 13 3C14.6569 3 16 4.34315 16 6Z"]) {
 				display: none !important;
 			}
 		}
@@ -3222,7 +3225,9 @@ purple3=#9048FF
 		/* Свой фон кнопки */
 		if chat_btn_active-chatters_bg_toggle {
 			/* В чате 🔴 Стрима и VOD'а */
-			div#channel-chatroom button:has(svg g path[d="M0 20v12h4v-8h12v8h16V20zM9 18A9 9 0 1 0 8.999-.001 9 9 0 0 0 9 18M9 4c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5M26 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12"]) {
+			div#channel-chatroom button:has(svg g path[d="M0 20v12h4v-8h12v8h16V20zM9 18A9 9 0 1 0 8.999-.001 9 9 0 0 0 9 18M9 4c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5M26 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12"]),
+			/* В отдельном 🪟 окне чате 🔴 Стрима и VOD'а */
+			div#channel-chatroom button:has(svg g path[d="M4.5 9C6.985 9 9 6.985 9 4.5C9 2.015 6.985 0 4.5 0C2.015 0 0 2.015 0 4.5C0 6.985 2.015 9 4.5 9ZM4.5 2C5.88 2 7 3.12 7 4.5C7 5.88 5.88 7 4.5 7C3.12 7 2 5.88 2 4.5C2 3.12 3.12 2 4.5 2ZM8 10H0V12V16H2V12H8V16H16V10H10H8ZM16 6C16 7.65685 14.6569 9 13 9C11.3431 9 10 7.65685 10 6C10 4.34315 11.3431 3 13 3C14.6569 3 16 4.34315 16 6Z"]) {
 				background-color: chat_btn_active-chatters_bg_color !important;
 				background-image: none !important;
 			}
@@ -3230,7 +3235,10 @@ purple3=#9048FF
 	
 	
 		/* Делает размер кнопки, таким же, как у кнопки […] контекстного меню (Mo'Kick) */
-		div#channel-chatroom button:has(svg g path[d="M0 20v12h4v-8h12v8h16V20zM9 18A9 9 0 1 0 8.999-.001 9 9 0 0 0 9 18M9 4c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5M26 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12"]) {
+		/* В чате 🔴 Стрима и VOD'а */
+		div#channel-chatroom button:has(svg g path[d="M0 20v12h4v-8h12v8h16V20zM9 18A9 9 0 1 0 8.999-.001 9 9 0 0 0 9 18M9 4c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5M26 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12"]),
+		/* В отдельном 🪟 окне чате 🔴 Стрима и VOD'а */
+		div#channel-chatroom button:has(svg g path[d="M4.5 9C6.985 9 9 6.985 9 4.5C9 2.015 6.985 0 4.5 0C2.015 0 0 2.015 0 4.5C0 6.985 2.015 9 4.5 9ZM4.5 2C5.88 2 7 3.12 7 4.5C7 5.88 5.88 7 4.5 7C3.12 7 2 5.88 2 4.5C2 3.12 3.12 2 4.5 2ZM8 10H0V12V16H2V12H8V16H16V10H10H8ZM16 6C16 7.65685 14.6569 9 13 9C11.3431 9 10 7.65685 10 6C10 4.34315 11.3431 3 13 3C14.6569 3 16 4.34315 16 6Z"]) {
 			height: 2rem;
 			width: 2rem;
 		}
@@ -3238,14 +3246,18 @@ purple3=#9048FF
 	
 		/* Без наведения курсора */
 			/* В чате 🔴 Стрима и VOD'а */
-			div#channel-chatroom button:has(svg g path[d="M0 20v12h4v-8h12v8h16V20zM9 18A9 9 0 1 0 8.999-.001 9 9 0 0 0 9 18M9 4c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5M26 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12"]) {
+			div#channel-chatroom button:has(svg g path[d="M0 20v12h4v-8h12v8h16V20zM9 18A9 9 0 1 0 8.999-.001 9 9 0 0 0 9 18M9 4c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5M26 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12"]),
+			/* В отдельном 🪟 окне чате 🔴 Стрима и VOD'а */
+			div#channel-chatroom button:has(svg g path[d="M4.5 9C6.985 9 9 6.985 9 4.5C9 2.015 6.985 0 4.5 0C2.015 0 0 2.015 0 4.5C0 6.985 2.015 9 4.5 9ZM4.5 2C5.88 2 7 3.12 7 4.5C7 5.88 5.88 7 4.5 7C3.12 7 2 5.88 2 4.5C2 3.12 3.12 2 4.5 2ZM8 10H0V12V16H2V12H8V16H16V10H10H8ZM16 6C16 7.65685 14.6569 9 13 9C11.3431 9 10 7.65685 10 6C10 4.34315 11.3431 3 13 3C14.6569 3 16 4.34315 16 6Z"]) {
 				color: chat_btn_active-chatters_color !important;
 				order: chat_btn_active-chatters_order !important;
 			}
 	
 		/* При наведении курсора */
 			/* В чате 🔴 Стрима и VOD'а */
-			div#channel-chatroom button:has(svg g path[d="M0 20v12h4v-8h12v8h16V20zM9 18A9 9 0 1 0 8.999-.001 9 9 0 0 0 9 18M9 4c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5M26 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12"]):hover {
+			div#channel-chatroom button:has(svg g path[d="M0 20v12h4v-8h12v8h16V20zM9 18A9 9 0 1 0 8.999-.001 9 9 0 0 0 9 18M9 4c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5M26 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12"]):hover,
+			/* В отдельном 🪟 окне чате 🔴 Стрима и VOD'а */
+			div#channel-chatroom button:has(svg g path[d="M4.5 9C6.985 9 9 6.985 9 4.5C9 2.015 6.985 0 4.5 0C2.015 0 0 2.015 0 4.5C0 6.985 2.015 9 4.5 9ZM4.5 2C5.88 2 7 3.12 7 4.5C7 5.88 5.88 7 4.5 7C3.12 7 2 5.88 2 4.5C2 3.12 3.12 2 4.5 2ZM8 10H0V12V16H2V12H8V16H16V10H10H8ZM16 6C16 7.65685 14.6569 9 13 9C11.3431 9 10 7.65685 10 6C10 4.34315 11.3431 3 13 3C14.6569 3 16 4.34315 16 6Z"]):hover {
 				filter: drop-shadow(0px 0px 4px chat_btn_active-chatters_color) !important;
 			}
 	}
@@ -4495,6 +4507,7 @@ purple3=#9048FF
 		/* Цвет фона у удалённого сообщения */
 		if chat_deleted_message_bg_toggle {
 			div#channel-chatroom div[data-index]:has(div span.text-neutral > span.line-through), /* дефолтные */
+			div#chatroom-messages div[data-index]:has(div span.text-neutral > span.line-through), /* ветка */
 			div#channel-chatroom div[data-index]:has(seventv-container.mokick_deleted-message), /* (7tv / Mo'Kick) */
 			div#channel-chatroom div[data-index]:has(span.mokick_deleted-message) /* (Mo'Kick) */ {
 				background-color: chat_deleted_message_bg_color !important;
@@ -4506,6 +4519,7 @@ purple3=#9048FF
 		if chat_deleted_message_text_strike_disable {
 			/* В чате 🔴 Стрима */
 			div#channel-chatroom span.text-neutral > span.line-through, /* дефолтные */
+			div#chatroom-messages span.text-neutral > span.line-through, /* ветка */
 			div#channel-chatroom div[data-index] seventv-container.mokick_deleted-message, /* (7tv) */
 			/* В функциональных окнах 🗑 "Message Log" и 💬 "Chat Clears", в чате 🔴 Стрима */
 			div#channel-chatroom div[class *="break-words"] span.mokick_deleted-message,
@@ -4534,6 +4548,8 @@ purple3=#9048FF
 		/* Информация в скобках "(Deleted/Timed Out/Banned)" и/или "[Bullying/Hate/Violence]" в удалённом модератором сообщении */
 			/* В чате 🔴 Стрима и 🛠 Модерки */
 			div#channel-chatroom span.text-neutral > span.font-semibold,
+			/* В чате 🔴 Стрима и 🛠 Модерки в Ветке */
+			div#chatroom-messages span.text-neutral > span.font-semibold,
 			/* В чате 🔴 Стрима и 🛠 Модерки (7tv / Mo'Kick) */
 			div#channel-chatroom div[data-index] seventv-container.mokick_deleted-message > span[data-deleted-message-exclude],
 			/* В чате 🔴 Стрима и 🛠 Модерки (7tv / Mo'Kick) */
@@ -4874,8 +4890,10 @@ purple3=#9048FF
 				div:has(div#chatroom-messages) div[data-index] button[aria-label="Удалить"],
 				/* В функциональных окнах 🗑 "Message Log" и 💬 "Chat Clears" */
 				div[data-state="open"] div[data-mo-kick-injected] > button[aria-label="Удалить"],
-				/* В плавающих 🪟 функциональных окнах (Mo'Kick)*/
-				div.moKick-draggable div[data-mo-kick-injected] > button[data-action="Удалить"] {
+				/* В плавающих 🪟 функциональных окнах (Mo'Kick) */
+				div.moKick-draggable div[data-mo-kick-injected] > button[data-action="Удалить"],
+				/* В 💬 ветке сообщений */
+				div#chatroom-messages div[data-index] button[aria-label="Удалить"] {
 					background-color: chat_hover_btn_delete-msg_bg_color !important;
 					background-image: none !important;
 				}
@@ -4890,8 +4908,10 @@ purple3=#9048FF
 				div:has(div#chatroom-messages) div[data-index] button[aria-label="Удалить"],
 				/* В функциональных окнах 🗑 "Message Log" и 💬 "Chat Clears" */
 				div[data-state="open"] div[data-mo-kick-injected] > button[aria-label="Удалить"],
-				/* В плавающих 🪟 функциональных окнах (Mo'Kick)*/
-				div.moKick-draggable div[data-mo-kick-injected] > button[data-action="Удалить"] {
+				/* В плавающих 🪟 функциональных окнах (Mo'Kick) */
+				div.moKick-draggable div[data-mo-kick-injected] > button[data-action="Удалить"],
+				/* В 💬 ветке сообщений */
+				div#chatroom-messages div[data-index] button[aria-label="Удалить"] {
 					display: none !important;
 				}
 			}
@@ -4904,8 +4924,10 @@ purple3=#9048FF
 				div:has(div#chatroom-messages) div[data-index] button[aria-label="Удалить"],
 				/* В функциональных окнах 🗑 "Message Log" и 💬 "Chat Clears" */
 				div[data-state="open"] div[data-mo-kick-injected] > button[aria-label="Удалить"],
-				/* В плавающих 🪟 функциональных окнах (Mo'Kick)*/
-				div.moKick-draggable div[data-mo-kick-injected] > button[data-action="Удалить"] {
+				/* В плавающих 🪟 функциональных окнах (Mo'Kick) */
+				div.moKick-draggable div[data-mo-kick-injected] > button[data-action="Удалить"],
+				/* В 💬 ветке сообщений */
+				div#chatroom-messages div[data-index] button[aria-label="Удалить"] {
 					color: chat_hover_btn_delete-msg_color !important;
 					order: chat_hover_btn_delete-msg_order !important;
 				}
@@ -4918,7 +4940,9 @@ purple3=#9048FF
 				/* В функциональных окнах 🗑 "Message Log" и 💬 "Chat Clears" */
 				div[data-state="open"] div[data-mo-kick-injected] > button[aria-label="Удалить"]:hover,
 				/* В плавающих 🪟 функциональных окнах (Mo'Kick)*/
-				div.moKick-draggable div[data-mo-kick-injected] > button[data-action="Удалить"]:hover {
+				div.moKick-draggable div[data-mo-kick-injected] > button[data-action="Удалить"]:hover,
+				/* В 💬 ветке сообщений */
+				div#chatroom-messages div[data-index] button[aria-label="Удалить"]:hover {
 					filter: drop-shadow(0px 0px 4px chat_hover_btn_delete-msg_color) !important;
 				}
 	
@@ -4932,8 +4956,10 @@ purple3=#9048FF
 				div:has(div#chatroom-messages) div[data-index] button[aria-label="Закрепить"],
 				/* В функциональных окнах 🗑 "Message Log" и 💬 "Chat Clears" */
 				div[data-state="open"] div[data-mo-kick-injected] > button[aria-label="Закрепить"],
-				/* В плавающих 🪟 функциональных окнах (Mo'Kick)*/
-				div.moKick-draggable div[data-mo-kick-injected] > button[data-action="Закрепить"] {
+				/* В плавающих 🪟 функциональных окнах (Mo'Kick) */
+				div[data-state="open"] div[data-mo-kick-injected] > button[aria-label="Закрепить"],
+				/* В 💬 ветке сообщений */
+				div#chatroom-messages div[data-index] button[aria-label="Закрепить"] {
 					background-color: chat_hover_btn_pin-msg_bg_color !important;
 					background-image: none !important;
 				}
@@ -4948,8 +4974,10 @@ purple3=#9048FF
 				div:has(div#chatroom-messages) div[data-index] button[aria-label="Закрепить"],
 				/* В функциональных окнах 🗑 "Message Log" и 💬 "Chat Clears" */
 				div[data-state="open"] div[data-mo-kick-injected] > button[aria-label="Закрепить"],
-				/* В плавающих 🪟 функциональных окнах (Mo'Kick)*/
-				div.moKick-draggable div[data-mo-kick-injected] > button[data-action="Закрепить"] {
+				/* В плавающих 🪟 функциональных окнах (Mo'Kick) */
+				div.moKick-draggable div[data-mo-kick-injected] > button[data-action="Закрепить"],
+				/* В 💬 ветке сообщений */
+				div#chatroom-messages div[data-index] button[aria-label="Закрепить"] {
 					display: none !important;
 				}
 			}
@@ -4960,8 +4988,10 @@ purple3=#9048FF
 				div#channel-chatroom div[data-index] button[aria-label="Закрепить"],
 				/* В функциональных окнах 🗑 "Message Log" и 💬 "Chat Clears" */
 				div[data-state="open"] div[data-mo-kick-injected] > button[aria-label="Закрепить"],
-				/* В плавающих 🪟 функциональных окнах (Mo'Kick)*/
-				div.moKick-draggable div[data-mo-kick-injected] > button[data-action="Закрепить"] {
+				/* В плавающих 🪟 функциональных окнах (Mo'Kick) */
+				div.moKick-draggable div[data-mo-kick-injected] > button[data-action="Закрепить"],
+				/* В 💬 ветке сообщений */
+				div#chatroom-messages div[data-index] button[aria-label="Закрепить"] {
 					color: chat_hover_btn_pin-msg_color !important;
 					order: chat_hover_btn_pin-msg_order !important;
 				}
@@ -4973,8 +5003,10 @@ purple3=#9048FF
 				div:has(div#chatroom-messages) div[data-index] button[aria-label="Закрепить"]:hover,
 				/* В функциональных окнах 🗑 "Message Log" и 💬 "Chat Clears" */
 				div[data-state="open"] div[data-mo-kick-injected] > button[aria-label="Закрепить"]:hover,
-				/* В плавающих 🪟 функциональных окнах (Mo'Kick)*/
-				div.moKick-draggable div[data-mo-kick-injected] > button[data-action="Закрепить"]:hover {
+				/* В плавающих 🪟 функциональных окнах (Mo'Kick) */
+				div.moKick-draggable div[data-mo-kick-injected] > button[data-action="Закрепить"]:hover,
+				/* В 💬 ветке сообщений */
+				div#chatroom-messages div[data-index] button[aria-label="Закрепить"]:hover {
 					filter: drop-shadow(0px 0px 4px chat_hover_btn_pin-msg_color) !important;
 				}
 	
@@ -5521,6 +5553,14 @@ purple3=#9048FF
 				background-image: none !important;
 			}
 		}
+	
+	
+		/* Отключить отображение кнопки, рядом с ником модера */
+		
+			div#channel-chatroom div[data-index]:has(path[d="M30 0C31.1046 0 32 0.895431 32 2V30C32 31.1046 31.1046 32 30 32H2C0.895431 32 0 31.1046 0 30V2C0 0.895431 0.895431 0 2 0H30ZM16.2197 2.99316C15.8292 2.60266 15.1962 2.60265 14.8057 2.99316L8.36328 9.43555C7.97294 9.82608 7.97284 10.4591 8.36328 10.8496L10.0918 12.5781C10.4823 12.9686 11.1153 12.9685 11.5059 12.5781L11.585 12.499L13.9414 14.8564L3.57129 25.2275C2.70357 26.0954 2.7035 27.5023 3.57129 28.3701C4.43911 29.2376 5.84612 29.2377 6.71387 28.3701L17.084 17.999L19.4414 20.3564L19.3633 20.4346C18.9728 20.8251 18.9728 21.4581 19.3633 21.8486L21.0918 23.5771C21.4823 23.9676 22.1154 23.9676 22.5059 23.5771L28.9482 17.1348C29.3386 16.7443 29.3386 16.1112 28.9482 15.7207L27.2197 13.9922C26.8293 13.6017 26.1962 13.6018 25.8057 13.9922L25.7266 14.0703L23.3701 11.7139C24.2377 10.8461 24.2376 9.4391 23.3701 8.57129C22.5023 7.7035 21.0954 7.70357 20.2275 8.57129L17.8701 6.21387L17.9482 6.13574C18.3388 5.74522 18.3388 5.11221 17.9482 4.72168L16.2197 2.99316Z"]) div.inline-flex button:has(svg > path[d *="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) {
+				color: transparent !important;
+				z-index: -100 !important;
+			}
 	
 	
 		/* Активная - Без наведения курсора */
