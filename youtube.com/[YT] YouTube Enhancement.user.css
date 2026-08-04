@@ -1,0 +1,380 @@
+/* ==UserStyle==
+@name           [YT] YouTube Enhancement
+@namespace      https://github.com/NightWolf69
+@version        1.0.0-pre-alpha
+@description    Улучшения, исправления, кастомизация, и прочие полезности для "YouTube", "YouTube Shorts" и "YouTube Streams"
+@author         NightWolf_69
+@homepageURL    https://github.com/NightWolf69/My-.css-frontends
+@supportURL     https://github.com/NightWolf69/My-.css-frontends/issues
+@preprocessor   stylus
+
+@var	text		header-0-start		"╔═══════════════════ ВНЕШНИЙ ВИД YOUTUBE В ЦЕЛОМ ═══════════════════╗"				"0"
+@var	text  		header-0-divider-0	"╠══════════ ВЕРХНИЙ БАР САЙТА ═══════════╣" 										"0"
+@var	text  		header-0-divider-1	"╠══════════ ЛЕВОЕ БОКОВОЕ МЕНЮ ═══════════╣" 										"0"
+@var	text  		header-0-divider-2	"╠══════════ FEED / РЕКОМЕНДАЦИИ (ПЛАШКИ С ВИДЕО) ═══════════╣" 					"0"
+@var	text  		header-0-end		"╚═══════════════════════════════════════════════════════╝" 						"0"
+
+@var	number  		empty0			"" 																					[0,0,0]
+
+@var	text		header-1-start		"╔═══════════════════ СТРАНИЦА ПРОСМОТРА ВИДЕО — ПЛЕЕР ═══════════════════╗"		"0"
+@var	text  		header-1-divider-0	"╠══════════ СТРАНИЦА ПРОСМОТРА ВИДЕО — ПОД ПЛЕЕРОМ ═══════════╣" 					"0"
+@var	text  		header-1-divider-1	"╠══════════ СТРАНИЦА ПРОСМОТРА ВИДЕО — КОММЕНТАРИИ ═══════════╣" 					"0"
+@var	text  		header-1-divider-2	"╠══════════ СТРАНИЦА ПРОСМОТРА ВИДЕО — РЕКОМЕНДАЦИИ СПРАВА ═══════════╣" 			"0"
+@var	text  		header-1-end		"╚═══════════════════════════════════════════════════════╝" 						"0"
+
+@var	number  		empty1			"" 																					[0,0,0]
+
+@var	text		header-2-start		"╔═══════════════════ СТРАНИЦА ПРОСМОТРА ШОРТС — ПЛЕЕР ═══════════════════╗"		"0"
+@var	text  		header-2-divider-0	"╠══════════ СТРАНИЦА ПРОСМОТРА ШОРТС  — КНОПКИ СБОКУ ═══════════╣" 				"0"
+@var	text  		header-2-divider-1	"╠══════════ СТРАНИЦА ПРОСМОТРА ШОРТС  — НАЗВАНИЕ / ОПИСАНИЕ ═══════════╣" 			"0"
+@var	text  		header-2-divider-2	"╠══════════ СТРАНИЦА ПРОСМОТРА ВИДЕО — КОММЕНТАРИИ ═══════════╣" 					"0"
+@var	text  		header-2-end		"╚═══════════════════════════════════════════════════════╝" 						"0"
+
+@var	number  		empty2			"" 																					[0,0,0]
+
+@var	text		header-3-start		"╔═══════════════════ ЧАТ СТРИМА ═══════════════════╗"								"0"
+@var	text  		header-3-end		"╚═══════════════════════════════════════════════════════╝" 						"0"
+
+
+
+@var		checkbox			custom_toggle			"Toggle 1"											0
+@var		number  			custom_number			"" 													[0,0,0]
+@var		text				custom_text				"Кастомный текст"									"hello"
+@var		color				custom_color			"color Example NAME"								skyblue
+@var		select 				custom_dropdown			"Контекстное меню"									{"краснй текст":"red", "сини текст":"blue"}
+
+==/UserStyle== */
+
+@-moz-document url("https://www.youtube.com/"), url("http://www.youtube.com/"), url("https://youtube.com/"), url("http://youtube.com/"), url("https://youtu.be/"), url("http://youtu.be/") {
+/* ############################ */
+/* ##### Главной странице ##### */
+/* ############################ */
+
+	/* Отключение плашек Джем */
+	div#contents:not(yt-page-header-view-model) ytd-rich-item-renderer:has(div.ytCollectionsStackCollectionStack1),
+	div#contents:not(yt-page-header-view-model) ytd-rich-item-renderer:has(div.ytCollectionsStackCollectionStack2),
+	div#contents:not(yt-page-header-view-model) ytd-rich-item-renderer:has(div.ytCollectionsStackCollectionStack1Large),
+	div#contents:not(yt-page-header-view-model) ytd-rich-item-renderer:has(yt-thumbnail-view-model.ytCollectionThumbnailViewModelHostHasStacks),
+	div#contents:not(yt-page-header-view-model) ytd-rich-item-renderer:has(div[class *="content-id-"].yt-lockup-view-model.yt-lockup-view-model--vertical.yt-lockup-view-model--collection-stack-2.yt-lockup-view-model--rich-grid-legacy-margin) {
+		display: none !important;
+	}
+	
+	
+	/* Отключение секций "YouTube Игротека" */
+	div#content ytd-rich-shelf-renderer div#dismissible:has(a[href="/playables"]) {
+		display: none !important;
+	}
+	
+}
+
+@-moz-document url-prefix("https://www.youtube.com"), url-prefix("http://www.youtube.com"), url-prefix("https://youtube.com"), url-prefix("http://youtube.com"), url-prefix("https://youtu.be"), url-prefix("http://youtu.be") {
+/* ##################### */
+/* ##### Скролбарр ##### */
+/* ##################### */
+
+	/* Цвет скролл бара */
+	html {
+		scrollbar-color: #ED00009E transparent !important;
+	}
+}
+
+@-moz-document url-prefix("https://www.youtube.com"), url-prefix("http://www.youtube.com"), url-prefix("https://youtube.com"), url-prefix("http://youtube.com"), url-prefix("https://youtu.be"), url-prefix("http://youtu.be") {
+/* ################# */
+/* ##### Плеер ##### */
+/* ################# */
+	
+/* Удаление лишних эллементов сайта */
+	/* Убирает tooltip плашку у кнопки поворота картинки */
+	div.it-player-button--tooltip {
+		display: none !important;
+	}
+	
+	
+	/* Добавляет свечение кнопке поворота картинки ('Improve YouTube!') */
+	div.ytp-chrome-bottom > div.ytp-chrome-controls > div.ytp-left-controls > button[id *="it-rotate-button"],
+	div.ytp-chrome-bottom > div.ytp-chrome-controls > div.ytp-left-controls > button[id *="it-rotate-button"] > svg {
+		filter: drop-shadow(0px 0px 10px  #ED0000) !important;
+		box-shadow: 0px 0px 14px #ED000054, 0px 0px 14px #ED00001F, 0px 0px 14px #ED00001f !important;
+	}
+	
+}
+
+@-moz-document url-prefix("https://www.youtube.com/results"), url-prefix("http://www.youtube.com/results"), url-prefix("https://youtube.com/results"), url-prefix("http://youtube.com/results"), url-prefix("https://youtu.be/results"), url-prefix("http://youtu.be/results") {
+/* ################################################################# */
+/* ##### Отключение плашек Джем на странице результатов поиска ##### */
+/* ################################################################# */
+
+	/* Отключает и Джем плашки, и плашки Плейлистов */
+	yt-lockup-view-model[class *="ytd-item-section-renderer lockup ytLockupViewModelWrapper"]:has(div.ytLockupViewModelHost.ytLockupViewModelHorizontal.ytLockupViewModelCollectionStack2.ytLockupViewModelFlexNone) {
+		display: none;
+	}
+	
+	/* Возвращает отображение плашек Плейлистов */
+	yt-lockup-view-model[class *="ytd-item-section-renderer lockup ytLockupViewModelWrapper"]:has(yt-content-metadata-view-model div[role="group"] span span a[href ^="/playlist?list="]) {
+		display: flex !important;
+	}
+	
+}
+
+@-moz-document domain("www.youtube.com"), domain("youtube.com"), domain("youtu.be") {
+/* ######################################################################################################## */
+/* ##### Внешний вид Главной страницы, страницы фида, страницы результатов поиска, страницы плейлиста ##### */
+/* ######################################################################################################## */
+	
+
+/* Удаление лишних эллементов сайта */
+	/* Удаление "списка Спонсоров канала", на его главной странице */
+	div[class *="style-scope ytd-recognition-shelf-renderer"]
+	/* Удаление кнопки "Стать спонсором", возле кнопки подписаться на канал на его главной странице */
+	button[class *="yt-spec-button-shape-next yt-spec-button-shape-next--outline yt-spec-button-shape-next--mono yt-spec-button-shape-next--size-m"],
+	/* Отключение кнопок от аддона, рядом с кнопкой "Подписаться" */
+	.ytd-watch-metadata > button,
+	yt-subscribe-plus-button-view-model.ytSubscribePlusButtonViewModelHost,
+	/* Удаление кнопки "Продвижение", возле кнопки Лайка/Дизлайка */
+	ytd-menu-renderer.ytd-watch-metadata > div#flexible-item-buttons > ytd-button-renderer,
+	/* Удаление кнопки скачивания SaveFrom */
+	div[id *= "savefrom__yt_btn"] {
+		display: none !important;
+	}
+	
+	/* Цвет шрифта на колокольчике увидомлений */
+	.yt-spec-icon-badge-shape__badge {
+		color: #fff !important;
+	}
+	
+	
+	/* Настройка [⋮] Контекстного меню взаимодействия, в 🔔 Контекстном меню уведомлений */
+	tp-yt-iron-dropdown.style-scope.ytd-popup-container > div#contentWrapper.style-scope.tp-yt-iron-dropdown > ytd-menu-popup-renderer.style-scope.ytd-popup-container
+	{
+    	max-width: 720px !important;
+    	width: 100% !important;
+		background-color: #F003 !important;
+	}
+	
+	
+	/* Фикс ширены всплывающего окна "Выберите плейлист" при сохранении видо */
+	div#contentWrapper yt-sheet-view-model[slot="dropdown-content"] yt-list-view-model.ytListViewModelHost.ytListViewModelCollectionThumbnailClass {
+		width: 390px !important;
+	}
+	
+	
+	/* Кнопка скрола вверх страницы (YouTube Video Downloader) */
+	div#it-scroll-to-top.satus-div {
+		margin-right: -3.1em !important;
+		margin-bottom: 2em !important;
+	}
+	
+	
+	/* Кнопка открытия менеджера загрузки видосов (Flixmate) */
+	div#ytdl-dlm-container > div.ytdl-dlm-container.shard-root.is-compact > div.ytdl-dlm-compact {
+		margin-right: -1em !important;
+		margin-bottom: -1em !important;
+	}
+}
+@-moz-document url-prefix("https://www.youtube.com/watch?v="), url-prefix("https://youtube.com/watch?v="), url-prefix("https://youtu.be/watch?v=") {
+/* ################################################ */
+/* ##### Внешний вид Страницы просмотра видео ##### */
+/* ################################################ */
+	
+	/* Выравнивание кнопки "Download" (Savefrom) */
+	div.ytdl-extension-button-container {
+    	margin-left: 8px !important;
+    	margin-right: 0px !important;
+	}
+	
+	
+	/* Удаление текста из кнопки аддона "Downloader by Addoncrop" */
+	div.ytdl-extension-button-container.shard-root > button.ytdl-extension-button {
+		font-size: 0px !important;
+		margin-right: -10px !important;
+		padding: 9px !important;
+	}
+	
+	
+	/* Размер выподающего контекстного меню у аддона "Downloader by Addoncrop" */
+	div.ytdl-primary-dropdown {
+		min-height: 25em !important;
+		max-height: 40em !important;
+		height: 31.8em !important;
+    }	
+	div.ytdl-extension-button__menu-container.has-custom-scrollbar {
+		min-height: 25em !important;
+		max-height: 40em !important;
+		margin: 0px 0px 0px 0px !important;
+	}
+	
+	
+	/* Отключение плашек "Джем" из списка рекомендованных видео в правом столбце, на странице с видео */
+	yt-lockup-view-model:has(div.yt-lockup-view-model.yt-lockup-view-model--horizontal.yt-lockup-view-model--collection-stack-2.yt-lockup-view-model--compact.yt-lockup-view-model--flex-none) {
+		display: none !important;
+	}
+}
+@-moz-document url-prefix("https://www.youtube.com/shorts"), url-prefix("https://youtube.com/shorts"), url-prefix("https://youtu.be/shorts") {
+/* ####################################################### */
+/* ##### Внешний вид Страницы просмотра Shorts видео ##### */
+/* ####################################################### */
+
+	/* Отключение предложенного поискового запроса в плеере */
+	div.ytReelMetapanelViewModelMetapanelItem > yt-shorts-suggested-action-view-model {
+		display: none !important;
+	}
+	
+	
+	/* Убирает кнопку Включения/Отключения субтитров внутри плеера */
+	div#player-container > div > ytd-shorts-player-controls > div#right-controls {min-width: 90px;}
+	div#player-container > div > ytd-shorts-player-controls > div#right-controls > div#closed-captioning-button-container {
+		display: none !important;
+	}
+	
+	
+	/* Убрать кнопку "Ремикс" */
+	reel-action-bar-view-model button-view-model:has(path[d="M10.564 1.095a11 11 0 00-9.189 8.058 1 1 0 101.932.517A8.999 8.999 0 0119.481 7H18a1 1 0 100 2h5V4a1 1 0 00-2 0v1.679a11 11 0 00-10.436-4.584ZM12 7a1 1 0 00-1 1v3H8a1 1 0 000 2h3v3a1 1 0 002 0v-3h3a1 1 0 000-2h-3V8a1 1 0 00-1-1Zm8.693 7.33A9 9 0 014.517 17H6a1 1 0 000-2H1v5a1 1 0 102 0v-1.68a11 11 0 0019.625-3.472 1 1 0 10-1.932-.518Z"]) {
+		display: none !important;
+	}
+	
+	
+	/* Фикс позиции окна скачивания видео (Downloader by Addoncrop) */
+	div.ytdl-shorts-downloader > div.ytdl-shorts-menu-container > div.ytdl-shorts-menu.shard-root {
+    	right: auto !important;
+    	top: -385px !important;
+	}
+}
+
+@-moz-document domain("www.youtube.com"), domain("youtube.com"), domain("youtu.be"), url-prefix("www.youtube.com/live_chat?is_popout="), url-prefix("youtube.com/live_chat?is_popout="), url-prefix("youtu.be/live_chat?is_popout=") {
+/* ################################################################# */
+/* ##### Внешний вид Страницы просмотра Live Stream трансляции ##### */
+/* ################################################################# */
+	
+	/* Цвет фона у блока с сообщением, где меня @тегнули */
+	yt-live-chat-text-message-renderer:has(span.mention) {
+		background-color: #FF572269 !important;
+	}
+	yt-live-chat-text-message-renderer:has(span.mention):hover {
+		background-color: #FF572289 !important;
+	}
+	
+	
+	/* Цвет самого тега моего @ника */
+	yt-live-chat-text-message-renderer > div#content > span#message-container > span#message > span.mention {
+		background: #ff5722 !important;
+	}
+	
+	
+	/* Цвет имени пользователя в чате стрима */
+	yt-live-chat-text-message-renderer > div#content > yt-live-chat-author-chip:not(yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="moderator"]) > span#author-name.yt-live-chat-author-chip {
+		color: darkgrey;
+	}
+	
+	/* Цвет выделения имени пользователя, если он "highlighted" (по какой-то причине, помечен ютубом как выделенный, мб популярный ютубер, мб подписчик YTPremium, хз!) */
+	yt-live-chat-text-message-renderer yt-live-chat-author-chip[is-highlighted] #author-name.yt-live-chat-author-chip {
+		background-color: var(--yt-live-chat-author-chip-verified-background-color);
+	}
+	
+	/* Цвет выделения имени пользователя, если он "owner" (автора канала) */
+	yt-live-chat-text-message-renderer yt-live-chat-author-chip[is-highlighted] #author-name.owner.yt-live-chat-author-chip {
+		background-color: brown;
+	}
+	
+	/* Цвет имени верифицированного галкой пользователя в чате стрима */
+	yt-live-chat-text-message-renderer:has([type="verified"]):not([type="moderator"]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip:has(> span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[type="verified"]) {
+		color: yellow;
+	}
+	/* Цвет иконки галки */
+	yt-live-chat-text-message-renderer:has([type="verified"]):not([type="moderator"]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip > span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[type="verified"] > div#image > yt-icon > span > div > svg > path {
+		color: yellow;
+		filter: drop-shadow(0px 0px 4px #000) !important;
+	}
+	
+	
+	/* Цвет имени пользователя модератора в чате стрима */
+	yt-live-chat-text-message-renderer:has([type="moderator"]):not([type="verified"]) > div#content > yt-live-chat-author-chip:has(> span#chat-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="moderator"]) > span#author-name.yt-live-chat-author-chip {
+		color: #3ea6ff;
+	}
+	/* Цвет иконки модератора в чате */
+	yt-live-chat-text-message-renderer:has([type="moderator"]):not([type="verified"]) > div#content > yt-live-chat-author-chip > span#chat-badges.yt-live-chat-author-chip > yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="moderator"] > div#image > yt-icon > span > div > svg > path {
+		fill: #3ea6ff;
+	}
+	/* Цвет заменённой иконки модератора в чате */
+	yt-live-chat-text-message-renderer:has(yt-live-chat-author-badge-renderer[type="moderator"]):not(yt-live-chat-author-badge-renderer[type="verified"]) > div#content > yt-live-chat-author-chip > span#chat-badges.yt-live-chat-author-chip > yt-live-chat-author-badge-renderer[type="moderator"]:not([type="verified"]) > div#image > yt-icon > span > div > svg:has(path[d="M3 4.998v9.857a6 6 0 003.365 5.39L12 23l5.635-2.755A6 6 0 0021 14.855V4.998a1 1 0 00-.656-.938L12 1 3.656 4.06A1 1 0 003 4.998Z"]) {
+		background-color: #3ea6ff;
+		mask-image: url("data:image/svg+xml;utf8,<svg viewBox='-2 -2 21 21' xmlns='http://www.w3.org/2000/svg'><path d='M6.7 9.8A5 4.7 0 0 1 .3 3.12l3.95 4.05 3.2-3.0L3.73.11a5 4.7 0 0 1 6.7 6.38l7 8-3.83 2.83L6.5 9.8z'/></svg>");
+		rotate: -2deg;
+	}
+	
+	/* svg[viewBox="0 0 16 16"] path[d="M9.64589146,7.05569719 C9.83346524,6.562372 9.93617022,6.02722257 9.93617022,5.46808511 C9.93617022,3.00042984 7.93574038,1 5.46808511,1 C4.90894765,1 4.37379823,1.10270499 3.88047304,1.29027875 L6.95744681,4.36725249 L4.36725255,6.95744681 L1.29027875,3.88047305 C1.10270498,4.37379824 1,4.90894766 1,5.46808511 C1,7.93574038 3.00042984,9.93617022 5.46808511,9.93617022 C6.02722256,9.93617022 6.56237198,9.83346524 7.05569716,9.64589147 L12.4098057,15 L15,12.4098057 L9.64589146,7.05569719 Z"] */
+	
+
+
+	/* Цвет имени верифицированного галкой пользователя и модератора в чате стрима */
+	yt-live-chat-text-message-renderer:has([type="verified"]):has([type="moderator"]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip:has(> span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="verified"]) {
+		color: cyan;
+	}
+	/* Цвет иконки галки у модера */
+	yt-live-chat-text-message-renderer:has([type="verified"]):has([type="moderator"]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip > span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[type="verified"] > div#image > yt-icon > span > div > svg > path {
+		color: cyan;
+	}
+	/* Цвет иконки модератора с галкой в чате */
+	yt-live-chat-text-message-renderer:has([type="verified"]):has([type="moderator"]) > div#content > yt-live-chat-author-chip:has(yt-live-chat-author-badge-renderer[type="verified"]) > span#chat-badges.yt-live-chat-author-chip > yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="moderator"] > div#image > yt-icon > span > div > svg > path {
+		fill: cyan;
+	}
+	/* Цвет заменённой иконки модератора с галкой в чате */
+	yt-live-chat-text-message-renderer:has([type="verified"]):has([type="moderator"]) > div#content > yt-live-chat-author-chip:has(yt-live-chat-author-badge-renderer[type="verified"]) > span#chat-badges.yt-live-chat-author-chip svg:has(path[d="M3 4.998v9.857a6 6 0 003.365 5.39L12 23l5.635-2.755A6 6 0 0021 14.855V4.998a1 1 0 00-.656-.938L12 1 3.656 4.06A1 1 0 003 4.998Z"]) {
+		background-color: cyan;
+		mask-image: url("data:image/svg+xml;utf8,<svg viewBox='-2 -2 21 21' xmlns='http://www.w3.org/2000/svg'><path d='M6.7 9.8A5 4.7 0 0 1 .3 3.12l3.95 4.05 3.2-3.0L3.73.11a5 4.7 0 0 1 6.7 6.38l7 8-3.83 2.83L6.5 9.8z'/></svg>");
+		rotate: -2deg;
+	}
+	
+	
+	/* Цвет текста сообщений в чате */
+	div#content span#message-container > span#message {
+		color: white;
+		/*filter: drop-shadow(0px 0px 1px white);*/
+		text-shadow: white 0px 0px 1px;
+	}
+	
+	
+	/* Цвет ссылки в сообщении, при наведении курсора */
+	div#content span#message-container > span#message > a.yt-simple-endpoint.yt-live-chat-text-message-renderer:hover {
+		color: red;
+		text-shadow: red 0px 0px 1px;
+	}
+	
+	
+	/* Кнопка прокрутки чата к самым последним и свежим сообщениям */
+	yt-icon-button#show-more {
+		background-color: var(--yt-live-chat-header-background-color);
+		filter: drop-shadow(0px 0px 1px #2196f3);
+		opacity: 75%
+	}
+	yt-icon-button#show-more:hover {
+		filter: drop-shadow(0px 0px 2px #2196f3);
+		opacity: 100%
+	}
+	
+	
+	/* Кнопка открытия меню смайлов bttv */
+	div#input-container > div#bttv-emote-picker-button-container > button[class *="bttv-Button-module__button-"][class *="bttv-EmoteMenu-module__button-"] {
+		color: red;
+	}
+	
+	
+	/* Кнопка открытия дефолтного меню смайлов */
+	div#input-container > div#emoji-picker-button,
+	div#input-container > div#emoji-picker-button yt-icon.yt-live-chat-icon-toggle-button-renderer {
+		color: yellow;
+		display: flex !important;
+		margin: 0;
+	}
+	
+	
+	/* Отключение анимированных реакций в чате справа */
+	div#picker-buttons:has( div#reaction-control-panel yt-reaction-control-panel-view-model div#hover-area div#fab-container div#expanded-buttons) {
+		display: none
+	}
+	
+	
+	/* Убрать плашку "Добро пожаловать в чат!" от ютуба */
+	div#chat yt-live-chat-viewer-engagement-message-renderer:has(> div#card.yt-live-chat-viewer-engagement-message-renderer) {
+		display: none
+	}
+}
