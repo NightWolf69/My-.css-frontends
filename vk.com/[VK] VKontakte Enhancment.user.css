@@ -1,24 +1,74 @@
 /* ==UserStyle==
 @name           [VK] VKontakte Enhancment
 @namespace      https://github.com/NightWolf69
-@version        1.0.0
+@version        1.0.1-beta
 @description    Правки внешнего вида для ВК
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
 @supportURL     https://github.com/NightWolf69/My-.css-frontends/issues
 @preprocessor   stylus
 
-@var	checkbox	visible_space_between_posts_toggle				"Сделать границу между разными постами визуально видемой"	1
-@var	checkbox	visiblety_left-right_btn_in-photo_view_toggle	"Улучшить видимость стрелок перелистывания фото, добавив под них тенет"	1
+@var	number  	header-VK											"╔══════════════════════ VK ════════════════════════╗"							[0,0,0]
+@var	checkbox		visible_space_between_posts_toggle				"Сделать границу между разными постами визуально видемой"						1
+@var	checkbox		visiblety_left-right_btn_in-photo_view_toggle	"Улучшить видимость стрелок перелистывания фото, добавив под них тенет"			1
+@var	checkbox		show_only_deleted_posts_on_my_wall_toggle		"Отображать только «Пост удалён» на моей странице"								0
+
+@var	number  	empty0												"" 																				[0,0,0]
+
+@var	number  	header-VK-Play-Live									"╔═══════════════════ VK Play Live ═════════════════════╗"						[0,0,0]
+@var	color			scroll-bar-color								"Цвет скролл полосок:"															#2594EF
+
+@var	color			pinned-msg-color								"Цвет кнопки закреплённого сообщения в чате:"									orange
+
+@var	color			hover-btn-bg-color								"Цвет фоновой подложки под hover кнопками:"										#00000080
+@var	color			hover-btn-delete-color							"Цвет Кнопки 🗑️ Удалить:"														lightgrey
+@var	color			hover-btn-reply-color							"Цвет Кнопки ↩️ Ответит:"														lightgreen
+
+@var	color			context-menu-btn-reply-color					"Цвет Кнопки в контекстном меню (ПКМ) ↩️ Ответит:"								lightgreen
+@var	color			context-menu-btn-mention-color					"Цвет Кнопки в контекстном меню (ПКМ) 📧 Упомянуть:"							magenta
+@var	color			context-menu-btn-copy-color						"Цвет Кнопки в контекстном меню (ПКМ) 🗒 Копировать:"							skyblue
+@var	color			context-menu-btn-pin-color						"Цвет Кнопки в контекстном меню (ПКМ) 📌 Закрепить это сообщение:"				orange
+@var	color			context-menu-btn-delete-color					"Цвет Кнопки в контекстном меню (ПКМ) 🗑️ Удалить:"								#FF5C5C
+
+@var	color			chat-emoji-btn-color							"Цвет кнопки вызова 😊 Меню смайлов:"											yellow
+@var	number			smile-menu-height-value							"Размер окна со смайлами по высоте ↨"											[512,274,1080]
+@var	number			smile-menu-width-value							"Размер окна со смайлами по ширине ↔"											[316,300,1920]
+
+@var	color			chat-send-btn-color								"Цвет кнопки ✈️ Отправки сообщения в чат:"										#2594EF
+
+@var	color			chat-studio-btn-color							"Цвет кнопки ⚔️ Студии/Модерки:"												lightgreen
+@var	color			chat-settings-btn-color							"Цвет кнопки ⚙️ Настроек чата:"													orange
 
 ==/UserStyle== */
 
-/*@@var	number		empty0	""	[0,0,0]*/
-@-moz-document domain("vk.com") {
+		/* Отключить отображение кнопки */
+		/* Убрать текст в кнопке */
+		/* Плавность анимаций */
+		/* Свой фон кнопки */
+
+/* Цветовые альясы */
+btn-bg=#323232
+btn-bg-hover=hsla(0, 0%, 100%, .04)
+btn-bg-dark=#232324
+red1=#FF5C5C
+red2=#F30
+ytred=#ED0000
+lightyellowgreen=#A0FF48
+kickgreen=#53FC18
+vkblue=#2594EF
+cyan2=#48FFF0
+pipblue=#578FFE
+purple1=#C39BFF
+purple2=#A970FF
+purple3=#9048FF
+
+@-moz-document domain("vk.com"), domain("vk.ru") {
+	/* Цвет скролбара */
+	html {scrollbar-color: var(--vkui--color_icon_accent) transparent !important;}
 	
 	/* Контекстное меню из аватарки профиля на верхнем баре сайта (VK Expert) */
 	span.top_profile_mrow {
-		background-color: #F000 !important;
+		background-color: transparent !important;
 	}
     
 	
@@ -54,4 +104,240 @@
 			filter: drop-shadow(0px 0px 4px #000) !important;
 		}
 	}
+	
+	
+	/* Включить отображеие только "Пост удалён" на своей странице, чтобы быстро удалить такие репосты */
+	if show_only_deleted_posts_on_my_wall_toggle {
+		/* Пост удалён */
+		div#page-wall div[role="feed"] article[data-index]:not(div[data-testid="post-content-container"] path[d="M28 4c13.255 0 24 10.745 24 24S41.255 52 28 52 4 41.255 4 28 14.745 4 28 4M12.129 14.248A20.92 20.92 0 0 0 7 28c0 11.598 9.402 21 21 21 5.26 0 10.067-1.933 13.752-5.128zM28 7a20.92 20.92 0 0 0-13.752 5.129l29.624 29.623A20.92 20.92 0 0 0 49 28c0-11.598-9.402-21-21-21"]) {
+				display: none !important;
+			}
+		div#page-wall div[role="feed"] article[data-index]:has(div[data-testid="post-content-container"] path[d="M28 4c13.255 0 24 10.745 24 24S41.255 52 28 52 4 41.255 4 28 14.745 4 28 4M12.129 14.248A20.92 20.92 0 0 0 7 28c0 11.598 9.402 21 21 21 5.26 0 10.067-1.933 13.752-5.128zM28 7a20.92 20.92 0 0 0-13.752 5.129l29.624 29.623A20.92 20.92 0 0 0 49 28c0-11.598-9.402-21-21-21"]) {
+				display: block !important;
+			}
+	}
+}
+
+@-moz-document domain("live.vkvideo.ru") {
+/* ########################## */
+/* ##### Цвет скролбара ##### */
+/* ########################## */
+
+	html {scrollbar-color: scroll-bar-color transparent !important;}
+	
+}
+
+@-moz-document domain("live.vkvideo.ru") {
+/* ###################################### */
+/* ##### Кнопки верхней панели чата ##### */
+/* ###################################### */
+	
+	/* Кнопка Просмотра/Скрытия 📌 Закреплённого сообщения */
+		/* Без наведления курсора */
+		div[class *="StreamChatTopPanel"] div[class *="StreamChatTopPanel_pinnedBlock"] > button[class *="StreamChatTopPanel_button"] span {
+			color: pinned-msg-color !important;
+			transition: all 0.2s ease-in-out !important;
+		}
+	
+		/* При наведенеии курсора */
+		div[class *="StreamChatTopPanel"] div[class *="StreamChatTopPanel_pinnedBlock"] > button[class *="StreamChatTopPanel_button"]:hover span {
+			filter: drop-shadow(0px 0px 4px pinned-msg-color) !important;
+		}
+	
+		/* Обводка закреплённого сообщения */
+		div[data-test-id="chatContainer"] div#chatPinned div[class *="PinnedBlockLayout"] {
+			border-color: pinned-msg-color !important;
+		}
+}
+
+@-moz-document domain("live.vkvideo.ru") {
+/* ############################### */
+/* ##### Hover кнопки в чате ##### */
+/* ############################### */
+
+	/* Плашка под hover кнопками */
+		div[data-test-id="chatContainer"] div[data-role="messageHoversContainer"] {
+			background-color: hover-btn-bg-color !important;
+		}
+	
+	
+	/* Кнопка 🗑️ Удалить */
+		/* Без наведения курсора */
+		div[data-test-id="chatContainer"] div[data-role="messageHoversContainer"] > button[data-role="deleteMessageButton"] span {
+			color: hover-btn-delete-color !important
+		}
+	
+		/* При наведении курсора */
+		div[data-test-id="chatContainer"] div[data-role="messageHoversContainer"] > button[data-role="deleteMessageButton"] {transition: all 0.2s ease-in-out !important;}
+		div[data-test-id="chatContainer"] div[data-role="messageHoversContainer"] > button[data-role="deleteMessageButton"]:hover {
+			filter: drop-shadow(0px 0px 4px hover-btn-delete-color) !important;
+		}
+	
+	/* Кнопка ↩️ Ответить */
+		/* Без наведения курсора */
+		div[data-test-id="chatContainer"] div[data-role="messageHoversContainer"] > button[data-role="replyButton"] span {
+			color: hover-btn-reply-color !important
+		}
+	
+		/* При наведении курсора */
+		div[data-test-id="chatContainer"] div[data-role="messageHoversContainer"] > button[data-role="replyButton"] {transition: all 0.2s ease-in-out !important;}
+		div[data-test-id="chatContainer"] div[data-role="messageHoversContainer"] > button[data-role="replyButton"]:hover {
+			filter: drop-shadow(0px 0px 4px hover-btn-reply-color) !important;
+		}
+}
+
+@-moz-document domain("live.vkvideo.ru") {
+/* ################################################# */
+/* ##### Функциональное контекстное меню (ПКМ) ##### */
+/* ################################################# */
+	
+	/* Выделение пунктов меню, при наведении курсора */
+		div[data-test-id="chatContainer"] div[data-role="messageMenu"] > button {transition: all 0.2s ease-in-out !important;}
+		div[data-test-id="chatContainer"] div[data-role="messageMenu"] > button:hover {
+			background-color: var(--color-transparent-hover) !important;
+			border-radius: 1rem
+			padding: .3rem
+		}
+	
+	
+	/* Кнопка контекстного меню ↩️ Ответить */
+		/* Без наведения курсора */
+		div[data-test-id="chatContainer"] div[data-role="messageMenu"] > button[data-role="replyButton"] span {
+			color: context-menu-btn-reply-color !important;
+		}
+	
+		/* При наведении курсора */
+		div[data-test-id="chatContainer"] div[data-role="messageMenu"] > button[data-role="replyButton"]:hover {
+			filter: drop-shadow(0px 0px 4px context-menu-btn-reply-color) !important;
+		}
+	
+	/* Кнопка контекстного меню 📧 Упомянуть */
+		/* Без наведения курсора */
+		div[data-test-id="chatContainer"] div[data-role="messageMenu"] > button[data-role="mention"] span {
+			color: context-menu-btn-mention-color !important;
+		}
+	
+		/* При наведении курсора */
+		div[data-test-id="chatContainer"] div[data-role="messageMenu"] > button[data-role="mention"]:hover {
+			filter: drop-shadow(0px 0px 4px context-menu-btn-mention-color) !important;
+		}
+	
+	/* Кнопка контекстного меню 🗒 Копировать */
+		/* Без наведения курсора */
+		div[data-test-id="chatContainer"] div[data-role="messageMenu"] > button[data-role="copyButton"] span {
+			color: context-menu-btn-copy-color !important;
+		}
+	
+		/* При наведении курсора */
+		div[data-test-id="chatContainer"] div[data-role="messageMenu"] > button[data-role="copyButton"]:hover {
+			filter: drop-shadow(0px 0px 4px context-menu-btn-copy-color) !important;
+		}
+	
+	/* Кнопка контекстного меню 📌 Закрепить это сообщение */
+		/* Без наведения курсора */
+		div[data-test-id="chatContainer"] div[data-role="messageMenu"] > button[data-role="pinButton"] span {
+			color: context-menu-btn-pin-color !important;
+		}
+	
+		/* При наведении курсора */
+		div[data-test-id="chatContainer"] div[data-role="messageMenu"] > button[data-role="pinButton"]:hover {
+			filter: drop-shadow(0px 0px 4px context-menu-btn-pin-color) !important;
+		}		
+	
+	/* Кнопка контекстного меню 🗑️ Удалить */
+		/* Без наведения курсора */
+		div[data-test-id="chatContainer"] div[data-role="messageMenu"] > button[data-role="deleteMessageButton"] span {
+			color: context-menu-btn-delete-color !important;
+		}
+	
+		/* При наведении курсора */
+		div[data-test-id="chatContainer"] div[data-role="messageMenu"] > button[data-role="deleteMessageButton"]:hover {
+			filter: drop-shadow(0px 0px 4px context-menu-btn-delete-color) !important;
+		}
+}
+
+@-moz-document domain("live.vkvideo.ru") {
+/* ################################## */
+/* ##### input поле ввода в чат ##### */
+/* ################################## */
+	
+	/* Кнопка вызова 😊 меню смайлов */
+		/* Без наведения курсора */
+		div#chat-pub-root button[data-test-id="publisherSmileButton"] {margin-left: 2rem}
+		div#chat-pub-root button[data-test-id="publisherSmileButton"] span {
+			color: chat-emoji-btn-color !important;
+		}
+	
+		/* При наведении курсора */
+		div#chat-pub-root button[data-test-id="publisherSmileButton"] {transition: all 0.2s ease-in-out !important;}
+		div#chat-pub-root button[class *="Active"][data-test-id="publisherSmileButton"],
+		div#chat-pub-root button[data-test-id="publisherSmileButton"]:hover {
+			filter: drop-shadow(0px 0px 4px chat-emoji-btn-color) !important;
+		}
+	
+	/* Разхмер окна 😊 смайлов по высоте */
+	:root {--smile-menu-height-value: smile-menu-height-value}
+		div#chat-pub-root > div[class *="ChatPublisher_smileSelector"] > div[data-test-id="smileSelector"] {
+			min-height: 150px;
+			height: calc(var(--smile-menu-height-value) * 1px) !important;
+			max-height: 1080px;
+			transition: all 0.2s ease-in-out !important;
+		}
+	
+	/* Размер окна по ширине + перенос окна со 😊 смайлами в правый край */
+	:root {--smile-menu-width-value: smile-menu-width-value}
+		div#chat-pub-root > div[class *="ChatPublisher_smileSelector"] {left: unset !important;}
+		div#chat-pub-root > div[class *="Publisher_smileSelectorWrapper"][class *="ChatPublisher_smileSelector"]:has(div[data-test-id="smileSelector"]) {
+			right: 12px !important;
+			min-width: 274px;
+			width: calc(var(--smile-menu-width-value) * 1px) !important;
+			max-width: 1920px;
+			transition: all 0.2s ease-in-out !important;
+		}
+	
+	
+	/* Кнопка отправки ✈️ сообщения в чат */
+		/* Без наведения курсора */
+		div#chat-pub-root button[data-test-id="publisherSubmitButton"] use {
+			color: chat-send-btn-color !important;
+		}
+	
+		/* При наведении курсора */
+		div#chat-pub-root button[data-test-id="publisherSubmitButton"] {transition: all 0.2s ease-in-out !important;}
+		div#chat-pub-root button[data-test-id="publisherSubmitButton"]:hover {
+			filter: drop-shadow(0px 0px 4px chat-send-btn-color) !important;
+		}
+}
+
+@-moz-document domain("live.vkvideo.ru") {
+/* ################################# */
+/* ##### Под input полем ввода ##### */
+/* ################################# */
+	
+	/* Кнопка открытия ⚔️ настроек чата */
+		/* Без наведения курсора */
+		div[data-test-id="chatContainer"] a[href *="/studio"] span,
+		div[data-test-id="chatContainer"] a[class *="linkToStudio"] span {
+				color: chat-studio-btn-color !important;
+				transition: all 0.2s ease-in-out !important;
+			}
+	
+		/* При наведении курсора */
+		div[data-test-id="chatContainer"] a[href *="/studio"] span:hover,
+		div[data-test-id="chatContainer"] a[class *="linkToStudio"] span:hover {
+				filter: drop-shadow(0px 0px 4px chat-studio-btn-color) !important;
+			}
+	
+	/* Кнопка открытия ⚙️ настроек чата */
+		/* Без наведения курсора */
+		div[data-test-id="chatContainer"] button[data-test-id="chatSettingsButton"] span {
+				color: chat-settings-btn-color !important;
+			}
+	
+		/* При наведении курсора */
+		div[data-test-id="chatContainer"] button[data-test-id="chatSettingsButton"] {transition: all 0.2s ease-in-out !important;}
+		div[data-test-id="chatContainer"]:has(div[class *="ChatSettings_root"][class *="ChatSettings_new"][data-test-id="chatSettingsRoot"]) button[data-test-id="chatSettingsButton"],
+		div[data-test-id="chatContainer"] button[data-test-id="chatSettingsButton"]:hover {
+				filter: drop-shadow(0px 0px 4px chat-settings-btn-color) !important;
+			}
 }
