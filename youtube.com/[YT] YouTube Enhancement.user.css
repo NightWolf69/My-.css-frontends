@@ -277,11 +277,11 @@
 	
 	/* Цвет имени верифицированного галкой пользователя в чате стрима */
 	yt-live-chat-text-message-renderer:has([type="verified"]):not([type="moderator"]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip:has(> span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[type="verified"]) {
-		color: yellow;
+		color: lightgreen;
 	}
 	/* Цвет иконки галки */
 	yt-live-chat-text-message-renderer:has([type="verified"]):not([type="moderator"]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip > span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[type="verified"] > div#image > yt-icon > span > div > svg > path {
-		color: yellow;
+		color: lightgreen;
 		filter: drop-shadow(0px 0px 4px #000) !important;
 	}
 	
