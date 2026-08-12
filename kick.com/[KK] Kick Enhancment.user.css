@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        2.1.9
+@version        2.1.10
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов 7tv и Mo'Kick (использование этих аддонов опционально)
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -498,6 +498,10 @@
 @var	color				prediction-msg_btn_context-menu_hide_color					"╠═        ► Пункт контекстного меню - 👁 Скрыть:"										#F30
 @var	number  		header-5-line-divider-31										"║"														 								[0,0,0]
 @var	number  		header-5-divider-5												"╠═══════════════════ СООБЩЕНИЯ В ЧАТЕ ═════════════════════╣" 							[0,0,0]
+@var	number  		header-5-line-divider-32										"║"														 								[0,0,0]
+@var	checkbox			chat-msg-bg_every2_toggle									"╠    Цвет фона у сообщений, через один (в шахматном порядке):"							1
+@var	color				chat-msg-bg_every2_bg_color									"╠═        Цвет текста:"																#C3C3C310
+@var	number  		header-5-line-divider-33										"║"														 								[0,0,0]
 @var	number  		header-5-line-divider-32										"║"														 								[0,0,0]
 @var	checkbox			chat-msg_toggle												"╠    Изменение внешнего вида текстовых сообщений в чате:"								1
 @var	color				chat-msg_color												"╠═        Цвет текста:"																white
@@ -1003,8 +1007,10 @@ btn-bg-hover=#484E53
 btn-bg-dark=rgba(66, 71, 77, .2)
 red1=#FF6262
 red2=#F30
+ytred=#ED0000
 lightyellowgreen=#A0FF48
 kickgreen=#53FC18
+vkblue=#2594EF
 cyan2=#48FFF0
 pipblue=#578FFE
 purple1=#C39BFF
@@ -4203,6 +4209,13 @@ purple3=#9048FF
 /* ##### Область чата - Пользовательские сообщения ##### */
 /* ##################################################### */
 	
+	/* Закраска фона сообщений через один */
+	if chat-msg-bg_every2_toggle {
+		div#channel-chatroom div[data-index]:nth-child(2n) {
+			background-color: chat-msg-bg_every2_bg_color !important;
+		}
+	}
+	
 	/* Текст сообщений в чате */
 	if chat-msg_toggle {
 		div#channel-chatroom div[data-index] span[class *="font-normal leading-"], /* дефолтный */
@@ -5955,7 +5968,7 @@ purple3=#9048FF
 	if chat_under-input-area_btn_settings_toggle {
 		/* Отключить отображение кнопки */
 		if chat_under-input-area_btn_settings_disable {
-			div#chatroom-footer div.z-common button:has(svg > path[d *="0-0.9-0.1-1.3l2.7-2.1c0.2-0.2"][d *="1.3c-0.7-0.5-1.4-0.9-2.2-1.3l-0.5-3.4C19.2"][d *="25l3.2-1.3c0.7"][d *="0.6l0.5-3.4c0.8-0.3"][d *="0.6-0.2-0.8L25.7"][d *="25l3.2-1.3c0.7"][d *="9-2.2-4.9-4.9s2.2-4.9"]) {
+			div#chatroom-footer div.z-common button:has(svg g path[d="M28.015 16.02c0-.74-.08-1.482-.2-2.183l4.065-2.343-4.005-6.928-4.065 2.343a11.9 11.9 0 0 0-3.805-2.183V0h-8.01v4.706A12.4 12.4 0 0 0 8.19 6.889L4.125 4.546.12 11.474l4.065 2.343c-.14.721-.2 1.442-.2 2.183s.08 1.482.2 2.183L.12 20.526l4.005 6.928 4.065-2.343a12 12 0 0 0 3.805 2.183V32h8.01v-4.706a12.4 12.4 0 0 0 3.805-2.183l4.065 2.343 4.005-6.928-4.065-2.343c.14-.721.2-1.442.2-2.183zM16 22.028a6 6 0 0 1-6.008-6.008A6 6 0 0 1 16 10.013a6 6 0 0 1 6.008 6.007A6 6 0 0 1 16 22.028"]) {
 				display: none !important;
 			}
 		}
@@ -5963,7 +5976,7 @@ purple3=#9048FF
 	
 		/* Свой фон кнопки */
 		if chat_under-input-area_btn_settings_bg_toggle {
-			div#chatroom-footer div.z-common button:has(svg > path[d *="0-0.9-0.1-1.3l2.7-2.1c0.2-0.2"][d *="1.3c-0.7-0.5-1.4-0.9-2.2-1.3l-0.5-3.4C19.2"][d *="25l3.2-1.3c0.7"][d *="0.6l0.5-3.4c0.8-0.3"][d *="0.6-0.2-0.8L25.7"][d *="25l3.2-1.3c0.7"][d *="9-2.2-4.9-4.9s2.2-4.9"]) {
+			div#chatroom-footer div.z-common button:has(svg g path[d="M28.015 16.02c0-.74-.08-1.482-.2-2.183l4.065-2.343-4.005-6.928-4.065 2.343a11.9 11.9 0 0 0-3.805-2.183V0h-8.01v4.706A12.4 12.4 0 0 0 8.19 6.889L4.125 4.546.12 11.474l4.065 2.343c-.14.721-.2 1.442-.2 2.183s.08 1.482.2 2.183L.12 20.526l4.005 6.928 4.065-2.343a12 12 0 0 0 3.805 2.183V32h8.01v-4.706a12.4 12.4 0 0 0 3.805-2.183l4.065 2.343 4.005-6.928-4.065-2.343c.14-.721.2-1.442.2-2.183zM16 22.028a6 6 0 0 1-6.008-6.008A6 6 0 0 1 16 10.013a6 6 0 0 1 6.008 6.007A6 6 0 0 1 16 22.028"]) {
 				background-color: chat_under-input-area_btn_settings_bg_color !important;
 				background-image: none !important;
 			}
@@ -5971,12 +5984,12 @@ purple3=#9048FF
 	
 	
 		/* Без наведения курсора */
-		div#chatroom-footer div.z-common button:has(svg > path[d *="0-0.9-0.1-1.3l2.7-2.1c0.2-0.2"][d *="1.3c-0.7-0.5-1.4-0.9-2.2-1.3l-0.5-3.4C19.2"][d *="25l3.2-1.3c0.7"][d *="0.6l0.5-3.4c0.8-0.3"][d *="0.6-0.2-0.8L25.7"][d *="25l3.2-1.3c0.7"][d *="9-2.2-4.9-4.9s2.2-4.9"]) {
+		div#chatroom-footer div.z-common button:has(svg g path[d="M28.015 16.02c0-.74-.08-1.482-.2-2.183l4.065-2.343-4.005-6.928-4.065 2.343a11.9 11.9 0 0 0-3.805-2.183V0h-8.01v4.706A12.4 12.4 0 0 0 8.19 6.889L4.125 4.546.12 11.474l4.065 2.343c-.14.721-.2 1.442-.2 2.183s.08 1.482.2 2.183L.12 20.526l4.005 6.928 4.065-2.343a12 12 0 0 0 3.805 2.183V32h8.01v-4.706a12.4 12.4 0 0 0 3.805-2.183l4.065 2.343 4.005-6.928-4.065-2.343c.14-.721.2-1.442.2-2.183zM16 22.028a6 6 0 0 1-6.008-6.008A6 6 0 0 1 16 10.013a6 6 0 0 1 6.008 6.007A6 6 0 0 1 16 22.028"]) {
 			color: chat_under-input-area_btn_settings_color !important;
 		}
 	
 		/* При наведении курсора */
-		div#chatroom-footer div.z-common button:has(svg > path[d *="0-0.9-0.1-1.3l2.7-2.1c0.2-0.2"][d *="1.3c-0.7-0.5-1.4-0.9-2.2-1.3l-0.5-3.4C19.2"][d *="25l3.2-1.3c0.7"][d *="0.6l0.5-3.4c0.8-0.3"][d *="0.6-0.2-0.8L25.7"][d *="25l3.2-1.3c0.7"][d *="9-2.2-4.9-4.9s2.2-4.9"]):hover {
+		div#chatroom-footer div.z-common button:has(svg g path[d="M28.015 16.02c0-.74-.08-1.482-.2-2.183l4.065-2.343-4.005-6.928-4.065 2.343a11.9 11.9 0 0 0-3.805-2.183V0h-8.01v4.706A12.4 12.4 0 0 0 8.19 6.889L4.125 4.546.12 11.474l4.065 2.343c-.14.721-.2 1.442-.2 2.183s.08 1.482.2 2.183L.12 20.526l4.005 6.928 4.065-2.343a12 12 0 0 0 3.805 2.183V32h8.01v-4.706a12.4 12.4 0 0 0 3.805-2.183l4.065 2.343 4.005-6.928-4.065-2.343c.14-.721.2-1.442.2-2.183zM16 22.028a6 6 0 0 1-6.008-6.008A6 6 0 0 1 16 10.013a6 6 0 0 1 6.008 6.007A6 6 0 0 1 16 22.028"]):hover {
 			filter: drop-shadow(0px 0px 4px chat_under-input-area_btn_settings_color) !important;
 		}
 	}
