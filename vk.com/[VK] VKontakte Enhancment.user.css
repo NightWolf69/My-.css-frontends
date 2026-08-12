@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [VK] VKontakte Enhancment
 @namespace      https://github.com/NightWolf69
-@version        1.0.1-beta
+@version        1.0.2-beta
 @description    Правки внешнего вида для ВК
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -148,6 +148,18 @@ purple3=#9048FF
 		div[data-test-id="chatContainer"] div#chatPinned div[class *="PinnedBlockLayout"] {
 			border-color: pinned-msg-color !important;
 		}
+}
+
+@-moz-document domain("live.vkvideo.ru") {
+/* ############################ */
+/* ##### Сообщения в чате ##### */
+/* ############################ */
+
+	/* Закраска фона сообщений через один */
+	div[data-test-id="chatContainer"] div:not([class]) > div:has(> div[data-role="messageContainer"]):nth-child(2n) {
+		background-color: #C3C3C320 !important;
+	}
+
 }
 
 @-moz-document domain("live.vkvideo.ru") {
