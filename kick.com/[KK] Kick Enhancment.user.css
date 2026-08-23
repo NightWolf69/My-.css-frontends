@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        2.2.0
+@version        2.2.1
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов 7tv и Mo'Kick (использование этих аддонов опционально)
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -104,29 +104,39 @@
 @var	number  		header-3-line-divider-1											"║"														 								[0,0,0]
 @var	checkbox			player_stream-recorder_widget_toggle						"╠    Компактный вид виджет «Stream Recorder» аддона Mo'Kick:"							1
 @var	number  		header-3-line-divider-2											"║"														 								[0,0,0]
+@var	checkbox			player_btn_rewind-30_toggle									"╠    Изменение кнопок ↩️ ← 10 и ↩️ ← 30:"												1
+@var	color				player_btn_rewind-30_color									"╠═       Цвет кнопки:"																	#C39BFF
+@var	number  		header-3-line-divider-3											"║"														 								[0,0,0]
+@var	checkbox			player_btn_goto-prev-page_toggle							"╠    Изменение кнопки 🔽 Вернутьсяна прошлую страницу:"								1
+@var	checkbox			player_btn_goto-prev-page_disable							"╠═        Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"					1
+@var	color				player_btn_goto-prev-page_color								"╠═       Цвет кнопки:"																	#53FC18
+@var	number  		header-3-line-divider-3											"║"														 								[0,0,0]
 @var	checkbox			player_btn_rewind_toggle									"╠    Изменение кнопки ⏪ Rewind аддона Mo'Kick:"										1
 @var	checkbox			player_btn_rewind_disable									"╠═        Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"					0
 @var	checkbox			player_in_mod_btn_rewind_disable							"╠═        Отключить отображение кнопки в 🛠 плеере Модерки:"							1
-@var	color				player_btn_rewind_color										"╠═       Цвет внешнего свечения кнопки:"												#C39BFF
+@var	color				player_btn_rewind_color										"╠═       Цвет кнопки:"																	#C39BFF
 @var	number  		header-3-line-divider-3											"║"														 								[0,0,0]
 @var	checkbox			player_btn_watch-again_toggle								"╠    Изменение кнопки 🔄 Повторное воспроизведение:"									1
-@var	color				player_btn_watch-again_color								"╠═        Цвет внешнего свечения кнопки:"												#53FC18
+@var	color				player_btn_watch-again_color								"╠═        Цвет кнопки:"																#53FC18
 @var	number  		header-3-line-divider-4											"║"														 								[0,0,0]
 @var	checkbox			player_btn_pause-play_toggle								"╠    Изменение кнопки ⏯ Пауза/Воспроизвести:"											1
-@var	color				player_btn_pause-play_color									"╠═        Цвет внешнего свечения кнопки:"												#A970FF
+@var	color				player_btn_pause-play_color									"╠═        Цвет кнопки:"																#A970FF
 @var	number  		header-3-line-divider-5											"║"														 								[0,0,0]
+@var	checkbox			player_btn_fast-forward-10_toggle							"╠    Изменение кнопки ↪️ → 10:"														1
+@var	color				player_btn_fast-forward-10_color							"╠═       Цвет кнопки:"																	#C39BFF
+@var	number  		header-3-line-divider-6											"║"														 								[0,0,0]
 @var	checkbox			player_btn_fast-forward_toggle								"╠    Изменение кнопки ⏩ Fast Forward аддона Mo'Kick:"									1
 @var	checkbox			player_btn_fast-forward_disable								"╠═        Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"					0
 @var	checkbox			player_in_mod_btn_fast-forward_disable						"╠═        Отключить отображение кнопки в 🛠 плеере Модерки:"							1
-@var	color				player_btn_fast-forward_color								"╠═       Цвет внешнего свечения кнопки:"												#C39BFF
+@var	color				player_btn_fast-forward_color								"╠═       Цвет кнопки:"																	#C39BFF
 @var	number  		header-3-line-divider-6											"║"														 								[0,0,0]
 @var	checkbox			player_btn_mute-unmute_toggle								"╠    Изменение кнопки 🔈 Отключить звук / 🔇 Отменить отключение звука:"				1
 @var	checkbox			player_btn_mute-unmute_disable								"╠═        Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"					0
 @var	checkbox			player_in_mod_btn_mute-unmute_disable						"╠═        Отключить отображение кнопки в 🛠 плеере Модерки:"							0
 @var	checkbox			player_in-tab_btn_mute-unmute_disable						"╠═        Отключить отображение кнопки в 📌 плеере In-Tab (Mo'Kick):"					0
 @var	checkbox			player_clip_btn_mute-unmute_disable							"╠═        Отключить отображение кнопки в 🎞 плеере Просмотра клипа:"					0
-@var	color				player_btn_unmuted_color									"╠═        Цвет внешнего свечения, когда звук 🔈 Включен:"								#A0FF48
-@var	color				player_btn_muted_color										"╠═        Цвет внешнего свечения, когда звук 🔇 Отключен:"								#FF6262
+@var	color				player_btn_unmuted_color									"╠═        Цвет кнопки, когда звук 🔈 Включен:"											#A0FF48
+@var	color				player_btn_muted_color										"╠═        Цвет кнопки, когда звук 🔇 Отключен:"										#FF6262
 @var	number  		header-3-line-divider-7											"║"														 								[0,0,0]
 @var	checkbox			player_volume-slider_fix									"╠    Фикс перекрытия 🎚 Ползунока регулировки громкости, шкалой перемотки:"			1
 @var	checkbox			player_volume-slider_force									"╠    🎚 Ползунок регулировки громкости всегда видно в ▶️ плеере Стрима и VOD'а:"		1
@@ -139,14 +149,14 @@
 @var	checkbox			player_in_mod_btn_stream-record_disable						"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_stream-record_order								"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-4,-10,10]
 @var	number				player_in_mod_btn_stream-record_order						"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[-4,-10,10]
-@var	color				player_btn_stream-record_color								"╠═        Цвет внешнего свечения кнопки:"												#FF6262
+@var	color				player_btn_stream-record_color								"╠═        Цвет кнопки:"																#FF6262
 @var	number  		header-3-line-divider-9											"║"														 								[0,0,0]
 @var	checkbox			player_btn_screenshot_toggle								"╠    Изменение кнопки 📸 Instant Screenshot аддона Mo'Kick:"							1
 @var	checkbox			player_btn_screenshot_disable								"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_screenshot_disable						"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							0
 @var	number				player_btn_screenshot_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[3,-10,10]
 @var	number				player_in_mod_btn_screenshot_order							"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[3,-10,10]
-@var	color				player_btn_screenshot_color									"╠═        Цвет внешнего свечения кнопки:"												#FF6262
+@var	color				player_btn_screenshot_color									"╠═        Цвет кнопки:"																#FF6262
 @var	number  		header-3-line-divider-10										"║"														 								[0,0,0]
 @var	checkbox			player_btn_filters_toggle									"╠    Изменение кнопки ✨ Filters аддона Mo'Kick:"										1
 @var	checkbox			player_btn_filters_disable									"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
@@ -154,46 +164,56 @@
 @var	number				player_btn_filters_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-2,-10,10]
 @var	number				player_in_mod_btn_filters_order								"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[-2,-10,10]
 @var	color				player_btn_filters_color									"╠═        Цвет внешнего свечения кнопки:"												yellow
-@var	number  		header-3-line-divider-11											"║"														 								[0,0,0]
+@var	number  		header-3-line-divider-11										"║"														 								[0,0,0]
 @var	checkbox			player_btn_speed_toggle										"╠    Изменение кнопки 🎛 Playback Speed аддона Mo'Kick:"								1
 @var	checkbox			player_btn_speed_disable									"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_speed_disable								"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_speed_order										"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[1,-10,10]
 @var	number				player_in_mod_btn_speed_order								"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[1,-10,10]
-@var	color				player_btn_speed_color										"╠═        Цвет внешнего свечения кнопки:"												cyan
+@var	color				player_btn_speed_color										"╠═        Цвет кнопки:"																cyan
 @var	number  		header-3-line-divider-12										"║"														 								[0,0,0]
 @var	checkbox			player_btn_statistics_toggle								"╠    Изменение кнопки 📊 Statistics аддона Mo'Kick:"									1
 @var	checkbox			player_btn_statistics_disable								"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_statistics_disable						"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_statistics_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[0,-10,10]
 @var	number				player_in_mod_btn_statistics_order							"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[0,-10,10]
-@var	color				player_btn_statistics_color									"╠═        Цвет внешнего свечения кнопки:"												#C39BFF
+@var	color				player_btn_statistics_color									"╠═        Цвет кнопки:"																#C39BFF
 @var	number  		header-3-line-divider-13										"║"														 								[0,0,0]
 @var	checkbox			player_btn_pip_toggle										"╠    Изменение кнопки 🪟 Картинка в картинке:"											1
 @var	checkbox			player_btn_pip_disable										"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						1
 @var	checkbox			player_in_mod_btn_pip_disable								"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_pip_order										"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-1,-10,10]
 @var	number				player_in_mod_btn_pip_order									"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[-1,-10,10]
-@var	color				player_btn_pip_color										"╠═        Цвет внешнего свечения кнопки:"												#578FFE
+@var	color				player_btn_pip_color										"╠═        Цвет кнопки:"																#578FFE
 @var	number  		header-3-line-divider-14										"║"														 								[0,0,0]
+@var	checkbox			player_btn_report_toggle									"╠    Изменение кнопки 🔔Пожаловаться:"													1
+@var	checkbox			player_btn_report_disable									"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
+@var	number				player_btn_report_order										"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-4,-10,10]
+@var	color				player_btn_report_color										"╠═        Цвет кнопки:"																yellow
+@var	number  		header-3-line-divider-15										"║"														 								[0,0,0]
 @var	checkbox			player_btn_clip_toggle										"╠    Изменение кнопки 🎬 Clip:"														1
 @var	checkbox			player_btn_clip_disable										"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_clip_disable								"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_clip_order										"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-4,-10,10]
 @var	number				player_in_mod_btn_clip_order								"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[-4,-10,10]
-@var	color				player_btn_clip_color										"╠═        Цвет внешнего свечения кнопки:"												#A0FF48
+@var	color				player_btn_clip_color										"╠═        Цвет кнопки:"																#A0FF48
+@var	number  		header-3-line-divider-15										"║"														 								[0,0,0]
+@var	checkbox			player_btn_share_toggle										"╠    Изменение кнопки 🔗 Поделиться:"													1
+@var	checkbox			player_btn_share_disable									"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
+@var	number				player_btn_share_order										"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-4,-10,10]
+@var	color				player_btn_share_color										"╠═        Цвет кнопки:"																cyan
 @var	number  		header-3-line-divider-15										"║"														 								[0,0,0]
 @var	checkbox			player_btn_captions_toggle									"╠    Изменение кнопки 📟 Captions:"													1
 @var	checkbox			player_btn_captions_disable									"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	number				player_btn_captions_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[1,-10,10]
-@var	color				player_btn_captions_color									"╠═        Цвет внешнего свечения кнопки:"												rgb(69, 173, 252)
+@var	color				player_btn_captions_color									"╠═        Цвет кнопки:"																rgb(69, 173, 252)
 @var	number  		header-3-line-divider-15										"║"														 								[0,0,0]
 @var	checkbox			player_btn_theatre_toggle									"╠    Изменение кнопки 🔛 Театральный режим:"											1
 @var	checkbox			player_btn_theatre_disable									"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_theatre_disable							"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_theatre_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[2,-10,10]
 @var	number				player_in_mod_btn_theatre_order								"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[2,-10,10]
-@var	color				player_btn_theatre_color									"╠═        Цвет внешнего свечения кнопки:"												#A970FF
+@var	color				player_btn_theatre_color									"╠═        Цвет кнопки:"																#A970FF
 @var	number  		header-3-line-divider-16										"║"														 								[0,0,0]
 @var	checkbox			player_btn_fullscreen_toggle								"╠    Изменение кнопки ↗️ Полный экран:"												1
 @var	checkbox			player_btn_fullscreen_disable								"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
@@ -202,14 +222,14 @@
 @var	checkbox			player_clip_btn_fullscreen_disable							"╠═       Отключить отображение кнопки в 🎞 плеере Просмотра клипа:"					0
 @var	number				player_btn_fullscreen_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[4,-10,10]
 @var	number				player_in_mod_btn_fullscreen_order							"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[4,-10,10]
-@var	color				player_btn_fullscreen_color									"╠═        Цвет внешнего свечения кнопки:"												#9048FF
+@var	color				player_btn_fullscreen_color									"╠═        Цвет кнопки:"																#9048FF
 @var	number  		header-3-line-divider-17										"║"														 								[0,0,0]
 @var	checkbox			player_btn_quality_toggle									"╠    Изменение кнопки ⚙️ Качество:"													1
 @var	checkbox			player_btn_quality_disable									"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_quality_disable							"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							0
 @var	number				player_btn_quality_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-3,-10,10]
 @var	number				player_in_mod_btn_quality_order								"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[-3,-10,10]
-@var	color				player_btn_quality_color									"╠═        Цвет внешнего свечения кнопки:"												orange
+@var	color				player_btn_quality_color									"╠═        Цвет кнопки:"																orange
 @var	number  		header-3-line-divider-18										"║"														 								[0,0,0]
 @var	number  		header-3-end													"╚═══════════════════════════════════════════════════════╝" 							[0,0,0]
 
@@ -1612,6 +1632,60 @@ purple3=#9048FF
 	}
 	
 	
+	/* Кнопка ↩️ "← 30" и ↩️ "← 10" в миниатюрном плеере (когда окно браузера маленькое) */
+	if player_btn_rewind-30_toggle {
+		/* Без наведения курсора */
+			/* В плеере 🔴 Стрима и ⚫️ VOD'а */
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipBack10"]) path,
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipBack30"]) path {
+				fill: player_btn_rewind-30_color !important;
+			}
+	
+			/* В плеере 🔴 Стрима и ⚫️ VOD'а */
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipBack10"]),
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipBack30"]) {
+				color: player_btn_rewind-30_color !important;
+				filter: drop-shadow(0px 0px 4px #000) !important;
+			}
+	
+		/* При наведении курсора */
+			/* В плеере 🔴 Стрима и ⚫️ VOD'а */
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipBack10"]):hover,
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipBack30"]):hover {
+				filter: drop-shadow(0px 0px 4px player_btn_rewind-30_color) !important;
+			}
+	}
+	
+	
+	/* Кнопка возврата на прошлую страницу 🔽 в миниатюрном плеере (когда окно браузера маленькое) */
+	if player_btn_goto-prev-page_toggle {
+		/* Отключение кнопки в плеере 🔴 Стрима и ⚫️ VOD'а */
+		if player_btn_goto-prev-page_disable {
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="ChevronDown"]) {
+				display: none;
+			}
+		}
+	
+	
+		/* Без наведения курсора */
+		div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="ChevronDown"]) path {
+			fill: player_btn_goto-prev-page_color;
+		}
+	
+		div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="ChevronDown"]) {
+			color: player_btn_goto-prev-page_color;
+			filter: drop-shadow(0px 0px 4px #000) !important;
+			rotate: 180deg;
+		}
+	
+	
+		/* При наведении курсора */
+		div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="ChevronDown"]):hover {
+			filter: drop-shadow(0px 0px 4px player_btn_goto-prev-page_color) !important;
+		}
+	}
+	
+	
 	/* Кнопка ⏪ "Rewind" (Mo'Kick) */
 	if player_btn_rewind_toggle {
 		/* Отключение кнопки в плеере 🔴 Стрима и ⚫️ VOD'а */
@@ -1724,6 +1798,28 @@ purple3=#9048FF
 			/* ⏸ В плеере 🎞 Просмотра клипа */
 			div[role="dialog"]:has(h2) button:not([type="button"]):has(svg[data-ds-icon="Play"]):hover {
 				filter: drop-shadow(0px 0px 4px player_btn_pause-play_color) !important;
+			}
+	}
+	
+	
+	/* Кнопка ↪️ "→ 10" в миниатюрном плеере (когда окно браузера маленькое) */
+	if player_btn_fast-forward-10_toggle {
+		/* Без наведения курсора */
+			/* В плеере 🔴 Стрима и ⚫️ VOD'а */
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipForward10"]) path {
+				fill: player_btn_fast-forward-10_color !important;
+			}
+	
+			/* В плеере 🔴 Стрима и ⚫️ VOD'а */
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipForward10"]) {
+				color: player_btn_fast-forward-10_color !important;
+				filter: drop-shadow(0px 0px 4px #000) !important;
+			}
+	
+		/* При наведении курсора */
+			/* В плеере 🔴 Стрима и ⚫️ VOD'а */
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipForward10"]):hover {
+				filter: drop-shadow(0px 0px 4px player_btn_fast-forward-10_color) !important;
 			}
 	}
 	
@@ -2136,53 +2232,68 @@ purple3=#9048FF
 	if player_btn_speed_toggle {
 		/* Отключение в плеере 🔴 Стрима и ⚫️ VOD'а */
 		if player_btn_speed_disable {
-			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="PlaybackSpeed"]) {
+			/* Полноразмерный плеер */
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="PlaybackSpeed"]),
+ 			/* В миниатюрном плеере (когда окно браузера маленькое) (Mo'Kick) */
+			div#injected-embedded-channel-player-video button.moKick-playback-speed {
 				display: none !important;
 			}
 		}
 	
 		/* Отключение в плеере 🛠 Модерки */
 		if player_in_mod_btn_speed_disable {
-			div[data-grid="element"] div#injected-channel-player button:has(svg[data-ds-icon="PlaybackSpeed"]) {
+			div[data-grid="element"] div#injected-channel-player button.moKick-playback-speed {
 				display: none !important;
 			}
 		}
 	
 	
 		/* Смещение в плеере 🔴 Стрима и ⚫️ VOD'а */
-		div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="PlaybackSpeed"]) {
-			order: player_btn_speed_order !important;
-		}
+			/* Полноразмерный плеер */
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="PlaybackSpeed"]),
+ 			/* В миниатюрном плеере (когда окно браузера маленькое) (Mo'Kick) */
+			div#injected-embedded-channel-player-video button.moKick-playback-speed {
+				order: player_btn_speed_order !important;
+			}
 	
 		/* Смещение в плеере 🛠 Модерки */
-		div[data-grid="element"] div#injected-channel-player button:has(svg[data-ds-icon="PlaybackSpeed"]) {
+		div[data-grid="element"] div#injected-channel-player button.moKick-playback-speed {
 			order: player_in_mod_btn_speed_order !important;
 		}
 	
 	
 		/* Без наведения курсора */
 			/* В плеере 🔴 Стрима и ⚫️ VOD'а */
-			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="PlaybackSpeed"]) path,
+				/* Полноразмерный плеер */
+				div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="PlaybackSpeed"]) path,
+				/* В миниатюрном плеере (когда окно браузера маленькое) */
+				div#injected-embedded-channel-player-video button.moKick-playback-speed path,
 			/* В плеере 🛠 Модерки */
-			div[data-grid="element"] div#injected-channel-player button:has(svg[data-ds-icon="PlaybackSpeed"]) path {
-				fill: player_btn_speed_color !important;
-			}
+				div[data-grid="element"] div#injected-channel-player button.moKick-playback-speed path {
+					fill: player_btn_speed_color !important;
+				}
 	
 			/* В плеере 🔴 Стрима и ⚫️ VOD'а */
-			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="PlaybackSpeed"]),
+				/* Полноразмерный плеер */
+				div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="PlaybackSpeed"]),
+				/* В миниатюрном плеере (когда окно браузера маленькое) */
+				div#injected-embedded-channel-player-video button.moKick-playback-speed,
 			/* В плеере 🛠 Модерки */
-			div[data-grid="element"] div#injected-channel-player button:has(svg[data-ds-icon="PlaybackSpeed"]) {
-				color: player_btn_speed_color !important;
-				filter: drop-shadow(0px 0px 4px #000) !important;
-			}
+				div[data-grid="element"] div#injected-channel-player button.moKick-playback-speed {
+					color: player_btn_speed_color !important;
+					filter: drop-shadow(0px 0px 4px #000) !important;
+				}
 	
 		/* При наведении курсора */
 			/* В плеере 🔴 Стрима и ⚫️ VOD'а */
-			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="PlaybackSpeed"]):hover,
+				/* Полноразмерный плеер */
+				div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="PlaybackSpeed"]):hover,
+ 				/* В миниатюрном плеере (когда окно браузера маленькое) */
+				div#injected-embedded-channel-player-video button.moKick-playback-speed:hover,
 			/* В плеере 🛠 Модерки */
-			div[data-grid="element"] div#injected-channel-player button:has(svg[data-ds-icon="PlaybackSpeed"]):hover {
-				filter: drop-shadow(0px 0px 4px player_btn_speed_color) !important;
-			}
+				div[data-grid="element"] div#injected-channel-player button.moKick-playback-speed:hover {
+					filter: drop-shadow(0px 0px 4px player_btn_speed_color) !important;
+				}
 	}
 	
 	
@@ -2276,49 +2387,107 @@ purple3=#9048FF
 	}
 	
 	
-	/* Кнопка 🎬 "Clip" в плеере канала */
-	if player_btn_clip_toggle {
+	/* Кнопка 🔔 "Пожаловаться" в миниатюрном плеере (когда окно браузера маленькое) */
+	if player_btn_report_toggle {
 		/* Отключение в плеере 🔴 Стрима и ⚫️ VOD'а */
-		if player_btn_clip_disable {
-			div#injected-embedded-channel-player-video button:has(svg > path[d="M1.82739 7.28856L27.0598 1.71777L28.2433 7.07867L3.01097 12.6495L1.82739 7.28856ZM3.03003 28.9699V13.6999H28.96V28.9699H3.03003ZM19.98 21.3299L13.47 16.7299V25.9299L19.98 21.3299Z"]) {
-				display: none !important;
-			}
-		}
-	
-		/* Отключение в плеере 🛠 Модерки */
-		if player_in_mod_btn_clip_disable {
-			div[data-grid="element"] div#injected-channel-player button:has(svg > path[d="M1.82739 7.28856L27.0598 1.71777L28.2433 7.07867L3.01097 12.6495L1.82739 7.28856ZM3.03003 28.9699V13.6999H28.96V28.9699H3.03003ZM19.98 21.3299L13.47 16.7299V25.9299L19.98 21.3299Z"]) {
+		if player_btn_report_disable {
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="Report"]) {
 				display: none !important;
 			}
 		}
 	
 	
 		/* Смещение в плеере 🔴 Стрима и ⚫️ VOD'а */
-		div#injected-embedded-channel-player-video button:has(svg > path[d="M1.82739 7.28856L27.0598 1.71777L28.2433 7.07867L3.01097 12.6495L1.82739 7.28856ZM3.03003 28.9699V13.6999H28.96V28.9699H3.03003ZM19.98 21.3299L13.47 16.7299V25.9299L19.98 21.3299Z"]) {
+		div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="Report"]) {
+			order: player_btn_report_order !important;
+		}
+	
+	
+		/* Без наведения курсора */
+		div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="Report"]) {
+			color: player_btn_report_color !important;
+			filter: drop-shadow(0px 0px 4px #000) !important;
+		}
+	
+		/* При наведении курсора */
+		div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="Report"]):hover {
+			filter: drop-shadow(0px 0px 4px player_btn_report_color) !important;
+		}
+	}
+	
+	
+	/* Кнопка 🎬 "Clip" в плеере канала */
+	if player_btn_clip_toggle {
+		/* Отключение в плеере 🔴 Стрима и ⚫️ VOD'а */
+		if player_btn_clip_disable {
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="Clip"]) {
+				display: none !important;
+			}
+		}
+	
+		/* Отключение в плеере 🛠 Модерки */
+		if player_in_mod_btn_clip_disable {
+			div[data-grid="element"] div#injected-channel-player button:has(svg[data-ds-icon="Clip"]) {
+				display: none !important;
+			}
+		}
+	
+	
+		/* Смещение в плеере 🔴 Стрима и ⚫️ VOD'а */
+		div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="Clip"]) {
 			order: player_btn_clip_order !important;
 		}
 	
 		/* Смещение в плеере 🛠 Модерки */
-		div[data-grid="element"] div#injected-embedded-channel-player-video button:has(svg > path[d="M1.82739 7.28856L27.0598 1.71777L28.2433 7.07867L3.01097 12.6495L1.82739 7.28856ZM3.03003 28.9699V13.6999H28.96V28.9699H3.03003ZM19.98 21.3299L13.47 16.7299V25.9299L19.98 21.3299Z"]) {
+		div[data-grid="element"] div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="Clip"]) {
 			order: player_btn_clip_order !important;
 		}
 	
 	
 		/* Без наведения курсора */
-		/* В плеере 🔴 Стрима и ⚫️ VOD'а */
-		div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="Clip"]),
-		/* В плеере 🛠 Модерки */
-		div[data-grid="element"] div#injected-channel-player button:has(svg[data-ds-icon="Clip"]) {
-			color: player_btn_clip_color !important;
+			/* В плеере 🔴 Стрима и ⚫️ VOD'а */
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="Clip"]),
+			/* В плеере 🛠 Модерки */
+			div[data-grid="element"] div#injected-channel-player button:has(svg[data-ds-icon="Clip"]) {
+				color: player_btn_clip_color !important;
+				filter: drop-shadow(0px 0px 4px #000) !important;
+			}
+	
+		/* При наведении курсора */
+			/* В плеере 🔴 Стрима и ⚫️ VOD'а */
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="Clip"]):hover,
+			/* В плеере 🛠 Модерки */
+			div[data-grid="element"] div#injected-channel-player button:has(svg[data-ds-icon="Clip"]):hover {
+				filter: drop-shadow(0px 0px 4px player_btn_clip_color) !important;
+			}
+	}
+	
+	
+	/* Кнопка 🔗 "Поделиться" в миниатюрном плеере (когда окно браузера маленькое) */
+	if player_btn_share_toggle {
+		/* Отключение в плеере 🔴 Стрима и ⚫️ VOD'а */
+		if player_btn_share_disable {
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="Share"]) {
+				display: none !important;
+			}
+		}
+	
+	
+		/* Смещение в плеере 🔴 Стрима и ⚫️ VOD'а */
+		div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="Share"]) {
+			order: player_btn_share_order !important;
+		}
+	
+	
+		/* Без наведения курсора */
+		div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="Share"]) {
+			color: player_btn_share_color !important;
 			filter: drop-shadow(0px 0px 4px #000) !important;
 		}
 	
 		/* При наведении курсора */
-		/* В плеере 🔴 Стрима и ⚫️ VOD'а */
-		div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="Clip"]):hover,
-		/* В плеере 🛠 Модерки */
-		div[data-grid="element"] div#injected-channel-player button:has(svg[data-ds-icon="Clip"]):hover {
-			filter: drop-shadow(0px 0px 4px player_btn_clip_color) !important;
+		div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="Share"]):hover {
+			filter: drop-shadow(0px 0px 4px player_btn_share_color) !important;
 		}
 	}
 	
@@ -2377,7 +2546,7 @@ purple3=#9048FF
 	
 		/* Отключение в плеере 🛠 Модерки */
 		if player_in_mod_btn_theatre_disable {
-			div[data-grid="element"] div#injected-channel-player button:has(svg[data-ds-icon="ViewTheatre"]) {
+			div[data-grid="element"] div#injected-channel-player button:has(path[d="M2.17999 28.96V3.03H29.82V28.96H2.17999ZM6.17999 24.96H25.82V7.03H6.17999V24.96ZM8.06 11.24H23.95V20.77H8.06V11.24Z"]) {
 				display: none !important;
 			}
 		}
@@ -2389,7 +2558,7 @@ purple3=#9048FF
 		}
 	
 		/* Смещение в плеере 🛠 Модерки */
-		div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="ViewTheatre"]) {
+		div#injected-embedded-channel-player-video button:has(path[d="M2.17999 28.96V3.03H29.82V28.96H2.17999ZM6.17999 24.96H25.82V7.03H6.17999V24.96ZM8.06 11.24H23.95V20.77H8.06V11.24Z"]) {
 			order: player_btn_theatre_order !important;
 		}
 	
@@ -2398,7 +2567,7 @@ purple3=#9048FF
 			/* В плеере 🔴 Стрима и ⚫️ VOD'а */
 			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="ViewTheatre"]),
 			/* В плеере 🛠 Модерки */
-			div[data-grid="element"] div#injected-channel-player button:has(svg[data-ds-icon="ViewTheatre"]) {
+			div[data-grid="element"] div#injected-channel-player button:has(path[d="M2.17999 28.96V3.03H29.82V28.96H2.17999ZM6.17999 24.96H25.82V7.03H6.17999V24.96ZM8.06 11.24H23.95V20.77H8.06V11.24Z"]) {
 				color: player_btn_theatre_color !important;
 				filter: drop-shadow(0px 0px 4px #000) !important;
 				order: player_btn_theatre_order !important;
@@ -2408,7 +2577,7 @@ purple3=#9048FF
 			/* В плеере 🔴 Стрима и ⚫️ VOD'а */
 			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="ViewTheatre"]):hover,
 			/* В плеере 🛠 Модерки */
-			div[data-grid="element"] div#injected-channel-player button:has(svg[data-ds-icon="ViewTheatre"]):hover {
+			div[data-grid="element"] div#injected-channel-player button:has(path[d="M2.17999 28.96V3.03H29.82V28.96H2.17999ZM6.17999 24.96H25.82V7.03H6.17999V24.96ZM8.06 11.24H23.95V20.77H8.06V11.24Z"]):hover {
 				filter: drop-shadow(0px 0px 4px player_btn_theatre_color) !important;
 			}
 	}
@@ -4623,38 +4792,38 @@ purple3=#9048FF
 	if chat_reply-icon_in_reply-messages_toggle {
 		/* Без наведения курсора */
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] button:not([aria-label]) > svg > g > path[d="M21 9.5H9.54l5.96-5.96L11.96 0 0 11.96l11.82 11.82 3.54-3.54-5.76-5.76H21c3.3 0 5.98 2.68 5.98 5.98v.56c0 3.3-2.68 5.98-5.98 5.98H6v5h15c6.08 0 11-4.92 11-11v-.5c0-6.08-4.92-11-11-11"],
+			div#channel-chatroom div[data-index] button:not([aria-label]) > svg[data-ds-icon="ArrowCurveLeft"] path,
 			/* В окне ✍️ Ввода сообщения-ответа */
-			div#chatroom-footer div > svg > g > path[d="M21 9.5H9.54l5.96-5.96L11.96 0 0 11.96l11.82 11.82 3.54-3.54-5.76-5.76H21c3.3 0 5.98 2.68 5.98 5.98v.56c0 3.3-2.68 5.98-5.98 5.98H6v5h15c6.08 0 11-4.92 11-11v-.5c0-6.08-4.92-11-11-11"],
+			div#chatroom-footer div > svg[data-ds-icon="ArrowCurveLeft"] path,
 			/* В окне просмотра ветки ответов 💬 Thread */
-			div:has(main[data-theatre-mode-container]) div.z-popover svg:has(g > path[d="M32 1H0v23h10.8l5.26 7 5.18-7H32zm-4 19H4V5h24z"]),
+			div:has(main[data-theatre-mode-container]) div.z-popover svg[data-ds-icon="ArrowCurveLeft"],
 			/* В функциональных 🪟 Окнах 🗑 "Message Log" и 💬 "Chat Clears" (Mo'Kick) */
-			div[data-state="open"] div:has(span) > svg:has(path[d="M18.64 8.82996H15.02V2.57996L2.82996 11.33L15.02 20.08V13.83H18.64C21.61 13.83 24.02 16.25 24.02 19.21C24.02 22.17 21.6 24.59 18.64 24.59H8.91996V29.59H18.64C24.37 29.59 29.02 24.93 29.02 19.21C29.02 13.49 24.36 8.82996 18.64 8.82996Z"]) > path,
+			div[data-state="open"] div:has(span) > svg[data-ds-icon="ArrowCurveLeft"] path,
 			/* В плавающем 🪟 Окне "↩️ Replying to", когда отвечаешь на удалённое сообщение (Mo'Kick) */
-			div.z-alert-dialog div:has(span) > svg:has(path[d="M21 9.5H9.54l5.96-5.96L11.96 0 0 11.96l11.82 11.82 3.54-3.54-5.76-5.76H21c3.3 0 5.98 2.68 5.98 5.98v.56c0 3.3-2.68 5.98-5.98 5.98H6v5h15c6.08 0 11-4.92 11-11v-.5c0-6.08-4.92-11-11-11"]) > g > path,
+			div.z-alert-dialog div:has(span) > svg[data-ds-icon="ArrowCurveLeft"] path,
 			/* В дефолтной 📌 Карточке пользователя (Mo'Kick) */
-			div#user-identity.moKick-expanded div:has(span) > svg:has(path[d="M18.64 8.82996H15.02V2.57996L2.82996 11.33L15.02 20.08V13.83H18.64C21.61 13.83 24.02 16.25 24.02 19.21C24.02 22.17 21.6 24.59 18.64 24.59H8.91996V29.59H18.64C24.37 29.59 29.02 24.93 29.02 19.21C29.02 13.49 24.36 8.82996 18.64 8.82996Z"]) > path,
+			div#user-identity.moKick-expanded div:has(span) > svg[data-ds-icon="ArrowCurveLeft"] path,
 			/* В расширенной 📌 Карточке пользователя (Mo'Kick) */
-			div#user-identity_pinned.moKick-expanded div:has(span) > svg:has(path[d="M18.64 8.82996H15.02V2.57996L2.82996 11.33L15.02 20.08V13.83H18.64C21.61 13.83 24.02 16.25 24.02 19.21C24.02 22.17 21.6 24.59 18.64 24.59H8.91996V29.59H18.64C24.37 29.59 29.02 24.93 29.02 19.21C29.02 13.49 24.36 8.82996 18.64 8.82996Z"]) > path {
+			div#user-identity_pinned.moKick-expanded div:has(span) > svg[data-ds-icon="ArrowCurveLeft"] path {
 				color: chat_reply-icon_in_reply-messages_color !important;
 				fill: chat_reply-icon_in_reply-messages_color !important;
 			}
 	
 		/* При наведении курсора */
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] div:hover > button > svg:has(g > path[d="M21 9.5H9.54l5.96-5.96L11.96 0 0 11.96l11.82 11.82 3.54-3.54-5.76-5.76H21c3.3 0 5.98 2.68 5.98 5.98v.56c0 3.3-2.68 5.98-5.98 5.98H6v5h15c6.08 0 11-4.92 11-11v-.5c0-6.08-4.92-11-11-11"]),
+			div#channel-chatroom div[data-index] div:hover > button > svg[data-ds-icon="ArrowCurveLeft"],
 			/* В окне ✍️ Ввода сообщения-ответа */
-			div#chatroom-footer div:hover > div.overflow-y-hidden > div.flex-row > div.flex-col > div.flex-row > svg:has(g > path[d="M21 9.5H9.54l5.96-5.96L11.96 0 0 11.96l11.82 11.82 3.54-3.54-5.76-5.76H21c3.3 0 5.98 2.68 5.98 5.98v.56c0 3.3-2.68 5.98-5.98 5.98H6v5h15c6.08 0 11-4.92 11-11v-.5c0-6.08-4.92-11-11-11"]),
+			div#chatroom-footer div:hover > div.overflow-y-hidden > div.flex-row > div.flex-col > div.flex-row > svg[data-ds-icon="ArrowCurveLeft"],
 			/* В окне просмотра ветки ответов 💬 Thread */
-			div:has(main[data-theatre-mode-container]) div.z-popover:hover svg:has(g > path[d="M32 1H0v23h10.8l5.26 7 5.18-7H32zm-4 19H4V5h24z"]),
+			div:has(main[data-theatre-mode-container]) div.z-popover:hover svg[data-ds-icon="ArrowCurveLeft"],
 			/* В функциональных 🪟 Окнах 🗑 "Message Log" и 💬 "Chat Clears" (Mo'Kick) */
-			div[data-state="open"] div:hover > div:has(span) > svg:has(path[d="M18.64 8.82996H15.02V2.57996L2.82996 11.33L15.02 20.08V13.83H18.64C21.61 13.83 24.02 16.25 24.02 19.21C24.02 22.17 21.6 24.59 18.64 24.59H8.91996V29.59H18.64C24.37 29.59 29.02 24.93 29.02 19.21C29.02 13.49 24.36 8.82996 18.64 8.82996Z"]),
+			div[data-state="open"] div:hover > div:has(span) > svg[data-ds-icon="ArrowCurveLeft"],
 			/* В плавающем 🪟 Окне "↩️ Replying to", когда отвечаешь на удалённое сообщение (Mo'Kick) */
-			div.z-alert-dialog:hover div:has(span) > svg:has(path[d="M21 9.5H9.54l5.96-5.96L11.96 0 0 11.96l11.82 11.82 3.54-3.54-5.76-5.76H21c3.3 0 5.98 2.68 5.98 5.98v.56c0 3.3-2.68 5.98-5.98 5.98H6v5h15c6.08 0 11-4.92 11-11v-.5c0-6.08-4.92-11-11-11"]),
+			div.z-alert-dialog:hover div:has(span) > svg[data-ds-icon="ArrowCurveLeft"],
 			/* В дефолтной 📌 Карточке пользователя (Mo'Kick) */
-			div#user-identity.moKick-expanded div:hover > div:has(span) > svg:has(path[d="M18.64 8.82996H15.02V2.57996L2.82996 11.33L15.02 20.08V13.83H18.64C21.61 13.83 24.02 16.25 24.02 19.21C24.02 22.17 21.6 24.59 18.64 24.59H8.91996V29.59H18.64C24.37 29.59 29.02 24.93 29.02 19.21C29.02 13.49 24.36 8.82996 18.64 8.82996Z"]),
+			div#user-identity.moKick-expanded div:hover > div:has(span) > svg[data-ds-icon="ArrowCurveLeft"],
 			/* В расширенной 📌 Карточке пользователя (Mo'Kick) */
-			div#user-identity_pinned.moKick-expanded div:hover > div:has(span) > svg:has(path[d="M18.64 8.82996H15.02V2.57996L2.82996 11.33L15.02 20.08V13.83H18.64C21.61 13.83 24.02 16.25 24.02 19.21C24.02 22.17 21.6 24.59 18.64 24.59H8.91996V29.59H18.64C24.37 29.59 29.02 24.93 29.02 19.21C29.02 13.49 24.36 8.82996 18.64 8.82996Z"]) {
+			div#user-identity_pinned.moKick-expanded div:hover > div:has(span) > svg[data-ds-icon="ArrowCurveLeft"] {
 				filter: drop-shadow(0px 0px 4px chat_reply-icon_in_reply-messages_color) !important;
 			}
 	}
@@ -4716,15 +4885,15 @@ purple3=#9048FF
 	/* Краткий текст сообщения, на которое ↩️ отвечают в ветке сообщений*/
 	if chat_reply_preview_text_toggle {
 		/* Без наведения курсора */
-			div#channel-chatroom div[data-index] > div > div > div > button.cursor-pointer > span:has(span.inline), /* до ника, кому отвечают */
-			div#channel-chatroom div[data-index] > div > div > div > button.cursor-pointer > span:has(span.inline) > span.inline /* после ника, кому отвечают */ {
+			div#channel-chatroom div[data-index] div[type="button"] button > span:has(span.inline), /* до ника, кому отвечают */
+			div#channel-chatroom div[data-index] div[type="button"] button > span:has(span.inline) > span.inline /* после ника, кому отвечают */ {
 				color: chat_reply_preview_text_color !important;
 			}
 	
 		/* При наведении курсора */
-			div#channel-chatroom div[data-index] > div > div > div > button.cursor-pointer:hover > span:has(span.inline), /* до ника, кому отвечают */
-			div#channel-chatroom div[data-index] > div > div > div > button.cursor-pointer:hover > span:has(span.inline) > span.inline /* после ника, кому отвечают */
-			div#channel-chatroom div[data-index] button.cursor-pointer:hover > span > span:not([class="inline"]) /* ник, кому отвечают */ {
+			div#channel-chatroom div[data-index] div[type="button"] button:hover > span:has(span.inline), /* до ника, кому отвечают */
+			div#channel-chatroom div[data-index] div[type="button"] button:hover > span:has(span.inline) > span.inline, /* после ника, кому отвечают */
+			div#channel-chatroom div[data-index] div[type="button"] button:hover > span > span:not([class="inline"]) /* ник, кому отвечают */ {
 				color: chat_reply_preview_text-hover_color !important;
 				text-decoration: underline !important;
 			}
@@ -5694,6 +5863,7 @@ purple3=#9048FF
 	if chat_moderator_btn_timeout-user_toggle {
 		/* Свой фон кнопки */
 		if chat_moderator_btn_timeout-user_bg_toggle {
+			div#channel-chatroom div[data-index] button:not([disabled]):has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]), /* old */
 			div#channel-chatroom div[data-index] button:not([disabled]):has(svg[data-ds-icon="Hourglass"]) {
 				background-color: chat_moderator_btn_timeout-user_bg_color !important;
 				background-image: none !important;
@@ -5703,6 +5873,7 @@ purple3=#9048FF
 	
 		/* Отключить отображение кнопки, рядом с ником модера */
 		
+			div#channel-chatroom div[data-index]:has(svg[data-ds-icon="ModeratorBadge"]) button:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]), /* old */
 			div#channel-chatroom div[data-index]:has(svg[data-ds-icon="ModeratorBadge"]) button:has(svg[data-ds-icon="Hourglass"]) {
 				color: transparent !important;
 				z-index: -100 !important;
@@ -5710,12 +5881,14 @@ purple3=#9048FF
 	
 	
 		/* Активная - Без наведения курсора */
+		div#channel-chatroom div[data-index] button:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]), /* old */
 		div#channel-chatroom div[data-index] button:has(svg[data-ds-icon="Hourglass"]) {
 			color: chat_moderator_btn_timeout-user_color !important;
 			order: chat_moderator_btn_timeout-user_order !important;
 		}
 	
 		/* Активная - При наведении курсора */
+		div#channel-chatroom div[data-index] button:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]):hover, /* old */
 		div#channel-chatroom div[data-index] button:has(svg[data-ds-icon="Hourglass"]):hover {
 			filter: drop-shadow(0px 0px 4px chat_moderator_btn_timeout-user_color) !important;
 		}
@@ -5843,7 +6016,7 @@ purple3=#9048FF
 	if chat_input-area_btn_emoji-menu_toggle {
 		/* Отключить отображение кнопки */
 		if chat_input-area_btn_emoji-menu_disable {
-			div#chatroom-footer div#chat-input-wrapper > button:has(svg > path[d="M10 1c-4.972 0-9 4.028-9 9s4.028 9 9 9 9-4.027 9-9-4.027-9-9-9m3.375 4.781a1.407 1.407 0 1 1-.001 2.814 1.407 1.407 0 0 1 .001-2.814m-6.75 0a1.407 1.407 0 1 1-.001 2.814 1.407 1.407 0 0 1 .001-2.814M10 15.636a7.12 7.12 0 0 1-6.435-4.027l1.733-.844A5.2 5.2 0 0 0 10 13.713a5.2 5.2 0 0 0 4.703-2.948l1.732.844A7.12 7.12 0 0 1 10 15.636"]) {
+			div#chatroom-footer div#chat-input-wrapper > button:has(svg[data-ds-icon="Smile"]) {
 				display: none !important;
 			}
 		}
@@ -5851,21 +6024,21 @@ purple3=#9048FF
 		
 		/* Отключить отображение кнопки вызова дефолтного 🙂 меню смайлов, если есть меню смайлов от 7tv */
 		if chat_input-area_btn_emoji-menu_disable_if-7tv {
-			div#chatroom-footer div#chat-input-wrapper:has(seventv-container > button.seventv-emote-menu-button) > button:has(svg > path[d="M10 1c-4.972 0-9 4.028-9 9s4.028 9 9 9 9-4.027 9-9-4.027-9-9-9m3.375 4.781a1.407 1.407 0 1 1-.001 2.814 1.407 1.407 0 0 1 .001-2.814m-6.75 0a1.407 1.407 0 1 1-.001 2.814 1.407 1.407 0 0 1 .001-2.814M10 15.636a7.12 7.12 0 0 1-6.435-4.027l1.733-.844A5.2 5.2 0 0 0 10 13.713a5.2 5.2 0 0 0 4.703-2.948l1.732.844A7.12 7.12 0 0 1 10 15.636"]) {
+			div#chat-input-wrapper:has(seventv-container > button.seventv-emote-menu-button) > button:has(svg[data-ds-icon="Smile"]) {
 				display: none !important;
 			}
 		}
 		
 		
 		/* Без наведения курсора */
-		div#chatroom-footer div#chat-input-wrapper > button:has(svg > path[d="M10 1c-4.972 0-9 4.028-9 9s4.028 9 9 9 9-4.027 9-9-4.027-9-9-9m3.375 4.781a1.407 1.407 0 1 1-.001 2.814 1.407 1.407 0 0 1 .001-2.814m-6.75 0a1.407 1.407 0 1 1-.001 2.814 1.407 1.407 0 0 1 .001-2.814M10 15.636a7.12 7.12 0 0 1-6.435-4.027l1.733-.844A5.2 5.2 0 0 0 10 13.713a5.2 5.2 0 0 0 4.703-2.948l1.732.844A7.12 7.12 0 0 1 10 15.636"]) {
+		div#chat-input-wrapper button:has(svg[data-ds-icon="Smile"]) {
 			color: chat_input-area_btn_emoji-menu_color !important;
 			width: 2.25rem !important;
 			height: 2.25rem !important;
 		}
 	
 		/* При наведении курсора */
-		div#chatroom-footer div#chat-input-wrapper > button:has(svg > path[d="M10 1c-4.972 0-9 4.028-9 9s4.028 9 9 9 9-4.027 9-9-4.027-9-9-9m3.375 4.781a1.407 1.407 0 1 1-.001 2.814 1.407 1.407 0 0 1 .001-2.814m-6.75 0a1.407 1.407 0 1 1-.001 2.814 1.407 1.407 0 0 1 .001-2.814M10 15.636a7.12 7.12 0 0 1-6.435-4.027l1.733-.844A5.2 5.2 0 0 0 10 13.713a5.2 5.2 0 0 0 4.703-2.948l1.732.844A7.12 7.12 0 0 1 10 15.636"]):hover {
+		div#chat-input-wrapper button:has(svg[data-ds-icon="Smile"]):hover {
 			background-color: rgba(66, 71, 77, .005) !important;
 			filter: drop-shadow(0px 0px 4px chat_input-area_btn_emoji-menu_color) !important;
 		}
@@ -7843,14 +8016,14 @@ purple3=#9048FF
 			}
 	
 	
-		/* ✏️ Изменение названия стрима */
+		/* 👨‍👦 Изменение названия стрима */
 			/* Без наведения курсора */
-			div[data-type="mod-actions"] div svg[data-ds-icon="StreamTitle"] path {
+			div[data-type="mod-actions"] div svg[data-ds-icon="PeopleGroup"] path {
 				fill: mod-dashboard_widgets-window_mods-action_edit-title_color !important;
 			}
 	
 			/* При наведении курсора */
-			div[data-type="mod-actions"] div:hover > svg[data-ds-icon="StreamTitle"] {
+			div[data-type="mod-actions"] div:hover > svg[data-ds-icon="PeopleGroup"] {
 				filter: drop-shadow(0px 0px 4px mod-dashboard_widgets-window_mods-action_edit-title_color) !important;
 			}
 	
