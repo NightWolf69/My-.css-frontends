@@ -8510,12 +8510,12 @@ purple3=#9048FF
 	
 		/* ✏️ Изменение категории стрима */
 			/* Без наведения курсора */
-			div[data-type="mod-actions"] div svg[data-ds-icon="StreamCategory"] path {
+			div[data-type="mod-actions"] div svg[data-ds-icon="BrowseOutline"] path {
 				fill: mod-dashboard_widgets-window_mods-action_edit-category_color !important;
 			}
 	
 			/* При наведении курсора */
-			div[data-type="mod-actions"] div:hover > svg[data-ds-icon="StreamCategory"] {
+			div[data-type="mod-actions"] div:hover > svg[data-ds-icon="BrowseOutline"] {
 				filter: drop-shadow(0px 0px 4px mod-dashboard_widgets-window_mods-action_edit-category_color) !important;
 			}
 	
