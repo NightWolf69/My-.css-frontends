@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        2.3.0
+@version        2.3.1
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов Enhancer, 7tv, Mo'Kick и NipahTV (использование этих аддонов опционально)
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -59,41 +59,46 @@
 //Эллементы верхней панеле сайта
 @var	number  		header-1-start													"╔═════════════ ЭЛЛЕМЕНТЫ ВЕРХНЕЙ ПАНЕЛИ САЙТА ══════════════╗"							[0,0,0]
 @var	checkbox			top_site_bar_btn_togg_side_menu_toggle						"╠    Изменение кнопки Свернуть/Развернуть боковое меню:"								1
-@var	color				top_site_bar_btn_togg_side_menu_color						"╠═        Цвет внешнего свечения кнопки"												#A0FF48
+@var	color				top_site_bar_btn_togg_side_menu_color						"╠═        Цвет внешнего свечения кнопки:"												#A0FF48
 @var	number  		header-1-line-divider-0											"║"														 								[0,0,0]
 @var	checkbox			top_site_bar_btn_enhancer_toggle							"╠    Изменение кнопки вызова настроек аддона Enhancer:"								1
-@var	checkbox			top_site_bar_btn_enhancer_disable							"╠═       Отключить отображение кнопки"													0
-@var	color				top_site_bar_btn_enhancer_color								"╠═        Цвет внешнего свечения кнопки"												rebeccapurple
+@var	checkbox			top_site_bar_btn_enhancer_disable							"╠═       Отключить отображение кнопки:"												0
+@var	color				top_site_bar_btn_enhancer_color								"╠═        Цвет внешнего свечения кнопки:"												rebeccapurple
 @var	number  		header-1-line-divider-1											"║"														 								[0,0,0]
-@var	checkbox			top_site_bar_btn_claim-reward_toggle						"╠    Изменение кнопки Получения награды:"												1
-@var	checkbox			top_site_bar_btn_claim-reward_disable						"╠═       Отключить отображение кнопки"													0
+@var	checkbox			top_site_bar_btn_claim-reward_toggle						"╠    Изменение кнопки 📦 Получения награды:"											1
+@var	checkbox			top_site_bar_btn_claim-reward_disable						"╠═       Отключить отображение кнопки:"												0
+@var	checkbox			top_site_bar_btn_claim-reward_ready-to-claim_toggle			"╠═       Особый фон кнопки, если есть награда к получению:"							1
+@var	color				top_site_bar_btn_claim-reward_ready-to-claim_color1			"╠══               Внутренний цвет градиента:"											#00FFEE70
+@var	color				top_site_bar_btn_claim-reward_ready-to-claim_color2			"╠══               Средний-Внутренний цвет градиента:"									#1AAB7BA1
+@var	color				top_site_bar_btn_claim-reward_ready-to-claim_color3			"╠══               Средний-Наружний цвет градиента:"									#006439C4
+@var	color				top_site_bar_btn_claim-reward_ready-to-claim_color4			"╠══               Наружний цвет градиента:"											#0E5413C9
 @var	checkbox			top_site_bar_btn_claim-reward_color_toggle					"╠═       Свой цвет кнопки"																1
-@var	color				top_site_bar_btn_claim-reward_color1						"╠══               Цвет верхнего левого угла иконки"									lightgreen
-@var	color				top_site_bar_btn_claim-reward_color2						"╠══               Цвет нижнего левого угла иконки"										lightgreen
-@var	color				top_site_bar_btn_claim-reward_color3						"╠══               Цвет верхней и нижней правой части иконки"							#53FC18
-@var	color				top_site_bar_btn_claim-reward_glow-color					"╠═        Цвет внешнего свечения кнопки"												rgb(83, 252, 24)
+@var	color				top_site_bar_btn_claim-reward_color1						"╠══               Цвет верхнего левого угла иконки:"									lightgreen
+@var	color				top_site_bar_btn_claim-reward_color2						"╠══               Цвет нижнего левого угла иконки:"									lightgreen
+@var	color				top_site_bar_btn_claim-reward_color3						"╠══               Цвет верхней и нижней правой части иконки:"							#53FC18
+@var	color				top_site_bar_btn_claim-reward_glow-color					"╠═        Цвет внешнего свечения кнопки:"												rgb(83, 252, 24)
 @var	number  		header-1-line-divider-2											"║"														 								[0,0,0]
 @var	checkbox			top_site_bar_btn_mo-kick_toggle								"╠    Изменение кнопки вызова настроек аддона Mo'Kick:"									1
-@var	checkbox			top_site_bar_btn_mo-kick_disable							"╠═       Отключить отображение кнопки"													0
-@var	color				top_site_bar_btn_mo-kick_color								"╠═        Цвет внешнего свечения кнопки"												#53FC18
+@var	checkbox			top_site_bar_btn_mo-kick_disable							"╠═       Отключить отображение кнопки:"												0
+@var	color				top_site_bar_btn_mo-kick_color								"╠═        Цвет внешнего свечения кнопки:"												#53FC18
 @var	number  		header-1-line-divider-3											"║"														 								[0,0,0]
 @var	checkbox			top_site_bar_btn_buy_kicks_toggle							"╠    Изменение кнопки вызова меню покупки KICKs:"										1
-@var	checkbox			top_site_bar_btn_buy_kicks_disable							"╠═       Отключить отображение кнопки"													0
-@var	color				top_site_bar_btn_buy_kicks_color							"╠═        Цвет внешнего свечения кнопки"												#53FC18
+@var	checkbox			top_site_bar_btn_buy_kicks_disable							"╠═       Отключить отображение кнопки:"												0
+@var	color				top_site_bar_btn_buy_kicks_color							"╠═        Цвет внешнего свечения кнопки:"												#53FC18
 @var	number  		header-1-line-divider-4											"║"														 								[0,0,0]
 @var	number  		header-1-divider												"╠══════════ ТОЛЬКО В РЕЖИМЕ МОДЕРАТОРА ИЛИ АВТОРА ═══════════╣" 						[0,0,0]
 @var	number  		header-line-divider-5											"║"														 								[0,0,0]
 @var	checkbox			top_site_bar_btn_new_cnl_prof_toggle						"╠    Изменение кнопки вызова меню New Channel Profile (Mo'Kick):"						1
-@var	checkbox			top_site_bar_btn_new_cnl_prof_disable						"╠═       Отключить отображение кнопки"													0
-@var	color				top_site_bar_btn_new_cnl_prof_color							"╠═        Цвет, и внешнее свечение кнопки"												orange
+@var	checkbox			top_site_bar_btn_new_cnl_prof_disable						"╠═       Отключить отображение кнопки:"												0
+@var	color				top_site_bar_btn_new_cnl_prof_color							"╠═        Цвет, и внешнее свечение кнопки:"											orange
 @var	number  		header-1-line-divider-6											"║"														 								[0,0,0]
 @var	checkbox			top_site_bar_btn_go-live_toggle								"╠    Изменение кнопки Выйти в эфир:"													1
-@var	checkbox			top_site_bar_btn_go-live_disable							"╠═       Отключить отображение кнопки"													0
+@var	checkbox			top_site_bar_btn_go-live_disable							"╠═       Отключить отображение кнопки:"												0
 @var	checkbox			top_site_bar_btn_go-live_bg_toggle							"╠═       Свой цвет фона кнопки:"														0
 @var	color				top_site_bar_btn_go-live_bg_color							"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
 @var	checkbox			top_site_bar_btn_go-live_text_disable						"╠═       Убрать текст в кнопке:"														1
-@var	color				top_site_bar_btn_go-live_color								"╠═        Цвет текста"																	#000
-@var	color				top_site_bar_btn_go-live_glow_color							"╠═        Цвет внешнего свечения кнопки"												#53FC18
+@var	color				top_site_bar_btn_go-live_color								"╠═        Цвет текста:"																#000
+@var	color				top_site_bar_btn_go-live_glow_color							"╠═        Цвет внешнего свечения кнопки:"												#53FC18
 @var	number  		header-1-line-divider-7											"║"														 								[0,0,0]
 @var	checkbox			top_site_bar_btn_create_profile_fix_toggle					"╠    Фикс кислотной кнопки в меню New Channel Profile (Mo'Kick):"						1
 @var	number  		header-1-end													"╚═══════════════════════════════════════════════════════╝" 							[0,0,0]
@@ -115,9 +120,9 @@
 //Кнопки в плеере
 @var	number  		header-3-start													"╔═════════════════════════ ПЛЕЕР ════════════════════════╗"							[0,0,0]
 @var	checkbox			player_btn_header_and_backgrount_img_toggle					"╠    Изменение кнопки ✏️ Изменить баннер:"												1
-@var	color				player_btn_header_and_backgrount_img_color					"╠═        Цвет кнопкит"																#C39BFF
-@var	checkbox			player_btn_header_and_backgrount_img_bg_toggle				"╠═       Свой цвет фона кнопки"														1
-@var	color				player_btn_header_and_backgrount_img_bg_color				"╠══               Цвет фона кнопки"													rgba(23, 26, 28, 1)
+@var	color				player_btn_header_and_backgrount_img_color					"╠═        Цвет кнопкит:"																#C39BFF
+@var	checkbox			player_btn_header_and_backgrount_img_bg_toggle				"╠═       Свой цвет фона кнопки:"														1
+@var	color				player_btn_header_and_backgrount_img_bg_color				"╠══               Цвет фона кнопки:"													rgba(23, 26, 28, 1)
 @var	number  		header-3-line-divider-0											"║"														 								[0,0,0]
 @var	color				player_upper_gradient_color									"╠    Градиент под названием клипа:"													rgba(0, 0, 0, 0.8)
 @var	checkbox			player_upper_info_readability_toggle						"╠    Улучшить видимость текста с инфой вверху плеера:"									1
@@ -1510,7 +1515,7 @@ purple3=#9048FF
 		}
 	
 	
-	/* Кнопка "Получи свою награду" */
+	/* Кнопка "📦 Получи свою награду" */
 	if top_site_bar_btn_claim-reward_toggle {
 		/* Отключить отображение кнопки */
 		if top_site_bar_btn_claim-reward_disable {
@@ -1523,6 +1528,20 @@ purple3=#9048FF
 		/* Свой фон кнопки */
 		nav[enhanced-modules="settings-button-main"] div button[data-state][aria-label][aria-haspopup="dialog"]:has(svg g path[d="M6 7.33301H8.63965V9.33301L11 10.666L13.333 9.33301V7.33301H16V14.666H6V7.33301ZM15.1201 2.41602L16 3.33301V5.33301H6V3.33301L5.12012 2.41602L4.08008 1.33301H14L15.1201 2.41602Z"]) {
 			background-color transparent !important;
+		}
+		
+		
+		/* Фон кнопки, когда есть награда которую можно забрать */
+		if top_site_bar_btn_claim-reward_ready-to-claim_toggle {
+			/* Без наведения курсора */
+			nav[enhanced-modules="settings-button-main"] button[data-state][aria-label][aria-haspopup="dialog"]:has(> video[loop]) {
+				background-image: radial-gradient(circle at center, top_site_bar_btn_claim-reward_ready-to-claim_color1, top_site_bar_btn_claim-reward_ready-to-claim_color2, top_site_bar_btn_claim-reward_ready-to-claim_color3, top_site_bar_btn_claim-reward_ready-to-claim_color4) !important;
+			}
+
+			/* При наведении курсора */
+			nav[enhanced-modules="settings-button-main"] button[data-state][aria-label][aria-haspopup="dialog"]:has(> video[loop]):hover {
+				filter: drop-shadow(0px 0px 4px top_site_bar_btn_claim-reward_glow-color) !important;
+			}
 		}
 	
 	
@@ -1732,7 +1751,11 @@ purple3=#9048FF
 			/* В плеере 📌 In-Tab (Mo'Kick) */
 			body > div#root > main:has(div[data-viewport-state="tablet"]) div.z-controls p.line-clamp-2.text-sm,
 			/* В плеере 🎞 Просмотра клипа */
-			div[role="dialog"] > div.flex div.z-controls > div[class ="flex flex-col gap-1.5 font-bold"] {
+			div[role="dialog"] > div.flex div.z-controls > div[class ="flex flex-col gap-1.5 font-bold"],
+ 			/* В миниатюрном плеере (когда окно браузера маленькое) */
+			div#injected-embedded-channel-player-video div > span span, /* Счётчик зрителей */
+			div#injected-embedded-channel-player-video div:nth-of-type(2) > div:has(> button):nth-child(1) > span.tabular-nums, /* Текущее время стрима */
+			div#injected-embedded-channel-player-video div#enhancer-real-video-time > span /* Время отставания от live */ {
 				filter: drop-shadow(0px 0px 4px #000) !important;
 			}
 	
@@ -1794,7 +1817,7 @@ purple3=#9048FF
 	if player_lower_info_readability_toggle {
 		/* Улучшение читабельности текста */
 			/* В плеере 🔴 Стрима и ⚫️ VOD'а */
-			div#injected-embedded-channel-player-video:has(video#video-player) div.flex > span.tabular-nums, /* Время Стрима / VOD'а */
+			[data-viewport-state="desktop"] div#injected-embedded-channel-player-video:has(video#video-player) div.flex > span.tabular-nums, /* Время Стрима / VOD'а */
 			div#injected-embedded-channel-player-video:has(video#video-player) div.flex > button:has(svg[data-ds-icon="Online"]) span.text-sm.font-semibold, /* Индикация: LIVE / PAUSED / CATCHING UP */
 			/* В плеере 🔴 Стрима и ⚫️ VOD'а (Enhancer) */
 			div#injected-embedded-channel-player-video div#enhancer-real-video-time.enhancer-video-real-time-wrapper, /* Сколько было по местному времени, на этот момент стрима */
@@ -3381,7 +3404,8 @@ purple3=#9048FF
 		/* Без наведения курсора */
 		div#channel-content div[data-testid="viewer-count"]:has(span) > svg[data-ds-icon="PeopleGroup"], /* дефолт */
 		div#channel-content div:not(span.text-surface-onSurfaceSecondary) > div > div > div > svg[data-ds-icon="PeopleGroup"], /* (Mo'Kick) */
-		main[data-theatre-mode-container] div:has(div[aria-hidden="true"].z-player) div > svg[data-ds-icon="PeopleGroup"] /* Вспплывающее окно, когда плеер стрима свёрнут */ {
+		main[data-theatre-mode-container] div:has(div[aria-hidden="true"].z-player) div > svg[data-ds-icon="PeopleGroup"], /* Вспплывающее окно, когда плеер стрима свёрнут */
+		div#injected-embedded-channel-player-video div > svg[data-ds-icon="PeopleGroup"] /* В миниатюрном плеере (когда окно браузера маленькое) */ {
 			color: channel_info_viewers_color !important;
 			fill: channel_info_viewers_color !important;
 		}
@@ -3389,7 +3413,8 @@ purple3=#9048FF
 		/* При наведении курсора */
 		div#channel-content div[data-testid="viewer-count"]:has(span):hover > svg[data-ds-icon="PeopleGroup"], /* дефолт */
 		div#channel-content div:not(span.text-surface-onSurfaceSecondary) > div > div > div:hover > svg[data-ds-icon="PeopleGroup"], /* (Mo'Kick) */
-		main[data-theatre-mode-container] div:has(div[aria-hidden="true"].z-player) div:hover > svg[data-ds-icon="PeopleGroup"] {
+		main[data-theatre-mode-container] div:has(div[aria-hidden="true"].z-player) div:hover > svg[data-ds-icon="PeopleGroup"], /* Вспплывающее окно, когда плеер стрима свёрнут */
+		div#injected-embedded-channel-player-video div:hover > svg[data-ds-icon="PeopleGroup"] /* В миниатюрном плеере (когда окно браузера маленькое) */ {
 			filter: drop-shadow(0px 0px 4px channel_info_viewers_color) !important;
 		}
 	}
