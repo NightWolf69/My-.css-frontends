@@ -1630,7 +1630,7 @@ purple3=#9048FF
 	if top_site_bar_btn_go-live_toggle {
 		/* Отключить отображение кнопки */
 		if top_site_bar_btn_go-live_disable {
-			nav button[style *="background-image:url('/img/studio/button-container.png');"]:has(svg[data-ds-icon="Kick"]) {
+			nav button:has(svg[data-ds-icon="Kick"]) {
 				display: none !important;
 			}
 		}
@@ -1638,10 +1638,10 @@ purple3=#9048FF
 	
 		/* Отключить отображение кнопки */
 		if top_site_bar_btn_go-live_text_disable {
-			nav button[style *="background-image:url('/img/studio/button-container.png');"]:has(svg[data-ds-icon="Kick"]) div.contents {
+			nav button:has(svg[data-ds-icon="Kick"]) div.contents {
 				display: none !important;
 			}
-			nav button[style *="background-image:url('/img/studio/button-container.png');"]:has(svg[data-ds-icon="Kick"]) {
+			nav button:has(svg[data-ds-icon="Kick"]) {
 				padding: 1.25rem .8rem 1.25rem .8rem;
 			}
 		}
@@ -1649,7 +1649,7 @@ purple3=#9048FF
 	
 		/* Свой фон кнопки */
 		if top_site_bar_btn_go-live_bg_toggle {
-			nav button[style *="background-image:url('/img/studio/button-container.png');"]:has(svg[data-ds-icon="Kick"]) {
+			nav button:has(svg[data-ds-icon="Kick"]) {
 				background-color: top_site_bar_btn_go-live_bg_color !important;
 				background-image: none !important;
 			}
@@ -1657,12 +1657,12 @@ purple3=#9048FF
 	
 	
 		/* Без наведения курсора */
-		nav button[style *="background-image:url('/img/studio/button-container.png');"]:has(svg[data-ds-icon="Kick"]) {
+		nav button:has(svg[data-ds-icon="Kick"]) {
 			color: top_site_bar_btn_go-live_color !important;
 		}
 	
 		/* При наведении курсора */
-		nav button[style *="background-image:url('/img/studio/button-container.png');"]:has(svg[data-ds-icon="Kick"]):hover {
+		nav button:has(svg[data-ds-icon="Kick"]):hover {
 			filter: drop-shadow(0px 0px 4px #53FC18) !important;
 		}
 	}
