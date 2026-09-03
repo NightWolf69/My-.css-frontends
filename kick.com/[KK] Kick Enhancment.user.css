@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        2.2.5
-@description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов 7tv и Mo'Kick (использование этих аддонов опционально)
+@version        2.3.0
+@description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов Enhancer, 7tv, Mo'Kick и NipahTV (использование этих аддонов опционально)
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
 @supportURL     https://github.com/NightWolf69/My-.css-frontends/issues
@@ -589,7 +589,7 @@
 @var	color				chat-msg_color												"╠═        Цвет текста:"																white
 @var	color				chat-msg_glow_color											"╠═        Цвет свечения у текста:"														#FFFFFF22
 @var	number  		header-5-line-divider-39										"║"														 								[0,0,0]
-@var	checkbox			chat_first-msg_toggle										"╠    Выделение 1го сообщения от пользователя в чате (Mo'Kick):"						1
+@var	checkbox			chat_first-msg_toggle										"╠    Выделение 1го сообщения от пользователя в чате (Mo'Kick) + (NipahTV):"			1
 @var	color				chat_first-msg_title_color									"╠═        Цвет надписи First Message in Section:"										magenta
 @var	color				chat_first-msg_bg_color										"╠═        Цвет фона у сообщения:"														#C832C830
 @var	number  		header-5-line-divider-40										"║"														 								[0,0,0]
@@ -667,44 +667,44 @@
 @var	checkbox			chat_hover_btn_delete-msg_bg_toggle							"╠══               Свой цвет фон у кнопки:"												1
 @var	color				chat_hover_btn_delete-msg_bg_color							"╠═══                       Цвет фона:"													rgba(66, 71, 77, .6)
 @var	color				chat_hover_btn_pin-msg_color								"╠═        ► Цвет кнопки 📌 Закрепить сообщение:"										orange
-@var	checkbox			chat_hover_btn_pin-msg_disable								"╠══                Отключить отображение кнопки:"										0
-@var	number				chat_hover_btn_pin-msg_order								"╠══                Смещение кнопки:"													[-3,-6,6]
+@var	checkbox			chat_hover_btn_pin-msg_disable								"╠══               Отключить отображение кнопки:"										0
+@var	number				chat_hover_btn_pin-msg_order								"╠══               Смещение кнопки:"													[-3,-6,6]
 @var	checkbox			chat_hover_btn_pin-msg_bg_toggle							"╠══               Свой цвет фон у кнопки:"												1
 @var	color				chat_hover_btn_pin-msg_bg_color								"╠═══                       Цвет фона:"													rgba(66, 71, 77, .6)
 @var	color				chat_hover_btn_reply-to-msg_color							"╠═        ► Цвет кнопки ↩️ Ответить на сообщение:"										lightgreen
-@var	checkbox			chat_hover_btn_reply-to-msg_disable							"╠══                Отключить отображение кнопки:"										0
-@var	checkbox			chat_hover_btn_reply-to-old-msg_disable						"╠══                Отключить отображение кнопки для старых сообщений:"					1
-@var	number				chat_hover_btn_reply-to-msg_order							"╠══                Смещение кнопки:"													[-4,-6,6]
+@var	checkbox			chat_hover_btn_reply-to-msg_disable							"╠══               Отключить отображение кнопки:"										0
+@var	checkbox			chat_hover_btn_reply-to-old-msg_disable						"╠══               Отключить отображение кнопки для старых сообщений:"					1
+@var	number				chat_hover_btn_reply-to-msg_order							"╠══               Смещение кнопки:"													[-4,-6,6]
 @var	checkbox			chat_hover_btn_reply-to-msg_bg_toggle						"╠══               Свой цвет фон у кнопки:"												1
 @var	color				chat_hover_btn_reply-to-msg_bg_color						"╠═══                       Цвет фона:"													rgba(66, 71, 77, .6)
 @var	color				chat_hover_btn_expand_color									"╠═        ► Цвет кнопки ▶️ Свернуть / ◀️ Развернуть:"									skyblue
-@var	checkbox			chat_hover_btn_expand_disable								"╠══                Отключить отображение кнопки:"										0
-@var	number				chat_hover_btn_expand_order									"╠══                Смещение кнопки:"													[3,-6,6]
+@var	checkbox			chat_hover_btn_expand_disable								"╠══               Отключить отображение кнопки:"										0
+@var	number				chat_hover_btn_expand_order									"╠══               Смещение кнопки:"													[3,-6,6]
 @var	checkbox			chat_hover_btn_expand_bg_toggle								"╠══               Свой цвет фон у кнопки:"												1
 @var	color				chat_hover_btn_expand_bg_color								"╠═══                       Цвет фона:"													rgba(66, 71, 77, .6)
 @var	color				chat_hover_btn_copy-msg-text_color							"╠═        ► Цвет кнопки 🗒 Копировать текст сообщения (Mo'Kick):"						pink
-@var	checkbox			chat_hover_btn_copy-msg-text_disable						"╠══                Отключить отображение кнопки:"										0
-@var	number				chat_hover_btn_copy-msg-text_order							"╠══                Смещение кнопки:"													[2,-6,6]
+@var	checkbox			chat_hover_btn_copy-msg-text_disable						"╠══               Отключить отображение кнопки:"										0
+@var	number				chat_hover_btn_copy-msg-text_order							"╠══               Смещение кнопки:"													[2,-6,6]
 @var	checkbox			chat_hover_btn_copy-msg-text_bg_toggle						"╠══               Свой цвет фон у кнопки:"												1
 @var	color				chat_hover_btn_copy-msg-text_bg_color						"╠═══                       Цвет фона:"													rgba(66, 71, 77, .6)
 @var	color				chat_hover_btn_mention-user_color							"╠═        ► Цвет кнопки 📧 Упомянуть ник в сообщении (Mo'Kick):"						magenta
-@var	checkbox			chat_hover_btn_mention-user_disable							"╠══                Отключить отображение кнопки:"										0
-@var	number				chat_hover_btn_mention-user_order							"╠══                Смещение кнопки:"													[0,-6,6]
+@var	checkbox			chat_hover_btn_mention-user_disable							"╠══               Отключить отображение кнопки:"										0
+@var	number				chat_hover_btn_mention-user_order							"╠══               Смещение кнопки:"													[0,-6,6]
 @var	checkbox			chat_hover_btn_mention-user_bg_toggle						"╠══               Свой цвет фон у кнопки:"												1
 @var	color				chat_hover_btn_mention-user_bg_color						"╠═══                       Цвет фона:"													rgba(66, 71, 77, .6)
 @var	color				chat_hover_btn_copy-username_color							"╠═        ► Цвет кнопки 🗒 Скопировать ник пользователя (Mo'Kick):"					#53FC18
-@var	checkbox			chat_hover_btn_copy-username_disable						"╠══                Отключить отображение кнопки:"										0
-@var	number				chat_hover_btn_copy-username_order							"╠══                Смещение кнопки:"													[1,-6,6]
+@var	checkbox			chat_hover_btn_copy-username_disable						"╠══               Отключить отображение кнопки:"										0
+@var	number				chat_hover_btn_copy-username_order							"╠══               Смещение кнопки:"													[1,-6,6]
 @var	checkbox			chat_hover_btn_copy-username_bg_toggle						"╠══               Свой цвет фон у кнопки:"												1
 @var	color				chat_hover_btn_copy-username_bg_color						"╠═══                       Цвет фона:"													rgba(66, 71, 77, .6)
 @var	color				chat_hover_btn_hide-msg_color								"╠═        ► Цвет кнопки 👁 Спрятать это сообщение (Mo'Kick):"							skyblue
-@var	checkbox			chat_hover_btn_hide-msg_disable								"╠══                Отключить отображение кнопки:"										0
-@var	number				chat_hover_btn_hide-msg_order								"╠══                Смещение кнопки:"													[0,-6,6]
+@var	checkbox			chat_hover_btn_hide-msg_disable								"╠══               Отключить отображение кнопки:"										0
+@var	number				chat_hover_btn_hide-msg_order								"╠══               Смещение кнопки:"													[0,-6,6]
 @var	checkbox			chat_hover_btn_hide-msg_bg_toggle							"╠══               Свой цвет фон у кнопки:"												1
 @var	color				chat_hover_btn_hide-msg_bg_color							"╠═══                       Цвет фона:"													rgba(66, 71, 77, .6)
 @var	color				chat_hover_btn_msg-time_color								"╠═        ► Цвет кнопки 🕒 Показать время отправки этого сообщения (Mo'Kick):"			cyan
-@var	checkbox			chat_hover_btn_msg-time_disable								"╠══                Отключить отображение кнопки:"										0
-@var	number				chat_hover_btn_msg-time_order								"╠══                Смещение кнопки:"													[-1,-6,6]
+@var	checkbox			chat_hover_btn_msg-time_disable								"╠══               Отключить отображение кнопки:"										0
+@var	number				chat_hover_btn_msg-time_order								"╠══               Смещение кнопки:"													[-1,-6,6]
 @var	checkbox			chat_hover_btn_msg-time_bg_toggle							"╠══               Свой цвет фон у кнопки:"												1
 @var	color				chat_hover_btn_msg-time_bg_color							"╠═══                       Цвет фона:"													rgba(66, 71, 77, .6)
 @var	number  		header-5-line-divider-53										"║"														 								[0,0,0]
@@ -739,27 +739,27 @@
 @var	color				chat_restriction-input-area_bg_color						"╠═        Цвет фона у поля для ввода сообщения, с ограничением чата:"					darkred
 @var	number  		header-5-line-divider-59										"║"														 								[0,0,0]
 @var	checkbox			chat_input-area_btn_identity_toggle							"╠    Изменение кнопки «🛡️ Chat Identity»:"											1
-@var	checkbox			chat_input-area_btn_identity_disable						"╠═        Отключить отображение кнопки:"												0
+@var	checkbox			chat_input-area_btn_identity_disable						"╠═       Отключить отображение кнопки:"												0
 @var	color				chat_input-area_btn_identity_color1							"╠═        Цвет кнопки (внешний):"														#53FC18
 @var	color				chat_input-area_btn_identity_color2							"╠═        Цвет кнопки (внутренний):"													cyan
 @var	number  		header-5-line-divider-60										"║"														 								[0,0,0]
 @var	checkbox			chat_input-area_btn_7tv-emoji-menu_toggle					"╠    Изменение кнопки вызова меню смайлов 7tv:"										1
-@var	checkbox			chat_input-area_btn_7tv-emoji-menu_disable					"╠═        Отключить отображение кнопки:"												0
+@var	checkbox			chat_input-area_btn_7tv-emoji-menu_disable					"╠═       Отключить отображение кнопки:"												0
 @var	color				chat_input-area_btn_7tv-emoji-menu_color					"╠═        Цвет кнопки:"																darkcyan
 @var	number  		header-5-line-divider-61										"║"														 								[0,0,0]
 @var	checkbox			chat_input-area_btn_emoji-menu_toggle						"╠    Изменение кнопки 😀 вызова меню смайлов:"											1
-@var	checkbox			chat_input-area_btn_emoji-menu_disable						"╠═        Отключить отображение кнопки:"												0
-@var	checkbox			chat_input-area_btn_emoji-menu_disable_if-7tv				"╠═        Отключить отображение кнопки, если есть кнопка смайлов от 7tv:"				0
+@var	checkbox			chat_input-area_btn_emoji-menu_disable						"╠═       Отключить отображение кнопки:"												0
+@var	checkbox			chat_input-area_btn_emoji-menu_disable_if-7tv				"╠═       Отключить отображение кнопки, если есть кнопка смайлов от 7tv:"				0
 @var	color				chat_input-area_btn_emoji-menu_color						"╠═        Цвет кнопки:"																yellow
 @var	number  		header-5-line-divider-62										"║"														 								[0,0,0]
 @var	checkbox			chat_under-input-area_btn_channel-points-menu_toggle		"╠    Изменение кнопки ✨ открытия меню Очков канала (ttv: баллы канала):"				1
-@var	checkbox			chat_under-input-area_btn_channel-points-menu_disable		"╠═        Отключить отображение кнопки:"												0
+@var	checkbox			chat_under-input-area_btn_channel-points-menu_disable		"╠═       Отключить отображение кнопки:"												0
 @var	color				chat_under-input-area_btn_channel-points-menu_color			"╠═        Цвет кнопки:"																rgb(24, 251, 176)
 @var	checkbox			chat_under-input-area_btn_channel-points-menu_bg_toggle		"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_under-input-area_btn_channel-points-menu_bg_color		"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
 @var	number  		header-5-line-divider-63										"║"														 								[0,0,0]
 @var	checkbox			chat_under-input-area_btn_KICKs-shop-menu_toggle			"╠    Изменение кнопки 🏠 Магазин подарков (ttv: Bits / Chears):"						1
-@var	checkbox			chat_under-input-area_btn_KICKs-shop-menu_disable			"╠═        Отключить отображение кнопки:"												0
+@var	checkbox			chat_under-input-area_btn_KICKs-shop-menu_disable			"╠═       Отключить отображение кнопки:"												0
 @var	color				chat_under-input-area_btn_KICKs-shop-menu_color				"╠═        Цвет кнопки:"																#53FC18
 @var	checkbox			chat_under-input-area_btn_KICKs-shop-menu_bg_toggle			"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_under-input-area_btn_KICKs-shop-menu_bg_color			"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
@@ -770,40 +770,46 @@
 @var	color				chat_under-input-area_btn_context-menu_bg_color				"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
 @var	number  		header-5-line-divider-65										"║"														 								[0,0,0]
 @var	checkbox			chat_under-input-area_btn_toggle-chatting_toggle			"╠    Изменение кнопки 💬 Toggle Chatting (Mo'Kick):"									1
-@var	checkbox			chat_under-input-area_btn_toggle-chatting_disable			"╠═        Отключить отображение кнопки:"												0
+@var	checkbox			chat_under-input-area_btn_toggle-chatting_disable			"╠═       Отключить отображение кнопки:"												0
 @var	color				chat_under-input-area_btn_toggle-chatting_color				"╠═        Цвет кнопки:"																lightyellow
 @var	checkbox			chat_under-input-area_btn_toggle-chatting_bg_toggle			"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_under-input-area_btn_toggle-chatting_bg_color			"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
 @var	number  		header-5-line-divider-66										"║"														 								[0,0,0]
 @var	checkbox			chat_under-input-area_btn_find-user_toggle					"╠    Изменение кнопки 🔍 Find User (Mo'Kick):"											1
-@var	checkbox			chat_under-input-area_btn_find-user_disable					"╠═        Отключить отображение кнопки (только под input полем чата):"					0
+@var	checkbox			chat_under-input-area_btn_find-user_disable					"╠═       Отключить отображение кнопки (только под input полем чата):"					0
 @var	color				chat_under-input-area_btn_find-user_color					"╠═        Цвет кнопки (только под input полем чата):"									lightyellow
 @var	checkbox			chat_under-input-area_btn_find-user_bg_toggle				"╠═       Свой цвет фона кнопки (только под input полем чата):"							1
 @var	color				chat_under-input-area_btn_find-user_bg_color				"╠══               Цвет фона кнопки (только под input полем чата):"						rgba(66, 71, 77, .2)
 @var	number  		header-5-line-divider-67										"║"														 								[0,0,0]
 @var	checkbox			chat_under-input-area_btn_mention_toggle					"╠    Изменение кнопки 📧 Mention (Mo'Kick):"											1
-@var	checkbox			chat_under-input-area_btn_mention_disable					"╠═        Отключить отображение кнопки (только под input полем чата):"					0
+@var	checkbox			chat_under-input-area_btn_mention_disable					"╠═       Отключить отображение кнопки (только под input полем чата):"					0
 @var	color				chat_under-input-area_btn_mention_color						"╠═        Цвет кнопки (только под input полем чата):"									magenta
 @var	checkbox			chat_under-input-area_btn_mention_bg_toggle					"╠═       Свой цвет фона кнопки (только под input полем чата):"							1
 @var	color				chat_under-input-area_btn_mention_bg_color					"╠══               Цвет фона кнопки (только под input полем чата):"						rgba(66, 71, 77, .2)
 @var	number  		header-5-line-divider-68										"║"														 								[0,0,0]
 @var	checkbox			chat_under-input-area_btn_settings_toggle					"╠    Изменение кнопки ⚙️ Настройки чата:"												1
-@var	checkbox			chat_under-input-area_btn_settings_disable					"╠═        Отключить отображение кнопки:"												0
+@var	checkbox			chat_under-input-area_btn_settings_disable					"╠═       Отключить отображение кнопки:"												0
 @var	color				chat_under-input-area_btn_settings_color					"╠═        Цвет кнопки:"																orange
 @var	checkbox			chat_under-input-area_btn_settings_bg_toggle				"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_under-input-area_btn_settings_bg_color					"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
 @var	number  		header-5-line-divider-69										"║"														 								[0,0,0]
+@var	checkbox			chat_under-input-area_btn_nipahtv_emoji-menu_toggle			"╠    Изменение кнопки 🙂 Меню смайлов (NipahTV):"										1
+@var	checkbox			chat_under-input-area_btn_nipahtv_emoji-menu_disable		"╠═       Отключить отображение кнопки:"												0
+@var	color				chat_under-input-area_btn_nipahtv_emoji-menu_glow_color		"╠═        Цвет внешнего свечения:"														deeppink
+@var	checkbox			chat_under-input-area_btn_nipahtv_emoji-menu_bg_toggle		"╠═       Свой цвет фона кнопки:"														1
+@var	color				chat_under-input-area_btn_nipahtv_emoji-menu_bg_color		"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
+@var	number  		header-5-line-divider-70										"║"														 								[0,0,0]
 @var	checkbox			chat_under-input-area_btn_send-message_toggle				"╠    Изменение кнопки Отправки сообщения в чат:"										1
 @var	color				chat_under-input-area_btn_send-message_color				"╠═        Цвет кнопки:"																#53FC18
 @var	color				chat_under-input-area_btn_send-message_text_color			"╠═        Цвет текста в кнопке:"														#0b0b0c
-@var	number  		header-5-line-divider-70										"║"														 								[0,0,0]
-@var	number  		header-5-divider-10												"╠══════════════════ МЕНЮ: ОЧКОВ КАНАЛА ═══════════════════╣" 							[0,0,0]
 @var	number  		header-5-line-divider-71										"║"														 								[0,0,0]
+@var	number  		header-5-divider-10												"╠══════════════════ МЕНЮ: ОЧКОВ КАНАЛА ═══════════════════╣" 							[0,0,0]
+@var	number  		header-5-line-divider-72										"║"														 								[0,0,0]
 @var	checkbox			channel-points-menu_btn_info_toggle							"╠    Изменение кнопки ℹ️ Узнать больше:"												1
 @var	color				channel-points-menu_btn_info_color							"╠═        Цвет кнопки:"																#53FC18
 @var	checkbox			channel-points-menu_btn_info_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				channel-points-menu_btn_info_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-72										"║"														 								[0,0,0]
+@var	number  		header-5-line-divider-73										"║"														 								[0,0,0]
 @var	checkbox			channel-points-menu_btn_prediction_toggle					"╠    Изменение плашки Активной/Завершенной ставки за баллы канала:"					1
 @var	checkbox			channel-points-menu_btn_prediction_grid_toggle				"╠═        Расположить содержимое внутри плашки, по людски:"							1
 @var	color				channel-points-menu_btn_prediction_hat-icon_color			"╠═        Цвет иконки шляпы:"															magenta
@@ -814,16 +820,16 @@
 @var	checkbox			channel-points-menu_btn_prediction_bg_toggle				"╠═       Свой цвет фона плашки:"														1
 @var	color				channel-points-menu_btn_prediction_bg_color					"╠══               Цвет фона плашки:"													rgba(35, 38, 41, 1)
 @var	color				channel-points-menu_btn_prediction_hover_bg_color			"╠══               Цвет фона плашки, при наведении курсора:"							rgba(40, 43, 46, 1)
-@var	number  		header-5-line-divider-73										"║"														 								[0,0,0]
+@var	number  		header-5-line-divider-74										"║"														 								[0,0,0]
 @var	checkbox			channel-points-menu_btns_grid_edge-glow_toggle				"╠    Сделать отступы по краям, для корректного отображения свечения:"					1
 @var	color				channel-points-menu_btns_grid_edge-glow_color				"╠═       Цвет внешнего свечения у покупаемых плиток с наградой:"						rgba(24, 251, 176, .4)
-@var	number  		header-5-line-divider-74										"║"														 								[0,0,0]
-@var	checkbox			channel-points-menu_btns_grid_compact_toggle				"╠    Сделать кнопки с наградами за баллы канала, компактнее:"							1
 @var	number  		header-5-line-divider-75										"║"														 								[0,0,0]
-@var	number  		header-5-divider-11												"╠════════════════ МЕНЮ: МАГАЗИН ПОДАРКОВ ═════════════════╣" 							[0,0,0]
+@var	checkbox			channel-points-menu_btns_grid_compact_toggle				"╠    Сделать кнопки с наградами за баллы канала, компактнее:"							1
 @var	number  		header-5-line-divider-76										"║"														 								[0,0,0]
-@var	checkbox  			header-5-WIP												"║ Планируется реализовать в будущем..."				 								0
+@var	number  		header-5-divider-11												"╠════════════════ МЕНЮ: МАГАЗИН ПОДАРКОВ ═════════════════╣" 							[0,0,0]
 @var	number  		header-5-line-divider-77										"║"														 								[0,0,0]
+@var	checkbox  			header-5-WIP												"║ Планируется реализовать в будущем..."				 								0
+@var	number  		header-5-line-divider-78										"║"														 								[0,0,0]
 @var	number  		header-5-end													"╚═══════════════════════════════════════════════════════╝" 							[0,0,0]
 
 @var	number  		empty5															"" 																						[0,0,0]
@@ -837,12 +843,12 @@
 @var	color				pop-up-windows_btn_close_color								"╠═        Цвет кнопки:"																#F30
 @var	checkbox			pop-up-windows_btn_close_bg_toggle							"╠═       Свой цвет фона кнопки:"														1
 @var	color				pop-up-windows_btn_close_bg_color							"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-2											"║"														 								[0,0,0]
+@var	number  		header-6-line-divider-2											"║"														 								[0,0,0]
 @var	checkbox			pop-up-windows_btn_back_toggle								"╠    Изменение кнопки ◀️ Назад:"														1
 @var	color				pop-up-windows_btn_back_color								"╠═        Цвет кнопки:"																lightgreen
 @var	checkbox			pop-up-windows_btn_back_bg_toggle							"╠═       Свой цвет фона кнопки:"														1
 @var	color				pop-up-windows_btn_back_bg_color							"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-3											"║"														 								[0,0,0]
+@var	number  		header-6-line-divider-3											"║"														 								[0,0,0]
 @var	number  		header-6-divider-1												"╠══════════ ВСПЛЫВАЮЩЕЕ ОКНО: СОЗДАНИЕ КЛИПА ═════════════╣" 							[0,0,0]
 @var	number  		header-6-line-divider-4											"║"														 								[0,0,0]
 @var	checkbox			create_clip_window_size_padding_toggle						"╠    Уменьшить отступ по краям окна:"													1
@@ -908,86 +914,104 @@
 @var	checkbox			user-profile-card_btn_gift-sub_bg_toggle					"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_gift-sub_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
 @var	number  		header-6-line-divider-17										"║"														 								[0,0,0]
+@var	checkbox			user-profile-card_btn_channel_toggle						"╠    Изменение кнопки 📺 Смотреть канал в Миниатюрная карточке пользователя:"			1
+@var	color				user-profile-card_btn_channel_color							"╠═        Цвет кнопки:"																#53FC18
+@var	checkbox			user-profile-card_btn_channel_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
+@var	color				user-profile-card_btn_channel_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
+@var	number  		header-6-line-divider-18										"║"														 								[0,0,0]
 @var	checkbox			user-profile-card_btn_add-to-priority_toggle				"╠    Изменение кнопки 👨‍👦 Add To Priority (Mo'Kick):"									1
 @var	checkbox			user-profile-card_btn_add-to-priority_text_disable			"╠═       Убрать текст в кнопке:"														1
 @var	color				user-profile-card_btn_add-to-priority_color					"╠═        Цвет кнопки:"																lightgreen
 @var	checkbox			user-profile-card_btn_add-to-priority_bg_toggle				"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_add-to-priority_bg_color				"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-18										"║"														 								[0,0,0]
+@var	number  		header-6-line-divider-19										"║"														 								[0,0,0]
 @var	checkbox			user-profile-card_btn_reveal-unreveal-msg_toggle			"╠    Изменение кнопки 👁 Reveal/Unreveal Message (Mo'Kick):"							1
 @var	color				user-profile-card_btn_reveal-unreveal-msg_color				"╠═        Цвет кнопки:"																skyblue
 @var	color				user-profile-card_btn_reveal-unreveal-msg-hide_color		"╠═        Цвет кнопки Reveal:"															#FF6262
 @var	color				user-profile-card_btn_reveal-unreveal-msg-show_color		"╠═        Цвет кнопки Unreveal:"														lightgreen
 @var	checkbox			user-profile-card_btn_reveal-unreveal-msg_bg_toggle			"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_reveal-unreveal-msg_bg_color			"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-19										"║"														 								[0,0,0]
+@var	number  		header-6-line-divider-20										"║"														 								[0,0,0]
 @var	checkbox			user-profile-card_btn_ignore_toggle							"╠    Изменение кнопки 🎙 Игнорировать/Удалить из игнорируемых:"						1
 @var	color				user-profile-card_btn_ignore-hide_color						"╠═        Цвет кнопки Игнорировать:"													#FF6262
 @var	color				user-profile-card_btn_ignore-show_color						"╠═        Цвет кнопки Удалить из Игнорируемых:"										lightgreen
 @var	checkbox			user-profile-card_btn_ignore_text_disable					"╠═       Убрать текст в кнопке:"														1
 @var	checkbox			user-profile-card_btn_ignore_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_ignore_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-20										"║"														 								[0,0,0]
+@var	number  		header-6-line-divider-21										"║"														 								[0,0,0]
+@var	checkbox			user-profile-card_btn_reply_toggle							"╠    Изменение кнопки ↩️ Ответить в Миниатюрная карточке пользователя:"				1
+@var	color				user-profile-card_btn_reply_color							"╠═        Цвет кнопки:"																skyblue
+@var	checkbox			user-profile-card_btn_reply_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
+@var	color				user-profile-card_btn_reply_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
+@var	number  		header-6-line-divider-22										"║"														 								[0,0,0]
 @var	checkbox			user-profile-card_btn_block_toggle							"╠    Изменение кнопки 🚫 Block/Unblock Highlight (Mo'Kick):"							1
 @var	color				user-profile-card_btn_block-hide_color						"╠═        Цвет кнопки Заблокировать:"													#FF6262
 @var	color				user-profile-card_btn_block-show_color						"╠═        Цвет кнопки Разблокировать:"													lightgreen
 @var	checkbox			user-profile-card_btn_block_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_block_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-21										"║"														 								[0,0,0]
+@var	number  		header-6-line-divider-23										"║"														 								[0,0,0]
 @var	checkbox			user-profile-card_btn_ban_toggle							"╠    Изменение Кнопки/Переключателя выдачи 🔨 Бана:"									1
 @var	color				user-profile-card_btn_ban_color								"╠═        Цвет кнопки/переключателя Заблокировать:"									#FF6262
 @var	checkbox			user-profile-card_btn_ban_bg_toggle							"╠═       Свой цвет фона кнопки (Mo'Kick):"												1
 @var	color				user-profile-card_btn_ban_bg_color							"╠══               Цвет фона кнопки:"													#4D4242
 @var	checkbox			user-profile-card-mini_btn_ban_bg_toggle					"╠═       Свой цвет фона кнопки в миниатюрном профиле пользователя:"					1
 @var	color				user-profile-card-mini_btn_ban_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-22										"║"														 								[0,0,0]
+@var	number  		header-6-line-divider-24										"║"														 								[0,0,0]
 @var	checkbox			user-profile-card_btn_timeout_toggle						"╠    Изменение Кнопки/Переключателя выдачи ⏳ Таймача:"									1
 @var	color				user-profile-card_btn_timeout_color							"╠═        Цвет кнопки/переключателя Отстранить:"										#9048FF
 @var	checkbox			user-profile-card_btn_timeout_bg_toggle						"╠═       Свой цвет фона кнопки (Mo'Kick):"												1
 @var	color				user-profile-card_btn_timeout_bg_color						"╠══               Цвет фона кнопки:"													#48424D
 @var	checkbox			user-profile-card-mini_btn_timeout_bg_toggle				"╠═       Свой цвет фона кнопки в миниатюрном профиле пользователя:"					1
 @var	color				user-profile-card-mini_btn_timeout_bg_color					"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-23										"║"														 								[0,0,0]
-@var	checkbox			user-profile-card_btn_unban-untimeout_toggle				"╠    Изменение Кнопка ⤴️ Unban (Mo'Kick):"												1
+@var	number  		header-6-line-divider-25										"║"														 								[0,0,0]
+@var	checkbox			user-profile-card_btn_unban-untimeout_toggle				"╠    Изменение Кнопки ⤴️ Unban (Mo'Kick):"												1
 @var	color				user-profile-card_btn_unban-untimeout_color					"╠═        Цвет кнопки/переключателя Отстранить:"										lightgreen
 @var	checkbox			user-profile-card_btn_unban-untimeout_bg_toggle				"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_unban-untimeout_bg_color				"╠══               Цвет фона кнопки:"													#424D45
-@var	number  		header-6-line-divider-24										"║"														 								[0,0,0]
+@var	number  		header-6-line-divider-26										"║"														 								[0,0,0]
+@var	checkbox			user-profile-card_btn_vip-user_toggle						"╠    Изменение Кнопки 👑 Vip/UnVip (NipahTV):"											1
+@var	color				user-profile-card_btn_vip-user_color						"╠═        Цвет кнопки Выдать VIP:"														gold
+@var	color				user-profile-card_btn_unvip-user_color						"╠═        Цвет кнопки Снять VIP:"														#F30
+@var	number  		header-6-line-divider-27										"║"														 								[0,0,0]
+@var	checkbox			user-profile-card_btn_mod-user_toggle						"╠    Изменение Кнопки 🛡️ Mod/UnMod (NipahTV):"										1
+@var	color				user-profile-card_btn_mod-user_color						"╠═        Цвет кнопки/переключателя Отстранить:"										deepskyblue
+@var	color				user-profile-card_btn_unmod-user_color						"╠═        Цвет кнопки/переключателя Отстранить:"										#F30
+@var	number  		header-6-line-divider-28										"║"														 								[0,0,0]
 @var	checkbox			user-profile-card_btn_chat-history_toggle					"╠    Изменение кнопки История чата в мини карточке пользователя, в низу экрана:"		1
 @var	color				user-profile-card_btn_chat-history_color					"╠═        Цвет кнопки:"																lightblue
 @var	checkbox			user-profile-card_btn_chat-history_bg_toggle				"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_chat-history_bg_color					"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-25										"║"														 								[0,0,0]
+@var	number  		header-6-line-divider-29										"║"														 								[0,0,0]
 @var	number  		header-6-divider-3												"╠══════════ ВСПЛЫВАЮЩЕЕ ОКНО: СТАВКА ═══════════╣" 									[0,0,0]
-@var	number  		header-6-line-divider-26										"║"														 								[0,0,0]
+@var	number  		header-6-line-divider-30										"║"														 								[0,0,0]
 @var	checkbox			prediction-window_choise_toggle								"╠    Изменение Плашек с вариантами для ставок:"										1
 @var	color				prediction-window_choise_bg_color							"╠═        Фоновый цвет плашекь:"														rgba(66, 71, 77, .2)
 @var	color				prediction-window_choise_glow_color							"╠═        Фоновый цвет плашеки, при наведении курсора для выбора победишвего варианта:"lightgreen
 @var	color				prediction-window_choise_check_color						"╠═        Цвет галочки ✔️ при выборе победившего варианта:"							#53FC18
-@var	number  		header-6-line-divider-27										"║"														 								[0,0,0]
+@var	number  		header-6-line-divider-31										"║"														 								[0,0,0]
 @var	checkbox			prediction-window_time-left_toggle							"╠    Изменение Полоски и Таймера оставшегося времени для приёма ставок:"				1
 @var	color				prediction-window_time-left_color							"╠═        Цвет Полоски и Таймера:"														#53FC18
 @var	color				prediction-window_time-left_bg_color						"╠═        Фоновый цвет плашекь:"														rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-28										"║"														 								[0,0,0]
+@var	number  		header-6-line-divider-32										"║"														 								[0,0,0]
 @var	checkbox			prediction-window_btn_cancel_toggle							"╠    Изменение Кнопок «Отмена», «Удалить» и «Назад»:"									1
 @var	color				prediction-window_btn_cancel_color							"╠═        Цвет кнопки/переключателя Отстранить:"										orange
 @var	checkbox			prediction-window_btn_cancel_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				prediction-window_btn_cancel_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-29										"║"														 								[0,0,0]
+@var	number  		header-6-line-divider-33										"║"														 								[0,0,0]
 @var	checkbox			prediction-window_btn_submit_toggle							"╠    Изменение Кнопок «Начать игру на предсказание» и «Выберете результат»:"			1
 @var	color				prediction-window_btn_submit_color							"╠═        Цвет кнопки/переключателя Отстранить:"										#53FC18
 @var	checkbox			prediction-window_btn_submit_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				prediction-window_btn_submit_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-30										"║"														 								[0,0,0]
+@var	number  		header-6-line-divider-34										"║"														 								[0,0,0]
 @var	checkbox			prediction-window_btn_abort_toggle							"╠    Изменение Кнопок «Завершить отправку» и «Удалить и вернуть очки»:"				1
 @var	color				prediction-window_btn_abort_color							"╠═        Цвет кнопки/переключателя Отстранить:"										#F30
 @var	checkbox			prediction-window_btn_abort_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				prediction-window_btn_abort_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-31										"║"														 								[0,0,0]
+@var	number  		header-6-line-divider-35										"║"														 								[0,0,0]
 @var	number  		header-6-divider-4												"╠══════════ ВСПЛЫВАЮЩЕЕ ОКНО: МЕНЮ Mo'Kick ═══════════╣" 								[0,0,0]
-@var	number  		header-6-line-divider-00										"║"														 								[0,0,0]
+@var	number  		header-6-line-divider-36										"║"														 								[0,0,0]
 @var	checkbox  			header-6-WIP												"║ Планируется реализовать в будущем..."				 								0
-@var	number  		header-6-line-divider-000										"║"														 								[0,0,0]
+@var	number  		header-6-line-divider-37										"║"														 								[0,0,0]
 @var	number  		header-6-end													"╚═══════════════════════════════════════════════════════╝" 							[0,0,0]
 
 @var	number  		empty6															"" 																						[0,0,0]
@@ -5032,9 +5056,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
-/* ##################################################### */
-/* ##### Область чата - Пользовательские сообщения ##### */
-/* ##################################################### */
+/* #################################### */
+/* ##### Область чата - Сообщения ##### */
+/* #################################### */
 	
 	/* Закраска фона сообщений через один */
 	if chat-msg-bg_every2_toggle {
@@ -5045,7 +5069,7 @@ purple3=#9048FF
 	
 	/* Текст сообщений в чате */
 	if chat-msg_toggle {
-		div#channel-chatroom div[data-index] span[class *="font-normal leading-"], /* дефолтный */
+		div#channel-chatroom div[data-index] span[class *="font-normal leading-"], /* дефолт */
  		div#channel-chatroom div[data-index] seventv-container.seventv-text-token > span.seventv-text-token /* (7tv) */ {
 			color: chat-msg_color !important;
 			filter: drop-shadow(0px 0px 4px chat-msg_glow_color) !important;
@@ -5054,23 +5078,30 @@ purple3=#9048FF
 	}
 	
 	
-	/* Выделение сообщения от пользователя, написавшего 1е сообщение в чат (Mo'Kick) */
+	/* Выделение сообщения от пользователя, написавшего 1е сообщение в чат (Mo'Kick) + (NipahTV) */
 	if chat_first-msg_toggle {
 		/* Цвет текста "First Message in Section" над 1м сообщением */
 		div#chatroom-messages div[data-index] > div[style *="background-color: color(srgb 0.3 0.79 0.3 / 0.1)"] > div.text-green-200 {
 			color: chat_first-msg_title_color !important;
 		}
 	
-		/* Цвет фона у 1го сообщения */
+		/* Цвет фона у 1го сообщения (Mo'Kick) */
 		div#chatroom-messages div[data-index] > div[style *="background-color: color(srgb 0.3 0.79 0.3 / 0.1)"] {
 			background-color: chat_first-msg_bg_color !important;
+		}
+	
+		/* Цвет фона у 1го сообщения (NipahTV) */
+		div#chatroom-messages div[data-index].ntv__chat-message--first-message {
+			background-color: chat_first-msg_bg_color !important;
+			border-color: transparent !important;
 		}
 	}
 	
 	
 	/* Хайлайт сообщения в чате, при наведении курсора */
 	if chat_msg-hover_toggle {
-		div#chatroom-messages div[data-index] > div.group > div[class *="betterhover:group-hover:bg-surface-highest"]:hover {
+		div#chatroom-messages div[data-index] > div.group > div[class *="betterhover:group-hover:bg-surface-highest"]:hover, /* дефолт */
+ 		div#chatroom-messages div[data-index].ntv__chat-message:hover div.ntv__chat-message__inner /* (NipahTV) */ {
 			background-color: chat_msg-hover_bg_color !important;
 		}
 	}
@@ -5222,7 +5253,9 @@ purple3=#9048FF
 			/* В чате 🔴 Стрима и 🛠 Модерки */
 			div#channel-chatroom div[data-index] button:not([aria-label]) > svg[data-ds-icon="ArrowCurveLeft"] path,
 			/* В окне ✍️ Ввода сообщения-ответа */
-			div#chatroom-footer div > svg[data-ds-icon="ArrowCurveLeft"] path,
+			div#chatroom-footer div > svg[data-ds-icon="ArrowCurveLeft"] path, /* дефолт */
+			div#chatroom-footer div.kick__chat-footer div.ntv__reply-message__wrapper div.ntv__reply-message__header svg:nth-of-type(1) path, /* (NipahTV) */
+			div#chatroom-footer div.kick__chat-footer div.ntv__reply-message__wrapper div.ntv__reply-message__content svg[data-ds-icon="ArrowCurveLeft"] path, /* (NipahTV) */
 			/* В окне просмотра ветки ответов 💬 Thread */
 			div:has(main[data-theatre-mode-container]) div.z-popover svg[data-ds-icon="ArrowCurveLeft"],
 			/* В функциональных 🪟 Окнах 🗑 "Message Log" и 💬 "Chat Clears" (Mo'Kick) */
@@ -5241,7 +5274,9 @@ purple3=#9048FF
 			/* В чате 🔴 Стрима и 🛠 Модерки */
 			div#channel-chatroom div[data-index] div:hover > button > svg[data-ds-icon="ArrowCurveLeft"],
 			/* В окне ✍️ Ввода сообщения-ответа */
-			div#chatroom-footer div:hover > div.overflow-y-hidden > div.flex-row > div.flex-col > div.flex-row > svg[data-ds-icon="ArrowCurveLeft"],
+			div#chatroom-footer div:hover > div.overflow-y-hidden > div.flex-row > div.flex-col > div.flex-row > svg[data-ds-icon="ArrowCurveLeft"], /* дефолт */
+			div#chatroom-footer div.kick__chat-footer div:has(> div.ntv__reply-message__wrapper):hover div.ntv__reply-message__header svg:nth-of-type(1), /* (NipahTV) */
+			div#chatroom-footer div.kick__chat-footer div.ntv__reply-message__wrapper div.ntv__reply-message__content:hover svg[data-ds-icon="ArrowCurveLeft"] path, /* (NipahTV) */
 			/* В окне просмотра ветки ответов 💬 Thread */
 			div:has(main[data-theatre-mode-container]) div.z-popover:hover svg[data-ds-icon="ArrowCurveLeft"],
 			/* В функциональных 🪟 Окнах 🗑 "Message Log" и 💬 "Chat Clears" (Mo'Kick) */
@@ -5262,19 +5297,22 @@ purple3=#9048FF
 		/* Без наведения курсора */
 			/* Цвет имени пользователя которому ↩️ отвечают в ветке сообщений */
 				/* В чате 🔴 Стрима и 🛠 Модерки */
-				div#channel-chatroom div[data-index] button.cursor-default > span > span:not([class="inline"]),
-				div#channel-chatroom div[data-index] button.cursor-pointer > span > span:not([class="inline"]),
+				div#channel-chatroom div[data-index] button.cursor-default > span > span:not([class="inline"]), /* дефолт */
+				div#channel-chatroom div[data-index] button.cursor-pointer > span > span:not([class="inline"]), /* дефолт */
+				div#channel-chatroom div[data-index].ntv__chat-message button.ntv__chat-message__attachment > span > span:not([class="inline"]), /* (NipahTV) */
+			/* В окне ✍️ Ввода сообщения-ответа */
+				div#chatroom-footer div.kick__chat-footer div.ntv__reply-message__content button.ntv__chat-message__attachment > span > span:not([class="inline"]), /* (NipahTV) */
 				/* В чате 🔴 Стрима в функциональных окнах 🗑 "Message Log" и 💬 "Chat Clears" (Mo'Kick) */
-				div[data-state="open"] span[class *="inline"][class *="cursor-pointer"]
+				div[data-state="open"] span[class *="inline"][class *="cursor-pointer"],
 				/* В дефолтной 📌 Карточке пользователя (Mo'Kick) */
 				div#user-identity.moKick-expanded span[class *="inline"][class *="cursor-pointer"],
 				/* В расширенной 📌 Карточке пользователя (Mo'Kick) */
 				div#user-identity_pinned.moKick-expanded span[class *="inline"][class *="cursor-pointer"],
 			/* Цвет ника таймачнутого в функциональном меню ⏳ "Active Timeouts" (Mo'Kick) */
 				/* В чате 🔴 Стрима и ⚫️ VOD'а */
-				div#channel-chatroom div.flex.items-center:has(svg > path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span,
+				div#channel-chatroom div.flex.items-center:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span,
 				/* В чате 🛠 Модерки */
-				div[data-grid="element"] div.bg-surface-base div.flex.items-center:has(svg > path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span,
+				div[data-grid="element"] div.bg-surface-base div.flex.items-center:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span,
 			/* Цвет имени пользователя Модератора, и/или Пользователя, и/или Стримера, в системном сообщении в чате */
 				div#channel-chatroom span.text-surface-onSurfaceSecondary > button, /* в чате */
 				div#channel-chatroom span.text-surface-onSurfaceSecondary > span[data-username-bannedby],
@@ -5286,19 +5324,18 @@ purple3=#9048FF
 		/* При наведении курсора */
 			/* Цвет имени пользователя которому ↩️ отвечают в ветке сообщений */
 				/* В чате 🔴 Стрима и 🛠 Модерки */
-				div#channel-chatroom div[data-index] button.cursor-default > span > span:not([class="inline"]):hover,
-				/*div#channel-chatroom div[data-index] button.cursor-pointer > span > span:not([class="inline"]):hover,*/
+				div#channel-chatroom div[data-index] button.cursor-default > span > span:not([class="inline"]):hover, /* дефолт */
 				/* В чате 🔴 Стрима в функциональных окнах 🗑 "Message Log" и 💬 "Chat Clears" (Mo'Kick) */
-				div[data-state="open"] span[class *="inline"][class *="cursor-pointer"]:hover
+				div[data-state="open"] span[class *="inline"][class *="cursor-pointer"]:hover,
 				/* В дефолтной 📌 Карточке пользователя (Mo'Kick) */
 				div#user-identity.moKick-expanded span[class *="inline"][class *="cursor-pointer"]:hover,
 				/* В расширенной 📌 Карточке пользователя (Mo'Kick) */
 				div#user-identity_pinned.moKick-expanded span[class *="inline"][class *="cursor-pointer"]:hover,
 			/* Цвет ника таймачнутого в функциональном меню ⏳ "Active Timeouts" (Mo'Kick) */
 				/* В чате 🔴 Стрима и ⚫️ VOD'а */
-				div#channel-chatroom div.flex.items-center:has(svg > path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span:hover,
+				div#channel-chatroom div.flex.items-center:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span:hover,
 				/* В чате 🛠 Модерки */
-				div[data-grid="element"] div.bg-surface-base div.flex.items-center:has(svg > path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span:hover,
+				div[data-grid="element"] div.bg-surface-base div.flex.items-center:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span:hover,
 			/* Цвет имени пользователя Модератора, и/или Пользователя, и/или Стримера, в системном сообщении в чате */
 				div#channel-chatroom span.text-surface-onSurfaceSecondary > button:hover, /* в чате */
 				div#channel-chatroom span.text-surface-onSurfaceSecondary > span[data-username-bannedby]:hover,
@@ -5313,18 +5350,38 @@ purple3=#9048FF
 	/* Краткий текст сообщения, на которое ↩️ отвечают в ветке сообщений*/
 	if chat_reply_preview_text_toggle {
 		/* Без наведения курсора */
-			div#channel-chatroom div[data-index] div[type="button"] button > span:has(span.inline), /* до ника, кому отвечают */
-			div#channel-chatroom div[data-index] div[type="button"] button > span:has(span.inline) > span.inline /* после ника, кому отвечают */ {
-				color: chat_reply_preview_text_color !important;
-			}
+			/* В чате 🔴 Стрима и 🛠 Модерки */
+				/* дефолт */
+				div#channel-chatroom div[data-index] div[type="button"] button > span:has(span.inline), /* до ника, кому отвечают */
+				div#channel-chatroom div[data-index] div[type="button"] button > span:has(span.inline) > span.inline, /* после ника, кому отвечают */
+				/* (NipahTV) */
+				div#channel-chatroom div[data-index].ntv__chat-message div.ntv__chat-message__inner button.ntv__chat-message__attachment > span:has(span.inline), /* до ника, кому отвечают */
+				div#channel-chatroom div[data-index].ntv__chat-message div.ntv__chat-message__inner button.ntv__chat-message__attachment > span:has(span.inline) > span.inline, /* после ника, кому отвечают */
+			/* В окне ✍️ Ввода сообщения-ответа */
+				/* (NipahTV) */
+				div#chatroom-footer div.kick__chat-footer div.ntv__reply-message__content button.ntv__chat-message__attachment > span:has(span.inline), /* до ника, кому отвечают */
+				div#chatroom-footer div.kick__chat-footer div.ntv__reply-message__content button.ntv__chat-message__attachment > span:has(span.inline) > span.inline /* после ника, кому отвечают */ {
+					color: chat_reply_preview_text_color !important;
+				}
 	
 		/* При наведении курсора */
-			div#channel-chatroom div[data-index] div[type="button"] button:hover > span:has(span.inline), /* до ника, кому отвечают */
-			div#channel-chatroom div[data-index] div[type="button"] button:hover > span:has(span.inline) > span.inline, /* после ника, кому отвечают */
-			div#channel-chatroom div[data-index] div[type="button"] button:hover > span > span:not([class="inline"]) /* ник, кому отвечают */ {
-				color: chat_reply_preview_text-hover_color !important;
-				text-decoration: underline !important;
-			}
+			/* В чате 🔴 Стрима и 🛠 Модерки */
+				/* дефолт */
+				div#channel-chatroom div[data-index] div[type="button"] button:hover > span:has(span.inline), /* до ника, кому отвечают */
+				div#channel-chatroom div[data-index] div[type="button"] button:hover > span:has(span.inline) > span.inline, /* после ника, кому отвечают */
+				div#channel-chatroom div[data-index] div[type="button"] button:hover > span > span:not([class="inline"]), /* ник, кому отвечают */
+				/* (NipahTV) */
+				div#channel-chatroom div[data-index].ntv__chat-message div.ntv__chat-message__inner button.ntv__chat-message__attachment:hover > span:has(span.inline), /* до ника, кому отвечают */
+				div#channel-chatroom div[data-index].ntv__chat-message div.ntv__chat-message__inner button.ntv__chat-message__attachment:hover > span:has(span.inline) > span.inline, /* после ника, кому отвечают */
+				div#channel-chatroom div[data-index].ntv__chat-message div.ntv__chat-message__inner button.ntv__chat-message__attachment:hover > span > span:not([class="inline"]), /* ник, кому отвечают */
+			/* В окне ✍️ Ввода сообщения-ответа */
+				/* (NipahTV) */
+				div#chatroom-footer div.kick__chat-footer div.ntv__reply-message__content button.ntv__chat-message__attachment:hover > span:has(span.inline), /* до ника, кому отвечают */
+				div#chatroom-footer div.kick__chat-footer div.ntv__reply-message__content button.ntv__chat-message__attachment:hover > span:has(span.inline) > span.inline, /* после ника, кому отвечают */
+				div#chatroom-footer div.kick__chat-footer div.ntv__reply-message__content button.ntv__chat-message__attachment:hover > span > span:not([class="inline"]) /* ник, кому отвечают */ {
+					color: chat_reply_preview_text-hover_color !important;
+					text-decoration: underline !important;
+				}
 	}
 	
 	
@@ -5332,8 +5389,8 @@ purple3=#9048FF
 	if chat_deleted_message_toggle {
 		/* Цвет фона у удалённого сообщения */
 		if chat_deleted_message_bg_toggle {
-			div#channel-chatroom div[data-index]:has(div span.text-neutral > span.line-through), /* дефолтные */
-			div#chatroom-messages div[data-index]:has(div span.text-neutral > span.line-through), /* ветка */
+			div#channel-chatroom div[data-index]:has(div span.text-neutral > span.line-through), /* дефолтные / (NipahTV) */
+			div#chatroom-messages div[data-index]:has(div span.text-neutral > span.line-through), /* ветка / (NipahTV) */
 			div#channel-chatroom div[data-index]:has(seventv-container.mokick_deleted-message), /* (7tv / Mo'Kick) */
 			div#channel-chatroom div[data-index]:has(span.mokick_deleted-message) /* (Mo'Kick) */ {
 				background-color: chat_deleted_message_bg_color !important;
@@ -5341,24 +5398,29 @@ purple3=#9048FF
 		}
 	
 	
-		/* Отключение зачёркивания текста у удалённого сообщения */
+		/* Отключение зачёркивания/курсива текста у удалённого сообщения */
 		if chat_deleted_message_text_strike_disable {
 			/* В чате 🔴 Стрима */
-			div#channel-chatroom span.text-neutral > span.line-through, /* дефолтные */
+			div#channel-chatroom span.text-neutral > span.line-through, /* дефолт */
 			div#chatroom-messages span.text-neutral > span.line-through, /* ветка */
 			div#channel-chatroom div[data-index] seventv-container.mokick_deleted-message, /* (7tv) */
+			div#channel-chatroom div[data-index].ntv__chat-message--deleted div.ntv__chat-message__inner > span, /* (NipahTV) */
+			div#chatroom-messages div[data-index].ntv__chat-message--deleted div.ntv__chat-message__inner > span, /* (NipahTV) */
 			/* В функциональных 🪟 Окнах 🗑 "Message Log" и 💬 "Chat Clears", в чате 🔴 Стрима */
 			div#channel-chatroom div[class *="break-words"] span.mokick_deleted-message,
 			/* В функциональных 🪟 Окнах 🗑 "Message Log" и 💬 "Chat Clears", в чате 🛠 Модерки */
 			div[data-type="chat"] div[class *="break-words"] span.mokick_deleted-message {
+				font-style: normal !important;
 				text-decoration: none !important;
 			}
 		}
 	
 	
 		/* В чате 🔴 Стрима */
-		div#channel-chatroom span.text-neutral > span.line-through, /* дефолтные */
+		div#channel-chatroom span.text-neutral > span.line-through, /* дефолт */
 		div#channel-chatroom div[data-index] seventv-container.mokick_deleted-message, /* (7tv) */
+		/* div#channel-chatroom div[data-index].ntv__chat-message--deleted div.ntv__chat-message__inner > span, (NipahTV) */
+		/* div#chatroom-messages div[data-index].ntv__chat-message--deleted div.ntv__chat-message__inner > span, (NipahTV) */
 		/* В функциональных 🪟 Окнах 🗑 "Message Log" и 💬 "Chat Clears", в чате 🔴 Стрима */
 		div#channel-chatroom div[class *="break-words"] span.mokick_deleted-message,
 		/* В функциональных 🪟 Окнах 🗑 "Message Log" и 💬 "Chat Clears", в чате 🛠 Модерки */
@@ -5369,9 +5431,11 @@ purple3=#9048FF
 	
 		/* Информация в скобках "(Deleted/Timed Out/Banned)" и/или "[Bullying/Hate/Violence]" в удалённом модератором сообщении */
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom span.text-neutral > span.font-semibold,
+			div#channel-chatroom span.text-neutral > span.font-semibold, /* дефолт */
+			div#channel-chatroom div[data-index].ntv__chat-message--deleted div.ntv__chat-message__inner > span:nth-of-type(2), /* (NipahTV) */
 			/* В чате 🔴 Стрима и 🛠 Модерки в Ветке */
-			div#chatroom-messages span.text-neutral > span.font-semibold,
+			div#chatroom-messages span.text-neutral > span.font-semibold, /* дефолт */
+			div#chatroom-messages div[data-index].ntv__chat-message--deleted div.ntv__chat-message__inner > span:nth-of-type(2), /* (NipahTV) */
 			/* В чате 🔴 Стрима и 🛠 Модерки (7tv / Mo'Kick) */
 			div#channel-chatroom div[data-index] seventv-container.mokick_deleted-message > span[data-deleted-message-exclude],
 			/* В чате 🔴 Стрима и 🛠 Модерки (7tv / Mo'Kick) */
@@ -5574,9 +5638,13 @@ purple3=#9048FF
 			/* В чате 🔴 Стрима и 🛠 Модерки */
 			div#channel-chatroom div[data-index] > div.group > div.z-absolute:has(button[aria-label]), /* дефолт */
 			div#channel-chatroom div[data-index] > div.group > div.z-absolute:has(button[data-action]), /* (Mo'Kick) */
+			div#channel-chatroom div[data-index] > div.kick__chat-message__actions:has(button[aria-label]), /* (NipahTV) */
+			div#channel-chatroom div[data-index] > div.kick__chat-message__actions:has(button[data-action]), /* (Mo'Kick) + (NipahTV) */
 			/* В 🪟 Окне просмотра 💬 Ветки ответов "Thread" */
 			div:has(div#chatroom-messages) div[data-index] > div.group > div.z-absolute:has(button[aria-label]), /* дефолт */
 			div:has(div#chatroom-messages) div[data-index] > div.group > div.z-absolute:has(button[data-action]), /* (Mo'Kick) */
+			div:has(div#chatroom-messages) div[data-index] > div.kick__chat-message__actions:has(button[aria-label]), /* (NipahTV) */
+			div:has(div#chatroom-messages) div[data-index] > div.kick__chat-message__actions:has(button[data-action]), /* (Mo'Kick) + (NipahTV) */
 			/* В функциональных 🪟 Окнах 🗑 "Message Log" и 💬 "Chat Clears" (Mo'Kick) */
 			div[data-state="open"] div.group > div.z-absolute:has(button[data-action]),
 			/* В дефолтной 📌 Карточке пользователя */
@@ -5593,9 +5661,13 @@ purple3=#9048FF
 			/* В чате 🔴 Стрима и 🛠 Модерки */
 			div#channel-chatroom div[data-index] > div.group > div.z-absolute:has(button[aria-label]), /* дефолт */
 			div#channel-chatroom div[data-index] > div.group > div.z-absolute:has(button[data-action]), /* (Mo'Kick) */
+			div#channel-chatroom div[data-index] > div.kick__chat-message__actions:has(button[aria-label]), /* (NipahTV) */
+			div#channel-chatroom div[data-index] > div.kick__chat-message__actions:has(button[data-action]), /* (Mo'Kick) + (NipahTV) */
 			/* В 🪟 Окне просмотра 💬 Ветки ответов "Thread" */
 			div:has(div#chatroom-messages) div[data-index] > div.group > div.z-absolute:has(button[aria-label]), /* дефолт */
 			div:has(div#chatroom-messages) div[data-index] > div.group > div.z-absolute:has(button[data-action]), /* (Mo'Kick) */
+			div:has(div#chatroom-messages) div[data-index] > div.kick__chat-message__actions:has(button[aria-label]), /* (NipahTV) */
+			div:has(div#chatroom-messages) div[data-index] > div.kick__chat-message__actions:has(button[data-action]), /* (Mo'Kick) + (NipahTV) */
 			/* В функциональных 🪟 Окнах 🗑 "Message Log" и 💬 "Chat Clears" (Mo'Kick) */
 			div[data-state="open"] div.group > div.z-absolute:has(button[data-action]),
 			/* В дефолтной 📌 Карточке пользователя */
@@ -5611,9 +5683,13 @@ purple3=#9048FF
 		/* Удаление вертикальных палочек */
 		if chat_hover_btn_vertical-divider_disable {
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] > div.group > div.z-absolute:has(button) > div,
+			div#channel-chatroom div[data-index] > div.group > div.z-absolute:has(button) > div, /* дефолт */
+			div#channel-chatroom div[data-index] > div.kick__chat-message__actions:has(button[aria-label]) > div, /* (NipahTV) */
+			div#channel-chatroom div[data-index] > div.kick__chat-message__actions:has(button[data-action]) > div, /* (Mo'Kick) + (NipahTV) */
 			/* В 🪟 Окне просмотра 💬 Ветки ответов "Thread" */
-			div:has(div#chatroom-messages) div[data-index] > div.group > div.z-absolute:has(button) > div,
+			div:has(div#chatroom-messages) div[data-index] > div.group > div.z-absolute:has(button) > div, /* дефолт */
+			div:has(div#chatroom-messages) div[data-index] > div.kick__chat-message__actions:has(button[aria-label]) > div, /* (NipahTV) */
+			div:has(div#chatroom-messages) div[data-index] > div.kick__chat-message__actions:has(button[data-action]) > div, /* (Mo'Kick) + (NipahTV) */
 			/* В функциональных 🪟 Окнах 🗑 "Message Log" и 💬 "Chat Clears" (Mo'Kick) */
 			div[data-state="open"] div.group > div.z-absolute:has(button) > div,
 			/* В дефолтной 📌 Карточке пользователя */
@@ -5628,9 +5704,11 @@ purple3=#9048FF
 		/* Смещение плашки с кнопками по высоте, и развер кнопок */
 		if chat_hover_btn_compact-size {
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] div.group > div[class *="betterhover:group-hover"].z-absolute:has(button),
+			div#channel-chatroom div[data-index] div.group > div[class *="betterhover:group-hover"].z-absolute:has(button), /* дефолт */
+			div#channel-chatroom div[data-index] > div.kick__chat-message__actions:has(button), /* (NipahTV) */
 			/* В 🪟 Окне просмотра 💬 Ветки ответов "Thread" */
-			div:has(div#chatroom-messages) div[data-index] div.group > div[class *="betterhover:group-hover"].z-absolute:has(button),
+			div:has(div#chatroom-messages) div[data-index] div.group > div[class *="betterhover:group-hover"].z-absolute:has(button), /* дефолт */
+			div:has(div#chatroom-messages) div[data-index] > div.kick__chat-message__actions:has(button), /* (NipahTV) */
 			/* В функциональных 🪟 Окнах 🗑 "Message Log" и 💬 "Chat Clears" (Mo'Kick) */
 			div[data-state="open"] div.group > div[class *="betterhover:group-hover"].z-absolute:has(button),
 			/* В дефолтной 📌 Карточке пользователя */
@@ -5642,9 +5720,11 @@ purple3=#9048FF
 			}
 		} else {
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] div.group > div[class *="betterhover:group-hover"].z-absolute:has(button),
+			div#channel-chatroom div[data-index] div.group > div[class *="betterhover:group-hover"].z-absolute:has(button), /* дефолт */
+			div#channel-chatroom div[data-index] > div.kick__chat-message__actions:has(button), /* (NipahTV) */
 			/* В 🪟 Окне просмотра 💬 Ветки ответов "Thread" */
-			div:has(div#chatroom-messages) div[data-index] div.group > div[class *="betterhover:group-hover"].z-absolute:has(button),
+			div:has(div#chatroom-messages) div[data-index] div.group > div[class *="betterhover:group-hover"].z-absolute:has(button), /* дефолт */
+			div:has(div#chatroom-messages) div[data-index] > div.kick__chat-message__actions:has(button), /* (NipahTV) */
 			/* В функциональных 🪟 Окнах 🗑 "Message Log" и 💬 "Chat Clears" (Mo'Kick) */
 			div[data-state="open"] div.group > div[class *="betterhover:group-hover"].z-absolute:has(button),
 			/* В дефолтной 📌 Карточке пользователя */
@@ -5660,9 +5740,11 @@ purple3=#9048FF
 		/* Отзеркаленный порядок кнопок, чтоб было как на твиче */
 		if chat_hover_btn_revers-all {
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] div.group > div[class *="betterhover:group-hover"].z-absolute:has(button),
+			div#channel-chatroom div[data-index] div.group > div[class *="betterhover:group-hover"].z-absolute:has(button), /* дефолт */
+			div#channel-chatroom div[data-index] > div.kick__chat-message__actions:has(button), /* (NipahTV) */
 			/* В 🪟 Окне просмотра 💬 Ветки ответов "Thread" */
-			div:has(div#chatroom-messages) div[data-index] div.group > div[class *="betterhover:group-hover"].z-absolute:has(button),
+			div:has(div#chatroom-messages) div[data-index] div.group > div[class *="betterhover:group-hover"].z-absolute:has(button), /* дефолт */
+			div:has(div#chatroom-messages) div[data-index] > div.kick__chat-message__actions:has(button), /* (NipahTV) */
 			/* В функциональных 🪟 Окнах 🗑 "Message Log" и 💬 "Chat Clears" (Mo'Kick) */
 			div[data-state="open"] div.group > div[class *="betterhover:group-hover"].z-absolute:has(button),
 			/* В дефолтной 📌 Карточке пользователя */
@@ -6676,6 +6758,31 @@ purple3=#9048FF
 	}
 	
 	
+	/* Кнопка вызова "🙂 Меню смайлов" (NipahTV) */
+	if chat_under-input-area_btn_nipahtv_emoji-menu_toggle {
+		/* Отключить отображение кнопки */
+		if chat_under-input-area_btn_nipahtv_emoji-menu_disable {
+			div#chatroom-footer div.kick__chat-footer div.ntv__emote-menu-button {
+				display: none !important;
+			}
+		}
+	
+	
+		/* Свой фон кнопки */
+		if chat_under-input-area_btn_nipahtv_emoji-menu_bg_toggle {
+			div#chatroom-footer div.kick__chat-footer div.ntv__emote-menu-button {
+				background-color: chat_under-input-area_btn_nipahtv_emoji-menu_bg_color !important;
+				background-image: none !important;
+			}
+		}
+	
+		/* При наведении курсора */
+		div#chatroom-footer div.kick__chat-footer div.ntv__emote-menu-button:hover {
+			filter: drop-shadow(0px 0px 4px chat_under-input-area_btn_nipahtv_emoji-menu_glow_color) !important;
+		}
+	}
+	
+	
 	/* Кнопка "⚙️ Настройки чата" */
 	if chat_under-input-area_btn_settings_toggle {
 		/* Отключить отображение кнопки */
@@ -6953,7 +7060,12 @@ purple3=#9048FF
 			button[aria-label="Close"],
 			button:has(svg[data-ds-icon="Cross"]),
 			/* Mo'Kick */
-			button:has(path[d="M28 6.99204L25.008 4L16 12.9973L6.99204 4L4 6.99204L12.9973 16L4 25.008L6.99204 28L16 19.0027L25.008 28L28 25.008L19.0027 16L28 6.99204Z"]) {
+			button:has(path[d="M28 6.99204L25.008 4L16 12.9973L6.99204 4L4 6.99204L12.9973 16L4 25.008L6.99204 28L16 19.0027L25.008 28L28 25.008L19.0027 16L28 6.99204Z"]),
+ 			/* (NipahTV) */
+			button.ntv__modal__close-btn,
+			svg.ntv__reply-message__close-btn,
+ 			svg:has(path[d="m37.304 11.282l1.414 1.414l-26.022 26.02l-1.414-1.413z"]),
+ 			svg:has(path[d="m12.696 11.282l26.022 26.02l-1.414 1.415l-26.022-26.02z"]) {
 				background-color: pop-up-windows_btn_close_bg_color !important;
 				background-image: none !important;
 			}
@@ -6966,7 +7078,12 @@ purple3=#9048FF
 			button[aria-label="Close"],
 			button:has(svg[data-ds-icon="Cross"]),
 			/* Mo'Kick */
-			button:has(path[d="M28 6.99204L25.008 4L16 12.9973L6.99204 4L4 6.99204L12.9973 16L4 25.008L6.99204 28L16 19.0027L25.008 28L28 25.008L19.0027 16L28 6.99204Z"]) {
+			button:has(path[d="M28 6.99204L25.008 4L16 12.9973L6.99204 4L4 6.99204L12.9973 16L4 25.008L6.99204 28L16 19.0027L25.008 28L28 25.008L19.0027 16L28 6.99204Z"]),
+ 			/* (NipahTV) */
+			button.ntv__modal__close-btn,
+			svg.ntv__reply-message__close-btn,
+ 			svg:has(path[d="m37.304 11.282l1.414 1.414l-26.022 26.02l-1.414-1.413z"]),
+ 			svg:has(path[d="m12.696 11.282l26.022 26.02l-1.414 1.415l-26.022-26.02z"]) {
 			color: pop-up-windows_btn_close_color !important;
 		}
 	
@@ -6975,7 +7092,12 @@ purple3=#9048FF
 			button[aria-label="Close"]:hover,
 			button:has(svg[data-ds-icon="Cross"]):hover,
 			/* Mo'Kick */
-			button:has(path[d="M28 6.99204L25.008 4L16 12.9973L6.99204 4L4 6.99204L12.9973 16L4 25.008L6.99204 28L16 19.0027L25.008 28L28 25.008L19.0027 16L28 6.99204Z"]):hover /*  */ {
+			button:has(path[d="M28 6.99204L25.008 4L16 12.9973L6.99204 4L4 6.99204L12.9973 16L4 25.008L6.99204 28L16 19.0027L25.008 28L28 25.008L19.0027 16L28 6.99204Z"]):hover,
+ 			/* (NipahTV) */
+			button.ntv__modal__close-btn:hover,
+			svg.ntv__reply-message__close-btn:hover,
+ 			svg:has(path[d="m37.304 11.282l1.414 1.414l-26.022 26.02l-1.414-1.413z"]):hover,
+ 			svg:has(path[d="m12.696 11.282l26.022 26.02l-1.414 1.415l-26.022-26.02z"]):hover {
 			filter: drop-shadow(0px 0px 4px pop-up-windows_btn_close_color) !important;
 		}
 	}
@@ -7350,9 +7472,9 @@ purple3=#9048FF
 			div#user-identity button:has(svg[data-ds-icon="HeartOutline"]),
 			div#user-identity button:has(svg[data-ds-icon="HeartFilled"]),
 			/* Миниатюрная карточка пользователя, в низу экрана */
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > div.fill-surface-onSurface > button:has(svg[data-ds-icon="HeartBrokenOutline"]),
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > div.fill-surface-onSurface > button:has(svg[data-ds-icon="HeartOutline"]),
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > div.fill-surface-onSurface > button:has(svg[data-ds-icon="HeartFilled"]),
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="HeartBrokenOutline"]),
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="HeartOutline"]),
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="HeartFilled"]),
 			/* Начать отслеживать (Mo'Kick) */
 			div#user-identity button:has(path[d="M23.2975 6.5L26.5 9.7025V14.6112L16 24.455L5.5 14.6112V9.7025L8.7025 6.5H10.4L16 10.98L21.6 6.5H23.2975ZM24.75 3H20.375L16 6.5L11.625 3H7.25L2 8.25V16.125L16 29.25L30 16.125V8.25L24.75 3Z"]),
 			div#user-identity_pinned button:has(path[d="M23.2975 6.5L26.5 9.7025V14.6112L16 24.455L5.5 14.6112V9.7025L8.7025 6.5H10.4L16 10.98L21.6 6.5H23.2975ZM24.75 3H20.375L16 6.5L11.625 3H7.25L2 8.25V16.125L16 29.25L30 16.125V8.25L24.75 3Z"]),
@@ -7361,7 +7483,9 @@ purple3=#9048FF
 			div#user-identity_pinned button:has(path[d="M12.375 1.5H10.1875L8 3.25L5.8125 1.5H3.625L1 4.125V8.0625L8 14.625L15 8.0625V4.125L12.375 1.5Z"]),
 			/* Перестать отслеживать (Mo'Kick) */
 			div#user-identity button:has(path[d="M30 8.25L24.75 3H20.375L16 6.5L11.625 3H7.25L2 8.25V16.125L16 29.25L30 16.125V8.25ZM5.5 9.7025L8.7025 6.5H10.4L13.41 8.90625L8.97375 12.5375L13.7775 17L10.9338 19.6775L5.5175 14.6025V9.69375L5.5 9.7025ZM16 24.455L13.48 22.0925L18.8875 17L14.285 12.7212L21.8713 6.50875H23.2975L26.5 9.71125V14.62L16 24.4638V24.455Z"]),
-			div#user-identity_pinned button:has(path[d="M30 8.25L24.75 3H20.375L16 6.5L11.625 3H7.25L2 8.25V16.125L16 29.25L30 16.125V8.25ZM5.5 9.7025L8.7025 6.5H10.4L13.41 8.90625L8.97375 12.5375L13.7775 17L10.9338 19.6775L5.5175 14.6025V9.69375L5.5 9.7025ZM16 24.455L13.48 22.0925L18.8875 17L14.285 12.7212L21.8713 6.50875H23.2975L26.5 9.71125V14.62L16 24.4638V24.455Z"]) {
+			div#user-identity_pinned button:has(path[d="M30 8.25L24.75 3H20.375L16 6.5L11.625 3H7.25L2 8.25V16.125L16 29.25L30 16.125V8.25ZM5.5 9.7025L8.7025 6.5H10.4L13.41 8.90625L8.97375 12.5375L13.7775 17L10.9338 19.6775L5.5175 14.6025V9.69375L5.5 9.7025ZM16 24.455L13.48 22.0925L18.8875 17L14.285 12.7212L21.8713 6.50875H23.2975L26.5 9.71125V14.62L16 24.4638V24.455Z"]),
+ 			/* Кнопка "Follow" в карточке пользователя (NipahTV) */
+			div.ntv__user-info-modal div.ntv__user-info-modal__actions button.ntv__user-info-modal__follow {
 				background-color: user-profile-card_btn_follow_bg_color !important;
 				background-image: none !important;
 			}
@@ -7374,9 +7498,12 @@ purple3=#9048FF
 			div#user-identity button:has(svg[data-ds-icon="HeartOutline"]),
 			div#user-identity button:has(svg[data-ds-icon="HeartFilled"]),
 			/* Миниатюрная карточка пользователя, в низу экрана */
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > div.fill-surface-onSurface > button:has(svg[data-ds-icon="HeartBrokenOutline"]),
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > div.fill-surface-onSurface > button:has(svg[data-ds-icon="HeartOutline"]),
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > div.fill-surface-onSurface > button:has(svg[data-ds-icon="HeartFilled"]),
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="HeartBrokenOutline"]),
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="HeartBrokenOutline"]) path,
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="HeartOutline"]),
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="HeartOutline"]) path,
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="HeartFilled"]),
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="HeartFilled"]) path,
 			/* Начать отслеживать (Mo'Kick) */
 			div#user-identity button:has(path[d="M23.2975 6.5L26.5 9.7025V14.6112L16 24.455L5.5 14.6112V9.7025L8.7025 6.5H10.4L16 10.98L21.6 6.5H23.2975ZM24.75 3H20.375L16 6.5L11.625 3H7.25L2 8.25V16.125L16 29.25L30 16.125V8.25L24.75 3Z"]),
 			div#user-identity_pinned button:has(path[d="M23.2975 6.5L26.5 9.7025V14.6112L16 24.455L5.5 14.6112V9.7025L8.7025 6.5H10.4L16 10.98L21.6 6.5H23.2975ZM24.75 3H20.375L16 6.5L11.625 3H7.25L2 8.25V16.125L16 29.25L30 16.125V8.25L24.75 3Z"]),
@@ -7385,7 +7512,9 @@ purple3=#9048FF
 			div#user-identity_pinned button:has(path[d="M12.375 1.5H10.1875L8 3.25L5.8125 1.5H3.625L1 4.125V8.0625L8 14.625L15 8.0625V4.125L12.375 1.5Z"]),
 			/* Перестать отслеживать (Mo'Kick) */
 			div#user-identity button:has(path[d="M30 8.25L24.75 3H20.375L16 6.5L11.625 3H7.25L2 8.25V16.125L16 29.25L30 16.125V8.25ZM5.5 9.7025L8.7025 6.5H10.4L13.41 8.90625L8.97375 12.5375L13.7775 17L10.9338 19.6775L5.5175 14.6025V9.69375L5.5 9.7025ZM16 24.455L13.48 22.0925L18.8875 17L14.285 12.7212L21.8713 6.50875H23.2975L26.5 9.71125V14.62L16 24.4638V24.455Z"]),
-			div#user-identity_pinned button:has(path[d="M30 8.25L24.75 3H20.375L16 6.5L11.625 3H7.25L2 8.25V16.125L16 29.25L30 16.125V8.25ZM5.5 9.7025L8.7025 6.5H10.4L13.41 8.90625L8.97375 12.5375L13.7775 17L10.9338 19.6775L5.5175 14.6025V9.69375L5.5 9.7025ZM16 24.455L13.48 22.0925L18.8875 17L14.285 12.7212L21.8713 6.50875H23.2975L26.5 9.71125V14.62L16 24.4638V24.455Z"]) {
+			div#user-identity_pinned button:has(path[d="M30 8.25L24.75 3H20.375L16 6.5L11.625 3H7.25L2 8.25V16.125L16 29.25L30 16.125V8.25ZM5.5 9.7025L8.7025 6.5H10.4L13.41 8.90625L8.97375 12.5375L13.7775 17L10.9338 19.6775L5.5175 14.6025V9.69375L5.5 9.7025ZM16 24.455L13.48 22.0925L18.8875 17L14.285 12.7212L21.8713 6.50875H23.2975L26.5 9.71125V14.62L16 24.4638V24.455Z"]),
+ 			/* Кнопка "Follow" в карточке пользователя (NipahTV) */
+			div.ntv__user-info-modal div.ntv__user-info-modal__actions button.ntv__user-info-modal__follow {
 				color: user-profile-card_btn_follow_color !important;
 			}
 	
@@ -7395,9 +7524,9 @@ purple3=#9048FF
 			div#user-identity button:has(svg[data-ds-icon="HeartOutline"]):hover,
 			div#user-identity button:has(svg[data-ds-icon="HeartFilled"]):hover,
 			/* Миниатюрная карточка пользователя, в низу экрана */
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > div.fill-surface-onSurface > button:has(svg[data-ds-icon="HeartBrokenOutline"]):hover,
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > div.fill-surface-onSurface > button:has(svg[data-ds-icon="HeartOutline"]):hover,
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > div.fill-surface-onSurface > button:has(svg[data-ds-icon="HeartFilled"]):hover,
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="HeartBrokenOutline"]):hover,
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="HeartOutline"]):hover,
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="HeartFilled"]):hover,
 			/* Начать отслеживать (Mo'Kick) */
 			div#user-identity button:has(path[d="M23.2975 6.5L26.5 9.7025V14.6112L16 24.455L5.5 14.6112V9.7025L8.7025 6.5H10.4L16 10.98L21.6 6.5H23.2975ZM24.75 3H20.375L16 6.5L11.625 3H7.25L2 8.25V16.125L16 29.25L30 16.125V8.25L24.75 3Z"]):hover,
 			div#user-identity_pinned button:has(path[d="M23.2975 6.5L26.5 9.7025V14.6112L16 24.455L5.5 14.6112V9.7025L8.7025 6.5H10.4L16 10.98L21.6 6.5H23.2975ZM24.75 3H20.375L16 6.5L11.625 3H7.25L2 8.25V16.125L16 29.25L30 16.125V8.25L24.75 3Z"]):hover,
@@ -7406,7 +7535,9 @@ purple3=#9048FF
 			div#user-identity_pinned button:has(path[d="M12.375 1.5H10.1875L8 3.25L5.8125 1.5H3.625L1 4.125V8.0625L8 14.625L15 8.0625V4.125L12.375 1.5Z"]):hover,
 			/* Перестать отслеживать (Mo'Kick) */
 			div#user-identity button:has(path[d="M30 8.25L24.75 3H20.375L16 6.5L11.625 3H7.25L2 8.25V16.125L16 29.25L30 16.125V8.25ZM5.5 9.7025L8.7025 6.5H10.4L13.41 8.90625L8.97375 12.5375L13.7775 17L10.9338 19.6775L5.5175 14.6025V9.69375L5.5 9.7025ZM16 24.455L13.48 22.0925L18.8875 17L14.285 12.7212L21.8713 6.50875H23.2975L26.5 9.71125V14.62L16 24.4638V24.455Z"]):hover,
-			div#user-identity_pinned button:has(path[d="M30 8.25L24.75 3H20.375L16 6.5L11.625 3H7.25L2 8.25V16.125L16 29.25L30 16.125V8.25ZM5.5 9.7025L8.7025 6.5H10.4L13.41 8.90625L8.97375 12.5375L13.7775 17L10.9338 19.6775L5.5175 14.6025V9.69375L5.5 9.7025ZM16 24.455L13.48 22.0925L18.8875 17L14.285 12.7212L21.8713 6.50875H23.2975L26.5 9.71125V14.62L16 24.4638V24.455Z"]):hover {
+			div#user-identity_pinned button:has(path[d="M30 8.25L24.75 3H20.375L16 6.5L11.625 3H7.25L2 8.25V16.125L16 29.25L30 16.125V8.25ZM5.5 9.7025L8.7025 6.5H10.4L13.41 8.90625L8.97375 12.5375L13.7775 17L10.9338 19.6775L5.5175 14.6025V9.69375L5.5 9.7025ZM16 24.455L13.48 22.0925L18.8875 17L14.285 12.7212L21.8713 6.50875H23.2975L26.5 9.71125V14.62L16 24.4638V24.455Z"]):hover,
+ 			/* Кнопка "Follow" в карточке пользователя (NipahTV) */
+			div.ntv__user-info-modal div.ntv__user-info-modal__actions button.ntv__user-info-modal__follow:hover {
 				filter: drop-shadow(0px 0px 4px user-profile-card_btn_follow_color) !important;
 			}
 		}
@@ -7427,7 +7558,10 @@ purple3=#9048FF
 	
 		/* Свой фон кнопки */
 		if user-profile-card_btn_gift-sub_bg_toggle {
-			div#user-identity button:has(svg[data-ds-icon="Gift"]) {
+			/* Дефолтная */
+			div#user-identity button:has(svg[data-ds-icon="Gift"]),
+			/* Миниатюрная карточка пользователя, в низу экрана */
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="Gift"]) {
 				background-color: user-profile-card_btn_gift-sub_bg_color !important;
 				background-image: none !important;
 			}
@@ -7435,14 +7569,45 @@ purple3=#9048FF
 	
 	
 		/* Без наведения курсора */
-		div#user-identity button:has(svg[data-ds-icon="Gift"]) {
-			color: user-profile-card_btn_gift-sub_color !important;
-		}
+			/* Дефолтная */
+			div#user-identity button:has(svg[data-ds-icon="Gift"]),
+			/* Миниатюрная карточка пользователя, в низу экрана */
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="Gift"]),
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="Gift"]) path {
+				color: user-profile-card_btn_gift-sub_color !important;
+			}
 	
 		/* При наведении курсора */
-		div#user-identity button:has(svg[data-ds-icon="Gift"]):hover {
-			filter: drop-shadow(0px 0px 4px user-profile-card_btn_gift-sub_color) !important;
+			/* Дефолтная */
+			div#user-identity button:has(svg[data-ds-icon="Gift"]):hover,
+			/* Миниатюрная карточка пользователя, в низу экрана */
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="Gift"]):hover {
+				filter: drop-shadow(0px 0px 4px user-profile-card_btn_gift-sub_color) !important;
+			}
+	}
+	
+	
+	/* Кнопка "📺 Смотреть канал" - Миниатюрная карточка пользователя, в низу экрана */
+	if user-profile-card_btn_channel_toggle {
+		/* Свой фон кнопки */
+		if user-profile-card_btn_channel_bg_toggle {
+			div[role="dialog"] > div.no-scrollbar.flex.shrink a:has(svg[data-ds-icon="Channel"]) {
+				background-color: user-profile-card_btn_channel_bg_color !important;
+				background-image: none !important;
+			}
 		}
+	
+	
+		/* Без наведения курсора */
+			div[role="dialog"] > div.no-scrollbar.flex.shrink a:has(svg[data-ds-icon="Channel"]),
+			div[role="dialog"] > div.no-scrollbar.flex.shrink a:has(svg[data-ds-icon="Channel"]) path {
+				color: user-profile-card_btn_channel_color !important;
+			}
+	
+		/* При наведении курсора */
+			div[role="dialog"] > div.no-scrollbar.flex.shrink a:has(svg[data-ds-icon="Channel"]):hover {
+				filter: drop-shadow(0px 0px 4px user-profile-card_btn_channel_color) !important;
+			}
 	}
 	
 	
@@ -7547,12 +7712,13 @@ purple3=#9048FF
 			/* "Игнорировать" - Дефолтная карточка пользователя */
 			div#user-identity button:has(svg[data-ds-icon="MicrophoneStrikeout"]),
 			/* "Игнорировать" - Миниатюрная карточка пользователя, в низу экрана */
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > div.fill-surface-onSurface > button:has(svg[data-ds-icon="MicrophoneStrikeout"]),
-			
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="ChatOutlineStrikeout"]),
 			/* "Удалить из игнорируемых" - Дефолтная карточка пользователя */
 			div#user-identity button:has(svg[data-ds-icon="Microphone"]),
 			/* "Удалить из игнорируемых" - Миниатюрная карточка пользователя, в низу экрана */
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > div.fill-surface-onSurface > button:has(svg[data-ds-icon="Microphone"]) {
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="ChatOutline"]),
+ 			/* Кнопка "Mute" в карточке пользователя (NipahTV) */
+			div.ntv__user-info-modal div.ntv__user-info-modal__actions button.ntv__user-info-modal__mute {
 				background-color: user-profile-card_btn_ignore_bg_color !important;
 				background-image: none !important;
 			}
@@ -7563,8 +7729,10 @@ purple3=#9048FF
 			/* "Игнорировать" - Дефолтная карточка пользователя */
 			div#user-identity button:has(svg[data-ds-icon="Microphone"]),
 			/* "Игнорировать" - Миниатюрная карточка пользователя, в низу экрана */
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > div.fill-surface-onSurface > button:has(svg[data-ds-icon="Microphone"]),
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > div.fill-surface-onSurface > button:has(svg[data-ds-icon="Microphone"]) path {
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="ChatOutlineStrikeout"]),
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="ChatOutlineStrikeout"]) path,
+ 			/* Кнопка "Mute" в карточке пользователя (NipahTV) */
+			div.ntv__user-info-modal div.ntv__user-info-modal__actions button.ntv__user-info-modal__mute {
 				color: user-profile-card_btn_ignore-show_color !important;
 				fill: user-profile-card_btn_ignore-show_color !important;
 			}
@@ -7572,8 +7740,8 @@ purple3=#9048FF
 			/* "Удалить из игнорируемых" - Дефолтная карточка пользователя */
 			div#user-identity button:has(svg[data-ds-icon="MicrophoneStrikeout"]),
 			/* "Удалить из игнорируемых" - Миниатюрная карточка пользователя, в низу экрана */
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > div.fill-surface-onSurface > button:has(svg[data-ds-icon="MicrophoneStrikeout"]),
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > div.fill-surface-onSurface > button:has(svg[data-ds-icon="MicrophoneStrikeout"]) path {
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="ChatOutline"]),
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="ChatOutline"]) path {
 				color: user-profile-card_btn_ignore-hide_color !important;
 				fill: user-profile-card_btn_ignore-hide_color !important;
 			}
@@ -7582,27 +7750,53 @@ purple3=#9048FF
 			/* "Игнорировать" - Дефолтная карточка пользователя */
 			div#user-identity button:has(svg[data-ds-icon="Microphone"]):hover,
 			/* "Игнорировать" - Миниатюрная карточка пользователя, в низу экрана */
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > div.fill-surface-onSurface > button:has(svg[data-ds-icon="Microphone"]):hover {
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="ChatOutlineStrikeout"]):hover,
+ 			/* Кнопка "Mute" в карточке пользователя (NipahTV) */
+			div.ntv__user-info-modal div.ntv__user-info-modal__actions button.ntv__user-info-modal__mute:hover {
 				color: user-profile-card_btn_ignore-hide_color !important;
 				filter: drop-shadow(0px 0px 4px user-profile-card_btn_ignore-hide_color) !important;
 			}
 			/* "Игнорировать" - Миниатюрная карточка пользователя, в низу экрана */
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > div.fill-surface-onSurface > button:has(svg[data-ds-icon="Microphone"]):hover path {
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="ChatOutlineStrikeout"]):hover path {
 				fill: user-profile-card_btn_ignore-hide_color !important;
 			}
 
 			/* "Удалить из игнорируемых" - Дефолтная карточка пользователя */
 			div#user-identity button:has(svg[data-ds-icon="MicrophoneStrikeout"]):hover,
 			/* "Удалить из игнорируемых" - Миниатюрная карточка пользователя, в низу экрана */
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > div.fill-surface-onSurface > button:has(svg[data-ds-icon="MicrophoneStrikeout"]):hover {
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="ChatOutline"]):hover {
 				color: user-profile-card_btn_ignore-show_color !important;
 				filter: drop-shadow(0px 0px 4px user-profile-card_btn_ignore-show_color) !important;
 			}
 			/* "Удалить из игнорируемых" - Миниатюрная карточка пользователя, в низу экрана */
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > div.fill-surface-onSurface > button:has(svg[data-ds-icon="MicrophoneStrikeout"]):hover path {
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="ChatOutline"]):hover path {
 				fill: user-profile-card_btn_ignore-show_color !important;
 			}
 		}
+	
+	
+	/* Кнопка "↩️ Ответить" - Миниатюрная карточка пользователя, в низу экрана */
+	if user-profile-card_btn_reply_toggle {
+		/* Свой фон кнопки */
+		if user-profile-card_btn_reply_bg_toggle {
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="ArrowCurveLeft"]) {
+				background-color: user-profile-card_btn_reply_bg_color !important;
+				background-image: none !important;
+			}
+		}
+	
+	
+		/* Без наведения курсора */
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="ArrowCurveLeft"]),
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="ArrowCurveLeft"]) path {
+				color: user-profile-card_btn_reply_color !important;
+			}
+	
+		/* При наведении курсора */
+			div[role="dialog"] > div.no-scrollbar.flex.shrink button:has(svg[data-ds-icon="ArrowCurveLeft"]):hover {
+				filter: drop-shadow(0px 0px 4px user-profile-card_btn_reply_color) !important;
+			}
+	}
 	
 	
 	/* Кнопка "🚫 Block/Unblock Highlight (Mo'Kick)" */
@@ -7656,20 +7850,27 @@ purple3=#9048FF
 	/* Кнопка/Переключатель выдачи 🔨 Бана */
 		/* Без наведения курсора */
 			/* Иконка бана, в дефолтной карточке пользователя */
-			div#user-identity div.contents > div[class] > div > svg:has(path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]) path,
-			/* Иконка бана, в Миниатюрной карточке пользователя, в низу экрана */
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > button:has(path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]) path,
+			div#user-identity div.contents > div[class] > div > svg[data-ds-icon="Prohibited"] path,
+			/* Иконка бана, в миниатюрной карточке пользователя, в низу экрана */
+			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > button:has(svg[data-ds-icon="Prohibited"]) path,
 			/* Иконка бана рядом с "Banned by", в карточке пользователя (Mo'Kick) */
 			div#user-identity div > svg:has(path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]),
 			/* Иконка бана рядом с "Banned by", в расширенной карточке пользователя (Mo'Kick) */
-			div#user-identity_pinned div > svg:has(path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]) {
+			div#user-identity_pinned div > svg:has(path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]),
+ 			/* Иконка бана, в карточке пользователя (NipahTV) */
+			div.ntv__user-info-modal div.ntv__user-info-modal__mod-actions > button[alt *="Ban"] path {
 				fill: user-profile-card_btn_ban_color !important;
 			}
 	
+			/* Иконка бана в карточке пользователя, если пользователь уже забанен (NipahTV) */
+			div.ntv__user-info-modal:has(div.ntv__user-info-modal__status-page__banned) div.ntv__user-info-modal__mod-actions > button[alt *="Ban"] path {
+				fill: user-profile-card_btn_unban-untimeout_color !important;
+			}
+	
 			/* Текст "Запрет", между иконкой и переключателем бана */
-			div#user-identity div.contents > div[class] > div:has(path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]),
+			div#user-identity div.contents > div[class] > div:has(svg[data-ds-icon="Prohibited"]),
 			/* Текст "Запрет", в миниатюрной карточке пользователя, в низу экрана */
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > button:has(path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]) span,
+			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > button:has(svg[data-ds-icon="Prohibited"]) span,
 			/* Текст "Banned by", в карточке пользователя (Mo'Kick) */
 			div#user-identity div:has(path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]) > span,
 			/* Текст "Banned by", в расширенной карточке пользователя (Mo'Kick) */
@@ -7706,7 +7907,7 @@ purple3=#9048FF
 	
 			/* Свой фон кнопки выдачи бана, в миниатюрной карточке пользователя, в низу экрана */
 			if user-profile-card-mini_btn_ban_bg_toggle {
-				div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > button:has(path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]) {
+				div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > button:has(svg[data-ds-icon="Prohibited"]) {
 					background-color: user-profile-card-mini_btn_ban_bg_color !important;
 				}
 			}
@@ -7714,7 +7915,7 @@ purple3=#9048FF
 	
 		/* При наведении курсора */
 			/* Иконка бана, в дефолтной карточке пользователя */
-			div#user-identity div.contents > div:hover > div > svg:has(path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]),
+			div#user-identity div.contents > div:hover > div > svg[data-ds-icon="Prohibited"],
 			/* Переключатель выдачи бана, в дефолтной карточке пользователя */
 			div#user-identity div.contents > div:hover > button[aria-checked],
 			/* Иконка бана рядом с "Banned by", в карточке пользователя (Mo'Kick) */
@@ -7725,8 +7926,15 @@ purple3=#9048FF
 			div#user-identity button:has(span > svg > path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]):hover span,
 			div#user-identity_pinned button:has(span > svg > path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]):hover span,
 			/* Кнопка выдачи бана, в миниатюрной карточке пользователя, в низу экрана */
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > button:has(path[d="M16 7C12.14 7 9 10.14 9 14C9 15.2 9.34 16.32 9.86 17.3L19.3 7.86C18.32 7.32 17.2 7 16 7Z"]):hover {
+			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > button:has(svg[data-ds-icon="Prohibited"]):hover,
+ 			/* Иконка бана, в карточке пользователя (NipahTV) */
+			div.ntv__user-info-modal div.ntv__user-info-modal__mod-actions > button[alt *="Ban"]:hover svg {
 				filter: drop-shadow(0px 0px 4px user-profile-card_btn_ban_color) !important;
+			}
+	
+			/* Иконка бана в карточке пользователя, если пользователь уже забанен (NipahTV) */
+			div.ntv__user-info-modal:has(div.ntv__user-info-modal__status-page__banned) div.ntv__user-info-modal__mod-actions > button[alt *="Ban"]:hover svg {
+				filter: drop-shadow(0px 0px 4px user-profile-card_btn_unban-untimeout_color) !important;
 			}
 	
 	
@@ -7734,24 +7942,26 @@ purple3=#9048FF
 	if user-profile-card_btn_timeout_toggle {
 		/* Без наведения курсора */
 			/* Иконка таймача, в дефолтной карточке пользователя */
-			div#user-identity div.contents > div > div > h3 > div > svg:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) path,
-			/* Иконка бана, в Миниатюрной карточке пользователя, в низу экрана */
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > button:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) path,
+			div#user-identity div.contents h3 svg[data-ds-icon="Hourglass"] path,
+			/* Иконка таймача, в миниатюрной карточке пользователя, в низу экрана */
+			div[role="dialog"] button:has(svg[data-ds-icon="Hourglass"]) path,
 			/* Иконка таймача рядом с "Timed out by", в карточке пользователя (Mo'Kick) */
-			div#user-identity div > svg:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]),
+			div#user-identity button span svg[data-ds-icon="Hourglass"] path,
 			/* Иконка таймача рядом с "Timed out by", в расширенной карточке пользователя (Mo'Kick) */
-			div#user-identity_pinned div > svg:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) {
+			div#user-identity_pinned button span svg[data-ds-icon="Hourglass"] path,
+ 			/* Иконка бана, в карточке пользователя (NipahTV) */
+			div.ntv__user-info-modal div.ntv__user-info-modal__mod-actions > button[alt *="Timeout"] path:nth-of-type(2) {
 				fill: user-profile-card_btn_timeout_color !important;
 			}
 	
 			/* Текст "Тайм-аут", между иконкой и переключателем таймача */
-			div#user-identity div.contents > div > div > h3 > div:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) span,
+			div#user-identity div.contents > div > div > h3 > div:has(svg[data-ds-icon="Hourglass"]) span,
 			/* Текст "Тайм-аут", в миниатюрной карточке пользователя, в низу экрана */
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > button:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) span,
+			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > button:has(svg[data-ds-icon="Hourglass"]) span,
 			/* Текст "Timed out by", в карточке пользователя (Mo'Kick) */
-			div#user-identity div:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span,
+			div#user-identity div:has(svg[data-ds-icon="Hourglass"]) > span,
 			/* Текст "Timed out by", в расширенной карточке пользователя (Mo'Kick) */
-			div#user-identity_pinned div:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span {
+			div#user-identity_pinned div:has(svg[data-ds-icon="Hourglass"]) > span {
 				color: user-profile-card_btn_timeout_color !important;
 			}
 	
@@ -7765,28 +7975,27 @@ purple3=#9048FF
 			/* Кнопка разворачивания списка вариантов выдачи таймача (Mo'Kick) */
 				/* Свой фон кнопки */
 				if user-profile-card_btn_timeout_bg_toggle {
-					div#user-identity button:has(span > svg > path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]),
-					div#user-identity_pinned button:has(span > svg > path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) {
+					div#user-identity button:has(span svg[data-ds-icon="Hourglass"]),
+					div#user-identity_pinned button:has(span svg[data-ds-icon="Hourglass"]) {
 						background-color: #48424D !important;
 						background-image: none !important;
 					}
 				} else {
-					div#user-identity button:has(span > svg > path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]),
-					div#user-identity_pinned button:has(span > svg > path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) {
+					div#user-identity button:has(span svg[data-ds-icon="Hourglass"]),
+					div#user-identity_pinned button:has(span svg[data-ds-icon="Hourglass"]) {
 						background-color: transparent !important;
 						background-image: none !important;
 					}
 				}
 	
-			div#user-identity button:has(span > svg > path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]),
-			div#user-identity_pinned button:has(span > svg > path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) {
+			div#user-identity button:has(svg[data-ds-icon="Hourglass"]),
+			div#user-identity_pinned button:has(span svg[data-ds-icon="Hourglass"]) {
 				color: user-profile-card_btn_timeout_color !important;
 			}
 	
-	
 			/* Свой фон кнопки разворачивания списка вариантов выдачи таймача, в миниатюрной карточке пользователя, в низу экрана */
 			if user-profile-card-mini_btn_timeout_bg_toggle {
-				div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > button:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) {
+				div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > button:has(svg[data-ds-icon="Hourglass"]) {
 					background-color: user-profile-card-mini_btn_timeout_bg_color !important;
 				}
 			}
@@ -7825,7 +8034,9 @@ purple3=#9048FF
 				/* В карточке пользователя (Mo'Kick) */
 				div#user-identity div:has(div[role="radiogroup"]) > div.shrink > button.mokick-state-layer-base,
 				/* В расширенной карточке пользователя (Mo'Kick) */
-				div#user-identity_pinned div:has(div[role="radiogroup"]) > div.shrink > button.mokick-state-layer-base {
+				div#user-identity_pinned div:has(div[role="radiogroup"]) > div.shrink > button.mokick-state-layer-base,
+ 				/* В карточке пользователя (NipahTV) */
+				div.ntv__user-info-modal__timeout-page__wrapper button {
 					background-color: user-profile-card_btn_timeout_color !important;
 					background-image: none !important;
 				}
@@ -7833,26 +8044,28 @@ purple3=#9048FF
 	
 		/* При наведении курсора */
 			/* Иконка таймача, в дефолтной карточке пользователя */
-			div#user-identity div.contents > div:hover > div > h3 > div > svg:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]),
-			div#user-identity div.contents > div.bg-surface-base:hover > div.flex > div.flex > svg:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]),
+			div#user-identity div.contents > div:hover > div > h3 > div > svg[data-ds-icon="Hourglass"],
+			div#user-identity div.contents > div.bg-surface-base:hover > div.flex > div.flex > svg[data-ds-icon="Hourglass"],
 			/* Переключатель выдачи таймача, в дефолтной карточке пользователя */
 			div#user-identity div.contents > div:hover > div > h3 > div > button[aria-checked],
 			div#user-identity div.contents > div.bg-surface-base:hover > div.flex > button[aria-checked="true"],
 			/* Иконка таймача рядом с "Timed out by", в карточке пользователя (Mo'Kick) */
-			div#user-identity div.bg-surface-highest:hover > div:not(.contents) > div.bg-surface-base > div.flex > div > svg:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]),
+			div#user-identity div.bg-surface-highest:hover > div:not(.contents) > div.bg-surface-base > div.flex > div > svg[data-ds-icon="Hourglass"],
 			/* Иконка таймача рядом с "Timed out by", в расширенной карточке пользователя (Mo'Kick) */
-			div#user-identity_pinned div.bg-surface-base:hover > div > div.bg-surface-base > div > div > svg:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]),
+			div#user-identity_pinned div.bg-surface-base:hover > div > div.bg-surface-base > div > div > svg[data-ds-icon="Hourglass"],
 			/* Текст внутри кнопки выдачи таймача (Mo'Kick) */
-			div#user-identity button:has(span > svg > path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]):hover span,
-			div#user-identity_pinned button:has(span > svg > path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]):hover span,
+			div#user-identity button:has(span svg[data-ds-icon="Hourglass"]):hover span,
+			div#user-identity_pinned button:has(span svg[data-ds-icon="Hourglass"]):hover span,
 			/* Кнопка разворачивания списка вариантов выдачи таймача, в миниатюрной карточке пользователя, в низу экрана */
-			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > button:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]):hover,
+			div[role="dialog"] > div.no-scrollbar.flex.shrink > div.flex.flex-col > button:has(svg[data-ds-icon="Hourglass"]):hover,
 			/* Кнопка выдачи уставноленного времени отстранения в дефолтной карточке пользователя */
 			div#user-identity div.contents > div > div:has(h3) form > div.shrink > button[type="submit"]:hover,
 			/* Кнопка выдачи уставноленного времени отстранения в карточке пользователя (Mo'Kick) */
 			div#user-identity div:has(div[role="radiogroup"]) > div.shrink > button.mokick-state-layer-base:hover,
 			/* Кнопка выдачи уставноленного времени отстранения в расширенной карточке пользователя (Mo'Kick) */
-			div#user-identity_pinned div:has(div[role="radiogroup"]) > div.shrink > button.mokick-state-layer-base:hover {
+			div#user-identity_pinned div:has(div[role="radiogroup"]) > div.shrink > button.mokick-state-layer-base:hover,
+ 			/* Иконка бана, в карточке пользователя (NipahTV) */
+			div.ntv__user-info-modal div.ntv__user-info-modal__mod-actions > button[alt *="Timeout"] svg:hover {
 				filter: drop-shadow(0px 0px 4px user-profile-card_btn_timeout_color) !important;
 			}
 	}
@@ -7892,6 +8105,58 @@ purple3=#9048FF
 			/* В расширенной карточке пользователя (Mo'Kick) */
 			div#user-identity_pinned button:has(span > svg > path[d="M16 3.43994C12.45 3.43994 9.25 4.90994 6.96 7.27994L3.44 3.75994V13.4999H13.18L12.29 12.6099L9.8 10.1199C11.35 8.46994 13.56 7.43994 16 7.43994C20.71 7.43994 24.55 11.2799 24.55 15.9999C24.55 17.8299 23.97 19.5399 22.97 20.9299L16.95 14.9099L15.94 15.9299L14.13 17.7399L14.19 17.8099L19.96 23.5699C18.77 24.1999 17.43 24.5499 16 24.5499C13.64 24.5499 11.51 23.5899 9.96 22.0399L7.13 24.8699C9.4 27.1499 12.53 28.5499 16 28.5499C22.93 28.5499 28.55 22.9299 28.55 15.9999C28.55 9.06994 22.93 3.43994 16 3.43994Z"]):hover span {
 				filter: drop-shadow(0px 0px 4px user-profile-card_btn_unban-untimeout_color) !important;
+			}
+	}
+	
+	
+	/* Кнопка "Выдать 👑 VIP" в карточке пользователя (NipahTV) */
+	if user-profile-card_btn_vip-user_toggle {
+		/* Выдать */
+			/* Без наведения курсора */
+			div.ntv__user-info-modal div.ntv__user-info-modal__mod-actions > button[alt *="VIP"] svg {
+				color: user-profile-card_btn_vip-user_color !important;
+			}
+	
+			/* При наведении курсора */
+			div.ntv__user-info-modal div.ntv__user-info-modal__mod-actions > button[alt *="VIP"]:hover svg {
+				filter: drop-shadow(0px 0px 4px user-profile-card_btn_vip-user_color) !important;
+			}
+	
+		/* Снять */
+			/* Без наведения курсора */
+			div.ntv__user-info-modal:has(div.ntv__user-info-modal__badges svg[ntv-tooltip="VIP"]) div.ntv__user-info-modal__mod-actions > button[alt *="VIP"] svg {
+				color: user-profile-card_btn_unvip-user_color !important;
+			}
+	
+			/* При наведении курсора */
+			div.ntv__user-info-modal:has(div.ntv__user-info-modal__badges svg[ntv-tooltip="VIP"]) div.ntv__user-info-modal__mod-actions > button[alt *="VIP"]:hover svg {
+				filter: drop-shadow(0px 0px 4px user-profile-card_btn_unvip-user_color) !important;
+			}
+	}
+	
+	
+	/* Кнопка "Выдать 🛡️ Модерку" в карточке пользователя (NipahTV) */
+	if user-profile-card_btn_mod-user_toggle {
+		/* Выдать */
+			/* Без наведения курсора */
+			div.ntv__user-info-modal div.ntv__user-info-modal__mod-actions > button[alt *="Mod"] svg {
+				color: user-profile-card_btn_mod-user_color !important;
+			}
+	
+			/* При наведении курсора */
+			div.ntv__user-info-modal div.ntv__user-info-modal__mod-actions > button[alt *="Mod"]:hover svg {
+				filter: drop-shadow(0px 0px 4px user-profile-card_btn_mod-user_color) !important;
+			}
+	
+		/* Снять */
+			/* Без наведения курсора */
+			div.ntv__user-info-modal:has(div.ntv__user-info-modal__badges svg[ntv-tooltip="Moderator"]) div.ntv__user-info-modal__mod-actions > button[alt *="Mod"] svg {
+				color: user-profile-card_btn_unmod-user_color !important;
+			}
+	
+			/* При наведении курсора */
+			div.ntv__user-info-modal:has(div.ntv__user-info-modal__badges svg[ntv-tooltip="Moderator"]) div.ntv__user-info-modal__mod-actions > button[alt *="Mod"]:hover svg {
+				filter: drop-shadow(0px 0px 4px user-profile-card_btn_unmod-user_color) !important;
 			}
 	}
 	
