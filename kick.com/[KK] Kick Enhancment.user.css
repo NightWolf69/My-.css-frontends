@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        2.3.1
+@version        2.3.2
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов Enhancer, 7tv, Mo'Kick и NipahTV (использование этих аддонов опционально)
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -5135,7 +5135,7 @@ purple3=#9048FF
 	/* Подчёркивание тегнутого "@" имени пользователя в сообщении, при наведении курсора (Mo'Kick) */
 	if chat-msg_mention_underline_toggle {
 		/* В чате 🔴 Стрима и 🛠 Модерки */
-		div[data-index] > div > div > seventv-container > span > span:hover, /* (7tv) */
+		div[data-index] > div > div > seventv-container > span > button:hover, /* (7tv) */
 		div[data-index] > div > div > span > span[data-mokick-mention].cursor-pointer:hover, /* (Mo'Kick) */
 		/* В чате 🔴 Стрима в функциональных окнах 🗑 "Message Log" и 💬 "Chat Clears" (Mo'Kick) */
 		div[data-state="open"] span[data-mokick-mention].cursor-pointer:hover,
@@ -5258,17 +5258,45 @@ purple3=#9048FF
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
 /* ############################################## */
-/* ##### Область чата - Системные сообщения ##### */
+/* ##### Область чата - Ответы на сообщения ##### */
 /* ############################################## */
 	
-	/* Цвет таймера оставшегося время отстранения, в функциональном меню ⏳ "Active Timeouts" (Mo'Kick) */
-	if chat_context_mo-kick_btn_active-timeouts_timeleft_toggle {
-		/* В чате 🛠 Модерки */
-		div[data-grid="element"] div.bg-surface-highest div.flex.items-center > div.flex.justify-end span,
-		/* В функциональном меню ⏳ "Active Timeouts" */
-		div[data-state="open"] div.bg-surface-highest div.flex.items-center > div.flex.justify-end span {
-			color: chat_context_mo-kick_btn_active-timeouts_timeleft_color !important;
-		}
+	
+	/* Краткий текст сообщения, на которое ↩️ отвечают в ветке сообщений*/
+	if chat_reply_preview_text_toggle {
+		/* Без наведения курсора */
+			/* В чате 🔴 Стрима и 🛠 Модерки */
+				/* дефолт */
+				div#channel-chatroom div[data-index] div[type="button"] button > span:has(span.inline), /* до ника, кому отвечают */
+				div#channel-chatroom div[data-index] div[type="button"] button > span:has(span.inline) > span.inline, /* после ника, кому отвечают */
+				/* (NipahTV) */
+				div#channel-chatroom div[data-index].ntv__chat-message div.ntv__chat-message__inner button.ntv__chat-message__attachment > span:has(span.inline), /* до ника, кому отвечают */
+				div#channel-chatroom div[data-index].ntv__chat-message div.ntv__chat-message__inner button.ntv__chat-message__attachment > span:has(span.inline) > span.inline, /* после ника, кому отвечают */
+			/* В окне ✍️ Ввода сообщения-ответа */
+				/* (NipahTV) */
+				div#chatroom-footer div.kick__chat-footer div.ntv__reply-message__content button.ntv__chat-message__attachment > span:has(span.inline), /* до ника, кому отвечают */
+				div#chatroom-footer div.kick__chat-footer div.ntv__reply-message__content button.ntv__chat-message__attachment > span:has(span.inline) > span.inline /* после ника, кому отвечают */ {
+					color: chat_reply_preview_text_color !important;
+				}
+	
+		/* При наведении курсора */
+			/* В чате 🔴 Стрима и 🛠 Модерки */
+				/* дефолт */
+				div#channel-chatroom div[data-index] div[type="button"] button:hover > span:has(span.inline), /* до ника, кому отвечают */
+				div#channel-chatroom div[data-index] div[type="button"] button:hover > span:has(span.inline) > span.inline, /* после ника, кому отвечают */
+				div#channel-chatroom div[data-index] div[type="button"] button:hover > span > span:not([class="inline"]), /* ник, кому отвечают */
+				/* (NipahTV) */
+				div#channel-chatroom div[data-index].ntv__chat-message div.ntv__chat-message__inner button.ntv__chat-message__attachment:hover > span:has(span.inline), /* до ника, кому отвечают */
+				div#channel-chatroom div[data-index].ntv__chat-message div.ntv__chat-message__inner button.ntv__chat-message__attachment:hover > span:has(span.inline) > span.inline, /* после ника, кому отвечают */
+				div#channel-chatroom div[data-index].ntv__chat-message div.ntv__chat-message__inner button.ntv__chat-message__attachment:hover > span > span:not([class="inline"]), /* ник, кому отвечают */
+			/* В окне ✍️ Ввода сообщения-ответа */
+				/* (NipahTV) */
+				div#chatroom-footer div.kick__chat-footer div.ntv__reply-message__content button.ntv__chat-message__attachment:hover > span:has(span.inline), /* до ника, кому отвечают */
+				div#chatroom-footer div.kick__chat-footer div.ntv__reply-message__content button.ntv__chat-message__attachment:hover > span:has(span.inline) > span.inline, /* после ника, кому отвечают */
+				div#chatroom-footer div.kick__chat-footer div.ntv__reply-message__content button.ntv__chat-message__attachment:hover > span > span:not([class="inline"]) /* ник, кому отвечают */ {
+					color: chat_reply_preview_text-hover_color !important;
+					text-decoration: underline !important;
+				}
 	}
 	
 	
@@ -5315,6 +5343,23 @@ purple3=#9048FF
 				filter: drop-shadow(0px 0px 4px chat_reply-icon_in_reply-messages_color) !important;
 			}
 	}
+
+}
+	
+@-moz-document domain("kick.com"), domain("dashboard.kick.com") {
+/* ############################################## */
+/* ##### Область чата - Системные сообщения ##### */
+/* ############################################## */
+	
+	/* Цвет таймера оставшегося время отстранения, в функциональном меню ⏳ "Active Timeouts" (Mo'Kick) */
+	if chat_context_mo-kick_btn_active-timeouts_timeleft_toggle {
+		/* В чате 🛠 Модерки */
+		div[data-grid="element"] div[class *="surface"] div.flex.items-center > div.flex.justify-end span,
+		/* В функциональном меню ⏳ "Active Timeouts" */
+		div[data-state="open"] div[class *="surface"] div.flex.items-center > div.flex.justify-end span {
+			color: chat_context_mo-kick_btn_active-timeouts_timeleft_color !important;
+		}
+	}
 	
 	
 	/* Кликабельное имя пользователя, в сообщениях-ответах и системных-сообщениях о действии модераора, а так-же в функциональных меню (Mo'Kick) */
@@ -5322,8 +5367,7 @@ purple3=#9048FF
 		/* Без наведения курсора */
 			/* Цвет имени пользователя которому ↩️ отвечают в ветке сообщений */
 				/* В чате 🔴 Стрима и 🛠 Модерки */
-				div#channel-chatroom div[data-index] button.cursor-default > span > span:not([class="inline"]), /* дефолт */
-				div#channel-chatroom div[data-index] button.cursor-pointer > span > span:not([class="inline"]), /* дефолт */
+				div#channel-chatroom div[data-index] div[type="button"] button > span > span:not([class="inline"]), /* дефолт */
 				div#channel-chatroom div[data-index].ntv__chat-message button.ntv__chat-message__attachment > span > span:not([class="inline"]), /* (NipahTV) */
 			/* В окне ✍️ Ввода сообщения-ответа */
 				div#chatroom-footer div.kick__chat-footer div.ntv__reply-message__content button.ntv__chat-message__attachment > span > span:not([class="inline"]), /* (NipahTV) */
@@ -5337,7 +5381,7 @@ purple3=#9048FF
 				/* В чате 🔴 Стрима и ⚫️ VOD'а */
 				div#channel-chatroom div.flex.items-center:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span,
 				/* В чате 🛠 Модерки */
-				div[data-grid="element"] div.bg-surface-base div.flex.items-center:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span,
+				div[data-grid="element"] div[class *="surface"] div.flex.items-center:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span,
 			/* Цвет имени пользователя Модератора, и/или Пользователя, и/или Стримера, в системном сообщении в чате */
 				div#channel-chatroom span.text-surface-onSurfaceSecondary > button, /* в чате */
 				div#channel-chatroom span.text-surface-onSurfaceSecondary > span[data-username-bannedby],
@@ -5349,7 +5393,7 @@ purple3=#9048FF
 		/* При наведении курсора */
 			/* Цвет имени пользователя которому ↩️ отвечают в ветке сообщений */
 				/* В чате 🔴 Стрима и 🛠 Модерки */
-				div#channel-chatroom div[data-index] button.cursor-default > span > span:not([class="inline"]):hover, /* дефолт */
+				div#channel-chatroom div[data-index] div > span[class *="surface"] > button.inline:hover, /* дефолт */
 				/* В чате 🔴 Стрима в функциональных окнах 🗑 "Message Log" и 💬 "Chat Clears" (Mo'Kick) */
 				div[data-state="open"] span[class *="inline"][class *="cursor-pointer"]:hover,
 				/* В дефолтной 📌 Карточке пользователя (Mo'Kick) */
@@ -5360,51 +5404,13 @@ purple3=#9048FF
 				/* В чате 🔴 Стрима и ⚫️ VOD'а */
 				div#channel-chatroom div.flex.items-center:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span:hover,
 				/* В чате 🛠 Модерки */
-				div[data-grid="element"] div.bg-surface-base div.flex.items-center:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span:hover,
+				div[data-grid="element"] div[class *="surface"] div.flex.items-center:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span:hover,
 			/* Цвет имени пользователя Модератора, и/или Пользователя, и/или Стримера, в системном сообщении в чате */
 				div#channel-chatroom span.text-surface-onSurfaceSecondary > button:hover, /* в чате */
 				div#channel-chatroom span.text-surface-onSurfaceSecondary > span[data-username-bannedby]:hover,
 				div#channel-chatroom span.text-surface-onSurfaceSecondary > span[data-username-eventuser]:hover,
 				div#channel-chatroom span.text-surface-onSurfaceSecondary > span.cursor-pointer.font-bold:hover /* в сообщении о рейде на канал */ {
 					color: chat_reply-and-system_messages_username_hover_color !important;
-					text-decoration: underline !important;
-				}
-	}
-	
-	
-	/* Краткий текст сообщения, на которое ↩️ отвечают в ветке сообщений*/
-	if chat_reply_preview_text_toggle {
-		/* Без наведения курсора */
-			/* В чате 🔴 Стрима и 🛠 Модерки */
-				/* дефолт */
-				div#channel-chatroom div[data-index] div[type="button"] button > span:has(span.inline), /* до ника, кому отвечают */
-				div#channel-chatroom div[data-index] div[type="button"] button > span:has(span.inline) > span.inline, /* после ника, кому отвечают */
-				/* (NipahTV) */
-				div#channel-chatroom div[data-index].ntv__chat-message div.ntv__chat-message__inner button.ntv__chat-message__attachment > span:has(span.inline), /* до ника, кому отвечают */
-				div#channel-chatroom div[data-index].ntv__chat-message div.ntv__chat-message__inner button.ntv__chat-message__attachment > span:has(span.inline) > span.inline, /* после ника, кому отвечают */
-			/* В окне ✍️ Ввода сообщения-ответа */
-				/* (NipahTV) */
-				div#chatroom-footer div.kick__chat-footer div.ntv__reply-message__content button.ntv__chat-message__attachment > span:has(span.inline), /* до ника, кому отвечают */
-				div#chatroom-footer div.kick__chat-footer div.ntv__reply-message__content button.ntv__chat-message__attachment > span:has(span.inline) > span.inline /* после ника, кому отвечают */ {
-					color: chat_reply_preview_text_color !important;
-				}
-	
-		/* При наведении курсора */
-			/* В чате 🔴 Стрима и 🛠 Модерки */
-				/* дефолт */
-				div#channel-chatroom div[data-index] div[type="button"] button:hover > span:has(span.inline), /* до ника, кому отвечают */
-				div#channel-chatroom div[data-index] div[type="button"] button:hover > span:has(span.inline) > span.inline, /* после ника, кому отвечают */
-				div#channel-chatroom div[data-index] div[type="button"] button:hover > span > span:not([class="inline"]), /* ник, кому отвечают */
-				/* (NipahTV) */
-				div#channel-chatroom div[data-index].ntv__chat-message div.ntv__chat-message__inner button.ntv__chat-message__attachment:hover > span:has(span.inline), /* до ника, кому отвечают */
-				div#channel-chatroom div[data-index].ntv__chat-message div.ntv__chat-message__inner button.ntv__chat-message__attachment:hover > span:has(span.inline) > span.inline, /* после ника, кому отвечают */
-				div#channel-chatroom div[data-index].ntv__chat-message div.ntv__chat-message__inner button.ntv__chat-message__attachment:hover > span > span:not([class="inline"]), /* ник, кому отвечают */
-			/* В окне ✍️ Ввода сообщения-ответа */
-				/* (NipahTV) */
-				div#chatroom-footer div.kick__chat-footer div.ntv__reply-message__content button.ntv__chat-message__attachment:hover > span:has(span.inline), /* до ника, кому отвечают */
-				div#chatroom-footer div.kick__chat-footer div.ntv__reply-message__content button.ntv__chat-message__attachment:hover > span:has(span.inline) > span.inline, /* после ника, кому отвечают */
-				div#chatroom-footer div.kick__chat-footer div.ntv__reply-message__content button.ntv__chat-message__attachment:hover > span > span:not([class="inline"]) /* ник, кому отвечают */ {
-					color: chat_reply_preview_text-hover_color !important;
 					text-decoration: underline !important;
 				}
 	}
@@ -5441,17 +5447,18 @@ purple3=#9048FF
 		}
 	
 	
-		/* В чате 🔴 Стрима */
-		div#channel-chatroom span.text-neutral > span.line-through, /* дефолт */
-		div#channel-chatroom div[data-index] seventv-container.mokick_deleted-message, /* (7tv) */
-		/* div#channel-chatroom div[data-index].ntv__chat-message--deleted div.ntv__chat-message__inner > span, (NipahTV) */
-		/* div#chatroom-messages div[data-index].ntv__chat-message--deleted div.ntv__chat-message__inner > span, (NipahTV) */
-		/* В функциональных 🪟 Окнах 🗑 "Message Log" и 💬 "Chat Clears", в чате 🔴 Стрима */
-		div#channel-chatroom div[class *="break-words"] span.mokick_deleted-message,
-		/* В функциональных 🪟 Окнах 🗑 "Message Log" и 💬 "Chat Clears", в чате 🛠 Модерки */
-		div[data-type="chat"] div[class *="break-words"] span.mokick_deleted-message {
-			color: chat_deleted_message_text_color !important;
-		}
+		/* Цвет текста у удалённого ообщения */
+			/* В чате 🔴 Стрима */
+			div#channel-chatroom span.text-neutral > span.line-through, /* дефолт */
+			div#channel-chatroom div[data-index] seventv-container.mokick_deleted-message, /* (7tv) */
+			/* div#channel-chatroom div[data-index].ntv__chat-message--deleted div.ntv__chat-message__inner > span, (NipahTV) */
+			/* div#chatroom-messages div[data-index].ntv__chat-message--deleted div.ntv__chat-message__inner > span, (NipahTV) */
+			/* В функциональных 🪟 Окнах 🗑 "Message Log" и 💬 "Chat Clears", в чате 🔴 Стрима */
+			div#channel-chatroom div[class *="break-words"] span.mokick_deleted-message,
+			/* В функциональных 🪟 Окнах 🗑 "Message Log" и 💬 "Chat Clears", в чате 🛠 Модерки */
+			div[data-type="chat"] div[class *="break-words"] span.mokick_deleted-message {
+				color: chat_deleted_message_text_color !important;
+			}
 	
 	
 		/* Информация в скобках "(Deleted/Timed Out/Banned)" и/или "[Bullying/Hate/Violence]" в удалённом модератором сообщении */
@@ -5491,12 +5498,12 @@ purple3=#9048FF
 		/* Цвет фона сообщения о действии модератора в чате */
 		if chat_system_message_bg_toggle {
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] > div > div:has(span.text-surface-onSurfaceSecondary),
+			div#channel-chatroom div[data-index] > div > div.wrap-break-word:nth-child(1),
 			/* В окне просмотра ветки ответов 💬 Thread */
 			div#chatroom-messages div[data-index] > div > div:has(span.text-surface-onSurfaceSecondary),
 			/* В функциональных 🪟 Окнах 🔨 "Moderation Log" и 🗑 "Message Log" и 💬 "Chat Clears" и ⏳ "Active Timeouts" (Mo'Kick) */
-			div[data-state="open"] div.bg-surface-highest:has(span.text-surface-onSurfaceSecondary),
-			div[data-state="open"] div.bg-surface-highest:has(div.flex.items-center) {
+			div[data-state="open"] div[class *="surface"]:has(span[class *="surface"]),
+			div[data-state="open"] div[class *="surface"]:has(div div path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) /* ⏳ "Active Timeouts" */ {
 				background-color: chat_system_message_bg_color !important;
 			}
 		}
@@ -5505,13 +5512,13 @@ purple3=#9048FF
 	/* 🚪 Иконка действия другого стримера в чате - "Рейд" */
 		/* Без наведения курсора */
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] div.bg-surface-highest:has(span) > svg:has(path[d="M27.11 4.78C25.93 3.61001 24.3 2.88 22.51 2.88C18.91 2.88 16 5.79001 16 9.39001C16 5.79001 13.09 2.88 9.48998 2.88C5.88998 2.88 2.97998 5.79001 2.97998 9.39001V22.61C2.97998 26.2 5.89998 29.12 9.48998 29.12C11.29 29.12 12.92 28.39 14.1 27.21C15.27 26.03 16 24.4 16 22.61C16 26.2 18.91 29.12 22.51 29.12C26.11 29.12 29.02 26.2 29.02 22.61V9.39001C29.02 7.59 28.29 5.96 27.11 4.78ZM18.91 21.01V18.68H13V22.61C13 24.54 11.43 26.12 9.48998 26.12C7.54998 26.12 5.97998 24.54 5.97998 22.61V9.39001C5.97998 7.45001 7.55998 5.88 9.48998 5.88C11.42 5.88 13 7.45001 13 9.39001V13.32H18.91V10.99L26.03 16L18.91 21.01Z"]) > path {
+			div#channel-chatroom div[data-index] div[class *="surface"]:has(span) > svg:has(path[d="M27.11 4.78C25.93 3.61001 24.3 2.88 22.51 2.88C18.91 2.88 16 5.79001 16 9.39001C16 5.79001 13.09 2.88 9.48998 2.88C5.88998 2.88 2.97998 5.79001 2.97998 9.39001V22.61C2.97998 26.2 5.89998 29.12 9.48998 29.12C11.29 29.12 12.92 28.39 14.1 27.21C15.27 26.03 16 24.4 16 22.61C16 26.2 18.91 29.12 22.51 29.12C26.11 29.12 29.02 26.2 29.02 22.61V9.39001C29.02 7.59 28.29 5.96 27.11 4.78ZM18.91 21.01V18.68H13V22.61C13 24.54 11.43 26.12 9.48998 26.12C7.54998 26.12 5.97998 24.54 5.97998 22.61V9.39001C5.97998 7.45001 7.55998 5.88 9.48998 5.88C11.42 5.88 13 7.45001 13 9.39001V13.32H18.91V10.99L26.03 16L18.91 21.01Z"]) > path {
 				fill: chat_system_message_raid_color !important;
 			}
 	
 		/* При наведении куросора */
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] div.bg-surface-highest:has(span):hover > svg:has(path[d="M27.11 4.78C25.93 3.61001 24.3 2.88 22.51 2.88C18.91 2.88 16 5.79001 16 9.39001C16 5.79001 13.09 2.88 9.48998 2.88C5.88998 2.88 2.97998 5.79001 2.97998 9.39001V22.61C2.97998 26.2 5.89998 29.12 9.48998 29.12C11.29 29.12 12.92 28.39 14.1 27.21C15.27 26.03 16 24.4 16 22.61C16 26.2 18.91 29.12 22.51 29.12C26.11 29.12 29.02 26.2 29.02 22.61V9.39001C29.02 7.59 28.29 5.96 27.11 4.78ZM18.91 21.01V18.68H13V22.61C13 24.54 11.43 26.12 9.48998 26.12C7.54998 26.12 5.97998 24.54 5.97998 22.61V9.39001C5.97998 7.45001 7.55998 5.88 9.48998 5.88C11.42 5.88 13 7.45001 13 9.39001V13.32H18.91V10.99L26.03 16L18.91 21.01Z"]) {
+			div#channel-chatroom div[data-index] div[class *="surface"]:has(span):hover > svg:has(path[d="M27.11 4.78C25.93 3.61001 24.3 2.88 22.51 2.88C18.91 2.88 16 5.79001 16 9.39001C16 5.79001 13.09 2.88 9.48998 2.88C5.88998 2.88 2.97998 5.79001 2.97998 9.39001V22.61C2.97998 26.2 5.89998 29.12 9.48998 29.12C11.29 29.12 12.92 28.39 14.1 27.21C15.27 26.03 16 24.4 16 22.61C16 26.2 18.91 29.12 22.51 29.12C26.11 29.12 29.02 26.2 29.02 22.61V9.39001C29.02 7.59 28.29 5.96 27.11 4.78ZM18.91 21.01V18.68H13V22.61C13 24.54 11.43 26.12 9.48998 26.12C7.54998 26.12 5.97998 24.54 5.97998 22.61V9.39001C5.97998 7.45001 7.55998 5.88 9.48998 5.88C11.42 5.88 13 7.45001 13 9.39001V13.32H18.91V10.99L26.03 16L18.91 21.01Z"]) {
 				filter: drop-shadow(0px 0px 4px chat_system_message_raid_color) !important;
 			}
 	
@@ -5519,21 +5526,27 @@ purple3=#9048FF
 	/* 🗑 Иконка действия модератора чата "Очистки чата" */
 		/* Без наведения курсора */
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] div.bg-surface-highest:has(span) > svg[data-ds-icon="Trash"] path,
+			div#channel-chatroom div[data-index] div[class *="surface"]:has(span) > svg[data-ds-icon="Trash"] path,
+			div#channel-chatroom div[data-index] div[class *="surface"]:has(span) > svg:has(path[d="M22.6786 6.21429V3H9.82143V6.21429H5V9.42857H27.5V6.21429H22.6786Z"]) path, /* old */
 			/* В окне просмотра ветки ответов 💬 Thread */
-			div:has(div#chatroom-messages) div[data-index] div.bg-surface-highest:has(span) > svg[data-ds-icon="Trash"] path,
+			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span) > svg[data-ds-icon="Trash"] path,
+			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span) > svg:has(path[d="M22.6786 6.21429V3H9.82143V6.21429H5V9.42857H27.5V6.21429H22.6786Z"]) path, /* old */
 			/* В функциональном 🪟 Окне 💬 "Chat Clears" */
-			div[data-state="open"] div.flex-col:has(> div.bg-surface-highest) svg[data-ds-icon="Trash"] path {
+			div[data-state="open"] div.flex-col:has(> div[class *="surface"]) svg[data-ds-icon="Trash"] path,
+			div[data-state="open"] div.flex-col:has(> div[class *="surface"]) svg:has(path[d="M22.6786 6.21429V3H9.82143V6.21429H5V9.42857H27.5V6.21429H22.6786Z"]) path /* old */ {
 				fill: chat_system_message_clear-chat_color !important;
 			}
 	
 		/* При наведении куросора */
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] div.bg-surface-highest:has(span):hover > svg[data-ds-icon="Trash"],
+			div#channel-chatroom div[data-index] div[class *="surface"]:has(span):hover > svg[data-ds-icon="Trash"],
+			div#channel-chatroom div[data-index] div[class *="surface"]:has(span):hover > svg:has(path[d="M22.6786 6.21429V3H9.82143V6.21429H5V9.42857H27.5V6.21429H22.6786Z"]), /* old */
 			/* В окне просмотра ветки ответов 💬 Thread */
-			div:has(div#chatroom-messages) div[data-index] div.bg-surface-highest:has(span):hover > svg[data-ds-icon="Trash"],
+			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span):hover > svg[data-ds-icon="Trash"],
+			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span):hover > svg:has(path[d="M22.6786 6.21429V3H9.82143V6.21429H5V9.42857H27.5V6.21429H22.6786Z"]), /* old */
 			/* В функциональном 🪟 Окне 💬 "Chat Clears" */
-			div[data-state="open"] div.flex-col:has(> div.bg-surface-highest):hover svg[data-ds-icon="Trash"] {
+			div[data-state="open"] div.flex-col:has(> div[class *="surface"]):hover svg[data-ds-icon="Trash"],
+			div[data-state="open"] div.flex-col:has(> div[class *="surface"]):hover svg:has(path[d="M22.6786 6.21429V3H9.82143V6.21429H5V9.42857H27.5V6.21429H22.6786Z"]) /* old */ {
 				filter: drop-shadow(0px 0px 4px chat_system_message_clear-chat_color) !important;
 			}
 	
@@ -5541,13 +5554,13 @@ purple3=#9048FF
 	/* 💬 Иконка Сколько сообщений было восстановленнопосле "Очистки чата" (Mo'Kick) */
 		/* Без наведения курсора */
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] div.flex-col > div.bg-surface-highest > svg:has(path[d="M10.115 2.73999H5.885C2.98 2.73999 0.625 5.09499 0.625 7.99999C0.625 9.96999 1.71 11.685 3.31 12.585V14.59L6.8 13.26H10.115C13.02 13.26 15.375 10.905 15.375 7.99999C15.375 5.09499 13.02 2.73999 10.115 2.73999ZM4.55 9.23999C3.865 9.23999 3.31 8.68499 3.31 7.99999C3.31 7.31499 3.865 6.75999 4.55 6.75999C5.235 6.75999 5.785 7.31499 5.785 7.99999C5.785 8.68499 5.235 9.23999 4.55 9.23999ZM8 9.23999C7.315 9.23999 6.76 8.68499 6.76 7.99999C6.76 7.31499 7.315 6.75999 8 6.75999C8.685 6.75999 9.24 7.31499 9.24 7.99999C9.24 8.68499 8.685 9.23999 8 9.23999ZM11.45 9.23999C10.765 9.23999 10.215 8.68499 10.215 7.99999C10.215 7.31499 10.765 6.75999 11.45 6.75999C12.135 6.75999 12.69 7.31499 12.69 7.99999C12.69 8.68499 12.135 9.23999 11.45 9.23999Z"]) > path {
+			div#channel-chatroom div[data-index] div.flex-col > div[class *="surface"] > svg:has(path[d="M10.115 2.73999H5.885C2.98 2.73999 0.625 5.09499 0.625 7.99999C0.625 9.96999 1.71 11.685 3.31 12.585V14.59L6.8 13.26H10.115C13.02 13.26 15.375 10.905 15.375 7.99999C15.375 5.09499 13.02 2.73999 10.115 2.73999ZM4.55 9.23999C3.865 9.23999 3.31 8.68499 3.31 7.99999C3.31 7.31499 3.865 6.75999 4.55 6.75999C5.235 6.75999 5.785 7.31499 5.785 7.99999C5.785 8.68499 5.235 9.23999 4.55 9.23999ZM8 9.23999C7.315 9.23999 6.76 8.68499 6.76 7.99999C6.76 7.31499 7.315 6.75999 8 6.75999C8.685 6.75999 9.24 7.31499 9.24 7.99999C9.24 8.68499 8.685 9.23999 8 9.23999ZM11.45 9.23999C10.765 9.23999 10.215 8.68499 10.215 7.99999C10.215 7.31499 10.765 6.75999 11.45 6.75999C12.135 6.75999 12.69 7.31499 12.69 7.99999C12.69 8.68499 12.135 9.23999 11.45 9.23999Z"]) > path {
 				fill: chat_system_message_message-recovered_color !important;
 			}
 	
 		/* При наведении куросора */
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] div.flex-col:hover > div.bg-surface-highest > svg:has(path[d="M10.115 2.73999H5.885C2.98 2.73999 0.625 5.09499 0.625 7.99999C0.625 9.96999 1.71 11.685 3.31 12.585V14.59L6.8 13.26H10.115C13.02 13.26 15.375 10.905 15.375 7.99999C15.375 5.09499 13.02 2.73999 10.115 2.73999ZM4.55 9.23999C3.865 9.23999 3.31 8.68499 3.31 7.99999C3.31 7.31499 3.865 6.75999 4.55 6.75999C5.235 6.75999 5.785 7.31499 5.785 7.99999C5.785 8.68499 5.235 9.23999 4.55 9.23999ZM8 9.23999C7.315 9.23999 6.76 8.68499 6.76 7.99999C6.76 7.31499 7.315 6.75999 8 6.75999C8.685 6.75999 9.24 7.31499 9.24 7.99999C9.24 8.68499 8.685 9.23999 8 9.23999ZM11.45 9.23999C10.765 9.23999 10.215 8.68499 10.215 7.99999C10.215 7.31499 10.765 6.75999 11.45 6.75999C12.135 6.75999 12.69 7.31499 12.69 7.99999C12.69 8.68499 12.135 9.23999 11.45 9.23999Z"]) {
+			div#channel-chatroom div[data-index] div.flex-col:hover > div[class *="surface"] > svg:has(path[d="M10.115 2.73999H5.885C2.98 2.73999 0.625 5.09499 0.625 7.99999C0.625 9.96999 1.71 11.685 3.31 12.585V14.59L6.8 13.26H10.115C13.02 13.26 15.375 10.905 15.375 7.99999C15.375 5.09499 13.02 2.73999 10.115 2.73999ZM4.55 9.23999C3.865 9.23999 3.31 8.68499 3.31 7.99999C3.31 7.31499 3.865 6.75999 4.55 6.75999C5.235 6.75999 5.785 7.31499 5.785 7.99999C5.785 8.68499 5.235 9.23999 4.55 9.23999ZM8 9.23999C7.315 9.23999 6.76 8.68499 6.76 7.99999C6.76 7.31499 7.315 6.75999 8 6.75999C8.685 6.75999 9.24 7.31499 9.24 7.99999C9.24 8.68499 8.685 9.23999 8 9.23999ZM11.45 9.23999C10.765 9.23999 10.215 8.68499 10.215 7.99999C10.215 7.31499 10.765 6.75999 11.45 6.75999C12.135 6.75999 12.69 7.31499 12.69 7.99999C12.69 8.68499 12.135 9.23999 11.45 9.23999Z"]) {
 				filter: drop-shadow(0px 0px 4px chat_system_message_message-recovered_color) !important;
 			}
 	
@@ -5557,7 +5570,7 @@ purple3=#9048FF
 				/* В чате 🔴 Стрима и 🛠 Модерки */
 				div#channel-chatroom div[data-index] button.mokick-state-layer-surface:has(path[d="M11.3393 3.10714V1.5H4.91071V3.10714H2.5V4.71429H13.75V3.10714H11.3393Z"]),
 				/* В функциональном 🪟 Окне 💬 "Chat Clears" */
-				div[data-state="open"] div.flex-col:has(> div.bg-surface-highest) button.mokick-state-layer-surface:has(span[data-role="button-text"]) {
+				div[data-state="open"] div.flex-col:has(> div[class *="surface"]) button.mokick-state-layer-surface:has(span[data-role="button-text"]) {
 					background-color: chat_system_message_message-recovered_btn_bg_color !important;
 					background-image: none !important;
 					color: chat_system_message_message-recovered_btn_text_color !important;
@@ -5572,7 +5585,7 @@ purple3=#9048FF
 	
 			/* Кнопка функциональном/плавающем окне - При наведении курсора */
 				/* В функциональном 🪟 Окне 💬 "Chat Clears" */
-				div[data-state="open"] div.flex-col:has(> div.bg-surface-highest) button.mokick-state-layer-surface:has(span[data-role="button-text"]):hover {
+				div[data-state="open"] div.flex-col:has(> div[class *="surface"]) button.mokick-state-layer-surface:has(span[data-role="button-text"]):hover {
 					color: chat_system_message_message-recovered_btn_bg_show_color !important;
 					filter: drop-shadow(0px 0px 4px chat_system_message_message-recovered_btn_bg_show_color) !important;
 				}
@@ -5582,27 +5595,27 @@ purple3=#9048FF
 	/* ⏳ Иконка действия модератора чата "Выдачи таймача" */
 		/* Без наведения курсора */
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] div.bg-surface-highest:has(span) > svg[data-ds-icon="Hourglass"] path,
-			div#channel-chatroom div[data-index] div.bg-surface-highest:has(span) > svg path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"], /* old */
+			div#channel-chatroom div[data-index] div[class *="surface"]:has(span) > svg[data-ds-icon="Hourglass"] path,
+			div#channel-chatroom div[data-index] div[class *="surface"]:has(span) > svg path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"], /* old */
 			/* В 🪟 Окне просмотра 💬 Ветки ответов "Thread" */
-			div:has(div#chatroom-messages) div[data-index] div.bg-surface-highest:has(span) > svg[data-ds-icon="Hourglass"] path,
-			div:has(div#chatroom-messages) div[data-index] div.bg-surface-highest:has(span) > svg path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"], /* old */
+			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span) > svg[data-ds-icon="Hourglass"] path,
+			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span) > svg path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"], /* old */
 			/* В функциональном 🪟 Окне ⏳ "Active Timeouts" */
-			div[data-state="open"] div.bg-surface-highest svg[data-ds-icon="Hourglass"] path,
-			div[data-state="open"] div.bg-surface-highest svg path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"] /* old */ {
+			div[data-state="open"] div[class *="surface"] svg[data-ds-icon="Hourglass"] path,
+			div[data-state="open"] div[class *="surface"] svg path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"] /* old */ {
 				fill: chat_system_message_timeout_color !important;
 			}
 	
 		/* При наведении куросора */
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] div.bg-surface-highest:has(span):hover > svg[data-ds-icon="Hourglass"],
-			div#channel-chatroom div[data-index] div.bg-surface-highest:has(span):hover > svg:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]), /* old */
+			div#channel-chatroom div[data-index] div[class *="surface"]:has(span):hover > svg[data-ds-icon="Hourglass"],
+			div#channel-chatroom div[data-index] div[class *="surface"]:has(span):hover > svg:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]), /* old */
 			/* В 🪟 Окне просмотра 💬 Ветки ответов "Thread" */
-			div:has(div#chatroom-messages) div[data-index] div.bg-surface-highest:has(span):hover > svg[data-ds-icon="Hourglass"],
-			div:has(div#chatroom-messages) div[data-index] div.bg-surface-highest:has(span):hover > svg:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]), /* old */
+			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span):hover > svg[data-ds-icon="Hourglass"],
+			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span):hover > svg:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]), /* old */
 			/* В функциональном 🪟 Окне ⏳ "Active Timeouts" */
-			div[data-state="open"] div.bg-surface-highest:hover svg[data-ds-icon="Hourglass"],
-			div[data-state="open"] div.bg-surface-highest:hover svg:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]), /* old */ {
+			div[data-state="open"] div[class *="surface"]:hover svg[data-ds-icon="Hourglass"],
+			div[data-state="open"] div[class *="surface"]:hover svg:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) /* old */ {
 				filter: drop-shadow(0px 0px 4px chat_system_message_timeout_color) !important;
 			}
 	
@@ -5610,21 +5623,27 @@ purple3=#9048FF
 	/* 🔨 Иконка действия модератора чата "Выдачи бана" */ /* NEW */
 		/* Без наведения курсора */
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] div.bg-surface-highest:has(span) > svg[data-ds-icon="Prohibited"] path,
+			div#channel-chatroom div[data-index] div[class *="surface"]:has(span) > svg[data-ds-icon="Prohibited"] path,
+			div#channel-chatroom div[data-index] div[class *="surface"]:has(span) > svg:has(path[d="M2 0V23.34L16 32L30 23.34V0H2ZM16 25C9.94 25 5 20.06 5 14C5 7.94 9.94 3 16 3C22.06 3 27 7.94 27 14C27 20.06 22.06 25 16 25Z"]) path, /* old */
 			/* В 🪟 Окне просмотра 💬 Ветки ответов "Thread" */
-			div:has(div#chatroom-messages) div[data-index] div.bg-surface-highest:has(span) > svg[data-ds-icon="Prohibited"] path,
+			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span) > svg[data-ds-icon="Prohibited"] path,
+			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span) > svg:has(path[d="M2 0V23.34L16 32L30 23.34V0H2ZM16 25C9.94 25 5 20.06 5 14C5 7.94 9.94 3 16 3C22.06 3 27 7.94 27 14C27 20.06 22.06 25 16 25Z"]) path, /* old */
 			/* В функциональном 🪟 Окне 🔨 "Moderation Log" */
-			div[data-state="open"] div.bg-surface-highest svg[data-ds-icon="Prohibited"] path {
+			div[data-state="open"] div[class *="surface"] svg[data-ds-icon="Prohibited"] path,
+			div[data-state="open"] div[class *="surface"] svg:has(path[d="M2 0V23.34L16 32L30 23.34V0H2ZM16 25C9.94 25 5 20.06 5 14C5 7.94 9.94 3 16 3C22.06 3 27 7.94 27 14C27 20.06 22.06 25 16 25Z"]) path /* old */ {
 				fill: chat_system_message_ban_color !important;
 			}
 	
 		/* При наведении куросора */
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] div.bg-surface-highest:has(span):hover > svg[data-ds-icon="Prohibited"],
+			div#channel-chatroom div[data-index] div[class *="surface"]:has(span):hover > svg[data-ds-icon="Prohibited"],
+			div#channel-chatroom div[data-index] div[class *="surface"]:has(span):hover > svg:has(path[d="M2 0V23.34L16 32L30 23.34V0H2ZM16 25C9.94 25 5 20.06 5 14C5 7.94 9.94 3 16 3C22.06 3 27 7.94 27 14C27 20.06 22.06 25 16 25Z"]), /* old */
 			/* В 🪟 Окне просмотра 💬 Ветки ответов "Thread" */
-			div:has(div#chatroom-messages) div[data-index] div.bg-surface-highest:has(span):hover > svg[data-ds-icon="Prohibited"],
+			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span):hover > svg[data-ds-icon="Prohibited"],
+			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span):hover > svg:has(path[d="M2 0V23.34L16 32L30 23.34V0H2ZM16 25C9.94 25 5 20.06 5 14C5 7.94 9.94 3 16 3C22.06 3 27 7.94 27 14C27 20.06 22.06 25 16 25Z"]), /* old */
 			/* В функциональном 🪟 Окне 🔨 "Moderation Log" */
-			div[data-state="open"] div.bg-surface-highest:hover svg[data-ds-icon="Prohibited"] {
+			div[data-state="open"] div[class *="surface"]:hover svg[data-ds-icon="Prohibited"],
+			div[data-state="open"] div[class *="surface"]:hover svg:has(path[d="M2 0V23.34L16 32L30 23.34V0H2ZM16 25C9.94 25 5 20.06 5 14C5 7.94 9.94 3 16 3C22.06 3 27 7.94 27 14C27 20.06 22.06 25 16 25Z"]) /* old */ {
 				filter: drop-shadow(0px 0px 4px chat_system_message_ban_color) !important;
 			}
 	
@@ -5632,21 +5651,27 @@ purple3=#9048FF
 	/* ⤴️ Иконка действия модератора чата "Снятия Таймача/Бана" */
 		/* Без наведения курсора */
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] div.bg-surface-highest:has(span) > svg[data-ds-icon="UnbanRequest"] path,
+			div#channel-chatroom div[data-index] div[class *="surface"]:has(span) > svg[data-ds-icon="UnbanRequest"] path,
+			div#channel-chatroom div[data-index] div[class *="surface"]:has(span) > svg:has(path[d="M16 3.43994C12.45 3.43994 9.25 4.90994 6.96 7.27994L3.44 3.75994V13.4999H13.18L12.29 12.6099L9.8 10.1199C11.35 8.46994 13.56 7.43994 16 7.43994C20.71 7.43994 24.55 11.2799 24.55 15.9999C24.55 17.8299 23.97 19.5399 22.97 20.9299L16.95 14.9099L15.94 15.9299L14.13 17.7399L14.19 17.8099L19.96 23.5699C18.77 24.1999 17.43 24.5499 16 24.5499C13.64 24.5499 11.51 23.5899 9.96 22.0399L7.13 24.8699C9.4 27.1499 12.53 28.5499 16 28.5499C22.93 28.5499 28.55 22.9299 28.55 15.9999C28.55 9.06994 22.93 3.43994 16 3.43994Z"]), /* old */
 			/* В 🪟 Окне просмотра 💬 Ветки ответов "Thread" */
-			div:has(div#chatroom-messages) div[data-index] div.bg-surface-highest:has(span) > svg[data-ds-icon="UnbanRequest"] path,
+			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span) > svg[data-ds-icon="UnbanRequest"] path,
+			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span) > svg:has(path[d="M16 3.43994C12.45 3.43994 9.25 4.90994 6.96 7.27994L3.44 3.75994V13.4999H13.18L12.29 12.6099L9.8 10.1199C11.35 8.46994 13.56 7.43994 16 7.43994C20.71 7.43994 24.55 11.2799 24.55 15.9999C24.55 17.8299 23.97 19.5399 22.97 20.9299L16.95 14.9099L15.94 15.9299L14.13 17.7399L14.19 17.8099L19.96 23.5699C18.77 24.1999 17.43 24.5499 16 24.5499C13.64 24.5499 11.51 23.5899 9.96 22.0399L7.13 24.8699C9.4 27.1499 12.53 28.5499 16 28.5499C22.93 28.5499 28.55 22.9299 28.55 15.9999C28.55 9.06994 22.93 3.43994 16 3.43994Z"]), /* old */
 			/* В функциональном 🪟 Окне 🔨 "Moderation Log" */
-			div[data-state="open"] div.bg-surface-highest svg[data-ds-icon="UnbanRequest"] path {
+			div[data-state="open"] div[class *="surface"] svg[data-ds-icon="UnbanRequest"] path,
+			div[data-state="open"] div[class *="surface"] svg:has(path[d="M16 3.43994C12.45 3.43994 9.25 4.90994 6.96 7.27994L3.44 3.75994V13.4999H13.18L12.29 12.6099L9.8 10.1199C11.35 8.46994 13.56 7.43994 16 7.43994C20.71 7.43994 24.55 11.2799 24.55 15.9999C24.55 17.8299 23.97 19.5399 22.97 20.9299L16.95 14.9099L15.94 15.9299L14.13 17.7399L14.19 17.8099L19.96 23.5699C18.77 24.1999 17.43 24.5499 16 24.5499C13.64 24.5499 11.51 23.5899 9.96 22.0399L7.13 24.8699C9.4 27.1499 12.53 28.5499 16 28.5499C22.93 28.5499 28.55 22.9299 28.55 15.9999C28.55 9.06994 22.93 3.43994 16 3.43994Z"]) /* old */ {
 				fill: chat_system_message_revive_color !important;
 			}
 	
 		/* При наведении куросора */
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] div.bg-surface-highest:has(span):hover > svg[data-ds-icon="UnbanRequest"],
+			div#channel-chatroom div[data-index] div[class *="surface"]:has(span):hover > svg[data-ds-icon="UnbanRequest"],
+			div#channel-chatroom div[data-index] div[class *="surface"]:has(span):hover > svg:has(path[d="M16 3.43994C12.45 3.43994 9.25 4.90994 6.96 7.27994L3.44 3.75994V13.4999H13.18L12.29 12.6099L9.8 10.1199C11.35 8.46994 13.56 7.43994 16 7.43994C20.71 7.43994 24.55 11.2799 24.55 15.9999C24.55 17.8299 23.97 19.5399 22.97 20.9299L16.95 14.9099L15.94 15.9299L14.13 17.7399L14.19 17.8099L19.96 23.5699C18.77 24.1999 17.43 24.5499 16 24.5499C13.64 24.5499 11.51 23.5899 9.96 22.0399L7.13 24.8699C9.4 27.1499 12.53 28.5499 16 28.5499C22.93 28.5499 28.55 22.9299 28.55 15.9999C28.55 9.06994 22.93 3.43994 16 3.43994Z"]), /* old */
 			/* В 🪟 Окне просмотра 💬 Ветки ответов "Thread" */
-			div:has(div#chatroom-messages) div[data-index] div.bg-surface-highest:has(span):hover > svg[data-ds-icon="UnbanRequest"],
+			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span):hover > svg[data-ds-icon="UnbanRequest"],
+			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span):hover > svg:has(path[d="M16 3.43994C12.45 3.43994 9.25 4.90994 6.96 7.27994L3.44 3.75994V13.4999H13.18L12.29 12.6099L9.8 10.1199C11.35 8.46994 13.56 7.43994 16 7.43994C20.71 7.43994 24.55 11.2799 24.55 15.9999C24.55 17.8299 23.97 19.5399 22.97 20.9299L16.95 14.9099L15.94 15.9299L14.13 17.7399L14.19 17.8099L19.96 23.5699C18.77 24.1999 17.43 24.5499 16 24.5499C13.64 24.5499 11.51 23.5899 9.96 22.0399L7.13 24.8699C9.4 27.1499 12.53 28.5499 16 28.5499C22.93 28.5499 28.55 22.9299 28.55 15.9999C28.55 9.06994 22.93 3.43994 16 3.43994Z"]), /* old */
 			/* В функциональном 🪟 Окне 🔨 "Moderation Log" */
-			div[data-state="open"] div.bg-surface-highest:hover svg[data-ds-icon="UnbanRequest"] {
+			div[data-state="open"] div[class *="surface"]:hover svg[data-ds-icon="UnbanRequest"],
+			div[data-state="open"] div[class *="surface"]:hover svg:has(path[d="M16 3.43994C12.45 3.43994 9.25 4.90994 6.96 7.27994L3.44 3.75994V13.4999H13.18L12.29 12.6099L9.8 10.1199C11.35 8.46994 13.56 7.43994 16 7.43994C20.71 7.43994 24.55 11.2799 24.55 15.9999C24.55 17.8299 23.97 19.5399 22.97 20.9299L16.95 14.9099L15.94 15.9299L14.13 17.7399L14.19 17.8099L19.96 23.5699C18.77 24.1999 17.43 24.5499 16 24.5499C13.64 24.5499 11.51 23.5899 9.96 22.0399L7.13 24.8699C9.4 27.1499 12.53 28.5499 16 28.5499C22.93 28.5499 28.55 22.9299 28.55 15.9999C28.55 9.06994 22.93 3.43994 16 3.43994Z"]) /* old */ {
 				filter: drop-shadow(0px 0px 4px chat_system_message_revive_color) !important;
 			}
 	}
@@ -8652,36 +8677,36 @@ purple3=#9048FF
 	
 		/* 💜 Фолов */
 			/* Без наведения курсора */
-			div[data-type="activity-feed"] div.border-outline-decorative svg[data-ds-icon="HeartFilled"] path {
+			div[data-type="activity-feed"] div > svg[data-ds-icon="HeartFilled"] path {
 				fill: mod-dashboard_widgets-window_activity-feed_follow_color !important;
 			}
 	
 			/* При наведении курсора */
-			div[data-type="activity-feed"] div.border-outline-decorative:hover > svg[data-ds-icon="HeartFilled"] {
+			div[data-type="activity-feed"] div:hover > svg[data-ds-icon="HeartFilled"] {
 				filter: drop-shadow(0px 0px 4px mod-dashboard_widgets-window_activity-feed_follow_color) !important;
 			}
 	
 	
 		/* 🚪 Рейд */
 			/* Без наведения курсора */
-			div[data-type="activity-feed"] div.border-outline-decorative svg[data-ds-icon="Raid"] path {
+			div[data-type="activity-feed"] div. > svg[data-ds-icon="RAID"] path {
 				fill: mod-dashboard_widgets-window_activity-feed_raid_color !important;
 			}
 	
 			/* При наведении курсора */
-			div[data-type="activity-feed"] div.border-outline-decorative:hover svg[data-ds-icon="Raid"] {
+			div[data-type="activity-feed"] div:hover > svg[data-ds-icon="RAID"] {
 				filter: drop-shadow(0px 0px 4px mod-dashboard_widgets-window_activity-feed_raid_color) !important;
 			}
 	
 	
 		/* ✨ Заказ награды за баллы канала */
 			/* Без наведения курсора */
-			div[data-type="activity-feed"] div.border-outline-decorative svg[data-ds-icon="Bubbles"] path {
+			div[data-type="activity-feed"] div > svg[data-ds-icon="Bubbles"] path {
 				fill: mod-dashboard_widgets-window_activity-feed_reward_color !important;
 			}
 	
 			/* При наведении курсора */
-			div[data-type="activity-feed"] div.border-outline-decorative:hover svg[data-ds-icon="Bubbles"] {
+			div[data-type="activity-feed"] div:hover > svg[data-ds-icon="Bubbles"] {
 				filter: drop-shadow(0px 0px 4px mod-dashboard_widgets-window_activity-feed_reward_color) !important;
 			}
 	}
