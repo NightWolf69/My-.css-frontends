@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [YT] YouTube Enhancement
 @namespace      https://github.com/NightWolf69
-@version        1.0.1-pre-alpha
+@version        1.0.2-pre-alpha
 @description    Улучшения, исправления, кастомизация, и прочие полезности для "YouTube", "YouTube Shorts" и "YouTube Streams"
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -262,17 +262,65 @@
 /* ################################################################# */
 /* ##### Внешний вид Страницы просмотра Live Stream трансляции ##### */
 /* ################################################################# */
-	
-	/* Закраска фона сообщений через один */
-	div#item-offset > div#items > yt-live-chat-text-message-renderer:nth-child(2n) {
-		background-color: #C3C3C320 !important;
+
+	/* Убрать текст из кнопки "самых активных чаттерсов" */
+	div#viewer-leaderboard-entry-point button > div:nth-of-type(2) {
+		display: none
+	}
+	div#viewer-leaderboard-entry-point button > div:nth-of-type(1) {
+		margin-right: unset
+	}
+
+	/* Убрать сообщение-баннер от HyperChat */
+	div.hyperchat-root div.hover-highlight:has(img[src="chrome-extension://naipgebhooiiccifflecbffmnjbabdbh/assets/logo.png"]) {
+		display: none
 	}
 	
-	/* Цвет фона у блока с сообщением, где меня @тегнули */
-	yt-live-chat-text-message-renderer:has(span.mention) {
+	
+	/* Закраска фона сообщений через один ⚫⬛ */
+	html[dark] div#item-offset > div#items > yt-live-chat-text-message-renderer:nth-child(even), /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight:nth-child(even) /* (HyperChat) */ {
+		background-color: #C3C3C30B;
+	}
+	
+	/* Закраска фона сообщений через один ⚪⬜ */
+	html:not([dark]) div#item-offset > div#items > yt-live-chat-text-message-renderer:nth-child(even), /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight:nth-child(even) /* (HyperChat) */ {
+		background-color: #C3C3C340;
+	}
+	
+	
+	/* Фон сообщений при наведении курсора ⚫⬛ */
+	html[dark] div#item-offset > div#items > yt-live-chat-text-message-renderer:hover, /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight:hover /* (HyperChat) */ {
+		background-color: #FFFFFF1F;
+	}
+	
+	/* Фон сообщений при наведении курсора ⚪⬜ */
+	html:not([dark]) div#item-offset > div#items > yt-live-chat-text-message-renderer:hover, /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight:hover /* (HyperChat) */ {
+		background-color: #0000001F;
+	}
+	
+	
+	/* Цвет фона у блока с сообщением, где меня @тегнули ⚫⬛ */
+	html[dark] yt-live-chat-text-message-renderer:has(span.mention), /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight.mention /* (HyperChat) */ {
 		background-color: #FF572269 !important;
 	}
-	yt-live-chat-text-message-renderer:has(span.mention):hover {
+	html[dark] yt-live-chat-text-message-renderer:has(span.mention):hover, /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight.mention:hover /* (HyperChat) */ {
+		background-color: #FF572289 !important;
+	}
+	
+	
+	/* Цвет фона у блока с сообщением, где меня @тегнули ⚪⬜ */
+	html:not([dark]) yt-live-chat-text-message-renderer:has(span.mention), /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight.mention /* (HyperChat) */ {
+		background-color: #FF572269 !important;
+	}
+	html:not([dark]) yt-live-chat-text-message-renderer:has(span.mention):hover, /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight.mention:hover /* (HyperChat) */ {
 		background-color: #FF572289 !important;
 	}
 	
@@ -283,95 +331,247 @@
 	}
 	
 	
-	/* Цвет имени пользователя в чате стрима */
-	yt-live-chat-text-message-renderer > div#content > yt-live-chat-author-chip:not(yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="moderator"]) > span#author-name.yt-live-chat-author-chip {
+	/* Цвет имени пользователя в чате стрима ⚫⬛ */
+	html[dark] yt-live-chat-text-message-renderer > div#content > yt-live-chat-author-chip:not(yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="moderator"]) > span#author-name.yt-live-chat-author-chip, /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div > a > span:not([class *="moderator"])  /* (HyperChat) */ {
 		color: darkgrey;
 	}
 	
-	/* Цвет выделения имени пользователя, если он "highlighted" (по какой-то причине, помечен ютубом как выделенный, мб популярный ютубер, мб подписчик YTPremium, хз!) */
-	yt-live-chat-text-message-renderer yt-live-chat-author-chip[is-highlighted] #author-name.yt-live-chat-author-chip {
+	
+	/* Цвет имени пользователя в чате стрима ⚪⬜ */
+	html:not([dark]) yt-live-chat-text-message-renderer > div#content > yt-live-chat-author-chip:not(yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="moderator"]) > span#author-name.yt-live-chat-author-chip, /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div:not(span[class *="moderator"]) > a > span:not([class *="moderator"]) /* (HyperChat) */ {
+		color: grey;
+	}
+	
+	
+	/* Добавление в начало имени пользователя в чате @ (HyperChat) */
+	html[it-pathname="/embed/hyperchat_embed"] div.hyperchat-root div.hover-highlight div > a > span:before {
+		content: "@";
+	}
+	
+	
+	/* Добавление подчёркивания имени пользователя при наведении курсора (HyperChat) */
+	html[it-pathname="/embed/hyperchat_embed"] div.hyperchat-root div.hover-highlight div > a > span:hover {
+		text-decoration: underline;
+	}
+	
+	
+	/* Цвет выделения имени пользователя, если он "highlighted" (по какой-то причине, помечен ютубом как выделенный, мб популярный ютубер, мб подписчик YTPremium, хз!) ⚫⬛ */
+	html[dark] yt-live-chat-text-message-renderer yt-live-chat-author-chip[is-highlighted] #author-name.yt-live-chat-author-chip {
 		background-color: var(--yt-live-chat-author-chip-verified-background-color);
 	}
 	
-	/* Цвет выделения имени пользователя, если он "owner" (автора канала) */
-	yt-live-chat-text-message-renderer yt-live-chat-author-chip[is-highlighted] #author-name.owner.yt-live-chat-author-chip {
+	
+	/* Цвет выделения имени пользователя, если он "highlighted" (по какой-то причине, помечен ютубом как выделенный, мб популярный ютубер, мб подписчик YTPremium, хз!) ⚪⬜ */
+	html:not([dark]) yt-live-chat-text-message-renderer yt-live-chat-author-chip[is-highlighted] #author-name.yt-live-chat-author-chip {
+		background-color: var(--yt-live-chat-author-chip-verified-background-color);
+	}
+	
+	/* Цвет выделения имени пользователя, если он "owner" (автора канала) ⚫⬛ */
+	html[dark] yt-live-chat-text-message-renderer yt-live-chat-author-chip[is-highlighted] #author-name.owner.yt-live-chat-author-chip {
 		background-color: brown;
 	}
 	
-	/* Цвет имени верифицированного галкой пользователя в чате стрима */
-	yt-live-chat-text-message-renderer:has([type="verified"]):not([type="moderator"]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip:has(> span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[type="verified"]) {
+	/* Цвет выделения имени пользователя, если он "owner" (автора канала) ⚪⬜ */
+	html:not([dark]) yt-live-chat-text-message-renderer yt-live-chat-author-chip[is-highlighted] #author-name.owner.yt-live-chat-author-chip {
+		background-color: brown;
+	}
+	
+	
+	/* Цвет имени верифицированного галкой пользователя в чате стрима ⚫⬛ */
+	html[dark] yt-live-chat-text-message-renderer:has([type="verified"]):not([type="moderator"]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip:has(> span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[type="verified"]), /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div:not(span[class *="moderator"]):has(span > i.text-gray-500) > a > span:not([class *="moderator"])  /* (HyperChat) */ {
 		color: lightgreen;
 	}
-	/* Цвет иконки галки */
-	yt-live-chat-text-message-renderer:has([type="verified"]):not([type="moderator"]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip > span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[type="verified"] > div#image > yt-icon > span > div > svg > path {
+	/* Цвет иконки галки ⚫⬛ */
+	html[dark] yt-live-chat-text-message-renderer:has([type="verified"]):not([type="moderator"]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip > span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[type="verified"] > div#image > yt-icon > span > div > svg > path, /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div:has(span > i.text-gray-500) > span > i.text-gray-500  /* (HyperChat) */ {
 		color: lightgreen;
 		filter: drop-shadow(0px 0px 4px #000) !important;
 	}
 	
 	
-	/* Цвет имени пользователя модератора в чате стрима */
-	yt-live-chat-text-message-renderer:has([type="moderator"]):not([type="verified"]) > div#content > yt-live-chat-author-chip:has(> span#chat-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="moderator"]) > span#author-name.yt-live-chat-author-chip {
+	/* Цвет имени верифицированного галкой пользователя в чате стрима ⚪⬜ */
+	html:not([dark]) yt-live-chat-text-message-renderer:has([type="verified"]):not([type="moderator"]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip:has(> span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[type="verified"]), /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div:not(span[class *="moderator"]):has(span > i.text-gray-500) > a > span:not([class *="moderator"]) /* (HyperChat) */ {
+		color: lightgreen;
+	}
+	/* Цвет иконки галки ⚪⬜ */
+	html:not([dark]) yt-live-chat-text-message-renderer:has([type="verified"]):not([type="moderator"]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip > span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[type="verified"] > div#image > yt-icon > span > div > svg > path {
+		color: lightgreen;
+		filter: drop-shadow(0px 0px 4px #000) !important;
+	}
+	
+	
+	/* Цвет имени пользователя модератора в чате стрима ⚫⬛ */
+	html[dark] yt-live-chat-text-message-renderer:has([type="moderator"]):not([type="verified"]) > div#content > yt-live-chat-author-chip:has(> span#chat-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="moderator"]) > span#author-name.yt-live-chat-author-chip, /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div > a > span[class *="moderator"] /* (HyperChat) */ {
 		color: #3ea6ff;
 	}
-	/* Цвет иконки модератора в чате */
-	yt-live-chat-text-message-renderer:has([type="moderator"]):not([type="verified"]) > div#content > yt-live-chat-author-chip > span#chat-badges.yt-live-chat-author-chip > yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="moderator"] > div#image > yt-icon > span > div > svg > path {
+	/* Цвет иконки модератора в чате ⚫⬛ */
+	html[dark] yt-live-chat-text-message-renderer:has([type="moderator"]):not([type="verified"]) > div#content > yt-live-chat-author-chip > span#chat-badges.yt-live-chat-author-chip > yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="moderator"] > div#image > yt-icon > span > div > svg > path, /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div > span:nth-of-type(2) > i:nth-of-type(1) /* (HyperChat) */ {
+		color: #3ea6ff;
 		fill: #3ea6ff;
 	}
-	/* Цвет заменённой иконки модератора в чате */
-	yt-live-chat-text-message-renderer:has(yt-live-chat-author-badge-renderer[type="moderator"]):not(yt-live-chat-author-badge-renderer[type="verified"]) > div#content > yt-live-chat-author-chip > span#chat-badges.yt-live-chat-author-chip > yt-live-chat-author-badge-renderer[type="moderator"]:not([type="verified"]) > div#image > yt-icon > span > div > svg:has(path[d="M3 4.998v9.857a6 6 0 003.365 5.39L12 23l5.635-2.755A6 6 0 0021 14.855V4.998a1 1 0 00-.656-.938L12 1 3.656 4.06A1 1 0 003 4.998Z"]) {
+	/* Цвет заменённой иконки модератора в чате ⚫⬛ */
+	html[dark] yt-live-chat-text-message-renderer:has(yt-live-chat-author-badge-renderer[type="moderator"]):not(yt-live-chat-author-badge-renderer[type="verified"]) > div#content > yt-live-chat-author-chip > span#chat-badges.yt-live-chat-author-chip > yt-live-chat-author-badge-renderer[type="moderator"]:not([type="verified"]) > div#image > yt-icon > span > div > svg:has(path[d="M3 4.998v9.857a6 6 0 003.365 5.39L12 23l5.635-2.755A6 6 0 0021 14.855V4.998a1 1 0 00-.656-.938L12 1 3.656 4.06A1 1 0 003 4.998Z"]), /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div:has(span[class *="moderator"]) > span:nth-of-type(2) > i:nth-of-type(1) /* (HyperChat) */ {
 		background-color: #3ea6ff;
 		mask-image: url("data:image/svg+xml;utf8,<svg viewBox='-2 -2 21 21' xmlns='http://www.w3.org/2000/svg'><path d='M6.7 9.8A5 4.7 0 0 1 .3 3.12l3.95 4.05 3.2-3.0L3.73.11a5 4.7 0 0 1 6.7 6.38l7 8-3.83 2.83L6.5 9.8z'/></svg>");
 		rotate: -2deg;
 	}
 	
-	/* svg[viewBox="0 0 16 16"] path[d="M9.64589146,7.05569719 C9.83346524,6.562372 9.93617022,6.02722257 9.93617022,5.46808511 C9.93617022,3.00042984 7.93574038,1 5.46808511,1 C4.90894765,1 4.37379823,1.10270499 3.88047304,1.29027875 L6.95744681,4.36725249 L4.36725255,6.95744681 L1.29027875,3.88047305 C1.10270498,4.37379824 1,4.90894766 1,5.46808511 C1,7.93574038 3.00042984,9.93617022 5.46808511,9.93617022 C6.02722256,9.93617022 6.56237198,9.83346524 7.05569716,9.64589147 L12.4098057,15 L15,12.4098057 L9.64589146,7.05569719 Z"] */
 	
+	/* Цвет имени пользователя модератора в чате стрима ⚪⬜ */
+	html:not([dark]) yt-live-chat-text-message-renderer:has([type="moderator"]):not([type="verified"]) > div#content > yt-live-chat-author-chip:has(> span#chat-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="moderator"]) > span#author-name.yt-live-chat-author-chip, /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div > a > span[class *="moderator"] /* (HyperChat) */ {
+		color: #3ea6ff;
+	}
+	/* Цвет иконки модератора в чате ⚪⬜ */
+	html:not([dark]) yt-live-chat-text-message-renderer:has([type="moderator"]):not([type="verified"]) > div#content > yt-live-chat-author-chip > span#chat-badges.yt-live-chat-author-chip > yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="moderator"] > div#image > yt-icon > span > div > svg > path, /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div > span:nth-of-type(2) > i:nth-of-type(1) /* (HyperChat) */ {
+		fill: #3ea6ff;
+	}
+	/* Цвет заменённой иконки модератора в чате ⚪⬜ */
+	html:not([dark]) yt-live-chat-text-message-renderer:has(yt-live-chat-author-badge-renderer[type="moderator"]):not(yt-live-chat-author-badge-renderer[type="verified"]) > div#content > yt-live-chat-author-chip > span#chat-badges.yt-live-chat-author-chip > yt-live-chat-author-badge-renderer[type="moderator"]:not([type="verified"]) > div#image > yt-icon > span > div > svg:has(path[d="M3 4.998v9.857a6 6 0 003.365 5.39L12 23l5.635-2.755A6 6 0 0021 14.855V4.998a1 1 0 00-.656-.938L12 1 3.656 4.06A1 1 0 003 4.998Z"]), /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div:has(span[class *="moderator"]) > span:nth-of-type(2) > i:nth-of-type(1) /* (HyperChat) */ {
+		background-color: #3ea6ff;
+		mask-image: url("data:image/svg+xml;utf8,<svg viewBox='-2 -2 21 21' xmlns='http://www.w3.org/2000/svg'><path d='M6.7 9.8A5 4.7 0 0 1 .3 3.12l3.95 4.05 3.2-3.0L3.73.11a5 4.7 0 0 1 6.7 6.38l7 8-3.83 2.83L6.5 9.8z'/></svg>");
+		rotate: -2deg;
+	}
 
 
-	/* Цвет имени верифицированного галкой пользователя и модератора в чате стрима */
-	yt-live-chat-text-message-renderer:has([type="verified"]):has([type="moderator"]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip:has(> span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="verified"]) {
+	/* Цвет имени верифицированного галкой пользователя и модератора в чате стрима ⚫⬛ */
+	html[dark] yt-live-chat-text-message-renderer:has([type="verified"]):has([type="moderator"]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip:has(> span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="verified"]), /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div:has(i:nth-of-type(1)):has(i:nth-of-type(2)) > div > a > span[class *="moderator"] /* (HyperChat) */ {
 		color: cyan;
 	}
-	/* Цвет иконки галки у модера */
-	yt-live-chat-text-message-renderer:has([type="verified"]):has([type="moderator"]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip > span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[type="verified"] > div#image > yt-icon > span > div > svg > path {
+	/* Цвет иконки галки у модера ⚫⬛ */
+	html[dark] yt-live-chat-text-message-renderer:has([type="verified"]):has([type="moderator"]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip > span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[type="verified"] > div#image > yt-icon > span > div > svg > path, /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div:has(i:nth-of-type(1)):has(i:nth-of-type(2)) > span > i.text-gray-500 /* (HyperChat) */ {
 		color: cyan;
 	}
-	/* Цвет иконки модератора с галкой в чате */
-	yt-live-chat-text-message-renderer:has([type="verified"]):has([type="moderator"]) > div#content > yt-live-chat-author-chip:has(yt-live-chat-author-badge-renderer[type="verified"]) > span#chat-badges.yt-live-chat-author-chip > yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="moderator"] > div#image > yt-icon > span > div > svg > path {
+	/* Цвет иконки модератора с галкой в чате ⚫⬛ */
+	html[dark] yt-live-chat-text-message-renderer:has([type="verified"]):has([type="moderator"]) > div#content > yt-live-chat-author-chip:has(yt-live-chat-author-badge-renderer[type="verified"]) > span#chat-badges.yt-live-chat-author-chip > yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="moderator"] > div#image > yt-icon > span > div > svg > path, /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div:has(i:nth-of-type(1)):has(i:nth-of-type(2)) > span:nth-of-type(2) > i:nth-of-type(1) /* (HyperChat) */ {
+		color: cyan;
 		fill: cyan;
 	}
-	/* Цвет заменённой иконки модератора с галкой в чате */
-	yt-live-chat-text-message-renderer:has([type="verified"]):has([type="moderator"]) > div#content > yt-live-chat-author-chip:has(yt-live-chat-author-badge-renderer[type="verified"]) > span#chat-badges.yt-live-chat-author-chip svg:has(path[d="M3 4.998v9.857a6 6 0 003.365 5.39L12 23l5.635-2.755A6 6 0 0021 14.855V4.998a1 1 0 00-.656-.938L12 1 3.656 4.06A1 1 0 003 4.998Z"]) {
+	/* Цвет заменённой иконки модератора с галкой в чате ⚫⬛ */
+	html[dark] yt-live-chat-text-message-renderer:has([type="verified"]):has([type="moderator"]) > div#content > yt-live-chat-author-chip:has(yt-live-chat-author-badge-renderer[type="verified"]) > span#chat-badges.yt-live-chat-author-chip svg:has(path[d="M3 4.998v9.857a6 6 0 003.365 5.39L12 23l5.635-2.755A6 6 0 0021 14.855V4.998a1 1 0 00-.656-.938L12 1 3.656 4.06A1 1 0 003 4.998Z"]) {
+		background-color: cyan;
+		mask-image: url("data:image/svg+xml;utf8,<svg viewBox='-2 -2 21 21' xmlns='http://www.w3.org/2000/svg'><path d='M6.7 9.8A5 4.7 0 0 1 .3 3.12l3.95 4.05 3.2-3.0L3.73.11a5 4.7 0 0 1 6.7 6.38l7 8-3.83 2.83L6.5 9.8z'/></svg>");
+		rotate: -2deg;
+	}
+
+
+	/* Цвет имени верифицированного галкой пользователя и модератора в чате стрима ⚪⬜ */
+	html:not([dark]) yt-live-chat-text-message-renderer:has([type="verified"]):has([type="moderator"]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip:has(> span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="verified"]), /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div:has(i:nth-of-type(1)):has(i:nth-of-type(2)) > div > a > span[class *="moderator"] /* (HyperChat) */ {
+		color: cyan;
+	}
+	/* Цвет иконки галки у модера ⚪⬜ */
+	html:not([dark]) yt-live-chat-text-message-renderer:has([type="verified"]):has([type="moderator"]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip > span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[type="verified"] > div#image > yt-icon > span > div > svg > path, /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div:has(i:nth-of-type(1)):has(i:nth-of-type(2)) > span > i.text-gray-500 /* (HyperChat) */ {
+		color: cyan;
+	}
+	/* Цвет иконки модератора с галкой в чате ⚪⬜ */
+	html:not([dark]) yt-live-chat-text-message-renderer:has([type="verified"]):has([type="moderator"]) > div#content > yt-live-chat-author-chip:has(yt-live-chat-author-badge-renderer[type="verified"]) > span#chat-badges.yt-live-chat-author-chip > yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="moderator"] > div#image > yt-icon > span > div > svg > path, /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div:has(i:nth-of-type(1)):has(i:nth-of-type(2)) > span:nth-of-type(2) > i:nth-of-type(1) /* (HyperChat) */ {
+		color: cyan;
+		fill: cyan;
+	}
+	/* Цвет заменённой иконки модератора с галкой в чате ⚪⬜ */
+	html:not([dark]) yt-live-chat-text-message-renderer:has([type="verified"]):has([type="moderator"]) > div#content > yt-live-chat-author-chip:has(yt-live-chat-author-badge-renderer[type="verified"]) > span#chat-badges.yt-live-chat-author-chip svg:has(path[d="M3 4.998v9.857a6 6 0 003.365 5.39L12 23l5.635-2.755A6 6 0 0021 14.855V4.998a1 1 0 00-.656-.938L12 1 3.656 4.06A1 1 0 003 4.998Z"]) {
 		background-color: cyan;
 		mask-image: url("data:image/svg+xml;utf8,<svg viewBox='-2 -2 21 21' xmlns='http://www.w3.org/2000/svg'><path d='M6.7 9.8A5 4.7 0 0 1 .3 3.12l3.95 4.05 3.2-3.0L3.73.11a5 4.7 0 0 1 6.7 6.38l7 8-3.83 2.83L6.5 9.8z'/></svg>");
 		rotate: -2deg;
 	}
 	
 	
-	/* Цвет текста сообщений в чате */
-	div#content span#message-container > span#message {
+	/* Цвет текста сообщений в чате ⚫⬛ */
+	html[dark] div#content span#message-container > span#message, /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div > span > span /* (HyperChat) */ {
 		color: white;
 		/*filter: drop-shadow(0px 0px 1px white);*/
 		text-shadow: white 0px 0px 1px;
 	}
 	
 	
-	/* Цвет ссылки в сообщении, при наведении курсора */
-	div#content span#message-container > span#message > a.yt-simple-endpoint.yt-live-chat-text-message-renderer:hover {
+	/* Цвет текста сообщений в чате ⚪⬜ */
+	html:not([dark]) div#content span#message-container > span#message, /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div > span > span /* (HyperChat) */ {
+		color: black;
+		/*filter: drop-shadow(0px 0px 1px white);*/
+		text-shadow: lightgrey 0px 0px 1px;
+	}
+	
+	
+	/* Цвет ссылки в сообщении, при наведении курсора ⚫⬛ */
+	html[dark] div#content span#message-container > span#message > a.yt-simple-endpoint.yt-live-chat-text-message-renderer:hover, /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div > span:has(> span) > a:hover /* (HyperChat) */ {
 		color: red;
 		text-shadow: red 0px 0px 1px;
 	}
 	
 	
-	/* Кнопка прокрутки чата к самым последним и свежим сообщениям */
-	yt-icon-button#show-more {
+	/* Цвет ссылки в сообщении, при наведении курсора ⚪⬜ */
+	html:not([dark]) div#content span#message-container > span#message > a.yt-simple-endpoint.yt-live-chat-text-message-renderer:hover, /* дефолт */
+ 	html[it-pathname="/embed/hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div > span:has(> span) > a:hover /* (HyperChat) */ {
+		color: red;
+		text-shadow: red 0px 0px 1px;
+	}
+	
+	
+	/* Кнопка прокрутки чата к самым последним и свежим сообщениям ⚫⬛ */
+	html[dark] yt-icon-button#show-more {
 		background-color: var(--yt-live-chat-header-background-color);
 		filter: drop-shadow(0px 0px 1px #2196f3);
-		opacity: 75%
+		opacity: 75%;
 	}
-	yt-icon-button#show-more:hover {
+	html[dark] yt-icon-button#show-more:hover {
 		filter: drop-shadow(0px 0px 2px #2196f3);
-		opacity: 100%
+		opacity: 100%;
+	}
+	
+	
+	/* Кнопка прокрутки чата к самым последним и свежим сообщениям ⚪⬜ */
+	html:not([dark]) yt-icon-button#show-more {
+		background-color: var(--yt-deprecated-blue-light);
+		filter: drop-shadow(0px 0px 1px #2196f3);
+		opacity: 75%;
+	}
+	html:not([dark]) yt-icon-button#show-more:hover {
+		filter: drop-shadow(0px 0px 2px #2196f3);
+		opacity: 100%;
+	}
+	
+	
+	/* Кнопка прокрутки чата к самым последним и свежим сообщениям (HyperChat) ⚫⬛ */
+ 	html[it-pathname="/embed/hyperchat_embed"] body.mode-dark div.hyperchat-root > div > div.bottom-0 button {
+		background-color: #0F0F0F; 
+		filter: drop-shadow(0px 0px 1px #2196f3);
+		opacity: 75%;
+		padding-block-end: .9rem;
+	}
+ 	html[it-pathname="/embed/hyperchat_embed"] body.mode-dark div.hyperchat-root > div > div.bottom-0 button:hover {
+		filter: drop-shadow(0px 0px 2px #2196f3);
+		opacity: 100%;
+	}
+	
+	
+	/* Кнопка прокрутки чата к самым последним и свежим сообщениям (HyperChat) ⚪⬜ */
+ 	html[it-pathname="/embed/hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root > div > div.bottom-0 button {
+		background-color: #167AC6; 
+		filter: drop-shadow(0px 0px 1px #2196f3);
+		opacity: 75%;
+		padding-block-end: .9rem;
+	}
+ 	html[it-pathname="/embed/hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root > div > div.bottom-0 button:hover {
+		filter: drop-shadow(0px 0px 2px #2196f3);
+		opacity: 100%;
 	}
 	
 	
