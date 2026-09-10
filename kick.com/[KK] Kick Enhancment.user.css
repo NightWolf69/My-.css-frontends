@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        2.3.2
+@version        2.3.3
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов Enhancer, 7tv, Mo'Kick и NipahTV (использование этих аддонов опционально)
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -900,7 +900,7 @@
 @var	checkbox			user-profile-card_btn_advanced-profile-card_toggle			"╠    Изменение кнопки 📌 Advanced Pinned Card (Mo'Kick):"								1
 @var	color				user-profile-card_btn_advanced-profile-card_color			"╠═        Цвет кнопки:"																orange
 @var	checkbox			user-profile-card_btn_advanced-profile-card_bg_toggle		"╠═       Свой цвет фона кнопки:"														1
-@var	color				user-profile-card_btn_advanced-profile-card_bg_color		"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
+@var	color				user-profile-card_btn_advanced-profile-card_bg_color		"╠══               Цвет фона кнопки:"													rgba(23, 26, 28, 1)
 @var	number  		header-6-line-divider-14										"║"														 								[0,0,0]
 @var	checkbox			user-profile-card_btn_edit-badges_toggle					"╠    Изменение кнопки ✏️ Edit Badges (Mo'Kick):"										1
 @var	color				user-profile-card_btn_edit-badges_color						"╠═        Цвет кнопки:"																#A970FF
@@ -5383,6 +5383,7 @@ purple3=#9048FF
 				/* В чате 🛠 Модерки */
 				div[data-grid="element"] div[class *="surface"] div.flex.items-center:has(path[d="M28 0H4V4L14 16L4 28V32H28V28L18 16L28 4V0ZM16 12.16L9.2 4H22.78L15.98 12.16H16Z"]) > span,
 			/* Цвет имени пользователя Модератора, и/или Пользователя, и/или Стримера, в системном сообщении в чате */
+				div#channel-chatroom div[data-index] div > span[class *="surface"] > button.inline, /* системное сообщение кто кого таймачнул/забанил */
 				div#channel-chatroom span.text-surface-onSurfaceSecondary > button, /* в чате */
 				div#channel-chatroom span.text-surface-onSurfaceSecondary > span[data-username-bannedby],
 				div#channel-chatroom span.text-surface-onSurfaceSecondary > span[data-username-eventuser],
@@ -8651,25 +8652,25 @@ purple3=#9048FF
 	if mod-dashboard_widgets-window_activity-feed_toggle {
 		/* Плавность анимаций */
 		div[data-type="activity-feed"] > div,
-		div[data-type="activity-feed"] div svg[data-ds-icon="LightningBolt"] {
+		div[data-type="activity-feed"] div svg[data-ds-icon="Activity"] {
 			transition: all 0.2s ease-in-out !important;
 		}
 	
 	
 		/* Без наведения курсора */
 			/* В боковом меню */
-			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="LightningBolt"]) path,
+			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="Activity"]) path,
 			/* В виджете */
-			div[data-type="activity-feed"] svg[data-ds-icon="LightningBolt"] path {
+			div[data-type="activity-feed"] svg[data-ds-icon="Activity"] path {
 				color: mod-dashboard_widgets-window_activity-feed_color !important;
 				fill: mod-dashboard_widgets-window_activity-feed_color !important;
 			}
 	
 		/* При наведении курсора */
 			/* В боковом меню */
-			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="LightningBolt"]):hover svg,
+			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="Activity"]):hover svg,
 			/* В виджете */
-			div[data-type="activity-feed"]:hover svg[data-ds-icon="LightningBolt"] {
+			div[data-type="activity-feed"]:hover svg[data-ds-icon="Activity"] {
 				filter: drop-shadow(0px 0px 4px mod-dashboard_widgets-window_activity-feed_color) !important;
 				transition: all 0.3s ease-in-out !important;
 			}
@@ -8716,25 +8717,25 @@ purple3=#9048FF
 	if mod-dashboard_widgets-window_mods-action_toggle {
 		/* Плавность анимаций */
 		div[data-type="mod-actions"] > div,
-		div[data-type="mod-actions"] div svg[data-ds-icon="List"] {
+		div[data-type="mod-actions"] div svg[data-ds-icon="Mods"] {
 			transition: all 0.2s ease-in-out !important;
 		}
 		
 	
 		/* Без наведения курсора */
 			/* В боковом меню */
-			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="List"]) path,
+			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="Mods"]) path,
 			/* В виджете */
-			div[data-type="mod-actions"] > div > div > div svg[data-ds-icon="List"] path {
+			div[data-type="mod-actions"] > div > div > div svg[data-ds-icon="Mods"] path {
 				color: mod-dashboard_widgets-window_mods-action_color !important;
 				fill: mod-dashboard_widgets-window_mods-action_color !important;
 			}
 	
 		/* При наведении курсора */
 			/* В боковом меню */
-			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="List"]):hover svg,
+			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="Mods"]):hover svg,
 			/* В виджете */
-			div[data-type="mod-actions"]:hover > div > div > div svg[data-ds-icon="List"] {
+			div[data-type="mod-actions"]:hover > div > div > div svg[data-ds-icon="Mods"] {
 				filter: drop-shadow(0px 0px 4px mod-dashboard_widgets-window_mods-action_color) !important;
 			}
 	
@@ -8919,7 +8920,7 @@ purple3=#9048FF
 	
 		/* Без наведения курсора */
 			/* В боковом меню */
-			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="MessagesOutline"]) path,
+			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="MessagesFilled"]) path,
 			/* В виджете */
 			div[data-type="chat"] > div > div > div > svg[data-ds-icon="MessagesOutline"]path {
 				color: mod-dashboard_widgets-window_chat_color !important;
@@ -8928,7 +8929,7 @@ purple3=#9048FF
 	
 		/* При наведении курсора */
 			/* В боковом меню */
-			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="MessagesOutline"]):hover svg,
+			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="MessagesFilled"]):hover svg,
 			/* В виджете */
 			div[data-type="chat"]:hover > div > div > div svg[data-ds-icon="MessagesOutline"] {
 				filter: drop-shadow(0px 0px 4px mod-dashboard_widgets-window_chat_color) !important;
@@ -8940,7 +8941,7 @@ purple3=#9048FF
 	if mod-dashboard_widgets-window_session-info_toggle {
 		/* Плавность анимаций */
 		div[data-type="session-info"] > div,
-		div[data-type="session-info"] div svg[data-ds-icon="Stream"] {
+		div[data-type="session-info"] div svg[data-ds-icon="Session"] {
 			transition: all 0.2s ease-in-out !important;
 		}
 	
@@ -8953,18 +8954,18 @@ purple3=#9048FF
 	
 		/* Без наведения курсора */
 			/* В боковом меню */
-			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="Stream"]) path,
+			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="Session"]) path,
 			/* В виджете */
-			div[data-type="session-info"] > div > div > div > svg[data-ds-icon="Stream"] path {
+			div[data-type="session-info"] > div > div > div > svg[data-ds-icon="Session"] path {
 				color: mod-dashboard_widgets-window_session-info_color !important;
 				fill: mod-dashboard_widgets-window_session-info_color !important;
 			}
 	
 		/* При наведении курсора */
 			/* В боковом меню */
-			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="Stream"]):hover svg,
+			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="Session"]):hover svg,
 			/* В виджете */
-			div[data-type="session-info"]:hover > div > div > div svg[data-ds-icon="Stream"] {
+			div[data-type="session-info"]:hover > div > div > div svg[data-ds-icon="Session"] {
 				filter: drop-shadow(0px 0px 4px mod-dashboard_widgets-window_session-info_color) !important;
 			}
 	}
@@ -8974,25 +8975,25 @@ purple3=#9048FF
 	if mod-dashboard_widgets-window_channel-actions_toggle {
 		/* Плавность анимаций */
 		div[data-type="channel-actions"] > div,
-		div[data-type="channel-actions"] div svg[data-ds-icon="CameraDual"] {
+		div[data-type="channel-actions"] div svg[data-ds-icon="Channel"] {
 			transition: all 0.2s ease-in-out !important;
 		}
 	
 	
 		/* Без наведения курсора */
 			/* В боковом меню */
-			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="CameraDual"]) path,
+			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="Channel"]) path,
 			/* В виджете */
-			div[data-type="channel-actions"] > div > div > div > svg[data-ds-icon="CameraDual"] path {
+			div[data-type="channel-actions"] > div > div > div > svg[data-ds-icon="Channel"] path {
 				color: mod-dashboard_widgets-window_channel-actions_color !important;
 				fill: mod-dashboard_widgets-window_channel-actions_color !important;
 			}
 	
 		/* При наведении курсора */
 			/* В боковом меню */
-			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="CameraDual"]):hover svg,
+			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="Channel"]):hover svg,
 			/* В виджете */
-			div[data-type="channel-actions"]:hover > div > div > div svg[data-ds-icon="CameraDual"] {
+			div[data-type="channel-actions"]:hover > div > div > div svg[data-ds-icon="Channel"] {
 				filter: drop-shadow(0px 0px 4px mod-dashboard_widgets-window_channel-actions_color) !important;
 			}
 	}
@@ -9002,25 +9003,25 @@ purple3=#9048FF
 	if mod-dashboard_widgets-window_stream-info_toggle {
 		/* Плавность анимаций */
 		div[data-type="stream-info"] > div,
-		div[data-type="stream-info"] div svg[data-ds-icon="Spanner"] {
+		div[data-type="stream-info"] div svg[data-ds-icon="StreamInfo"] {
 			transition: all 0.2s ease-in-out !important;
 		}
 	
 	
 		/* Без наведения курсора */
 			/* В боковом меню */
-			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="Spanner"]) path,
+			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="StreamInfo"]) path,
 			/* В виджете */
-			div[data-type="stream-info"] > div > div > div > svg[data-ds-icon="Spanner"] path {
+			div[data-type="stream-info"] > div > div > div > svg[data-ds-icon="StreamInfo"] path {
 				color: mod-dashboard_widgets-window_stream-info_color !important;
 				fill: mod-dashboard_widgets-window_stream-info_color !important;
 			}
 	
 		/* При наведении курсора */
 			/* В боковом меню */
-			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="Spanner"]):hover svg,
+			body > div > div:has(div[data-grid="container"]) > div.flex-col:has(button) button:has(svg[data-ds-icon="StreamInfo"]):hover svg,
 			/* В виджете */
-			div[data-type="stream-info"]:hover > div > div > div svg[data-ds-icon="Spanner"] {
+			div[data-type="stream-info"]:hover > div > div > div svg[data-ds-icon="StreamInfo"] {
 				filter: drop-shadow(0px 0px 4px mod-dashboard_widgets-window_stream-info_color) !important;
 			}
 	}
