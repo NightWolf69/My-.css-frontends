@@ -4,8 +4,10 @@
 // @version         0.9.1
 // @description     A simple script to restore the "Go To Channel" option on any livechat comment on YouTube.
 // @description:de  Ein einfaches script um die "Zum Kanal" Funktion bei allen Livechat-Kommentaren auf YouTube wiederherzustellen.
-// @author          Zerody (https://github.com/zerodytrash) & luk1337 (https://github.com/luk1337)
+// @author          Zerody (https://github.com/zerodytrash) & luk1337 (https://github.com/luk1337) & NightWolf69 (https://github.com/NightWolf69)
 // @icon            https://www.google.com/s2/favicons?domain=youtube.com
+// @downloadURL     https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/youtube.com/%5BYT%5D%20YouTube%20add%20GoToChannel%20button%20in%20chat%20context%20menu.user.js
+// @updateURL       https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/youtube.com/%5BYT%5D%20YouTube%20add%20GoToChannel%20button%20in%20chat%20context%20menu.user.js
 // @supportURL      https://github.com/zerodytrash/YouTube-Livechat-GoToChannel/issues
 // @license         MIT
 // @match           https://www.youtube.com/*

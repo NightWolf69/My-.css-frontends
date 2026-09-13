@@ -4,11 +4,14 @@
 // @version      1.0.0
 // @description  Отключает функцию "whole-message-clickable" у сообщений в чате, которая вызывала контекстное меню, по нажатию в любой точке
 // @homepageURL  https://github.com/NightWolf69/My-.css-frontends
+// @downloadURL  https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/youtube.com/%5BYT%5D%20YouTube%20disable%20'whole-message-clickable'.user.js
+// @updateURL    https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/youtube.com/%5BYT%5D%20YouTube%20disable%20'whole-message-clickable'.user.js
 // @supportURL   https://github.com/NightWolf69/My-.css-frontends/issues
-// @icon            https://www.google.com/s2/favicons?domain=youtube.com
-// @match        https://youtube.com/live_chat*
+// @icon         https://www.google.com/s2/favicons?domain=youtube.com
 // @match        https://www.youtube.com/live_chat*
+// @match        https://www.youtube.com/live_chat_replay*
 // @match        https://studio.youtube.com/live_chat*
+// @match        https://studio.youtube.com/live_chat_replay*
 // @run-at       document-start
 // @grant        none
 // ==/UserScript==
