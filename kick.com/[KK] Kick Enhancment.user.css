@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        2.3.3
+@version        2.3.4
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов Enhancer, 7tv, Mo'Kick и NipahTV (использование этих аддонов опционально)
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -82,16 +82,31 @@
 @var	checkbox			top_site_bar_btn_mo-kick_disable							"╠═       Отключить отображение кнопки:"												0
 @var	color				top_site_bar_btn_mo-kick_color								"╠═        Цвет внешнего свечения кнопки:"												#53FC18
 @var	number  		header-1-line-divider-3											"║"														 								[0,0,0]
+@var	checkbox			top_site_bar_btn_lang_toggle								"╠    Изменение кнопка 🌐 Отображаемый язык:"											1
+@var	color				top_site_bar_btn_lang_color									"╠═        Цвет кнопки:"																turquoise
+@var	checkbox			top_site_bar_btn_lang_bg_toggle								"╠═       Свой цвет фона кнопки:"														1
+@var	color				top_site_bar_btn_lang_bg_color								"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
+@var	number  		header-1-line-divider-4											"║"														 								[0,0,0]
+@var	checkbox			top_site_bar_btn_log-in_toggle								"╠    Изменение кнопка 🔑 Вход:"														1
+@var	color				top_site_bar_btn_log-in_color								"╠═        Цвет кнопки:"																#53FC18
+@var	checkbox			top_site_bar_btn_log-in_bg_toggle							"╠═       Свой цвет фона кнопки:"														1
+@var	color				top_site_bar_btn_log-in_bg_color							"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
+@var	number  		header-1-line-divider-5											"║"														 								[0,0,0]
+@var	checkbox			top_site_bar_btn_sign-up_toggle								"╠    Изменение кнопка 🔑 Регистрация:"													1
+@var	color				top_site_bar_btn_sign-up_color								"╠═        Цвет кнопки:"																#53FC18
+@var	checkbox			top_site_bar_btn_sign-up_bg_toggle							"╠═       Свой цвет фона кнопки:"														1
+@var	color				top_site_bar_btn_sign-up_bg_color							"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
+@var	number  		header-1-line-divider-6											"║"														 								[0,0,0]
 @var	checkbox			top_site_bar_btn_buy_kicks_toggle							"╠    Изменение кнопки вызова меню покупки KICKs:"										1
 @var	checkbox			top_site_bar_btn_buy_kicks_disable							"╠═       Отключить отображение кнопки:"												0
 @var	color				top_site_bar_btn_buy_kicks_color							"╠═        Цвет внешнего свечения кнопки:"												#53FC18
-@var	number  		header-1-line-divider-4											"║"														 								[0,0,0]
+@var	number  		header-1-line-divider-7											"║"														 								[0,0,0]
 @var	number  		header-1-divider												"╠══════════ ТОЛЬКО В РЕЖИМЕ МОДЕРАТОРА ИЛИ АВТОРА ═══════════╣" 						[0,0,0]
-@var	number  		header-line-divider-5											"║"														 								[0,0,0]
+@var	number  		header-1-line-divider-8											"║"														 								[0,0,0]
 @var	checkbox			top_site_bar_btn_new_cnl_prof_toggle						"╠    Изменение кнопки вызова меню New Channel Profile (Mo'Kick):"						1
 @var	checkbox			top_site_bar_btn_new_cnl_prof_disable						"╠═       Отключить отображение кнопки:"												0
 @var	color				top_site_bar_btn_new_cnl_prof_color							"╠═        Цвет, и внешнее свечение кнопки:"											orange
-@var	number  		header-1-line-divider-6											"║"														 								[0,0,0]
+@var	number  		header-1-line-divider-9											"║"														 								[0,0,0]
 @var	checkbox			top_site_bar_btn_go-live_toggle								"╠    Изменение кнопки Выйти в эфир:"													1
 @var	checkbox			top_site_bar_btn_go-live_disable							"╠═       Отключить отображение кнопки:"												0
 @var	checkbox			top_site_bar_btn_go-live_bg_toggle							"╠═       Свой цвет фона кнопки:"														0
@@ -99,7 +114,7 @@
 @var	checkbox			top_site_bar_btn_go-live_text_disable						"╠═       Убрать текст в кнопке:"														1
 @var	color				top_site_bar_btn_go-live_color								"╠═        Цвет текста:"																#000
 @var	color				top_site_bar_btn_go-live_glow_color							"╠═        Цвет внешнего свечения кнопки:"												#53FC18
-@var	number  		header-1-line-divider-7											"║"														 								[0,0,0]
+@var	number  		header-1-line-divider-10										"║"														 								[0,0,0]
 @var	checkbox			top_site_bar_btn_create_profile_fix_toggle					"╠    Фикс кислотной кнопки в меню New Channel Profile (Mo'Kick):"						1
 @var	number  		header-1-end													"╚═══════════════════════════════════════════════════════╝" 							[0,0,0]
 
@@ -133,8 +148,8 @@
 @var	number  		header-3-line-divider-1											"║"														 								[0,0,0]
 @var	checkbox			player_stream-recorder_and_stats-4-nerds_widget_toggle		"╠    Компактный вид виджетов «Stream Recorder» и «Stats For Nerds» (Mo'Kick):"			1
 @var	number  		header-3-line-divider-2											"║"														 								[0,0,0]
-@var	checkbox			player_btn_rewind-30_toggle									"╠    Изменение кнопок ↩️ ← 10 и ↩️ ← 30:"												1
-@var	color				player_btn_rewind-30_color									"╠═       Цвет кнопки:"																	#C39BFF
+@var	checkbox			player_btn_rewind-10-30_toggle								"╠    Изменение кнопок ↩️ ← 10 и ↩️ ← 30:"												1
+@var	color				player_btn_rewind-10-30_color								"╠═       Цвет кнопки:"																	#C39BFF
 @var	number  		header-3-line-divider-3											"║"														 								[0,0,0]
 @var	checkbox			player_btn_goto-prev-page_toggle							"╠    Изменение кнопки 🔽 Вернутьсяна прошлую страницу:"								1
 @var	checkbox			player_btn_goto-prev-page_disable							"╠═        Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"					1
@@ -151,8 +166,8 @@
 @var	checkbox			player_btn_pause-play_toggle								"╠    Изменение кнопки ⏯ Пауза/Воспроизвести:"											1
 @var	color				player_btn_pause-play_color									"╠═        Цвет кнопки:"																#A970FF
 @var	number  		header-3-line-divider-7											"║"														 								[0,0,0]
-@var	checkbox			player_btn_fast-forward-10_toggle							"╠    Изменение кнопки ↪️ → 10:"														1
-@var	color				player_btn_fast-forward-10_color							"╠═       Цвет кнопки:"																	#C39BFF
+@var	checkbox			player_btn_fast-forward-10-30_toggle						"╠    Изменение кнопки ↪️ → 10 и ↩️ → 30:"												1
+@var	color				player_btn_fast-forward-10-30_color							"╠═       Цвет кнопки:"																	#C39BFF
 @var	number  		header-3-line-divider-8											"║"														 								[0,0,0]
 @var	checkbox			player_btn_fast-forward_toggle								"╠    Изменение кнопки ⏩ Fast Forward аддона Mo'Kick:"									1
 @var	checkbox			player_btn_fast-forward_disable								"╠═        Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"					0
@@ -366,7 +381,6 @@
 //Чат
 @var	number  		header-5-start													"╔═══════════════════ ВЕРХНАЯЯ ЧАСТЬ ЧАТА ═══════════════════╗"							[0,0,0]
 @var	checkbox			chat_btn_collapse-expand_toggle								"╠    Изменение кнопки ▶️ Свернуть / ◀️ Развернуть чат:"								1
-@var	checkbox			chat_btn_collapse-expand_fix								"╠═       Исправить наслоение друг на друга кнопок ◀️ Развернуть чат и ✏️ Изменить баннер:"	1
 @var	color				chat_btn_collapse-expand_color								"╠═        Цвет кнопки ▶️ Свернуть / ◀️ Развернуть чат"									lightgreen
 @var	checkbox			chat_btn_collapse-expand_bg_toggle							"╠═       Свой цвет фона кнопки"														1
 @var	color				chat_btn_collapse_bg_color									"╠══               Цвет фона кнопки ▶️ Свернуть чат"									rgba(66, 71, 77, .2)
@@ -402,6 +416,7 @@
 @var	number  		header-5-line-divider-5											"║"														 								[0,0,0]
 @var	checkbox			chat_btn_active-chatters_mo-kick_toggle						"╠    Кнопка 👨‍👦 Active chatters (Mo'Kick):"												1
 @var	checkbox			chat_btn_active-chatters_in-channel_mo-kick_disable			"╠═        Отключить отображение кнопки в чате 🔴 Стрима:"								0
+@var	checkbox			chat_btn_active-chatters_in-vod_mo-kick_disable				"╠═        Отключить отображение кнопки в чате ⚫️ VOD'а:"								1
 @var	number				chat_btn_active-chatters_mo-kick_order						"╠═        Смещение кнопки:"															[0,-4,4]
 @var	color				chat_btn_active-chatters_mo-kick_color						"╠═        Цвет кнопки:"																cyan
 @var	checkbox			chat_btn_active-chatters_mo-kick_bg_toggle					"╠═       Свой цвет фона кнопки:"														1
@@ -1122,6 +1137,7 @@
 		/* Отключить отображение кнопки */
 		/* Убрать текст в кнопке */
 		/* Плавность анимаций */
+		/* Смещение кнопки */
 		/* Свой фон кнопки */
 
 /* Цветовые альясы */
@@ -1421,7 +1437,7 @@ purple3=#9048FF
 	
 		/* Размер кнопки, подстать соседним */
 			/* Обычный вид сайта */
-			nav > div.flex.items-center.gap-2 > button:not([aria-haspopup]),
+			nav > div.flex.items-center.gap-2 > button:not([aria-haspopup]):not([data-testid="sign-up"]),
 			/* В миниатюрном виде сайта (когда окно браузера маленькое) */
 			nav > div.flex.items-center.gap-4 > button:has(path[d="M4 4V10H7V7H35V10H38V4H4ZM1 12V30H7V26H9V28H13V26H15V30H31V26H33V28H35V30H41V24H39V22H37V20H39V18H41V12H35V14H33V16H31V12H15V14H13V16H9V14H7V12H1ZM21 18H25V24H21V18ZM4 32V38H38V32H35V35H7V32H4Z"]) {
 				border-radius: 9px !important;
@@ -1436,6 +1452,120 @@ purple3=#9048FF
  		nav > div.flex.items-center.gap-2 > button:has(path[d="M4 4V10H7V7H35V10H38V4H4ZM1 12V30H7V26H9V28H13V26H15V30H31V26H33V28H35V30H41V24H39V22H37V20H39V18H41V12H35V14H33V16H31V12H15V14H13V16H9V14H7V12H1ZM21 18H25V24H21V18ZM4 32V38H38V32H35V35H7V32H4Z"]):hover path,
  		nav > div.flex.items-center.gap-4 > button:has(path[d="M4 4V10H7V7H35V10H38V4H4ZM1 12V30H7V26H9V28H13V26H15V30H31V26H33V28H35V30H41V24H39V22H37V20H39V18H41V12H35V14H33V16H31V12H15V14H13V16H9V14H7V12H1ZM21 18H25V24H21V18ZM4 32V38H38V32H35V35H7V32H4Z"]):hover path {
 			filter: drop-shadow(0px 0px 4px top_site_bar_btn_mo-kick_color) !important;
+		}
+	}
+	
+	
+	/* Кнопка 🌐 "Отображаемый язык" */
+	if top_site_bar_btn_lang_toggle {
+		/* Свой фон кнопки */
+		if top_site_bar_btn_lang_bg_toggle {
+			/* Без наведения курсора */
+			nav > div > button[data-testid="navbar-display-language"] {
+				background-color: transparent !important;
+				background-image: none !important;
+			}
+	
+			/* При наведении курсора */
+			nav > div > button[data-testid="navbar-display-language"]:hover {
+				background-color: top_site_bar_btn_lang_bg_color !important;
+			}
+		}
+	
+	
+		/* Размер кнопки, подстать соседним */
+		nav > div > button[data-testid="navbar-display-language"] {
+			border-radius: 9px !important;
+			height: 2.5rem;
+			width: 2.5rem;
+		}
+	
+	
+		/* Без наведения курсора */
+		nav > div > button[data-testid="navbar-display-language"] svg {
+			color: top_site_bar_btn_lang_color;
+		}
+		nav > div > button[data-testid="navbar-display-language"] {
+			transition: all 0.2s ease-in-out !important;
+		}
+
+		/* При наведении курсора */
+		nav > div > button[data-testid="navbar-display-language"]:hover {
+			filter: drop-shadow(0px 0px 4px top_site_bar_btn_lang_color) !important;
+		}
+	}
+	
+	
+	/* Кнопка 🔑 "Вход" */
+	if top_site_bar_btn_log-in_toggle {
+		/* Свой фон кнопки */
+		if top_site_bar_btn_log-in_bg_toggle {
+			/* Без наведения курсора */
+			nav > div > button[data-testid="login"] {
+				background-color: transparent !important;
+				background-image: none !important;
+			}
+	
+			/* При наведении курсора */
+			nav > div > button[data-testid="login"]:hover {
+				background-color: top_site_bar_btn_log-in_bg_color !important;
+			}
+		}
+	
+	
+		/* Размер кнопки, подстать соседним */
+		nav > div > button[data-testid="login"] {
+			border-radius: 9px !important;
+			height: 2.5rem;
+		}
+	
+	
+		/* Без наведения курсора */
+		nav > div > button[data-testid="login"] {
+			color: top_site_bar_btn_log-in_color;
+			transition: all 0.2s ease-in-out !important;
+		}
+
+		/* При наведении курсора */
+		nav > div > button[data-testid="login"]:hover {
+			filter: drop-shadow(0px 0px 4px top_site_bar_btn_log-in_color) !important;
+		}
+	}
+	
+	
+	/* Кнопка 🔑 "Регистрация" */
+	if top_site_bar_btn_sign-up_toggle {
+		/* Свой фон кнопки */
+		if top_site_bar_btn_sign-up_bg_toggle {
+			/* Без наведения курсора */
+			nav > div > button[data-testid="sign-up"] {
+				background-color: transparent !important;
+				background-image: none !important;
+			}
+	
+			/* При наведении курсора */
+			nav > div > button[data-testid="sign-up"]:hover {
+				background-color: top_site_bar_btn_sign-up_bg_color !important;
+			}
+		}
+	
+	
+		/* Размер кнопки, подстать соседним */
+		nav > div > button[data-testid="sign-up"] {
+			border-radius: 9px !important;
+			height: 2.5rem;
+		}
+	
+	
+		/* Без наведения курсора */
+		nav > div > button[data-testid="sign-up"] {
+			color: top_site_bar_btn_sign-up_color;
+			transition: all 0.2s ease-in-out !important;
+		}
+
+		/* При наведении курсора */
+		nav > div > button[data-testid="sign-up"]:hover {
+			filter: drop-shadow(0px 0px 4px top_site_bar_btn_sign-up_color) !important;
 		}
 	}
 	
@@ -1918,19 +2048,19 @@ purple3=#9048FF
 	}
 	
 	
-	/* Кнопка ↩️ "← 30" и ↩️ "← 10" в миниатюрном плеере (когда окно браузера маленькое) */
-	if player_btn_rewind-30_toggle {
+	/* Кнопка ↩️ "← 10" и ↩️ "← 30" в миниатюрном плеере (когда окно браузера маленькое) */
+	if player_btn_rewind-10-30_toggle {
 		/* Без наведения курсора */
 			/* В плеере 🔴 Стрима и ⚫️ VOD'а */
 			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipBack10"]) path,
 			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipBack30"]) path {
-				fill: player_btn_rewind-30_color !important;
+				fill: player_btn_rewind-10-30_color !important;
 			}
 	
 			/* В плеере 🔴 Стрима и ⚫️ VOD'а */
 			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipBack10"]),
 			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipBack30"]) {
-				color: player_btn_rewind-30_color !important;
+				color: player_btn_rewind-10-30_color !important;
 				filter: drop-shadow(0px 0px 4px #000) !important;
 			}
 	
@@ -1938,7 +2068,7 @@ purple3=#9048FF
 			/* В плеере 🔴 Стрима и ⚫️ VOD'а */
 			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipBack10"]):hover,
 			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipBack30"]):hover {
-				filter: drop-shadow(0px 0px 4px player_btn_rewind-30_color) !important;
+				filter: drop-shadow(0px 0px 4px player_btn_rewind-10-30_color) !important;
 			}
 	}
 	
@@ -2088,24 +2218,27 @@ purple3=#9048FF
 	}
 	
 	
-	/* Кнопка ↪️ "→ 10" в миниатюрном плеере (когда окно браузера маленькое) */
-	if player_btn_fast-forward-10_toggle {
+	/* Кнопка ↪️ "→ 10" и ↪️ "→ 30" в миниатюрном плеере (когда окно браузера маленькое) */
+	if player_btn_fast-forward-10-30_toggle {
 		/* Без наведения курсора */
 			/* В плеере 🔴 Стрима и ⚫️ VOD'а */
-			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipForward10"]) path {
-				fill: player_btn_fast-forward-10_color !important;
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipForward10"]) path,
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipForward30"]) path {
+				fill: player_btn_fast-forward-10-30_color !important;
 			}
 	
 			/* В плеере 🔴 Стрима и ⚫️ VOD'а */
-			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipForward10"]) {
-				color: player_btn_fast-forward-10_color !important;
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipForward10"]),
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipForward30"]) {
+				color: player_btn_fast-forward-10-30_color !important;
 				filter: drop-shadow(0px 0px 4px #000) !important;
 			}
 	
 		/* При наведении курсора */
 			/* В плеере 🔴 Стрима и ⚫️ VOD'а */
-			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipForward10"]):hover {
-				filter: drop-shadow(0px 0px 4px player_btn_fast-forward-10_color) !important;
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipForward10"]):hover,
+			div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SkipForward30"]):hover {
+				filter: drop-shadow(0px 0px 4px player_btn_fast-forward-10-30_color) !important;
 			}
 	}
 	
@@ -2190,14 +2323,19 @@ purple3=#9048FF
 		/* Кнопка 🔈 "звук Размючен" */
 			/* Без наведения курсора */
 				/* В плеере 🔴 Стрима и ⚫️ VOD'а */
+				div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SoundQuiet"]),
 				div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SoundLoud"]),
 				/* В плеере 🛠 Модерки */
+				div[data-grid="element"] div#injected-channel-player button:has(svg[data-ds-icon="SoundQuiet"]),
 				div[data-grid="element"] div#injected-channel-player button:has(svg[data-ds-icon="SoundLoud"]),
 				/* В плеере 📌 In-Tab (Mo'Kick) */
+				body > div#root > main:has(div[data-viewport-state="tablet"]) button:has(svg[data-ds-icon="SoundQuiet"]),
 				body > div#root > main:has(div[data-viewport-state="tablet"]) button:has(svg[data-ds-icon="SoundLoud"]),
 				/* В плеере 🎬 Создания клипа */ 
+				div:has(video#clip-creator-player) button[type="button"]:has(svg[data-ds-icon="SoundQuiet"]),
 				div:has(video#clip-creator-player) button[type="button"]:has(svg[data-ds-icon="SoundLoud"]),
 				/* В плеере 🎞 Просмотра клипа */
+				div[role="dialog"]:has(h2) button:not([type="button"]):has(svg[data-ds-icon="SoundQuiet"]),
 				div[role="dialog"]:has(h2) button:not([type="button"]):has(svg[data-ds-icon="SoundLoud"]) {
 					color: player_btn_unmuted_color !important;
 					filter: drop-shadow(0px 0px 4px #000) !important;
@@ -2205,15 +2343,20 @@ purple3=#9048FF
 	
 			/* При наведении курсора */
 				/* В плеере 🔴 Стрима и ⚫️ VOD'а */
+				div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SoundQuiet"]):hover,
 				div#injected-embedded-channel-player-video button:has(svg[data-ds-icon="SoundLoud"]):hover,
 				/* В плеере 🛠 Модерки */
+				div[data-grid="element"] div#injected-channel-player button:has(svg[data-ds-icon="SoundQuiet"]):hover,
 				div[data-grid="element"] div#injected-channel-player button:has(svg[data-ds-icon="SoundLoud"]):hover,
 				/* В плеере 📌 In-Tab (Mo'Kick) */
-				body > div#root > main:has(div[data-viewport-state="tablet"]) button:has(svg[data-ds-icon="SoundLoud"]):hover,
+				body > div#root > main:has(div[data-viewport-state="tablet"]) button:has(svg[data-ds-icon="SoundQuiet"]):hover,
+				body > div#root > main:has(div[data-viewport-state="tablet"]) button:has(svg[data-ds-icon="SoundQuiet"]):hover,
 				/* В плеере 🎬 Создания клипа */ 
-				div:has(video#clip-creator-player) button[type="button"]:has(svg[data-ds-icon="SoundLoud"]):hover,
+				div:has(video#clip-creator-player) button[type="button"]:has(svg[data-ds-icon="SoundQuiet"]):hover,
+				div:has(video#clip-creator-player) button[type="button"]:has(svg[data-ds-icon="SoundQuiet"]):hover,
 				/* В плеере 🎞 Просмотра клипа */
-				div[role="dialog"]:has(h2) button:not([type="button"]):has(svg[data-ds-icon="SoundLoud"]):hover {
+				div[role="dialog"]:has(h2) button:not([type="button"]):has(svg[data-ds-icon="SoundQuiet"]):hover,
+				div[role="dialog"]:has(h2) button:not([type="button"]):has(svg[data-ds-icon="SoundQuiet"]):hover {
 					color: player_btn_muted_color !important;
 					filter: drop-shadow(0px 0px 4px player_btn_muted_color) !important;
 				}
@@ -2255,6 +2398,7 @@ purple3=#9048FF
 				/* Во всплывающем окне 🔴 Стрима, когда плеер свёрнут */
 				main[data-theatre-mode-container] div:has(div[aria-hidden="true"].z-player) button[aria-label="Mute"],
 				/* В миниатюре 🎞 Предпросмотра клипа, на странице всех клипов канала */
+				div[class *="group/card"] button:has(svg[data-ds-icon="SoundQuiet"]),
 				div[class *="group/card"] button:has(svg[data-ds-icon="SoundLoud"]) {
 					color: player_btn_unmuted_color !important;
 				}
@@ -2263,6 +2407,7 @@ purple3=#9048FF
 				/* Во всплывающем окне 🔴 Стрима, когда плеер свёрнут */
 				main[data-theatre-mode-container] div:has(div[aria-hidden="true"].z-player) button[aria-label="Mute"]:hover,
 				/* В миниатюре 🎞 Предпросмотра клипа, на странице всех клипов канала */
+				div[class *="group/card"] button:has(svg[data-ds-icon="SoundQuiet"]):hover,
 				div[class *="group/card"] button:has(svg[data-ds-icon="SoundLoud"]):hover {
 					color: player_btn_muted_color !important;
 					filter: drop-shadow(0px 0px 4px player_btn_muted_color) !important;
@@ -3771,7 +3916,7 @@ purple3=#9048FF
 				}
 	
 			/* < развернуть —  🔴 Стрима и ⚫️ VOD'а */
-				main button:has(svg[data-ds-icon="PopoutLeft"]) {
+				main button:has(svg[data-ds-icon="MessagesOutline"]) {
 					background-color: chat_btn_expand_bg_color !important;
 					background-image: none !important;
 				}
@@ -3781,14 +3926,6 @@ purple3=#9048FF
 					background-color: in_player_chat_btn_expand_bg_color !important;
 					background-image: none !important;
 				}
-		}
-	
-	
-		/* Фикс наслоения кнопок "< Развернуть чат" и "Изменить баннер" друг на друга, когда чат свёрнут */
-		if chat_btn_collapse-expand_fix {
-			main[data-theatre-mode-container] > div:has(div[aria-haspopup="dialog"] button svg[data-ds-icon="Edit"]) > div:has(button[dir="ltr"] svg[data-ds-icon="PopoutLeft"]) {
-				margin-right: 2.75em !important;
-			}
 		}
 	
 	
@@ -3803,7 +3940,7 @@ purple3=#9048FF
 			/* > свернуть —  🔴 Стрима и ⚫️ VOD'а */
 			div#channel-chatroom button:has(svg[data-ds-icon="CollapseRight"]),
 			/* < развернуть —  🔴 Стрима и ⚫️ VOD'а */
-			main button:has(svg[data-ds-icon="PopoutLeft"]) {
+			main button:has(svg[data-ds-icon="MessagesOutline"]) {
 				color: chat_btn_collapse-expand_color !important;
 				padding-top: .39rem !important;
 				padding-bottom: .39rem !important;
@@ -3819,7 +3956,7 @@ purple3=#9048FF
 			/* > свернуть —  🔴 Стрима и ⚫️ VOD'а */
 			div#channel-chatroom button:has(svg[data-ds-icon="CollapseRight"]):hover,
 			/* < развернуть —  🔴 Стрима и ⚫️ VOD'а */
-			main button:has(svg[data-ds-icon="PopoutLeft"]):hover,
+			main button:has(svg[data-ds-icon="MessagesOutline"]):hover,
 			/* < развернуть — Во всплывающем 🪟 Окне 🎞 Просмотра Клипа */
 			div[role="dialog"]:has(h2) button:has(svg[data-ds-icon="PopoutLeft"]):hover {
 				filter: drop-shadow(0px 0px 4px chat_btn_collapse-expand_color) !important;
@@ -3891,9 +4028,8 @@ purple3=#9048FF
 	
 	/* Кнопка "👨‍👦 Активные чаттеры" */
 	if chat_btn_active-chatters_toggle {
-		/* Отключение кнопки */
+		/* Отключение кнопки - В чате 🔴 Стрима и отдельном 🪟 Окне чата */
 		if chat_btn_active-chatters_in-channel_disable {
-			/* В чате 🔴 Стрима и ⚫️ VOD'а и отдельном 🪟 Окне чата */
 			div#channel-chatroom div.contents > div > button:has(svg[data-ds-icon="PeopleGroup"]):nth-of-type(1) {
 				display: none !important;
 			}
@@ -3903,11 +4039,11 @@ purple3=#9048FF
 				display: inherit !important;
 			}
 		}
-
+	
 	
 		/* Свой фон кнопки */
 		if chat_btn_active-chatters_bg_toggle {
-			/* В чате 🔴 Стрима и ⚫️ VOD'а и отдельном 🪟 Окне чата */
+			/* В чате 🔴 Стрима и отдельном 🪟 Окне чата */
 			div#channel-chatroom div.contents > div > button:has(svg[data-ds-icon="PeopleGroup"]):nth-of-type(1) {
 				background-color: chat_btn_active-chatters_bg_color !important;
 				background-image: none !important;
@@ -3916,7 +4052,7 @@ purple3=#9048FF
 	
 	
 		/* Делает размер кнопки, таким же, как у кнопки […] контекстного меню (Mo'Kick) */
-			/* В чате 🔴 Стрима и ⚫️ VOD'а и отдельном 🪟 Окне чата */
+			/* В чате 🔴 Стрима и отдельном 🪟 Окне чата */
 			div#channel-chatroom div.contents > div > button:has(svg[data-ds-icon="PeopleGroup"]):nth-of-type(1) {
 				height: 2rem;
 				width: 2rem;
@@ -3924,7 +4060,7 @@ purple3=#9048FF
 	
 	
 		/* Без наведения курсора */
-			/* В чате 🔴 Стрима и ⚫️ VOD'а и отдельном 🪟 Окне чата */
+			/* В чате 🔴 Стрима и отдельном 🪟 Окне чата */
 			div#channel-chatroom div.contents > div > button:has(svg[data-ds-icon="PeopleGroup"]):nth-of-type(1) {
 				color: chat_btn_active-chatters_color !important;
 				order: chat_btn_active-chatters_order !important;
@@ -3932,7 +4068,7 @@ purple3=#9048FF
 			}
 	
 		/* При наведении курсора */
-			/* В чате 🔴 Стрима и ⚫️ VOD'а и отдельном 🪟 Окне чата */
+			/* В чате 🔴 Стрима и отдельном 🪟 Окне чата */
 			div#channel-chatroom div.contents > div > button:has(svg[data-ds-icon="PeopleGroup"]):nth-of-type(1):hover {
 				filter: drop-shadow(0px 0px 4px chat_btn_active-chatters_color) !important;
 			}
@@ -3975,12 +4111,20 @@ purple3=#9048FF
 	
 	/* Кнопка "👨‍👦 Active chatters" (Mo'Kick) */
 	if chat_btn_active-chatters_mo-kick_toggle {
-		/* Отключение кнопки в чате 🔴 Стрима и VOD'а */
+		/* Отключение кнопки - В чате 🔴 Стрима */
 		if chat_btn_active-chatters_in-channel_mo-kick_disable {
-			/* В чате 🔴 Стрима и ⚫️ VOD'а */
+			/* В чате 🔴 Стрима */
 			div#channel-chatroom div.contents > div > div:nth-of-type(2) button:has(span[data-role="button-icon"] svg[data-ds-icon="PeopleGroup"]),
-			/* В отдельном 🪟 Окне чате 🔴 Стрима и ⚫️ VOD'а */
+			/* В отдельном 🪟 Окне чата 🔴 Стрима и ⚫️ VOD'а */
 			div#channel-chatroom div.contents > div > div:nth-of-type(1) button:has(span[data-role="button-icon"] svg[data-ds-icon="PeopleGroup"]) {
+				display: none !important;
+			}
+		}
+	
+	
+		/* Отключение кнопки - В чате ⚫️ VOD'а */
+		if chat_btn_active-chatters_in-vod_mo-kick_disable {
+			div#channel-chatroom > div > div > button:has(svg[data-ds-icon="PeopleGroup"]) {
 				display: none !important;
 			}
 		}
@@ -3988,9 +4132,11 @@ purple3=#9048FF
 	
 		/* Свой фон кнопки */
 		if chat_btn_active-chatters_mo-kick_bg_toggle {
-			/* В чате 🔴 Стрима и ⚫️ VOD'а */
+			/* В чате 🔴 Стрима */
 			div#channel-chatroom div.contents > div > div:nth-of-type(2) button:has(span[data-role="button-icon"] svg[data-ds-icon="PeopleGroup"]),
-			/* В отдельном 🪟 Окне чате 🔴 Стрима и ⚫️ VOD'а */
+			/* В чате ⚫️ VOD'а */
+			div#channel-chatroom > div > div > button:has(svg[data-ds-icon="PeopleGroup"]),
+			/* В отдельном 🪟 Окне чата 🔴 Стрима и ⚫️ VOD'а */
 			div#channel-chatroom div.contents > div > div:nth-of-type(1) button:has(span[data-role="button-icon"] svg[data-ds-icon="PeopleGroup"]) {
 				background-color: chat_btn_active-chatters_mo-kick_bg_color !important;
 				background-image: none !important;
@@ -3999,8 +4145,10 @@ purple3=#9048FF
 	
 	
 		/* Делает размер кнопки, таким же, как у кнопки […] контекстного меню (Mo'Kick) */
-			/* В чате 🔴 Стрима и ⚫️ VOD'а */
+			/* В чате 🔴 Стрима */
 			div#channel-chatroom div.contents > div > div:nth-of-type(2) button:has(span[data-role="button-icon"] svg[data-ds-icon="PeopleGroup"]),
+			/* В чате ⚫️ VOD'а */
+			div#channel-chatroom > div > div > button:has(svg[data-ds-icon="PeopleGroup"]),
 			/* В отдельном 🪟 Окне чате 🔴 Стрима и ⚫️ VOD'а */
 			div#channel-chatroom div.contents > div > div:nth-of-type(1) button:has(span[data-role="button-icon"] svg[data-ds-icon="PeopleGroup"]) {
 				height: 2rem;
@@ -4009,18 +4157,22 @@ purple3=#9048FF
 	
 	
 		/* Без наведения курсора */
-			/* В чате 🔴 Стрима и ⚫️ VOD'а */
+			/* В чате 🔴 Стрима */
 			div#channel-chatroom div.contents > div > div:nth-of-type(2) button:has(span[data-role="button-icon"] svg[data-ds-icon="PeopleGroup"]),
-			/* В отдельном 🪟 Окне чате 🔴 Стрима и ⚫️ VOD'а */
+			/* В чате ⚫️ VOD'а */
+			div#channel-chatroom > div > div > button:has(svg[data-ds-icon="PeopleGroup"]),
+			/* В отдельном 🪟 Окне чата 🔴 Стрима и ⚫️ VOD'а */
 			div#channel-chatroom div.contents > div > div:nth-of-type(1) button:has(span[data-role="button-icon"] svg[data-ds-icon="PeopleGroup"]) {
 				color: chat_btn_active-chatters_mo-kick_color !important;
 				order: chat_btn_active-chatters_mo-kick_order !important;
 			}
 	
 		/* При наведении курсора */
-			/* В чате 🔴 Стрима и ⚫️ VOD'а */
+			/* В чате 🔴 Стрима */
 			div#channel-chatroom div.contents > div > div:nth-of-type(2) button:has(span[data-role="button-icon"] svg[data-ds-icon="PeopleGroup"]):hover,
-			/* В отдельном 🪟 Окне чате 🔴 Стрима и ⚫️ VOD'а */
+			/* В чате ⚫️ VOD'а */
+			div#channel-chatroom > div > div > button:has(svg[data-ds-icon="PeopleGroup"]):hover,
+			/* В отдельном 🪟 Окне чата 🔴 Стрима и ⚫️ VOD'а */
 			div#channel-chatroom div.contents > div > div:nth-of-type(1) button:has(span[data-role="button-icon"] svg[data-ds-icon="PeopleGroup"]):hover {
 				filter: drop-shadow(0px 0px 4px chat_btn_active-chatters_mo-kick_color) !important;
 			}
@@ -4031,8 +4183,10 @@ purple3=#9048FF
 	if chat_btn_return-to-chat_mo-kick_toggle {
 		/* Свой фон кнопки */
 		if chat_btn_return-to-chat_mo-kick_bg_toggle {
-			/* В чате 🔴 Стрима и ⚫️ VOD'а */
-			div#channel-chatroom div.contents > div button:has(path[d="M8 0v4H0v22h4v6l6-6h18V16h4V0zm16 22H4V8h20z"]) {
+			/* В чате 🔴 Стрима */
+			div#channel-chatroom div.contents > div button:has(path[d="M8 0v4H0v22h4v6l6-6h18V16h4V0zm16 22H4V8h20z"]),
+			/* В чате ⚫️ VOD'а */
+			div#channel-chatroom > div > div > button:has(path[d="M8 0v4H0v22h4v6l6-6h18V16h4V0zm16 22H4V8h20z"]) {
 				background-color: chat_btn_return-to-chat_mo-kick_bg_color !important;
 				background-image: none !important;
 			}
@@ -4040,22 +4194,29 @@ purple3=#9048FF
 	
 	
 		/* Делает размер кнопки, таким же, как у кнопки […] контекстного меню (Mo'Kick) */
-		div#channel-chatroom div.contents > div button:has(path[d="M8 0v4H0v22h4v6l6-6h18V16h4V0zm16 22H4V8h20z"]) {
+			/* В чате 🔴 Стрима */
+			div#channel-chatroom div.contents > div button:has(path[d="M8 0v4H0v22h4v6l6-6h18V16h4V0zm16 22H4V8h20z"]),
+			/* В чате ⚫️ VOD'а */
+			div#channel-chatroom > div > div > button:has(path[d="M8 0v4H0v22h4v6l6-6h18V16h4V0zm16 22H4V8h20z"]) {
 			height: 2rem;
 			width: 2rem;
 		}
 	
 	
 		/* Без наведения курсора */
-			/* В чате 🔴 Стрима и ⚫️ VOD'а */
-			div#channel-chatroom div.contents > div button:has(path[d="M8 0v4H0v22h4v6l6-6h18V16h4V0zm16 22H4V8h20z"]) {
+			/* В чате 🔴 Стрима */
+			div#channel-chatroom div.contents > div button:has(path[d="M8 0v4H0v22h4v6l6-6h18V16h4V0zm16 22H4V8h20z"]),
+			/* В чате ⚫️ VOD'а */
+			div#channel-chatroom > div > div > button:has(path[d="M8 0v4H0v22h4v6l6-6h18V16h4V0zm16 22H4V8h20z"]) {
 				color: chat_btn_return-to-chat_mo-kick_color !important;
 				order: chat_btn_return-to-chat_mo-kick_order !important;
 			}
 	
 		/* При наведении курсора */
-			/* В чате 🔴 Стрима и ⚫️ VOD'а */
-			div#channel-chatroom div.contents > div button:has(path[d="M8 0v4H0v22h4v6l6-6h18V16h4V0zm16 22H4V8h20z"]):hover {
+			/* В чате 🔴 Стрима */
+			div#channel-chatroom div.contents > div button:has(path[d="M8 0v4H0v22h4v6l6-6h18V16h4V0zm16 22H4V8h20z"]):hover,
+			/* В чате ⚫️ VOD'а */
+			div#channel-chatroom > div > div > button:has(path[d="M8 0v4H0v22h4v6l6-6h18V16h4V0zm16 22H4V8h20z"]):hover {
 				filter: drop-shadow(0px 0px 4px chat_btn_return-to-chat_mo-kick_color) !important;
 			}
 	}
@@ -6510,7 +6671,7 @@ purple3=#9048FF
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
 /* ####################################################### */
-/* ##### Нижняя часть чата - Область ввода сообшения ##### */
+/* ##### Нижняя часть чата - Область ввода сообщения ##### */
 /* ####################################################### */
 	
 	/* Индикация, что в чат нельзя писать из-за каких-либо ограничительных режимов(Только подписчики/фолловеры/эмотиконы/Медленный режим) */
