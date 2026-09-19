@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [VK] VKontakte Enhancment
 @namespace      https://github.com/NightWolf69
-@version        1.0.2-beta
+@version        1.0.3-beta
 @description    Правки внешнего вида для ВК
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -89,10 +89,23 @@ purple3=#9048FF
 			padding-top: .7em !important;
 			margin-block: -.55em !important;
 		}
+		
+		/* Убрать обводку по краю у всех эллементов */
+		body[scheme] section:before,
+		body[scheme] section:after {
+			box-shadow: inset 0 0 0 transparent !important;
+		}
+		
+		/* Добавить подложку под строку поиска в начале ленты */
+		body[scheme] section div > div[role="heading"]:has(> div[class *="Header"]) {
+			background-color: var(--vkui--color_background_content) !important;
+			border-radius: 1em 1em 0em 0em !important;
+		}
+
 	
 		/* Удаление пустых блоков от рекламы между постами, которые остаются после AdBlock'еров */
 		body[scheme] div#spa_layout_content div[data-testid="feed_main_container"] > div[class *="modeCard"] > div[role="feed"] > article:has(div[style="display: block;"] > div div[class *="vkuiDiv__host vkuiRootComponent__host"]) {
-			display: none !important
+			display: none !important;
 		}
 	}
 	
@@ -156,8 +169,8 @@ purple3=#9048FF
 /* ############################ */
 
 	/* Закраска фона сообщений через один */
-	div[data-test-id="chatContainer"] div:not([class]) > div:has(> div[data-role="messageContainer"]):nth-child(2n) {
-		background-color: #C3C3C320 !important;
+	div[data-test-id="chatContainer"] div:not([class]) > div:has(> div[data-role="messageContainer"]):nth-child(even) {
+		background-color: #C3C3C30B !important;
 	}
 
 }
@@ -187,13 +200,16 @@ purple3=#9048FF
 	
 	/* Кнопка ↩️ Ответить */
 		/* Без наведения курсора */
-		div[data-test-id="chatContainer"] div[data-role="messageHoversContainer"] > button[data-role="replyButton"] span {
+		div[data-test-id="chatContainer"] div[data-role="messageHoversContainer"] > button[data-role="replyButton"] span,
+		div[data-test-id="chatContainer"] div[data-role="messageHoversContainer"] > button[data-role="threadButton"] span {
 			color: hover-btn-reply-color !important
 		}
 	
 		/* При наведении курсора */
-		div[data-test-id="chatContainer"] div[data-role="messageHoversContainer"] > button[data-role="replyButton"] {transition: all 0.2s ease-in-out !important;}
-		div[data-test-id="chatContainer"] div[data-role="messageHoversContainer"] > button[data-role="replyButton"]:hover {
+		div[data-test-id="chatContainer"] div[data-role="messageHoversContainer"] > button[data-role="replyButton"],
+		div[data-test-id="chatContainer"] div[data-role="messageHoversContainer"] > button[data-role="threadButton"] {transition: all 0.2s ease-in-out !important;}
+		div[data-test-id="chatContainer"] div[data-role="messageHoversContainer"] > button[data-role="replyButton"]:hover,
+		div[data-test-id="chatContainer"] div[data-role="messageHoversContainer"] > button[data-role="threadButton"]:hover {
 			filter: drop-shadow(0px 0px 4px hover-btn-reply-color) !important;
 		}
 }
@@ -318,6 +334,22 @@ purple3=#9048FF
 		div#chat-pub-root button[data-test-id="publisherSubmitButton"] {transition: all 0.2s ease-in-out !important;}
 		div#chat-pub-root button[data-test-id="publisherSubmitButton"]:hover {
 			filter: drop-shadow(0px 0px 4px chat-send-btn-color) !important;
+		}
+	
+	/* Кнопка вызова 😊 меню смайлов (VK Play Tools) */
+		/* Без наведения курсора */
+		div[data-test-id="chatContainer"] button#emote-popover-trigger img {display: none !important;}
+		div[data-test-id="chatContainer"] button#emote-popover-trigger {
+			background-color: #2594EF;
+			mask-image: url("chrome-extension://pgcocghliackkooeoiihnkdnbempgjfk/assets/images/emote-button.svg");
+			width: 22px;
+			height: 22px;
+			transition: all 0.2s ease-in-out !important;
+		}
+	
+		/* При наведении курсора */
+		div[data-test-id="chatContainer"] button#emote-popover-trigger:hover {
+			background-color: deepskyblue;
 		}
 }
 
