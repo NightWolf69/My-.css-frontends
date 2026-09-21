@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        2.3.5
+@version        2.3.6
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов Enhancer, 7tv, Mo'Kick и NipahTV (использование этих аддонов опционально)
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -1162,24 +1162,27 @@ purple3=#9048FF
 /* ##### Размеры тела страницы ##### */
 /* ################################# */
 
-	/* Ширины сайта В миниатюрном режиме сайта (когда окно браузера ОЧЕНЬ маленькое) */
-	@supports (width:100dvw) {
-		body:has(div[data-viewport-state="mobile"].w-xvw) .w-xvw {
-			width: 98dvw !important;
+	/* Если используеться кастомный скролбар, меняет размер страницы в компактном режиме */
+	if site_scrollbar_toggle {
+		/* Ширины сайта В миниатюрном режиме сайта (когда окно браузера ОЧЕНЬ маленькое) */
+		@supports (width:100dvw) {
+			body:has(div[data-viewport-state="mobile"].w-xvw) .w-xvw {
+				width: 98dvw !important;
+			}
 		}
-	}
-	
-	/* Ширины сайтаВ миниатюрном режиме сайта (когда окно браузера маленькое) */
-	@supports (width:100dvw) {
-		body:has(div[data-viewport-state="tablet"].w-xvw) .w-xvw {
-			width: 98.5dvw !important;
+
+		/* Ширины сайта В миниатюрном режиме сайта (когда окно браузера маленькое) */
+		@supports (width:100dvw) {
+			body:has(div[data-viewport-state="tablet"].w-xvw) .w-xvw {
+				width: 98.8dvw !important;
+			}
 		}
-	}
-	
-	/* Ширины сайта В полноразмерной версии сайта */
-	@supports (width:100dvw) {
-		body:has(div[data-viewport-state="desktopLarge"].w-xvw) .w-xvw {
-			width: 100dvw !important;
+
+		/* Ширины сайта В полноразмерной версии сайта */
+		@supports (width:100dvw) {
+			body:has(div[data-viewport-state="desktopLarge"].w-xvw) .w-xvw {
+				width: 100dvw !important;
+			}
 		}
 	}
 }
@@ -1327,7 +1330,10 @@ purple3=#9048FF
 	/* Цвет скролбара */
 	if site_scrollbar_toggle {
 		html {
+			scroll-behavior: smooth !important;
 			scrollbar-color: site_scrollbar_color transparent !important;
+			scrollbar-gutter: auto !important;
+			scrollbar-width: thin !important;
 		}
 	}
 	
