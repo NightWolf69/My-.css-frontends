@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [VK] VKontakte Enhancment
 @namespace      https://github.com/NightWolf69
-@version        1.0.3-beta
+@version        1.0.4-beta
 @description    Правки внешнего вида для ВК
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -64,7 +64,12 @@ purple3=#9048FF
 
 @-moz-document domain("vk.com"), domain("vk.ru") {
 	/* Цвет скролбара */
-	html {scrollbar-color: var(--vkui--color_icon_accent) transparent !important;}
+	html {
+		scroll-behavior: smooth !important;
+		scrollbar-color: var(--vkui--color_icon_accent) transparent !important;
+		scrollbar-gutter: auto !important;
+		scrollbar-width: thin !important;
+	}
 	
 	/* Контекстное меню из аватарки профиля на верхнем баре сайта (VK Expert) */
 	span.top_profile_mrow {
@@ -91,8 +96,9 @@ purple3=#9048FF
 		}
 		
 		/* Убрать обводку по краю у всех эллементов */
-		body[scheme] section:before,
-		body[scheme] section:after {
+		body[scheme] section:after, /* Верхняя секция паблика */
+		body[scheme] section:before, /* Новостная лента профиля/паблика */
+		body[scheme] div[data-testid="feed_main_container"] > div:has(> div[role="feed"]):before /* feed лента */ {
 			box-shadow: inset 0 0 0 transparent !important;
 		}
 		
@@ -136,7 +142,12 @@ purple3=#9048FF
 /* ##### Цвет скролбара ##### */
 /* ########################## */
 
-	html {scrollbar-color: scroll-bar-color transparent !important;}
+	html {
+		scroll-behavior: smooth !important;
+		scrollbar-color: scroll-bar-color transparent !important;
+		scrollbar-gutter: auto !important;
+		scrollbar-width: thin !important;
+	}
 	
 }
 
