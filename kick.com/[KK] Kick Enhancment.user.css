@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        2.3.7
+@version        2.3.8
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов Enhancer, 7tv, Mo'Kick и NipahTV (использование этих аддонов опционально)
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -784,6 +784,12 @@
 @var	checkbox			chat_under-input-area_btn_KICKs-shop-menu_bg_toggle			"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_under-input-area_btn_KICKs-shop-menu_bg_color			"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
 @var	number  		header-5-line-divider-64										"║"														 								[0,0,0]
+@var	checkbox			chat_under-input-area_btn_drops-panel_toggle				"╠    Изменение кнопки 🏠 Доступные дропы:"												1
+@var	checkbox			chat_under-input-area_btn_drops-panel_disable				"╠═       Отключить отображение кнопки:"												0
+@var	color				chat_under-input-area_btn_drops-panel_color					"╠═        Цвет кнопки:"																#53FC18
+@var	checkbox			chat_under-input-area_btn_drops-panel_bg_toggle				"╠═       Свой цвет фона кнопки:"														1
+@var	color				chat_under-input-area_btn_drops-panel_bg_color				"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
+@var	number  		header-5-line-divider-64										"║"														 								[0,0,0]
 @var	checkbox			chat_under-input-area_btn_context-menu_toggle				"╠    Изменение кнопки [⋮] Открытия контекстного меню (Mo'Kick):"						1
 @var	color				chat_under-input-area_btn_context-menu_color				"╠═        Цвет кнопки:"																#53FC18
 @var	checkbox			chat_under-input-area_btn_context-menu_bg_toggle			"╠═       Свой цвет фона кнопки:"														1
@@ -1093,6 +1099,7 @@
 @var	checkbox			mod-dashboard_widgets-window_activity-feed_toggle			"╠    Изменение Виджета ⚡️ Лента активности:"											1
 @var	color				mod-dashboard_widgets-window_activity-feed_color			"╠═        Цвет иконки виджета:"														yellow
 @var	color				mod-dashboard_widgets-window_activity-feed_follow_color		"╠══               ► 💜 Фолов:"															magenta
+@var	color				mod-dashboard_widgets-window_activity-feed_first-msg_color	"╠══               ► 💬 Впервые написал в чат:"											lightyellow
 @var	color				mod-dashboard_widgets-window_activity-feed_raid_color		"╠══               ► 🚪 Рейд:"															cyan
 @var	color				mod-dashboard_widgets-window_activity-feed_reward_color		"╠══               ► ✨ Заказ награды за баллы канала:"									rgb(24, 251, 176)
 @var	number  		header-7-line-divider-10										"║"														 								[0,0,0]
@@ -6874,6 +6881,60 @@ purple3=#9048FF
 	}
 	
 	
+	/* Кнопка "🏠 Доступные дропы" */
+	if chat_under-input-area_btn_drops-panel_toggle {
+		/* Отключить отображение кнопки */
+		if chat_under-input-area_btn_drops-panel_disable {
+			div#chatroom-footer div.z-common button[data-testid="drops-panel-button"] {
+				display: none !important;
+			}
+		}
+	
+	
+		/* Свой фон кнопки */
+		if chat_under-input-area_btn_drops-panel_bg_toggle {
+			div#chatroom-footer div.z-common button[data-testid="drops-panel-button"] {
+				background-color: chat_under-input-area_btn_KICKs-shop-menu_bg_color !important;
+				background-image: none !important;
+			}
+		}
+	
+	
+		/* Подгонка размера и зазора с соседними кнопками */
+		div#chatroom-footer div.z-common button[data-testid="drops-panel-button"] {
+    		height: calc(var(--spacing) * 9);
+			margin-right: calc(var(--spacing) * 2);
+			padding-inline: 1rem;
+    		width: calc(var(--spacing) * 9);
+		}
+	
+	
+		/* Фон кнопки, когда есть награда которую можно забрать */
+		if chat_under-input-area_btn_drops-panel_toggle {
+			/* Без наведения курсора */
+			nav[enhanced-modules="settings-button-main"] button[data-state][aria-label][aria-haspopup="dialog"]:has(> video[loop]) {
+				background-image: radial-gradient(circle at center, top_site_bar_btn_claim-reward_ready-to-claim_color1, top_site_bar_btn_claim-reward_ready-to-claim_color2, top_site_bar_btn_claim-reward_ready-to-claim_color3, top_site_bar_btn_claim-reward_ready-to-claim_color4) !important;
+			}
+	
+			/* При наведении курсора */
+			nav[enhanced-modules="settings-button-main"] button[data-state][aria-label][aria-haspopup="dialog"]:has(> video[loop]):hover {
+				filter: drop-shadow(0px 0px 4px top_site_bar_btn_claim-reward_glow-color) !important;
+			}
+		}
+	
+	
+		/* Без наведения курсора */
+		div#chatroom-footer div.z-common button[data-testid="drops-panel-button"] {
+			color: chat_under-input-area_btn_drops-panel_color !important;
+		}
+	
+		/* При наведении курсора */
+		div#chatroom-footer div.z-common button[data-testid="drops-panel-button"]:hover {
+			filter: drop-shadow(0px 0px 4px chat_under-input-area_btn_drops-panel_color) !important;
+		}
+	}
+	
+	
 	/* Кнопка "💬 Toggle Chatting" (Mo'Kick) */
 	if chat_under-input-area_btn_toggle-chatting_toggle {
 		/* Отключить отображение кнопки */
@@ -8710,7 +8771,7 @@ purple3=#9048FF
 	}
 	
 	
-	/* Кнопка "🏯 Фильтр" в верхней части окна виджита */
+	/* Кнопка " Фильтр" в верхней части окна виджита */
 	if mod-dashboard_widgets-window_btn_cancel_toggle {
 		/* Свой фон кнопки */
 		if mod-dashboard_widgets-window_btn_cancel_bg_toggle {
@@ -8875,6 +8936,18 @@ purple3=#9048FF
 			/* При наведении курсора */
 			div[data-type="activity-feed"] div:hover > svg[data-ds-icon="HeartFilled"] {
 				filter: drop-shadow(0px 0px 4px mod-dashboard_widgets-window_activity-feed_follow_color) !important;
+			}
+	
+	
+		/* 💬 Впервые написал в чат */
+			/* Без наведения курсора */
+			div[data-type="activity-feed"] div > svg[data-ds-icon="ChatOutline"] path {
+				fill: mod-dashboard_widgets-window_activity-feed_first-msg_color !important;
+			}
+	
+			/* При наведении курсора */
+			div[data-type="activity-feed"] div:hover > svg[data-ds-icon="ChatOutline"] {
+				filter: drop-shadow(0px 0px 4px mod-dashboard_widgets-window_activity-feed_first-msg_color) !important;
 			}
 	
 	
