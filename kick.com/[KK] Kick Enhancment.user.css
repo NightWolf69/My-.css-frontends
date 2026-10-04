@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        2.3.8
+@version        2.3.9
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов Enhancer, 7tv, Mo'Kick и NipahTV (использование этих аддонов опционально)
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -6830,17 +6830,23 @@ purple3=#9048FF
 	
 	
 		/* Без наведения курсора */
-		div#chatroom-footer div.z-common button[data-testid="channel-points-button"],
-		div#chatroom-footer div.z-common button[data-testid="channel-points-button"] img[alt="add points"],
-		div#chatroom-footer div.z-common button[data-testid="channel-points-button"] span,
-		div#chatroom-footer div.z-common button[data-testid="channel-points-button"] path {
-			color: chat_under-input-area_btn_channel-points-menu_color !important;
-		}
+			/* Сообщение в чате, о покупке пользователем, какой-либо награды */
+			div#chatroom-messages div[data-index] svg[data-ds-icon="Bubbles"],
+			/* Кнопка открытия меню очков канала */
+			div#chatroom-footer div.z-common button[data-testid="channel-points-button"],
+			div#chatroom-footer div.z-common button[data-testid="channel-points-button"] img[alt="add points"],
+			div#chatroom-footer div.z-common button[data-testid="channel-points-button"] span,
+			div#chatroom-footer div.z-common button[data-testid="channel-points-button"] path {
+				color: chat_under-input-area_btn_channel-points-menu_color !important;
+			}
 	
 		/* При наведении курсора */
-		div#chatroom-footer div.z-common button[data-testid="channel-points-button"]:hover {
-			filter: drop-shadow(0px 0px 4px chat_under-input-area_btn_channel-points-menu_color) !important;
-		}
+			/* Сообщение в чате, о покупке пользователем, какой-либо награды */
+			div#chatroom-messages div[data-index]:hover svg[data-ds-icon="Bubbles"],
+			/* Кнопка открытия меню очков канала */
+			div#chatroom-footer div.z-common button[data-testid="channel-points-button"]:hover {
+				filter: drop-shadow(0px 0px 4px chat_under-input-area_btn_channel-points-menu_color) !important;
+			}
 	}
 	
 	
