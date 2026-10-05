@@ -36,7 +36,7 @@
 > Существуют и другие аддоны для загрузки кастомного `.css` и `.js` кода. Однако я не гарантирую корректную работу, и вообще работу в целом на других аддонах, кроме перечисленных мною. Так как могут быть различия во внутреннем синтаксисе аддона, или отсутствовать поддержка настроек, или ещё что угодно...
 
 
-# Как установить `.user.css` и/или `.user.js` на аддон(ы)?
+# Как установить `.user.css` и/или `.user.js`?
 + <a href="https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/kick.com/%5BKK%5D%20Kick%20Enhancment.user.css" title="KICK.com" target="kick"><img src="https://kick.com/img/kick-logo.svg" alt="KICK" width="64"></a> — <a href="https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/kick.com/%5BKK%5D%20Kick%20Enhancment.user.css" title="KICK.com" target="kick">Установить</a> `.user.css` <code>v2.3.10</code>
 > [!NOTE]
 > Совместимо со следующими аддонами:
