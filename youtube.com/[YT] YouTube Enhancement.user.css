@@ -463,16 +463,6 @@
 @var	select  	header-4-line-divider-64									"║"														 										{" ":"divider"}
 @var	select  	header-4-end												"╚════════════════════════════════════════════════════════════╝" 								{" ":"divider"}
 
-@var	select   	empty5														"" 																								{" ":"divider"}
-
-
-
-@var		checkbox			custom_toggle			"Toggle 1"											0
-@var		number  			custom_number			"Число" 											[5,0,10]
-@var		text				custom_text				"Кастомный текст"									"hello"
-@var		color				custom_color			"color Example NAME"								skyblue
-@var		select 				custom_dropdown			"Контекстное меню"									{"краснй текст":"red", "сини текст":"blue"}
-
 ==/UserStyle== */
 
 //#3DC0ED
