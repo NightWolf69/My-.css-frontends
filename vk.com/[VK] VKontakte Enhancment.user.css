@@ -98,8 +98,10 @@ purple3=#9048FF
 		
 		/* Фон в зазоре между постами в feed ленте */
 		body[scheme] div[data-testid="feed_wall"] > div[data-testid="feed_main_container"] > div[class *="mode-card"]:has(> div[role="feed"] > article),
-		/* Фон в зазоре между постами в ленте профиля/канала */
-		body[scheme] section[class *="mode-card"]:has(> div#page-wall > div[role="feed"]) {
+		/* Фон в зазоре между постами в ленте профиля */
+		body[scheme] section[class *="mode-card"]:has(> div#page-wall > div[role="feed"]),
+		/* Фон в зазоре между постами в ленте канала */
+		body[scheme] div#spa_layout_content div:has(> section:nth-of-type(3)) section:has(section[class *="mode-plain"]):nth-of-type(3) {
 			background: transparent !important;
 			background-color: transparent !important;
 		}
@@ -112,11 +114,16 @@ purple3=#9048FF
 		}
 		
 		/* Добавить подложку под строку поиска в начале ленты */
-		body[scheme] section > div > div[role="heading"] {
+		body[scheme] section > div > div[role="heading"], /* на странице профиля */
+		body[scheme] section div[separator]:has(div#group_tabs) /* на странице паблика */ {
 			background-color: var(--vkui--color_background_content) !important;
 			border-radius: 1em 1em 0em 0em !important;
 		}
-
+	
+		/* Убрать боковые полоски у полосы поиска с вкладками в паблике */
+		body[scheme] section > div:has(div[separator] div#group_tabs) div:has(> hr) {
+			display: none !important;
+		}
 	
 		/* Удаление пустых блоков от рекламы между постами, которые остаются после AdBlock'еров */
 		body[scheme] div#spa_layout_content div[data-testid="feed_main_container"] > div[class *="modeCard"] > div[role="feed"] > article:has(div[style="display: block;"] > div div[class *="vkuiDiv__host vkuiRootComponent__host"]) {
