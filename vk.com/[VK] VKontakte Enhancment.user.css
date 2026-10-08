@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [VK] VKontakte Enhancment
 @namespace      https://github.com/NightWolf69
-@version        1.0.4-beta
+@version        1.0.5-beta
 @description    Правки внешнего вида для ВК
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -86,13 +86,22 @@ purple3=#9048FF
 		}
 	
 		/* Фон тела отдельных постов в feed ленте */
-		body[scheme] div[data-testid="feed_wall"] > div[data-testid="feed_main_container"] > div[class *="modeCard"] > div[role="feed"] > article,
+		body[scheme] div[data-testid="feed_wall"] > div[data-testid="feed_main_container"] > div[class *="mode-card"] > div[role="feed"] > article,
 		/* Фон тела отдельных постов в ленте профиля/канала */
-		body[scheme] section[class *="modeCard"] div#page-wall > div[role="feed"] > article {
+		body[scheme] section[class *="mode-card"] div#page-wall > div[role="feed"] > article {
 			background-color: var(--vkui--color_background_content) !important;
 			border-radius: 1em !important;
 			padding-top: .7em !important;
 			margin-block: -.55em !important;
+		}
+	
+		
+		/* Фон в зазоре между постами в feed ленте */
+		body[scheme] div[data-testid="feed_wall"] > div[data-testid="feed_main_container"] > div[class *="mode-card"]:has(> div[role="feed"] > article),
+		/* Фон в зазоре между постами в ленте профиля/канала */
+		body[scheme] section[class *="mode-card"]:has(> div#page-wall > div[role="feed"]) {
+			background: transparent !important;
+			background-color: transparent !important;
 		}
 		
 		/* Убрать обводку по краю у всех эллементов */
@@ -103,7 +112,7 @@ purple3=#9048FF
 		}
 		
 		/* Добавить подложку под строку поиска в начале ленты */
-		body[scheme] section div > div[role="heading"]:has(> div[class *="Header"]) {
+		body[scheme] section > div > div[role="heading"] {
 			background-color: var(--vkui--color_background_content) !important;
 			border-radius: 1em 1em 0em 0em !important;
 		}
