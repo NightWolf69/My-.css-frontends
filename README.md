@@ -69,7 +69,7 @@
 
 <hr width="69%">
 
-+ <a href="https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/vk.com/%5BVK%5D%20VKontakte%20Enhancment.user.css" title="VK.com и live.VKvideo.ru" target="vk"><img src="https://vk.ru/favicon.ico" alt="VK" width="24"></a> — <a href="https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/vk.com/%5BVK%5D%20VKontakte%20Enhancment.user.css" title="VK.com и live.VKvideo.ru" target="vk">Установить</a> `user.css` <code>v1.0.4-beta</code>
++ <a href="https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/vk.com/%5BVK%5D%20VKontakte%20Enhancment.user.css" title="VK.com и live.VKvideo.ru" target="vk"><img src="https://vk.ru/favicon.ico" alt="VK" width="24"></a> — <a href="https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/vk.com/%5BVK%5D%20VKontakte%20Enhancment.user.css" title="VK.com и live.VKvideo.ru" target="vk">Установить</a> `user.css` <code>v1.0.5-beta</code>
 > [!NOTE]
 > Совместимо со следующими аддонами:
 > 
