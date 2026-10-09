@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        2.3.10
+@version        2.3.11
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов Enhancer, 7tv, Mo'Kick и NipahTV (использование этих аддонов опционально)
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -1388,9 +1388,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
-/* ########################################## */
-/* ##### Эллементы верхней панеле сайта ##### */
-/* ########################################## */
+/* ############################### */
+/* ##### Верхняя панел сайта ##### */
+/* ############################### */
 	
 	/* Кнопка Свернуть/Развернуть боковое меню */
 	if top_site_bar_btn_togg_side_menu_toggle {
@@ -1811,9 +1811,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("dashboard.kick.com") {
-/* ############################################################################# */
-/* ##### Эллементы верхней панеле сайта, на странице модератора или автора ##### */
-/* ############################################################################# */
+/* ################################################################## */
+/* ##### Верхняя панел сайта, на странице модератора или автора ##### */
+/* ################################################################## */
 	
 	/* Кнопка New Channel Profile (Mo'Kick) */
 	if top_site_bar_btn_new_cnl_prof_toggle {
@@ -6841,7 +6841,10 @@ purple3=#9048FF
 	if chat_input-area_btn_emoji-menu_toggle {
 		/* Отключить отображение кнопки */
 		if chat_input-area_btn_emoji-menu_disable {
-			div#chatroom-footer div#chat-input-wrapper > button:has(svg[data-ds-icon="Smile"]) {
+			/* Обычный вид сайта */
+			div#chatroom-footer div#chat-input-wrapper > button:has(svg[data-ds-icon="Smile"]),
+			/* В миниатюрном виде сайта (когда окно браузера маленькое) */
+			div#chat-input-wrapper button:has(svg[data-ds-icon="Keyboard"]) {
 				display: none !important;
 			}
 		}
@@ -6849,24 +6852,33 @@ purple3=#9048FF
 		
 		/* Отключить отображение кнопки вызова дефолтного 🙂 меню смайлов, если есть меню смайлов от 7tv */
 		if chat_input-area_btn_emoji-menu_disable_if-7tv {
-			div#chat-input-wrapper:has(seventv-container > button.seventv-emote-menu-button) > button:has(svg[data-ds-icon="Smile"]) {
+			/* Обычный вид сайта */
+			div#chat-input-wrapper:has(seventv-container > button.seventv-emote-menu-button) > button:has(svg[data-ds-icon="Smile"]),
+			/* В миниатюрном виде сайта (когда окно браузера маленькое) */
+			div#chat-input-wrapper button:has(svg[data-ds-icon="Keyboard"]) {
 				display: none !important;
 			}
 		}
 		
 		
 		/* Без наведения курсора */
-		div#chat-input-wrapper button:has(svg[data-ds-icon="Smile"]) {
-			color: chat_input-area_btn_emoji-menu_color !important;
-			width: 2.25rem !important;
-			height: 2.25rem !important;
-		}
+			/* Обычный вид сайта */
+			div#chat-input-wrapper button:has(svg[data-ds-icon="Smile"]),
+			/* В миниатюрном виде сайта (когда окно браузера маленькое) */
+			div#chat-input-wrapper button:has(svg[data-ds-icon="Keyboard"]) {
+				color: chat_input-area_btn_emoji-menu_color !important;
+				width: 2.25rem !important;
+				height: 2.25rem !important;
+			}
 	
 		/* При наведении курсора */
-		div#chat-input-wrapper button:has(svg[data-ds-icon="Smile"]):hover {
-			background-color: rgba(66, 71, 77, .005) !important;
-			filter: drop-shadow(0px 0px 4px chat_input-area_btn_emoji-menu_color) !important;
-		}
+			/* Обычный вид сайта */
+			div#chat-input-wrapper button:has(svg[data-ds-icon="Smile"]):hover,
+			/* В миниатюрном виде сайта (когда окно браузера маленькое) */
+			div#chat-input-wrapper button:has(svg[data-ds-icon="Keyboard"]):hover {
+				background-color: rgba(66, 71, 77, .005) !important;
+				filter: drop-shadow(0px 0px 4px chat_input-area_btn_emoji-menu_color) !important;
+			}
 	}
 	
 	
@@ -7181,20 +7193,29 @@ purple3=#9048FF
 		}
 	}
 	
+			/* Обычный вид сайта */
+
+			/* В миниатюрном виде сайта (когда окно браузера маленькое) */
 	
-	/* Кнопка отправки сообщения в чат */
+	/* Кнопка "Отправить" сообщения в чат */
 	if chat_under-input-area_btn_send-message_toggle {
 		/* Без наведения курсора */
-		div#chatroom-footer div.z-common button#send-message-button {
-			background-color: chat_under-input-area_btn_send-message_color !important;
-			background-image: none !important;
-			color: chat_under-input-area_btn_send-message_text_color !important;
-		}
+			/* Обычный вид сайта */
+			div#chatroom-footer div.z-common button#send-message-button,
+ 			/* В миниатюрном виде сайта (когда окно браузера маленькое) */
+			div#chatroom-footer div.z-common button:has(svg[data-ds-icon="Send"])	{
+				background-color: chat_under-input-area_btn_send-message_color !important;
+				background-image: none !important;
+				color: chat_under-input-area_btn_send-message_text_color !important;
+			}
 	
 		/* При наведении курсора */
-		div#chatroom-footer div.z-common button#send-message-button:hover {
-			filter: drop-shadow(0px 0px 4px chat_under-input-area_btn_send-message_color) !important;
-		}
+			/* Обычный вид сайта */
+			div#chatroom-footer div.z-common button#send-message-button:hover,
+ 			/* В миниатюрном виде сайта (когда окно браузера маленькое) */
+			div#chatroom-footer div.z-common button:has(svg[data-ds-icon="Send"]):hover	{
+				filter: drop-shadow(0px 0px 4px chat_under-input-area_btn_send-message_color) !important;
+			}
 	}
 }
 	
