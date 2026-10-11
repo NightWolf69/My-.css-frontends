@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [YT] YouTube Enhancement
 @namespace      https://github.com/NightWolf69
-@version        1.0.6-pre-release
+@version        1.0.7
 @description    Улучшения, исправления, кастомизация, и прочие полезности для "YouTube", "YouTube Shorts" и "YouTube Streams"
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -124,7 +124,7 @@
 @var	color 			chat_common-user_timestamp_color--d 					"╠═        Цвет ⏲️ времени отправки сообщения в чат ⬛:"											grey
 @var	color 			chat_common-user_timestamp_color--l 					"╠═        Цвет ⏲️ времени отправки сообщения в чат ⬜:"											grey
 @var	color 			chat_common-user_username_color--d 						"╠═        Цвет @ имени пользователя в чате ⬛:"													lightgrey
-@var	color 			chat_common-user_username_color--l 						"╠═        Цвет @ имени пользователя в чате ⬜:"													darkgrey
+@var	color 			chat_common-user_username_color--l 						"╠═        Цвет @ имени пользователя в чате ⬜:"													grey
 @var	select  	header-4-line-divider-3										"║"														 										{" ":"divider"}
 @var	checkbox		chat_member-user_toggle									"╠    Изменение внешнего вида у «Платного подписчика 💲» в чате:"									1
 @var	select 			chat_member-user_timestamp_select 						"╠═        Время отправки сообщения в чат:"				{"По умолчанию":"default", "Вкл.":"on", "Откл.":"off"}
@@ -138,7 +138,7 @@
 @var	color 			chat_verified-user_timestamp_color--d 					"╠═        Цвет ⏲️ времени отправки сообщения в чат ⬛:"											olive
 @var	color 			chat_verified-user_timestamp_color--l 					"╠═        Цвет ⏲️ времени отправки сообщения в чат ⬜:"											olive
 @var	color 			chat_verified-user_username_color--d 					"╠═        Цвет @ имени пользователя в чате ⬛:"													yellow
-@var	color 			chat_verified-user_username_color--l 					"╠═        Цвет @ имени пользователя в чате ⬜:"													yellow
+@var	color 			chat_verified-user_username_color--l 					"╠═        Цвет @ имени пользователя в чате ⬜:"													#C9BC02
 @var	select  	header-4-line-divider-5										"║"														 										{" ":"divider"}
 @var	checkbox		chat_verified-member-user_toggle						"╠    Изменение внешнего вида у «Платный Верифицированного  подписчик 💲✔️» в чате:"			1
 @var	select 			chat_verified-member-user_timestamp_select 				"╠═        Время отправки сообщения в чат:"				{"По умолчанию":"default", "Вкл.":"on", "Откл.":"off"}
@@ -159,9 +159,9 @@
 @var	checkbox		chat_verified-moderator-user_toggle						"╠    Изменение внешнего вида у «Верифицированного модератора ✔️🛠» в чате:"					1
 @var	select 			chat_verified-moderator-user_timestamp_select 			"╠═        Время отправки сообщения в чат:"				{"По умолчанию":"default", "Вкл.":"on", "Откл.":"off"}
 @var	color 			chat_verified-moderator-user_timestamp_color--d 		"╠═        Цвет ⏲️ времени отправки сообщения в чат ⬛:"											lightseagreen
-@var	color 			chat_verified-moderator-user_timestamp_color--l 		"╠═        Цвет ⏲️ времени отправки сообщения в чат ⬜:"											lightseagreen
+@var	color 			chat_verified-moderator-user_timestamp_color--l 		"╠═        Цвет ⏲️ времени отправки сообщения в чат ⬜:"											darkcyan
 @var	color 			chat_verified-moderator-user_username_color--d 			"╠═        Цвет @ имени пользователя в чате ⬛:"													cyan
-@var	color 			chat_verified-moderator-user_username_color--l 			"╠═        Цвет @ имени пользователя в чате ⬜:"													turquoise
+@var	color 			chat_verified-moderator-user_username_color--l 			"╠═        Цвет @ имени пользователя в чате ⬜:"													lightseagreen
 @var	select  	header-4-line-divider-9										"║"														 										{" ":"divider"}
 @var	checkbox		chat_owner-user_toggle									"╠    Изменение внешнего вида у «Владельца канала 🔴» в чате:"									1
 @var	select 			chat_owner-user_timestamp_select 						"╠═        Время отправки сообщения в чат:"				{"По умолчанию":"default", "Вкл.":"on", "Откл.":"off"}
@@ -178,7 +178,7 @@
 @var	select  	header-4-line-divider-11									"║"														 										{" ":"divider"}
 @var	checkbox		chat-msg_chess-bg_toggle								"╠    Фон ячейки сообщения закрашенный через один:"												1
 @var	color 			chat-msg_chess-bg_color--d 								"╠═        Цвет фона ячейки сообщения ⬛:"														#C3C3C30B
-@var	color 			chat-msg_chess-bg_color--l 								"╠═        Цвет фона ячейки сообщения ⬜:"														#C3C3C340
+@var	color 			chat-msg_chess-bg_color--l 								"╠═        Цвет фона ячейки сообщения ⬜:"														#C3C3C350
 @var	select  	header-4-line-divider-12									"║"														 										{" ":"divider"}
 @var	checkbox		chat-msg_chess-bg-hover_toggle							"╠    Фон ячейки сообщения при наведении курсора:"												1
 @var	color 			chat-msg_chess-bg-hover_color--d 						"╠═        Цвет фона ячейки сообщения ⬛:"														#FFFFFF1F
@@ -195,19 +195,13 @@
 @var	select 			chat_username_hyperchat_behavior_select 				"╠    Имя пользователя  (HyperChat):"																				{"Подчёркивание при наведении курсора":"underline", "Отключение перехода на канал пользователя":"text"}
 @var	select  	header-4-line-divider-18									"║"														 										{" ":"divider"}
 @var	checkbox		chat-msg_user-leaderboard-top_toggle					"╠    Изменение кнопки топа активности чаттерса «👑 #1 / #2 / #3»:"								1
-@var	checkbox		chat-msg_user-leaderboard-top1_icon_disable				"╠═        Отключить отображение иконки «👑» у #1:"												1
-@var	checkbox		chat-msg_user-leaderboard-top1_text_disable				"╠═        Отключить отображение «номера в топе» у #1:"											0
-@var	color 			chat-msg_user-leaderboard-top1_btn-color--d				"╠═        Цвет кнопки у #1 ⬛:"																	#7B3EDB
-@var	color 			chat-msg_user-leaderboard-top1_btn-color--l				"╠═        Цвет кнопки у #1 ⬜:"																	#7B3EDB
-@var	color 			chat-msg_user-leaderboard-top1_text-color--d			"╠═        Цвет иконки и текста у #1 ⬛:"														white
-@var	color 			chat-msg_user-leaderboard-top1_text-color--l			"╠═        Цвет иконки и текста у #1 ⬜:"														#000
-@var	checkbox		chat-msg_user-leaderboard-top2-3_icon_disable			"╠═        Отключить отображение иконки «👑» у #2 / #3:"										1
-@var	checkbox		chat-msg_user-leaderboard-top2-3_text_disable			"╠═        Отключить отображение «номера в топе» у #2 / #3:"									0
-@var	color 			chat-msg_user-leaderboard-top2-3_btn-color--d			"╠═        Цвет кнопки у #2 / #3 ⬛:"															#36008C
-@var	color 			chat-msg_user-leaderboard-top2-3_btn-color--l			"╠═        Цвет кнопки у #2 / #3 ⬜:"															#36008C
-@var	color 			chat-msg_user-leaderboard-top2-3_text-color--d			"╠═        Цвет иконки и текста у #2 / #3 ⬛:"													white
-@var	color 			chat-msg_user-leaderboard-top2-3_text-color--l			"╠═        Цвет иконки и текста у #2 / #3 ⬜:"													#000
-@var	select  	header-4-line-divider-20									"║"														 										{" ":"divider"}
+@var	checkbox		chat-msg_user-leaderboard-top_icon_disable				"╠═        Отключить отображение иконки «👑»:"													1
+@var	checkbox		chat-msg_user-leaderboard-top_text_disable				"╠═        Отключить отображение «#»:"															0
+@var	color 			chat-msg_user-leaderboard-top_btn-color--d				"╠═        Цвет кнопки у #1 ⬛:"																	#7B3EDB
+@var	color 			chat-msg_user-leaderboard-top_btn-color--l				"╠═        Цвет кнопки у #1 ⬜:"																	#36008C
+@var	color 			chat-msg_user-leaderboard-top_text-color--d				"╠═        Цвет иконки и текста у #1 ⬛:"														white
+@var	color 			chat-msg_user-leaderboard-top_text-color--l				"╠═        Цвет иконки и текста у #1 ⬜:"														white
+@var	select  	header-4-line-divider-19									"║"														 										{" ":"divider"}
 @var	checkbox		chat-msg_behavior_toggle								"╠    Внешний вид сообщений в чате:"															1
 @var	color 			chat-msg_text_color--d 									"╠═        Цвет текста сообщений ⬛:"															white
 @var	color 			chat-msg_text_color--l 									"╠═        Цвет текста сообщений ⬜:"															#000
@@ -217,11 +211,11 @@
 @var	color 			chat-msg_link_color-hover--l							"╠═        Цвет ссылок в сообщении при наведении курсора ⬜:"									red
 @var	checkbox		chat-msg_text_bg_toggle									"╠═        Дополнительное выделение текста (фоновая тень под текстом):"							1
 @var	number		chat-msg_text_bg_value										"╠══               Интенсивность выделения текст (размер тени под текстом):"					[0,0,10]
-@var	select  	header-4-line-divider-19									"║"														 										{" ":"divider"}
-@var	checkbox		chat-default-msg_disable_toggle							"╠    Убрать сообщение в чате «Добро пожаловать в чат!»:"										1
 @var	select  	header-4-line-divider-20									"║"														 										{" ":"divider"}
-@var	checkbox		chat-default-hyperchat-msg_disable_toggle				"╠    Убрать сообщение-баннер от HyperChat:"													1
+@var	checkbox		chat-default-msg_disable_toggle							"╠    Убрать сообщение в чате «Добро пожаловать в чат!»:"										1
 @var	select  	header-4-line-divider-21									"║"														 										{" ":"divider"}
+@var	checkbox		chat-default-hyperchat-msg_disable_toggle				"╠    Убрать сообщение-баннер от HyperChat:"													1
+@var	select  	header-4-line-divider-22									"║"														 										{" ":"divider"}
 @var	checkbox		chat-scrolldown-btn_toggle								"╠    Изменение кнопки «⬇️» прокрутки чата к самым последним сообщениям:"						1
 @var	color 			chat-scrolldown-btn_arrow_color--d 						"╠═        Цвет стрелки ⬇️ ⬛:"																	white
 @var	color 			chat-scrolldown-btn_bg_color--d 						"╠═        Цвет фона кнопки ⬛:"																	#0F0F0F
@@ -229,121 +223,147 @@
 @var	color 			chat-scrolldown-btn_arrow_color--l 						"╠═        Цвет стрелки ⬇️ ⬜:"																	white
 @var	color 			chat-scrolldown-btn_bg_color--l 						"╠═        Цвет фона кнопки ⬜:"																	#167AC6
 @var	color 			chat-scrolldown-btn_glow_color--l 						"╠═        Цвет внешнего свечения кнопки ⬜:"													#2196F3
-@var	select  	header-4-line-divider-22									"║"														 										{" ":"divider"}
-@var	select  	header-4-divider-2											"╠════════ ВНЕШНИИЙ ВИД ЧАТА: СООБЩЕНИЕ УПОМИНАЮЩЕЕ МЕНЯ ═════════╣"							{" ":"divider"}
 @var	select  	header-4-line-divider-23									"║"														 										{" ":"divider"}
+@var	select  	header-4-divider-2											"╠════════ ВНЕШНИИЙ ВИД ЧАТА: СООБЩЕНИЕ УПОМИНАЮЩЕЕ МЕНЯ ═════════╣"							{" ":"divider"}
+@var	select  	header-4-line-divider-24									"║"														 										{" ":"divider"}
 @var	checkbox		chat-msg_mention-bg_toggle								"╠    Фон ячейки сообщения в котором меня @упомянули:"											1
 @var	color 			chat-msg_mention-bg_color--d 							"╠═        Цвет фона ячейки сообщения с упоминанием ⬛:"											#FF572269
 @var	color 			chat-msg_mention-bg_color--l 							"╠═        Цвет фона ячейки сообщения с упоминанием ⬜:"											#FF572269
 @var	color 			chat-msg_mention-bg-hover_color--d 						"╠═        Цвет фона ячейки сообщения с упоминанием, при наведении курсора ⬛:"					#FF572289
 @var	color 			chat-msg_mention-bg-hover_color--l 						"╠═        Цвет фона ячейки сообщения с упоминанием, при наведении курсора ⬜:"					#FF572289
-@var	select  	header-4-line-divider-24									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-25									"║"														 										{" ":"divider"}
 @var	checkbox		chat-msg_mention_vertical-line_toggle					"╠    Добавить вертикальную пометку ячейке сообщения с упоминанием меня:"						1
 @var	color 			chat-msg_mention_vertical-line--d 						"╠═        Цвет вертикальной пометки ⬛:"														#FF5722
 @var	color 			chat-msg_mention_vertical-line--l 						"╠═        Цвет вертикальной пометки ⬜:"														#FF5722
-@var	select  	header-4-line-divider-25									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-26									"║"														 										{" ":"divider"}
 @var	checkbox		chat-msg_mention_timestamp_toggle						"╠    Изменение ⏲️ временной отметки у сообщения, в котором меня @упоминают:"					1
 @var	select 			chat-msg_mention_timestamp_select 						"╠═        Время отправки сообщения в котором меня @упоминают:"														{"По умолчанию":"default", "Вкл. + наследовать цвет текста":"on-inherit", "Вкл. + задать свой цвет текста":"on-color", "Откл.":"off"}
 @var	color 			chat-msg_mention_timestamp_color--d 					"╠══               Цвет ⏲️ времени отправки сообщения с @упоминанием меня ⬛:"					#FF5722
 @var	color 			chat-msg_mention_timestamp_color--l 					"╠══               Цвет ⏲️ времени отправки сообщения с @упоминанием меня ⬜:"					#FF5722
-@var	select  	header-4-line-divider-26									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-27									"║"														 										{" ":"divider"}
 @var	checkbox		chat-msg_mention_toggle									"╠    Изменение цвета выделения, моего @упоминания в сообщении:"								1
 @var	color 			chat-msg_mention_color--d 								"╠═        Цвет выделения моего @упоминания в сообщении ⬛:"										#FF5722
 @var	color 			chat-msg_mention_color--l 								"╠═        Цвет выделения моего @упоминания в сообщении ⬜:"										#FF5722
-@var	select  	header-4-line-divider-27									"║"														 										{" ":"divider"}
-@var	select  	header-4-divider-3											"╠════════════ ВНЕШНИИЙ ВИД ЧАТА: УДАЛЁННОЕ СООБЩЕНИЕ ═════════════╣"							{" ":"divider"}
 @var	select  	header-4-line-divider-28									"║"														 										{" ":"divider"}
-@var	checkbox		chat-msg_deleted-bg_toggle								"╠    Фон ячейки удалённого сообщения:"															1
-@var	color 			chat-msg_deleted-bg_color--d 							"╠═        Цвет ячейки удалённого сообщения ⬛:"													#FF000020
-@var	color 			chat-msg_deleted-bg_color--l 							"╠═        Цвет ячейки удалённого сообщения ⬜:"													#FF000020
-@var	color 			chat-msg_deleted-bg-hover_color--d 						"╠═        Цвет ячейки удалённого сообщения, при наведении курсора ⬛:"							#FF000040
-@var	color 			chat-msg_deleted-bg-hover_color--l 						"╠═        Цвет ячейки удалённого сообщения, при наведении курсора ⬜:"							#FF000040
+@var	select  	header-4-divider-3											"╠════════ ВНЕШНИИЙ ВИД ЧАТА: ПОЛЬЗОВАТЕЛЬ СТАЛ СПОНСОРОМ ══════════╣"							{" ":"divider"}
 @var	select  	header-4-line-divider-29									"║"														 										{" ":"divider"}
+@var	checkbox		chat-msg_become-member_vertical-line_toggle				"╠    Добавить вертикальную пометку ячейке сообщения о 💲 покупке подписки:"					1
+@var	color 			chat-msg_become-member_vertical-line--d 				"╠═        Цвет вертикальной пометки ⬛:"														#0F9D58
+@var	color 			chat-msg_become-member_vertical-line--l 				"╠═        Цвет вертикальной пометки ⬜:"														#0A8043
+@var	select  	header-4-line-divider-30									"║"														 										{" ":"divider"}
+@var	select 			chat-msg_become-member_timestamp_select 				"╠═        Время отправки сообщения в чат (HyperChat):"															{"По умолчанию":"default", "Вкл.":"on", "Откл.":"off"}
+@var	color 			chat-msg_become-member_timestamp_color--d 				"╠═        Цвет ⏲️ времени отправки сообщения в чат ⬛:"											limegreen
+@var	color 			chat-msg_become-member_timestamp_color--l 				"╠═        Цвет ⏲️ времени отправки сообщения в чат ⬜:"											seagreen
+@var	select  	header-4-line-divider-31									"║"														 										{" ":"divider"}
+@var	checkbox		chat-msg_become-member_bg_toggle						"╠    Фоновая плашка внутри сообщения о 💲 покупке платной подписки:"							1
+@var	color 			chat-msg_become-member_bg_color--d 						"╠═        Цвет имени пользователя ⬛:"															transparent
+@var	color 			chat-msg_become-member_bg_color--l 						"╠═        Цвет имени пользователя ⬜:"															transparent
+@var	select  	header-4-line-divider-32									"║"														 										{" ":"divider"}
+@var	checkbox		chat-msg_become-member_username_toggle					"╠    Изминение цвета @ имени 👤 пользователя, купившего 💲 платную подписку:"					1
+@var	color 			chat-msg_become-member_username_color--d 				"╠═        Цвет имени пользователя ⬛:"															lime
+@var	color 			chat-msg_become-member_username_color--l 				"╠═        Цвет имени пользователя ⬜:"															green
+@var	select  	header-4-line-divider-33									"║"														 										{" ":"divider"}
+@var	checkbox		chat-msg_become-member_text_toggle						"╠    Изминение цвета сообщения о  том, какой тир подписки был 💲 куплен:"						1
+@var	color 			chat-msg_become-member_text_color--d 					"╠═        Цвет текста ⬛:"																		white
+@var	color 			chat-msg_become-member_text_color--l 					"╠═        Цвет текста ⬜:"																		#000
+@var	select  	header-4-line-divider-34									"║"														 										{" ":"divider"}
+@var	checkbox		chat-msg_become-member_hover_toggle						"╠    Цветовой акцент в правой части сообщения о покупке подписки, при наведении  курсора:"			1
+@var	color 			chat-msg_become-member_hover_color--d 					"╠═        Цвет акцента ⬛:"																		#0F9D58
+@var	color 			chat-msg_become-member_hover_color--l 					"╠═        Цвет акцента ⬜:"																		#0A8043
+@var	select  	header-4-line-divider-35									"║"														 										{" ":"divider"}
+@var	select  	header-4-divider-4											"╠════════════ ВНЕШНИИЙ ВИД ЧАТА: УДАЛЁННОЕ СООБЩЕНИЕ ═════════════╣"							{" ":"divider"}
+@var	select  	header-4-line-divider-36									"║"														 										{" ":"divider"}
+@var	checkbox		chat-msg_deleted-bg_toggle								"╠    Фон ячейки удалённого сообщения:"															1
+@var	color 			chat-msg_deleted-bg_color--d 							"╠═        Цвет ячейки удалённого сообщения ⬛:"													#FF000069
+@var	color 			chat-msg_deleted-bg_color--l 							"╠═        Цвет ячейки удалённого сообщения ⬜:"													#FF000069
+@var	color 			chat-msg_deleted-bg-hover_color--d 						"╠═        Цвет ячейки удалённого сообщения, при наведении курсора ⬛:"							#FF000089
+@var	color 			chat-msg_deleted-bg-hover_color--l 						"╠═        Цвет ячейки удалённого сообщения, при наведении курсора ⬜:"							#FF000089
+@var	select  	header-4-line-divider-37									"║"														 										{" ":"divider"}
 @var	checkbox		chat-msg_deleted_vertical-line_toggle					"╠    Добавить вертикальную пометку ячейке удалённого сообщения:"								1
 @var	color 			chat-msg_deleted_vertical-line--d 						"╠═        Цвет вертикальной пометки ⬛:"														crimson
 @var	color 			chat-msg_deleted_vertical-line--l 						"╠═        Цвет вертикальной пометки ⬜:"														crimson
-@var	select  	header-4-line-divider-30									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-38									"║"														 										{" ":"divider"}
 @var	checkbox		chat-msg_deleted_timestamp_toggle						"╠    Изменение ⏲️ временной отметки у удалённого сообщения:"									1
 @var	select 			chat-msg_deleted_timestamp_select 						"╠═        Время отправки  удалённого сообщения:"																	{"По умолчанию":"default", "Вкл. + наследовать цвет текста":"on-inherit", "Вкл. + задать свой цвет текста":"on-color", "Откл.":"off"}
 @var	color 			chat-msg_deleted_timestamp_color--d 					"╠══               Цвет ⏲️ времени отправки удалённого сообщения ⬛:"							crimson
-@var	color 			chat-msg_deleted_timestamp_color--l 					"╠══               Цвет ⏲️ времени отправки удалённого сообщения ⬜:"							crimson
-@var	select  	header-4-line-divider-31									"║"														 										{" ":"divider"}
+@var	color 			chat-msg_deleted_timestamp_color--l 					"╠══               Цвет ⏲️ времени отправки удалённого сообщения ⬜:"							darkred
+@var	select  	header-4-line-divider-39									"║"														 										{" ":"divider"}
 @var	checkbox		chat-msg_deleted_strike-and_italic_disable_toggle		"╠    Убрать «З̶а̶ч̶ё̶̶р̶к̶н̶у̶т̶о̶с̶т̶ь̶» и «Курсивность» у удалённых сообщений:"								1
-@var	select  	header-4-line-divider-32									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-40									"║"														 										{" ":"divider"}
 @var	checkbox		chat-msg_deleted_show-deleted_toggle					"╠    Убрать «Просмотреть удалённое сообщение»  у удалённого сообщения (Frappe):"				0
-@var	select  	header-4-line-divider-33									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-41									"║"														 										{" ":"divider"}
 @var	checkbox		chat-msg_deleted_deleted-hint_toggle					"╠    Добавление подписи (Удалено) / (Deleted) к удалённому сообщению:"							1
 @var	checkbox		chat-msg_deleted_deleted-hint_switch					"╠═        Какую надпись использовать (Удалено) или (Deleted):"									0
 @var	color 			chat-msg_deleted_deleted-hint_color--d 					"╠═        Цвет подписи (Удалено) / (Deleted) ⬛:"												grey
-@var	color 			chat-msg_deleted_deleted-hint_color--l 					"╠═        Цвет подписи (Удалено) / (Deleted) ⬜:"												darkgrey
-@var	select  	header-4-line-divider-34									"║"														 										{" ":"divider"}
-@var	select  	header-4-divider-4											"╠═══════ ВНЕШНИИЙ ВИД ЧАТА: СООБЩЕНИЕ О ВЫДАЧИ ТАЙМАЧА/БАНА (🛠) ═══════╣"						{" ":"divider"}
-@var	select  	header-4-line-divider-35									"║"														 										{" ":"divider"}
+@var	color 			chat-msg_deleted_deleted-hint_color--l 					"╠═        Цвет подписи (Удалено) / (Deleted) ⬜:"												#666
+@var	select  	header-4-line-divider-42									"║"														 										{" ":"divider"}
+@var	select  	header-4-divider-5											"╠═══════ ВНЕШНИИЙ ВИД ЧАТА: СООБЩЕНИЕ О ВЫДАЧИ ТАЙМАЧА/БАНА (🛠) ═══════╣"						{" ":"divider"}
+@var	select  	header-4-line-divider-43									"║"														 										{" ":"divider"}
 @var	checkbox		chat_moderator-action-msg-bg_toggle						"╠    Фон ячейки с сообщением, о ⏳Таймаче/🚫Бане/⤴️Разбане 👤Пользователя, 🛠Модератором:"		1
 @var	color 			chat_moderator-action-msg--d 							"╠═        Цвет фона ячейки сообщения с упоминанием ⬛:"											#00FF0016
-@var	color 			chat_moderator-action-msg--l 							"╠═        Цвет фона ячейки сообщения с упоминанием ⬜:"											#00FF0016
-@var	select  	header-4-line-divider-36									"║"														 										{" ":"divider"}
+@var	color 			chat_moderator-action-msg--l 							"╠═        Цвет фона ячейки сообщения с упоминанием ⬜:"											#00FF0030
+@var	select  	header-4-line-divider-44									"║"														 										{" ":"divider"}
 @var	checkbox		chat_moderator-action-msg_vertical-line_toggle			"╠    Изменение вертикальной пометки ячейки с сообщением, о ⏳Таймаче/🚫Бане/⤴️Разбане:"			1
 @var	color 			chat_moderator-action-msg_vertical-line--d 				"╠═        Цвет фона ячейки сообщения с упоминанием ⬛:"											lime
 @var	color 			chat_moderator-action-msg_vertical-line--l 				"╠═        Цвет фона ячейки сообщения с упоминанием ⬜:"											lime
-@var	select  	header-4-line-divider-37									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-45									"║"														 										{" ":"divider"}
 @var	checkbox		chat_moderator-action-msg_timestamp_toggle				"╠    Изменение ⏲️ временной отметки у сообщения, о ⏳Таймаче/🚫Бане/⤴️Разбане:"					1
 @var	select 			chat_moderator-action-msg_timestamp_select 				"╠═        Время отправки сообщения в котором меня @упоминают:"														{"По умолчанию":"default", "Вкл. + наследовать цвет текста":"on-inherit", "Вкл. + задать свой цвет текста":"on-color", "Откл.":"off"}
 @var	color 			chat_moderator-action-msg_timestamp_color--d 			"╠══               Цвет ⏲️ времени уведомления о ⏳Таймаче/🚫Бане/⤴️Разбане ⬛:"				seagreen
 @var	color 			chat_moderator-action-msg_timestamp_color--l 			"╠══               Цвет ⏲️ времени уведомления о ⏳Таймаче/🚫Бане/⤴️Разбане ⬜:"				green
-@var	select  	header-4-line-divider-38									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-46									"║"														 										{" ":"divider"}
 @var	checkbox		chat-moderator-action-msg_italic_disable_toggle			"╠    Убрать «Курсивность» у сообщения, о ⏳Таймаче/🚫Бане/⤴️Разбане:"							1
-@var	select  	header-4-line-divider-39									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-47									"║"														 										{" ":"divider"}
 @var	checkbox		chat-moderator-action-msg_usernames-highlight_toggle	"╠    Выделить ники 🛠Модератора и 👤Пользователя, в сообщении о ⏳Таймаче/🚫Бане/⤴️Разбане:"	1
-@var	select  	header-4-line-divider-40									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-48									"║"														 										{" ":"divider"}
 @var	checkbox		chat-moderator-action-msg_easy_copy_username_toggle		"╠    Выделение имён 🛠Модератора и 👤Пользователя одним кликом по ним:"						1
-@var	select  	header-4-line-divider-41									"║"														 										{" ":"divider"}
-@var	checkbox		chat-moderator-action-msg_timeout-duration_toggle		"╠    Выделение имён 🛠Модератора и 👤Пользователя одним кликом по ним:"						1
+@var	select  	header-4-line-divider-49									"║"														 										{" ":"divider"}
+@var	checkbox		chat-moderator-action-msg_timeout-duration_toggle		"╠    Продолжительность выданного отстранения в «сек.» в сообщении о ⏳Таймаче:"					1
 @var	color 			chat-moderator-action-msg_timeout-duration--d 			"╠═        Цвет продолжительности ⏳ Таймача ⬛:"												lightgreen
-@var	color 			chat-moderator-action-msg_timeout-duration--l 			"╠═        Цвет продолжительности ⏳ Таймача ⬜:"												lightgreen
-@var	select  	header-4-line-divider-42									"║"														 										{" ":"divider"}
+@var	color 			chat-moderator-action-msg_timeout-duration--l 			"╠═        Цвет продолжительности ⏳ Таймача ⬜:"												darkgreen
+@var	select  	header-4-line-divider-50									"║"														 										{" ":"divider"}
 @var	checkbox		chat-moderator-action-bottem_toltip_toggle				"╠    Сделать уведомление всплывающее внизу экрана, о действии модератора - компактнее:"		1
 @var	color 			chat-moderator-action-bottem_toltip_bg_color--d 		"╠═        Фоновый цвет всплывающей плашки ⬛:"													#323232C0
-@var	color 			chat-moderator-action-bottem_toltip_bg_color--l 		"╠═        Фоновый цвет всплывающей плашки ⬜:"													#323232C0
-@var	select  	header-4-line-divider-43									"║"														 										{" ":"divider"}
-@var	select  	header-4-divider-5											"╠══════════ ВНЕШНИИЙ ВИД ЧАТА: ОШИБКА ПОДКЛЮЧЕНИЯ К ЧАТУ ══════════╣"							{" ":"divider"}
-@var	select  	header-4-line-divider-44									"║"														 										{" ":"divider"}
+@var	color 			chat-moderator-action-bottem_toltip_bg_color--l 		"╠═        Фоновый цвет всплывающей плашки ⬜:"													#32323280
+@var	select  	header-4-line-divider-51									"║"														 										{" ":"divider"}
+@var	select  	header-4-divider-6											"╠══════════ ВНЕШНИИЙ ВИД ЧАТА: ОШИБКА ПОДКЛЮЧЕНИЯ К ЧАТУ ══════════╣"							{" ":"divider"}
+@var	select  	header-4-line-divider-52									"║"														 										{" ":"divider"}
 @var	checkbox		chat_server-error-msg-bg_toggle							"╠    Фон ячейки с сообщением о проблеме с подключением к чату:"								1
 @var	color 			chat_server-error-msg_bg--d 							"╠═        Цвет фона ячейки сообщения, о проблеме подключения к чату ⬛:"						midnightblue
-@var	color 			chat_server-error-msg_bg--l 							"╠═        Цвет фона ячейки сообщения, о проблеме подключения к чату ⬜:"						midnightblue
-@var	select  	header-4-line-divider-45									"║"														 										{" ":"divider"}
+@var	color 			chat_server-error-msg_bg--l 							"╠═        Цвет фона ячейки сообщения, о проблеме подключения к чату ⬜:"						powderblue
+@var	select  	header-4-line-divider-53									"║"														 										{" ":"divider"}
 @var	checkbox		chat-server-error-msg_vertical-line_toggle				"╠    Добавить вертикальную пометку ячейке, c сообщением о проблеме подключения к чату:"		1
 @var	color 			chat-server-error-msg_vertical-line--d 					"╠═        Цвет вертикальной пометки ⬛:"														cyan
-@var	color 			chat-server-error-msg_vertical-line--l 					"╠═        Цвет вертикальной пометки ⬜:"														cyan
-@var	select  	header-4-line-divider-46									"║"														 										{" ":"divider"}
+@var	color 			chat-server-error-msg_vertical-line--l 					"╠═        Цвет вертикальной пометки ⬜:"														deepskyblue
+@var	select  	header-4-line-divider-54									"║"														 										{" ":"divider"}
 @var	checkbox		chat_server-error-msg_timestamp_toggle					"╠    Изменение ⏲️ временной отметки у сообщения, о проблеме подключения к чату:"				1
 @var	select 			chat_server-error-msg_timestamp_select 					"╠═        Время отправки сообщения о проблеме подключения к чату:"													{"По умолчанию":"default", "Вкл. + наследовать цвет текста":"on-inherit", "Вкл. + задать свой цвет текста":"on-color", "Откл.":"off"}
 @var	color 			chat_server-error-msg_timestamp_color--d 				"╠══               Цвет ⏲️ времени уведомления о проблеме подключения к чату ⬛:"				darkcyan
 @var	color 			chat_server-error-msg_timestamp_color--l 				"╠══               Цвет ⏲️ времени уведомления о проблеме подключения к чату ⬜:"				teal
-@var	select  	header-4-line-divider-47									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-55									"║"														 										{" ":"divider"}
 @var	checkbox		chat-server-error-msg_italic_disable_toggle				"╠    Убрать «Курсивность» у сообщения, о проблеме подключения к чату:"							1
-@var	select  	header-4-line-divider-48									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-56									"║"														 										{" ":"divider"}
 @var	checkbox		chat-server-error-msg_text_color_toggle					"╠    Изменение цвета текста у сообщения, о проблеме подключения к чату:"						1
-@var	color 			chat-server-error-msg_text_color--d 					"╠═        Цвет вертикальной пометки ⬛:"														white
-@var	color 			chat-server-error-msg_text_color--l 					"╠═        Цвет вертикальной пометки ⬜:"														white
-@var	select  	header-4-line-divider-49									"║"														 										{" ":"divider"}
-@var	select  	header-4-divider-6											"╠═════════════ ВНЕШНИИЙ ВИД ЧАТА: КОНТЕКСТНОЕ МЕНЮ ══════════════╣"							{" ":"divider"}
-@var	select  	header-4-line-divider-50									"║"														 										{" ":"divider"}
+@var	color 			chat-server-error-msg_text_color--d 					"╠═        Цвет текста ⬛:"																		white
+@var	color 			chat-server-error-msg_text_color--l 					"╠═        Цвет текста ⬜:"																		#000
+@var	select  	header-4-line-divider-57									"║"														 										{" ":"divider"}
+@var	select  	header-4-divider-7											"╠═════════════ ВНЕШНИИЙ ВИД ЧАТА: КОНТЕКСТНОЕ МЕНЮ ══════════════╣"							{" ":"divider"}
+@var	select  	header-4-line-divider-58									"║"														 										{" ":"divider"}
 @var	checkbox		chat_context-menu-btn_toggle							"╠    Изменение кнопки [⋮] вызова контекстного меню:"											1
 @var	checkbox		chat_context-menu-btn_rounded_toggle					"╠═        Скруглить кнопку:"																	1
 @var	select 			chat_context-menu-btn_bg_select 						"╠═        Выбрать тип фона кнопки:"																				{"По умолчанию":"default", "Свой цвет фона":"color", "Градиент":"gradient"}
 @var	color 			chat_context-menu-btn_bg_color--d		 				"╠══               Цвет для варианта «Свой цвет фона» ⬛:"										#53535F61
-@var	color 			chat_context-menu-btn_bg_color--l		 				"╠══               Цвет для варианта «Свой цвет фона» ⬜:"										#53535F61
+@var	color 			chat_context-menu-btn_bg_color--l		 				"╠══               Цвет для варианта «Свой цвет фона» ⬜:"										#8F8F8F5C
 @var	color 			chat_context-menu-btn_color--d		 					"╠═        Цвет кнопки ⬛:"																		white
-@var	color 			chat_context-menu-btn_color--l		 					"╠═        Цвет кнопки ⬜:"																		lightgrey
-@var	select  	header-4-line-divider-51									"║"														 										{" ":"divider"}
+@var	color 			chat_context-menu-btn_color--l		 					"╠═        Цвет кнопки ⬜:"																		grey
+@var	select  	header-4-line-divider-59									"║"														 										{" ":"divider"}
 @var	checkbox		chat_context-menu_hide-if-not-hover_toggle				"╠    Скрывать [⋮] контекстное окно, если курсор мыши не на нём, или не на кнопки его вызова:"	1
-@var	select  	header-4-line-divider-52									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-60									"║"														 										{" ":"divider"}
 @var	checkbox		chat_context-menu_toggle								"╠    Изменение пунктов [⋮] контекстного меню:"													1
 @var	checkbox		chat_context-menu-btn_history_toggle					"╠═        ► Отображение кнопки «📊 Действия на канале»:"										1
 @var	number			chat_context-menu-btn_history_order						"╠══               Смещение кнопки:"															[1,-10,10]
 @var	color			chat_context-menu-btn_history_color--d					"╠══               Цвет кнопки ⬛:"																#C39BFF
-@var	color			chat_context-menu-btn_history_color--l					"╠══               Цвет кнопки ⬜:"																#C39BFF
+@var	color			chat_context-menu-btn_history_color--l					"╠══               Цвет кнопки ⬜:"																darkorchid
 @var	checkbox		chat_context-menu-btn_person_circle_toggle				"╠═        ► Отображение кнопки «👨‍ Перейти на канал»:"										1
 @var	number			chat_context-menu-btn_person_circle_order				"╠══               Смещение кнопки:"															[3,-10,10]
 @var	color			chat_context-menu-btn_person_circle_color--d			"╠══               Цвет кнопки ⬛:"																deepskyblue
@@ -355,15 +375,23 @@
 @var	checkbox		chat_context-menu-btn_flag_toggle						"╠═        ► Отображение кнопки «🚩 Пожаловаться»:"												1
 @var	number			chat_context-menu-btn_flag_order						"╠══               Смещение кнопки:"															[-1,-10,10]
 @var	color			chat_context-menu-btn_flag_color--d						"╠══               Цвет кнопки ⬛:"																yellow
-@var	color			chat_context-menu-btn_flag_color--l						"╠══               Цвет кнопки ⬜:"																yellow
+@var	color			chat_context-menu-btn_flag_color--l						"╠══               Цвет кнопки ⬜:"																peru
+@var	checkbox		chat_context-menu-btn_memberships_toggle				"╠═        ► Отображение кнопки «🎗️ Стать спонсором»:"												1
+@var	number			chat_context-menu-btn_memberships_order					"╠══               Смещение кнопки:"															[-2,-10,10]
+@var	color			chat_context-menu-btn_memberships_color--d				"╠══               Цвет кнопки ⬛:"																#0F9D58
+@var	color			chat_context-menu-btn_memberships_color--l				"╠══               Цвет кнопки ⬜:"																#0A8043
+@var	checkbox		chat_context-menu-btn_hide-pined_toggle					"╠═        ► Отображение кнопки «❌ Закрыть закреплённое сообщение»:"							1
+@var	number			chat_context-menu-btn_hide-pined_order					"╠══               Смещение кнопки:"															[-2,-10,10]
+@var	color			chat_context-menu-btn_hide-pined_color--d				"╠══               Цвет кнопки ⬛:"																yellowgreen
+@var	color			chat_context-menu-btn_hide-pined_color--l				"╠══               Цвет кнопки ⬜:"																olive
 @var	checkbox		chat_context-menu-btn_delete_toggle						"╠═        ► Отображение кнопки «🗑 Удалить»:"													1
 @var	number			chat_context-menu-btn_delete_order						"╠══               Смещение кнопки:"															[-5,-10,10]
 @var	color			chat_context-menu-btn_delete_color--d					"╠══               Цвет кнопки ⬛:"																lightgreen
-@var	color			chat_context-menu-btn_delete_color--l					"╠══               Цвет кнопки ⬜:"																lightgreen
+@var	color			chat_context-menu-btn_delete_color--l					"╠══               Цвет кнопки ⬜:"																forestgreen
 @var	checkbox		chat_context-menu-btn_timeout_toggle					"╠═        ► Отображение кнопки «⏳ Временно исключить пользователя из обсуждения (таймач)»:"	1
 @var	number			chat_context-menu-btn_timeout_order						"╠══               Смещение кнопки:"															[-3,-10,10]
 @var	color			chat_context-menu-btn_timeout_color--d					"╠══               Цвет кнопки ⬛:"																#9048FF
-@var	color			chat_context-menu-btn_timeout_color--l					"╠══               Цвет кнопки ⬜:"																#9048FF
+@var	color			chat_context-menu-btn_timeout_color--l					"╠══               Цвет кнопки ⬜:"																rebeccapurple
 @var	checkbox		chat_context-menu-btn_ignor_toggle						"╠═        ► Отображение кнопки «🚫 Заблокировать (игнор)»:"									1
 @var	number			chat_context-menu-btn_ignor_order						"╠══               Смещение кнопки:"															[-2,-10,10]
 @var	color			chat_context-menu-btn_ignor_color--d					"╠══               Цвет кнопки ⬛:"																orangered
@@ -375,11 +403,11 @@
 @var	checkbox		chat_context-menu-btn_unban_toggle						"╠═        ► Отображение кнопки «➕ Разблакировать пользователя (анбан)»:"						1
 @var	number			chat_context-menu-btn_unban_order						"╠══               Смещение кнопки:"															[-2,-10,10]
 @var	color			chat_context-menu-btn_unban_color--d					"╠══               Цвет кнопки ⬛:"																#53FC18
-@var	color			chat_context-menu-btn_unban_color--l					"╠══               Цвет кнопки ⬜:"																#53FC18
+@var	color			chat_context-menu-btn_unban_color--l					"╠══               Цвет кнопки ⬜:"																seagreen
 @var	checkbox		chat_context-menu-btn_add-mod_toggle					"╠═        ► Отображение кнопки «🛠 Назначить Модером»:"										1
 @var	number			chat_context-menu-btn_add-mod_order						"╠══               Смещение кнопки:"															[4,-10,10]
 @var	color			chat_context-menu-btn_add-mod_color--d					"╠══               Цвет кнопки ⬛:"																lime
-@var	color			chat_context-menu-btn_add-mod_color--l					"╠══               Цвет кнопки ⬜:"																lime
+@var	color			chat_context-menu-btn_add-mod_color--l					"╠══               Цвет кнопки ⬜:"																limegreen
 @var	checkbox		chat_context-menu-btn_unmod_toggle						"╠═        ► Отображение кнопки «🛠 Удалить из списка модераторов»:"								1
 @var	number			chat_context-menu-btn_unmod_order						"╠══               Смещение кнопки:"															[4,-10,10]
 @var	color			chat_context-menu-btn_unmod_color--d					"╠══               Цвет кнопки ⬛:"																forestgreen
@@ -396,13 +424,13 @@
 @var	number			chat_context-menu-btn_hyperchat-settings_order			"╠══               Смещение кнопки:"															[5,-10,10]
 @var	color			chat_context-menu-btn_hyperchat-settings_color--d		"╠══               Цвет кнопки ⬛:"																white
 @var	color			chat_context-menu-btn_hyperchat-settings_color--l		"╠══               Цвет кнопки ⬜:"																#000
-@var	select  	header-4-line-divider-53									"║"														 										{" ":"divider"}
-@var	select  	header-4-divider-7											"╠══════════ ВНЕШНИИЙ ВИД ЧАТА: КНОПКИ МОДЕРАТОРА (ALT) ═════════════╣"							{" ":"divider"}
-@var	select  	header-4-line-divider-54									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-61									"║"														 										{" ":"divider"}
+@var	select  	header-4-divider-8											"╠══════════ ВНЕШНИИЙ ВИД ЧАТА: КНОПКИ МОДЕРАТОРА (ALT) ═════════════╣"							{" ":"divider"}
+@var	select  	header-4-line-divider-62									"║"														 										{" ":"divider"}
 @var	checkbox		chat_moderator-btn_near-left_to_user_toggle				"╠    Перенести кнопки 🗑/⏳/🚫 слева от пользователя, и убрать привязку к клавише Alt:"			1
-@var	select  	header-4-line-divider-55									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-63									"║"														 										{" ":"divider"}
 @var	checkbox		chat_moderator-btn_fix_overlaying_toggle				"╠    Фикс вылезания границ подложки с кнопками 🗑/⏳/🚫, за границы самого сообщение:"			1
-@var	select  	header-4-line-divider-56									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-64									"║"														 										{" ":"divider"}
 @var	checkbox		chat_moderator-btn_toggle								"╠    Изменение кнопок действий модератора:"													1
 @var	checkbox		chat_moderator-btn_delete-msg_toggle					"╠═        ► Изменение кнопки «🗑 Удалить»::"													1
 @var	checkbox		chat_moderator-btn_delete-msg_for_moderator_disable		"╠══               Отключить отображение кнопки применительно к «🛠Модератору»:"				0
@@ -410,57 +438,57 @@
 @var	number			chat_moderator-btn_delete-msg_order						"╠══               Смещение кнопки:"															[1,-1,1]
 @var	select 			chat_moderator-btn_delete-msg_bg_select 				"╠══               Выбрать тип фона кнопки:"																		{"Откл.":"off", "Свой цвет фона":"color", "Градиент":"gradient"}
 @var	color 			chat_moderator-btn_delete-msg_bg_color--d		 		"╠══               Цвет для варианта «Свой цвет фона» ⬛:"										#53535F61
-@var	color 			chat_moderator-btn_delete-msg_bg_color--l		 		"╠══               Цвет для варианта «Свой цвет фона» ⬜:"										#53535F61
+@var	color 			chat_moderator-btn_delete-msg_bg_color--l		 		"╠══               Цвет для варианта «Свой цвет фона» ⬜:"										#8F8F8F5C
 @var	color 			chat_moderator-btn_delete-msg_color--d		 			"╠══               Цвет кнопки ⬛:"																lightgreen
-@var	color 			chat_moderator-btn_delete-msg_color--l		 			"╠══               Цвет кнопки ⬜:"																lightgreen
+@var	color 			chat_moderator-btn_delete-msg_color--l		 			"╠══               Цвет кнопки ⬜:"																seagreen
 @var	checkbox		chat_moderator-btn_timeout-user_toggle					"╠═        ► Изменение кнопки «⏳ Отстранить»::"													1
 @var	checkbox		chat_moderator-btn_timeout-user_for_moderator_disable	"╠══               Отключить отображение кнопки применительно к «🛠Модератору»:"				0
 @var	checkbox		chat_moderator-btn_timeout-user_for_owner_disable		"╠══               Отключить отображение кнопки применительно к «🔴 Владельцу»:"				0
 @var	number			chat_moderator-btn_timeout-user_order					"╠══               Смещение кнопки:"															[0,-1,1]
 @var	select 			chat_moderator-btn_timeout-user_bg_select 				"╠══               Выбрать тип фона кнопки:"																		{"Откл.":"off", "Свой цвет фона":"color", "Градиент":"gradient"}
 @var	color 			chat_moderator-btn_timeout-user_bg_color--d		 		"╠══               Цвет для варианта «Свой цвет фона» ⬛:"										#53535F61
-@var	color 			chat_moderator-btn_timeout-user_bg_color--l		 		"╠══               Цвет для варианта «Свой цвет фона» ⬜:"										#53535F61
+@var	color 			chat_moderator-btn_timeout-user_bg_color--l		 		"╠══               Цвет для варианта «Свой цвет фона» ⬜:"										#8F8F8F5C
 @var	color 			chat_moderator-btn_timeout-user_color--d		 		"╠══               Цвет кнопки ⬛:"																#A970FF
-@var	color 			chat_moderator-btn_timeout-user_color--l		 		"╠══               Цвет кнопки ⬜:"																#A970FF
+@var	color 			chat_moderator-btn_timeout-user_color--l		 		"╠══               Цвет кнопки ⬜:"																blueviolet
 @var	checkbox		chat_moderator-btn_ban-user_toggle						"╠═        ► Изменение кнопки «🚫 Забанить»::"													1
 @var	checkbox		chat_moderator-btn_ban-user_for_moderator_disable		"╠══               Отключить отображение кнопки применительно к «🛠Модератору»:"				0
 @var	checkbox		chat_moderator-btn_ban-user_for_owner_disable			"╠══               Отключить отображение кнопки применительно к «🔴 Владельцу»:"				0
 @var	number			chat_moderator-btn_ban-user_order						"╠══               Смещение кнопки:"															[-1,-1,1]
 @var	select 			chat_moderator-btn_ban-user_bg_select 					"╠══               Выбрать тип фона кнопки:"																		{"Откл.":"off", "Свой цвет фона":"color", "Градиент":"gradient"}
 @var	color 			chat_moderator-btn_ban-user_bg_color--d		 			"╠══               Цвет для варианта «Свой цвет фона» ⬛:"										#53535F61
-@var	color 			chat_moderator-btn_ban-user_bg_color--l		 			"╠══               Цвет для варианта «Свой цвет фона» ⬜:"										#53535F61
+@var	color 			chat_moderator-btn_ban-user_bg_color--l		 			"╠══               Цвет для варианта «Свой цвет фона» ⬜:"										#8F8F8F5C
 @var	color 			chat_moderator-btn_ban-user_color--d		 			"╠══               Цвет кнопки ⬛:"																crimson
 @var	color 			chat_moderator-btn_ban-user_color--l		 			"╠══               Цвет кнопки ⬜:"																crimson
-@var	select  	header-4-line-divider-57									"║"														 										{" ":"divider"}
-@var	select  	header-4-divider-8											"╠═════════════ НИЖНЯЯ ЧАСТЬ ЧАТА: ПОЛЕ ВВОДА ТЕКСТА ═══════════════╣"							{" ":"divider"}
-@var	select  	header-4-line-divider-58									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-65									"║"														 										{" ":"divider"}
+@var	select  	header-4-divider-9											"╠═════════════ НИЖНЯЯ ЧАСТЬ ЧАТА: ПОЛЕ ВВОДА ТЕКСТА ═══════════════╣"							{" ":"divider"}
+@var	select  	header-4-line-divider-66									"║"														 										{" ":"divider"}
 @var	checkbox		chat_input-area_btn_bttv-emoji-menu_toggle				"╠    Изменение кнопки «😡 Меню смайлов» (bttv):"												1
 @var	color 			chat_input-area_btn_bttv-emoji-menu_color--d 			"╠═        Цвет кнопки ⬛:"																		red
 @var	color 			chat_input-area_btn_bttv-emoji-menu_color--l			"╠═        Цвет кнопки ⬜:"																		red
-@var	select  	header-4-line-divider-59									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-67									"║"														 										{" ":"divider"}
 @var	checkbox		chat_input-area_btn_emoji-menu_toggle					"╠    Изменение кнопки «🙂 Меню смайлов»:"														1
 @var	checkbox		chat_input-area_btn_emoji-menu_force					"╠═        Принудительно отображать «🙂 Меню смайлов» (bttv):"									1
 @var	color 			chat_input-area_btn_emoji-menu_color--d 				"╠═        Цвет кнопки ⬛:"																		yellow
-@var	color 			chat_input-area_btn_emoji-menu_color--l					"╠═        Цвет кнопки ⬜:"																		yellow
-@var	select  	header-4-line-divider-60									"║"														 										{" ":"divider"}
+@var	color 			chat_input-area_btn_emoji-menu_color--l					"╠═        Цвет кнопки ⬜:"																		gold
+@var	select  	header-4-line-divider-68									"║"														 										{" ":"divider"}
 @var	checkbox		chat_input-area_btn_send-msg_toggle						"╠    Изменение кнопки «✈️ Отправить сообщение»:"												1
 @var	color 			chat_input-area_btn_send-msg_color--d 					"╠═        Цвет кнопки ⬛:"																		#3EA6FF
 @var	color 			chat_input-area_btn_send-msg_color--l					"╠═        Цвет кнопки ⬜:"																		#3EA6FF
-@var	select  	header-4-line-divider-61									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-69									"║"														 										{" ":"divider"}
 @var	checkbox		chat_input-area_btn_engage_toggle						"╠    Изменение кнопки «➕ Взаимодействуйте с аудиторией» (только для модеров 🛠):"				1
 @var	color 			chat_input-area_btn_engage_color--d 					"╠═        Цвет кнопки ⬛:"																		#3EA6FF
 @var	color 			chat_input-area_btn_engage_color--l						"╠═        Цвет кнопки ⬜:"																		#3EA6FF
-@var	select  	header-4-line-divider-62									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-70									"║"														 										{" ":"divider"}
 @var	checkbox		chat_input-area_btn_suport_toggle						"╠    Изменение кнопки «💵 Поддержать автора канала»:"											1
 @var	checkbox		chat_input-area_btn_suport_disable						"╠═        Отключить отображение кнопки:"														0
 @var	color 			chat_input-area_btn_suport_color--d 					"╠═        Цвет кнопки ⬛:"																		#53FC18
 @var	color 			chat_input-area_btn_suport_color--l						"╠═        Цвет кнопки ⬜:"																		#53FC18
-@var	select  	header-4-line-divider-63									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-71									"║"														 										{" ":"divider"}
 @var	checkbox		chat_input-area_btn_reaction_toggle						"╠    Изменение кнопки «❤️ Реакция»:"															1
 @var	checkbox		chat_input-area_btn_reaction_disable					"╠═        Отключить отображение кнопки:"														0
 @var	color 			chat_input-area_btn_reaction_color--d 					"╠═        Цвет кнопки ⬛:"																		orangered
 @var	color 			chat_input-area_btn_reaction_color--l					"╠═        Цвет кнопки ⬜:"																		orangered
-@var	select  	header-4-line-divider-64									"║"														 										{" ":"divider"}
+@var	select  	header-4-line-divider-72									"║"														 										{" ":"divider"}
 @var	select  	header-4-end												"╚════════════════════════════════════════════════════════════╝" 								{" ":"divider"}
 
 ==/UserStyle== */
@@ -1273,7 +1301,7 @@ purple3=#9048FF
 			}
 	
 			/* (HyperChat) */
-			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:nth-of-type(1):not(span[class *="text-owner"]):not(i:nth-of-type(1)) > span:nth-of-type(1) {
+			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:has(> a) > div:not(i:nth-of-type(1)):nth-of-type(1) > span:nth-of-type(1) {
 				display: auto !important;
 			}
 		}
@@ -1285,9 +1313,14 @@ purple3=#9048FF
 			}
 	
 			/* (HyperChat) */
-			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:nth-of-type(1):not(span[class *="text-owner"]):not(i:nth-of-type(1)) > span:nth-of-type(1) {
+			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:has(> a) > div:not(i:nth-of-type(1)):nth-of-type(1) > span:nth-of-type(1) {
 				display: inline !important;
 			}
+	
+			/* (HyperChat)
+			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:has(> a) > div:not(span[class *="text-member"]):not(span[class *="text-owner"]):not(i:nth-of-type(1)):nth-of-type(1) > span:nth-of-type(1) {
+				display: inline !important;
+			} */
 		}
 
 		if chat_common-user_timestamp_select is off {
@@ -1297,7 +1330,7 @@ purple3=#9048FF
 			}
 	
 			/* (HyperChat) */
-			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:nth-of-type(1):not(span[class *="text-owner"]):not(i:nth-of-type(1)) > span:nth-of-type(1) {
+			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:has(> a) > div:not(i:nth-of-type(1)):nth-of-type(1) > span:nth-of-type(1) {
 				display: none !important;
 			}
 		}
@@ -1307,14 +1340,14 @@ purple3=#9048FF
 			/* ⚫ дефолт ⚫ */
 			html[dark] yt-live-chat-text-message-renderer:not([author-type="member"]):not([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > span#timestamp,
 			/* ⚫ (HyperChat) ⚫ */
-			html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div:nth-of-type(1):not(span[class *="text-owner-dark"]):not(i:nth-of-type(1)) > span:nth-of-type(1) {
+			html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div:has(> a) > div:not(i:nth-of-type(1)):nth-of-type(1) > span:nth-of-type(1) {
 				color: chat_common-user_timestamp_color--d !important;
 			}
 	
 			/* ⚪ дефолт ⚪ */
 			html:not([dark]) yt-live-chat-text-message-renderer:not([author-type="member"]):not([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > span#timestamp,
 			/* ⚪ (HyperChat) ⚪ */
-			html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div:nth-of-type(1):not(span[class *="text-owner-light"]):not(i:nth-of-type(1)) > span:nth-of-type(1) {
+			html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div:has(> a) > div:not(i:nth-of-type(1)):nth-of-type(1) > span:nth-of-type(1) {
 				color: chat_common-user_timestamp_color--l !important;
 			}
 	
@@ -1323,14 +1356,14 @@ purple3=#9048FF
 			/* ⚫ дефолт ⚫ */
 			html[dark] yt-live-chat-text-message-renderer:not([author-type="member"]):not([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > yt-live-chat-author-chip:not(yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="moderator"]) > span#author-name.yt-live-chat-author-chip,
 			/* ⚫ (HyperChat) ⚫ */
-			html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div > a > span:not([class *="moderator"]):not([class *="text-owner-dark"]) {
+			html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div > a > span:not([class *="moderator"]):not([class *="text-owner"]) {
 				color: chat_common-user_username_color--d !important;
 			}
 	
 			/* ⚪ дефолт ⚪ */
 			html:not([dark]) yt-live-chat-text-message-renderer:not([author-type="member"]):not([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > yt-live-chat-author-chip:not(yt-live-chat-author-badge-renderer[enable-new-moderator-badge][type="moderator"]) > span#author-name.yt-live-chat-author-chip,
 			/* ⚪ (HyperChat) ⚪ */
-			html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div:not(span[class *="moderator"]) > a > span:not([class *="moderator"]):not([class *="text-owner-light"])) {
+			html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div:not(span[class *="moderator"]) > a > span:not([class *="moderator"]):not([class *="text-owner-light"]) {
 				color: chat_common-user_username_color--l !important;
 			}
 	
@@ -1378,7 +1411,7 @@ purple3=#9048FF
 			}
 	
 			/* (HyperChat) */
-			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:has(i.text-gray-500:nth-of-type(1)):not(i:nth-of-type(2)):not(span[class *="text-owner"]):nth-of-type(1) > span:nth-of-type(1) {
+			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight > div:has(> a) > div:has(> a span[class *="text-member"]):nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1) {
 				display: auto !important;
 			}
 		}
@@ -1390,7 +1423,7 @@ purple3=#9048FF
 			}
 	
 			/* (HyperChat) */
-			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:has(i.text-gray-500:nth-of-type(1)):not(i:nth-of-type(2)):not(span[class *="text-owner"]):nth-of-type(1) > span:nth-of-type(1) {
+			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight > div:has(> a) > div:has(> a span[class *="text-member"]):nth-of-type(1) > span:nth-of-type(1) {
 				display: inline !important;
 			}
 		}
@@ -1402,7 +1435,7 @@ purple3=#9048FF
 			}
 	
 			/* (HyperChat) */
-			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:has(i.text-gray-500:nth-of-type(1)):not(i:nth-of-type(2)):not(span[class *="text-owner"]):nth-of-type(1) > span:nth-of-type(1) {
+			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight > div:has(> a) > div:has(> a span[class *="text-member"]):nth-of-type(1) > span:nth-of-type(1) {
 				display: none !important;
 			}
 		}
@@ -1412,14 +1445,14 @@ purple3=#9048FF
 			/* ⚫ дефолт ⚫ */
 			html[dark] yt-live-chat-text-message-renderer[author-type="member"]:not([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > span#timestamp,
 			/* ⚫ (HyperChat) ⚫ */
-			html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div:has(i.text-gray-500:nth-of-type(1)):not(i:nth-of-type(2)):not(span[class *="text-owner-dark"]):nth-of-type(1) > span:nth-of-type(1) {
+			html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight > div:has(> a) > div:has(> a span[class *="text-member"]):nth-of-type(1) > span:nth-of-type(1) {
 				color: chat_member-user_timestamp_color--d !important;
 			}
 	
 			/* ⚪ дефолт ⚪ */
 			html:not([dark]) yt-live-chat-text-message-renderer[author-type="member"]:not([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > span#timestamp,
 			/* ⚪ (HyperChat) ⚪ */
-			html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div:has(i.text-gray-500:nth-of-type(1)):not(i:nth-of-type(2)):not(span[class *="text-owner-light"]):nth-of-type(1) > span:nth-of-type(1) {
+			html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight > div:has(> a) > div:has(> a span[class *="text-member"]):nth-of-type(1) > span:nth-of-type(1) {
 				color: chat_member-user_timestamp_color--l !important;
 			}
 	
@@ -1428,14 +1461,14 @@ purple3=#9048FF
 			/* ⚫ дефолт ⚫ */
 			html[dark] yt-live-chat-text-message-renderer[author-type="member"]:not([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > yt-live-chat-author-chip > span#author-name.member,
 			/* ⚫ (HyperChat) ⚫ */
-			html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div:not(span[class *="moderator"]):has(span > i.text-gray-500) > a > span:not([class *="moderator"]) {
+			html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div:not(span[class *="moderator"]) > a > span[class *="text-member"]:not([class *="moderator"]) {
 				color: chat_member-user_username_color--d !important;
 			}
 	
 			/* ⚪ дефолт ⚪ */
 			html:not([dark]) yt-live-chat-text-message-renderer[author-type="member"]:not([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > yt-live-chat-author-chip > span#author-name.member,
 			/* ⚪ (HyperChat) ⚪ */
-			html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div:not(span[class *="moderator"]):has(span > i.text-gray-500) > a > span:not([class *="moderator"]) {
+			html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div:not(span[class *="moderator"]) > a > span[class *="text-member"]:not([class *="moderator"]) {
 				color: chat_member-user_username_color--l !important;
 			}
 	
@@ -1445,7 +1478,7 @@ purple3=#9048FF
 		/* Отображение "⏲️ Времини отправки сообщения в чат" «Платного подписчика 💲» - дефолт */
 		html yt-live-chat-text-message-renderer[author-type="member"]:not([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > span#timestamp,
 		/* Отображение "⏲️ Времини отправки сообщения в чат" «Платного подписчика 💲» - (HyperChat) */
-		html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:has(i.text-gray-500:nth-of-type(1)):not(i:nth-of-type(2)):not(span[class *="text-owner"]):nth-of-type(1) > span:nth-of-type(1) {
+		html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight > div:has(> a) > div:has(> a span[class *="text-member"]):nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1) {
 			display: auto !important;
 		}
 	
@@ -1462,132 +1495,15 @@ purple3=#9048FF
 		}
 	
 		/* Цвет имени «Платного подписчика 💲» в чате - (HyperChat) */
-		html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:not(span[class *="moderator"]):has(span > i.text-gray-500) > a > span:not([class *="moderator"]) {
-			color: rgb(158, 158, 158) !important;
-		}
-	}
-}
-	
-@-moz-document domain("youtube.com"), domain("www.youtube.com"), domain("studio.youtube.com") {
-/* ##################################################################################### */
-/* ##### Чат - @Платный Верифицированный подписчик 💲✔️ (Верифицированный member) ##### */
-/* ##################################################################################### */
-	
-	/* Изменение внешнего вида «Платного подписчика 💲 (member)» в чате */
-	if chat_verified-member-user_toggle {
-		/* Отображение "⏲️ Времини отправки сообщения в чат" «Платного Верифицированного подписчика 💲✔️» */
-		if chat_verified-member-user_timestamp_select is default {
-			/* дефолт */
-			html yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > span#timestamp {
-				display: auto !important;
-			}
-	
-			/* (HyperChat) */
-			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:has(i.text-gray-500:nth-of-type(1)):not(i:nth-of-type(2)):not(span[class *="text-owner"]):nth-of-type(1) > span:nth-of-type(1) {
-				display: auto !important;
-			}
-		}
-	
-		if chat_verified-member-user_timestamp_select is on {
-			/* дефолт */
-			html yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > span#timestamp {
-				display: inline !important;
-			}
-	
-			/* (HyperChat) */
-			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:has(i.text-gray-500:nth-of-type(1)):not(i:nth-of-type(2)):not(span[class *="text-owner"]):nth-of-type(1) > span:nth-of-type(1) {
-				display: inline !important;
-			}
-		}
-	
-		if chat_verified-member-user_timestamp_select is off {
-			/* дефолт */
-			html yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > span#timestamp {
-				display: none !important;
-			}
-	
-			/* (HyperChat) */
-			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:has(i.text-gray-500:nth-of-type(1)):not(i:nth-of-type(2)):not(span[class *="text-owner"]):nth-of-type(1) > span:nth-of-type(1) {
-				display: none !important;
-			}
-		}
-	
-	
-		/* Цвет "⏲️ Времини отправки сообщения в чат" «Платного Верифицированного подписчика 💲✔️» ⬛/⬜ */
-			/* ⚫ дефолт ⚫ */
-			html[dark] yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > span#timestamp,
-			/* ⚫ (HyperChat) ⚫ */
-			html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div:has(i.text-gray-500:nth-of-type(1)):not(i:nth-of-type(2)):not(span[class *="text-owner-dark"]):nth-of-type(1) > span:nth-of-type(1) {
-				color: chat_verified-member-user_timestamp_color--d !important;
-			}
-	
-			/* ⚪ дефолт ⚪ */
-			html:not([dark]) yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > span#timestamp,
-			/* ⚪ (HyperChat) ⚪ */
-			html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div:has(i.text-gray-500:nth-of-type(1)):not(i:nth-of-type(2)):not(span[class *="text-owner-light"]):nth-of-type(1) > span:nth-of-type(1) {
-				color: chat_verified-member-user_timestamp_color--l !important;
-			}
-	
-	
-		/* Цвет имени «Платного Верифицированного подписчика 💲✔️» в чате ⬛/⬜ */
-			/* ⚫ дефолт ⚫ */
-			html[dark] yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > yt-live-chat-author-chip > span#author-name.member,
-			/* ⚫ (HyperChat) ⚫ */
+			/* ⚫⚫⚫ */
 			html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div:not(span[class *="moderator"]):has(span > i.text-gray-500) > a > span:not([class *="moderator"]) {
-				color: chat_verified-member-user_username_color--d !important;
+				color: rgb(4, 179, 1) !important;
 			}
 	
-			/* ⚪ дефолт ⚪ */
-			html:not([dark]) yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > yt-live-chat-author-chip > span#author-name.member
-			/* ⚪ (HyperChat) ⚪ */
+			/* ⚪⚪⚪ */
 			html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div:not(span[class *="moderator"]):has(span > i.text-gray-500) > a > span:not([class *="moderator"]) {
-				color: chat_verified-member-user_username_color--l !important;
+				color: rgb(14, 93, 16) !important;
 			}
-	
-	
-		/* Цвет «✔️» у «Платного Верифицированного подписчика 💲✔️» в чате ⬛/⬜ */
-			/* ⚫ дефолт ⚫ */
-			html[dark] yt-live-chat-text-message-renderer:not([author-type="member"]):has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip > span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[type="verified"] > div#image > yt-icon > span > div > svg > path,
-			/* ⚫ (HyperChat) ⚫ */
-			html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div > span:nth-of-type(2) > i.text-gray-500:nth-of-type(1) {
-				color: chat_verified-member-user_username_color--d !important;
-				fill: chat_verified-member-user_username_color--d !important;
-			}
-	
-			/* ⚪ дефолт ⚪ */
-			html:not([dark]) yt-live-chat-text-message-renderer:not([author-type="member"]):has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip > span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[type="verified"] > div#image > yt-icon > span > div > svg > path,
-			/* ⚪ (HyperChat) ⚪ */
-			html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div:has(span > i.text-gray-500) > span > i.text-gray-500 {
-				color: chat_verified-member-user_username_color--l !important;
-				fill: chat_verified-member-user_username_color--l !important;
-			}
-	
-	
-	/* Сбрасывает всё по дефолту, во избежание конфликтов */
-	} else {
-		/* Отображение "⏲️ Времини отправки сообщения в чат" «Платного Верифицированного подписчика 💲✔️» - дефолт */
-		html yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > span#timestamp,
-		/* Отображение "⏲️ Времини отправки сообщения в чат" «Платного Верифицированного подписчика 💲✔️» - (HyperChat) */
-		html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:has(i.text-gray-500:nth-of-type(1)):not(i:nth-of-type(2)):not(span[class *="text-owner"]):nth-of-type(1) > span:nth-of-type(1) {
-			display: auto !important;
-		}
-	
-		/* Цвет "⏲️ Времини отправки сообщения в чат" «Платного Верифицированного подписчика 💲✔️» - дефолт */
-		html yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > span#timestamp,
-		/* Цвет "⏲️ Времини отправки сообщения в чат" «Платного Верифицированного подписчика 💲✔️» - (HyperChat) */
-		html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:has(i.text-gray-500:nth-of-type(1)):not(i:nth-of-type(2)):not(span[class *="text-owner"]):nth-of-type(1) > span:nth-of-type(1) {
-			color: var(--yt-live-chat-tertiary-text-color, rgb(117, 117, 117)) !important;
-		}
-	
-		/* Цвет имени «Платного Верифицированного подписчика 💲✔️» в чате - дефолт */
-		html yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip:has(> span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[type="verified"]) {
-			color: var(--yt-live-chat-sponsor-color, inherit) !important;
-		}
-	
-		/* Цвет имени «Платного Верифицированного подписчика 💲✔️» в чате - (HyperChat) */
-		html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:not(span[class *="moderator"]):has(span > i.text-gray-500) > a > span:not([class *="moderator"]) {
-			color: rgb(158, 158, 158) !important;
-		}
 	}
 }
 	
@@ -1756,6 +1672,129 @@ purple3=#9048FF
 		html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div > span:nth-of-type(2) > i.text-gray-500:nth-of-type(1) {
 			color: rgb(158, 158, 158) !important;
 			fill: rgb(158, 158, 158) !important;
+		}
+	}
+}
+	
+@-moz-document domain("youtube.com"), domain("www.youtube.com"), domain("studio.youtube.com") {
+/* ##################################################################################### */
+/* ##### Чат - @Платный Верифицированный подписчик 💲✔️ (Верифицированный member) ##### */
+/* ##################################################################################### */
+	
+	/* Изменение внешнего вида «Платного подписчика 💲 (member)» в чате */
+	if chat_verified-member-user_toggle {
+		/* Отображение "⏲️ Времини отправки сообщения в чат" «Платного Верифицированного подписчика 💲✔️» */
+		if chat_verified-member-user_timestamp_select is default {
+			/* дефолт */
+			html yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > span#timestamp {
+				display: auto !important;
+			}
+	
+			/* (HyperChat) */
+			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:has(i.text-gray-500:nth-of-type(1)):not(i:nth-of-type(2)):has(> a span[class *="text-member"]):nth-of-type(1) > span:nth-of-type(1) {
+				display: auto !important;
+			}
+		}
+	
+		if chat_verified-member-user_timestamp_select is on {
+			/* дефолт */
+			html yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > span#timestamp {
+				display: inline !important;
+			}
+	
+			/* (HyperChat) */
+			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:has(i.text-gray-500:nth-of-type(1)):not(i:nth-of-type(2)):has(> a span[class *="text-member"]):nth-of-type(1) > span:nth-of-type(1) {
+				display: inline !important;
+			}
+		}
+	
+		if chat_verified-member-user_timestamp_select is off {
+			/* дефолт */
+			html yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > span#timestamp {
+				display: none !important;
+			}
+	
+			/* (HyperChat) */
+			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:has(i.text-gray-500:nth-of-type(1)):not(i:nth-of-type(2)):has(> a span[class *="text-member"]):nth-of-type(1) > span:nth-of-type(1) {
+				display: none !important;
+			}
+		}
+	
+	
+		/* Цвет "⏲️ Времини отправки сообщения в чат" «Платного Верифицированного подписчика 💲✔️» ⬛/⬜ */
+			/* ⚫ дефолт ⚫ */
+			html[dark] yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > span#timestamp,
+			/* ⚫ (HyperChat) ⚫ */
+			html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div:has(i.text-gray-500:nth-of-type(1)):not(i:nth-of-type(2)):has(> a span[class *="text-member"]):nth-of-type(1) > span:nth-of-type(1) {
+				color: chat_verified-member-user_timestamp_color--d !important;
+			}
+	
+			/* ⚪ дефолт ⚪ */
+			html:not([dark]) yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > span#timestamp,
+			/* ⚪ (HyperChat) ⚪ */
+			html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div:has(i.text-gray-500:nth-of-type(1)):not(i:nth-of-type(2)):has(> a span[class *="text-member"]):nth-of-type(1) > span:nth-of-type(1) {
+				color: chat_verified-member-user_timestamp_color--l !important;
+			}
+	
+	
+		/* Цвет имени «Платного Верифицированного подписчика 💲✔️» в чате ⬛/⬜ */
+			/* ⚫ дефолт ⚫ */
+			html[dark] yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > yt-live-chat-author-chip > span#author-name.member,
+			/* ⚫ (HyperChat) ⚫ */
+			html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div:not(span[class *="moderator"]):has(span > i.text-gray-500) > a > span:not([class *="moderator"]) {
+				color: chat_verified-member-user_username_color--d !important;
+			}
+	
+			/* ⚪ дефолт ⚪ */
+			html:not([dark]) yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > yt-live-chat-author-chip > span#author-name.member
+			/* ⚪ (HyperChat) ⚪ */
+			html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div:not(span[class *="moderator"]):has(span > i.text-gray-500) > a > span:not([class *="moderator"]) {
+				color: chat_verified-member-user_username_color--l !important;
+			}
+	
+	
+		/* Цвет «✔️» у «Платного Верифицированного подписчика 💲✔️» в чате ⬛/⬜ */
+			/* ⚫ дефолт ⚫ */
+			html[dark] yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip > span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[type="verified"] > div#image > yt-icon > span > div > svg > path,
+			/* ⚫ (HyperChat) ⚫ */
+			html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div:has(> a span[class *="text-member"]) > span:nth-of-type(2) > i.text-gray-500:nth-of-type(1) {
+				color: chat_verified-member-user_username_color--d !important;
+				fill: chat_verified-member-user_username_color--d !important;
+			}
+	
+			/* ⚪ дефолт ⚪ */
+			html:not([dark]) yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip > span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[type="verified"] > div#image > yt-icon > span > div > svg > path,
+			/* ⚪ (HyperChat) ⚪ */
+			html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div:has(> a span[class *="text-member"]):has(span > i.text-gray-500) > span > i.text-gray-500 {
+				color: chat_verified-member-user_username_color--l !important;
+				fill: chat_verified-member-user_username_color--l !important;
+			}
+	
+	
+	/* Сбрасывает всё по дефолту, во избежание конфликтов */
+	} else {
+		/* Отображение "⏲️ Времини отправки сообщения в чат" «Платного Верифицированного подписчика 💲✔️» - дефолт */
+		html yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > span#timestamp,
+		/* Отображение "⏲️ Времини отправки сообщения в чат" «Платного Верифицированного подписчика 💲✔️» - (HyperChat) */
+		html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:has(i.text-gray-500:nth-of-type(1)):not(i:nth-of-type(2)):not(span[class *="text-owner"]):nth-of-type(1) > span:nth-of-type(1) {
+			display: auto !important;
+		}
+	
+		/* Цвет "⏲️ Времини отправки сообщения в чат" «Платного Верифицированного подписчика 💲✔️» - дефолт */
+		html yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > span#timestamp,
+		/* Цвет "⏲️ Времини отправки сообщения в чат" «Платного Верифицированного подписчика 💲✔️» - (HyperChat) */
+		html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:has(i.text-gray-500:nth-of-type(1)):not(i:nth-of-type(2)):not(span[class *="text-owner"]):nth-of-type(1) > span:nth-of-type(1) {
+			color: var(--yt-live-chat-tertiary-text-color, rgb(117, 117, 117)) !important;
+		}
+	
+		/* Цвет имени «Платного Верифицированного подписчика 💲✔️» в чате - дефолт */
+		html yt-live-chat-text-message-renderer[author-type="member"]:has([type="verified"]):not([author-type="moderator"]):not([author-is-owner]) > div#content > yt-live-chat-author-chip > span#author-name.yt-live-chat-author-chip:has(> span#chip-badges.yt-live-chat-author-chip yt-live-chat-author-badge-renderer[type="verified"]) {
+			color: var(--yt-live-chat-sponsor-color, inherit) !important;
+		}
+	
+		/* Цвет имени «Платного Верифицированного подписчика 💲✔️» в чате - (HyperChat) */
+		html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div:not(span[class *="moderator"]):has(span > i.text-gray-500) > a > span:not([class *="moderator"]) {
+			color: rgb(158, 158, 158) !important;
 		}
 	}
 }
@@ -2308,7 +2347,7 @@ purple3=#9048FF
 		/* ⚪ дефолт ⚪ */
 		html:not([dark]) div#item-offset > div#items > yt-live-chat-text-message-renderer:nth-child(even),
 		/* ⚪ (HyperChat) ⚪ */
-		html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight:nth-child(even)/ {
+		html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight:nth-child(even) {
 			background-color: chat-msg_chess-bg_color--l;
 		}
 	}
@@ -2334,7 +2373,8 @@ purple3=#9048FF
 	
 	/* Добавление в начало имени пользователя «@» (HyperChat) */
 	if chat-msg_add_tag-sign_befor-username_toggle {
-		html[it-pathname *="hyperchat_embed"] div.hyperchat-root div.hover-highlight div > a.cursor-pointer > span:before {
+		html[it-pathname *="hyperchat_embed"] div.hyperchat-root div.hover-highlight div > a.cursor-pointer > span:before,
+ 		html[it-pathname *="hyperchat_embed"] div.hyperchat-root div.hover-highlight > div[style *="background-color:"][style *="15"][style *="157"][style *="88"] > div > span:nth-of-type(2):before {
 			content: "@";
 		}
 	}
@@ -2342,7 +2382,8 @@ purple3=#9048FF
 	
 	/* Курсор при наведении на блок сообщения в чате */
 	if chat-msg_mouse-cursor_for_msg-block_toggle {
-		yt-live-chat-text-message-renderer {
+		yt-live-chat-text-message-renderer,
+ 		yt-live-chat-membership-item-renderer {
 			cursor: default !important;
 		}
 	}
@@ -2354,8 +2395,12 @@ purple3=#9048FF
 		yt-live-chat-text-message-renderer div#content span#timestamp,
 		/* Имя пользователя - дефолт */
 		yt-live-chat-text-message-renderer yt-live-chat-author-chip span#author-name,
+		/* Имя пользователя, купившого сабку в чате - дефолт */
+		yt-live-chat-membership-item-renderer yt-live-chat-author-chip span#author-name,
 		/* Текст сообщения - дефолт */
 		yt-live-chat-text-message-renderer span#message-container span#message,
+		/* Текст сообщения пользователя, купившого сабку в чате - дефолт */
+		yt-live-chat-membership-item-renderer div#header-subtext,
 		/* Имя пользователя и timestamp - (HyperChat) */
 		html[it-pathname *="hyperchat_embed"] div.hyperchat-root div.hover-highlight div:has(> a.cursor-pointer > span):nth-of-type(1) {
 			cursor: text !important;
@@ -2373,6 +2418,10 @@ purple3=#9048FF
 		yt-live-chat-server-error-message > span#timestamp.yt-live-chat-server-error-message,
 		/* Выделение всего имени пользователя - одним кликом */
 		yt-live-chat-text-message-renderer yt-live-chat-author-chip span#author-name,
+		/* Выделение всего имени пользователя, купившого сабку в чате - одним кликом */
+		yt-live-chat-membership-item-renderer yt-live-chat-author-chip span#author-name,
+		/* Выделение всего имени пользователя, купившого сабку в чате - одним кликом (HyperChat) */
+		html[it-pathname *="hyperchat_embed"] div.hyperchat-root div.hover-highlight > div[style *="background-color:"][style *="15"][style *="157"][style *="88"] > div > span:nth-of-type(2),
 		/* Выделение всего имени пользователя которого тегнули в сообщении - одним кликом */
 		yt-live-chat-text-message-renderer span#message-container span#message span.mention,
 		/* Выделение всего timestamp - одним кликом (HyperChat) */
@@ -2388,6 +2437,10 @@ purple3=#9048FF
 		yt-live-chat-server-error-message > span#timestamp.yt-live-chat-server-error-message:hover,
 		/* Добавление подчёркивания имени пользователя - при наведении курсора */
 		yt-live-chat-text-message-renderer yt-live-chat-author-chip span#author-name:hover,
+		/* Добавление подчёркивания имени пользователя, купившого сабку в чате - одним кликом */
+		yt-live-chat-membership-item-renderer yt-live-chat-author-chip span#author-name:hover,
+		/* Добавление подчёркивания имени пользователя, купившого сабку в чате - одним кликом (HyperChat) */
+		html[it-pathname *="hyperchat_embed"] div.hyperchat-root div.hover-highlight > div[style *="background-color:"][style *="15"][style *="157"][style *="88"] > div > span:nth-of-type(2):hover,
 		/* Добавление подчёркивания имени пользователя которого тегнули в сообщении - при наведении курсора */
 		yt-live-chat-text-message-renderer span#message-container span#message span.mention:hover,
 		/* Добавление подчёркивания timestamp - при наведении курсора (HyperChat) */
@@ -2436,93 +2489,53 @@ purple3=#9048FF
 	
 	/* Изменение кнопки-иконки топа активности чаттерса 👑 #1/#2/#3 */
 	if chat-msg_user-leaderboard-top_toggle {
-		/* Чаттерс 👑 #1 */
-			/* Убрать иконку 👑 короны в кнопке */
-			if chat-msg_user-leaderboard-top1_icon_disable {
-				html yt-live-chat-text-message-renderer > div#content > div#before-content-buttons button[style *="background-color: rgb"][style *="123"][style *="62"][style *="219"] > div:nth-of-type(1) {
+		/* Чаттерс 👑 #1 / #2 / #3 */
+			/* Убрать иконку "👑" короны в кнопке */
+			if chat-msg_user-leaderboard-top_icon_disable {
+				html yt-live-chat-text-message-renderer > div#content > div#before-content-buttons button[style *="background-color: rgb"][style *="221"][style *="152"][style *="255"] > div:nth-of-type(1) {
 					display: none !important;
 				}
 			}
 	
-			/* Убрать "#1" в кнопке */
-			if chat-msg_user-leaderboard-top1_text_disable {
-				html yt-live-chat-text-message-renderer > div#content > div#before-content-buttons button[style *="background-color: rgb"][style *="123"][style *="62"][style *="219"] > div:nth-of-type(2) {
+			/* Убрать "#" в кнопке */
+			if chat-msg_user-leaderboard-top_text_disable {
+				html yt-live-chat-text-message-renderer > div#content > div#before-content-buttons button[style *="background-color: rgb"][style *="221"][style *="152"][style *="255"] > div:nth-of-type(2) {
 					display: none !important;
+				}
+	
+				/* Убирает отступ у иконки справо */
+				html yt-live-chat-text-message-renderer > div#content > div#before-content-buttons button[style *="background-color: rgb"][style *="221"][style *="152"][style *="255"] > div:nth-of-type(1) {
+					margin-right: unset !important;
 				}
 			}
 	
 			/* Отключить оборажение этой кнпоки */
-			if chat-msg_user-leaderboard-top1_icon_disable and chat-msg_user-leaderboard-top1_text_disable {
-				html yt-live-chat-text-message-renderer > div#content > div#before-content-buttons:has(button[style *="background-color: rgb"][style *="123"][style *="62"][style *="219"]) {
+			if chat-msg_user-leaderboard-top_icon_disable and chat-msg_user-leaderboard-top_text_disable {
+				html yt-live-chat-text-message-renderer > div#content > div#before-content-buttons:has(button[style *="background-color: rgb"][style *="221"][style *="152"][style *="255"]) {
 					display: none !important;
 				}
 			}
 	
 			/* Цвет кнопки */
 				/* ⚫⚫⚫ */
-				html[dark] yt-live-chat-text-message-renderer > div#content > div#before-content-buttons button[style *="background-color: rgb"][style *="123"][style *="62"][style *="219"] {
-					background-color: chat-msg_user-leaderboard-top1_btn-color--d !important;
+				html[dark] yt-live-chat-text-message-renderer > div#content > div#before-content-buttons button[style *="background-color: rgb"][style *="221"][style *="152"][style *="255"] {
+					background-color: chat-msg_user-leaderboard-top_btn-color--d !important;
 				}
 	
 				/* ⚪⚪⚪ */
-				html:not([dark]) yt-live-chat-text-message-renderer > div#content > div#before-content-buttons button[style *="background-color: rgb"][style *="123"][style *="62"][style *="219"] {
-					background-color: chat-msg_user-leaderboard-top1_btn-color--l !important;
+				html:not([dark]) yt-live-chat-text-message-renderer > div#content > div#before-content-buttons button[style *="background-color: rgb"][style *="221"][style *="152"][style *="255"] {
+					background-color: chat-msg_user-leaderboard-top_btn-color--l !important;
 				}
 	
 			/* Цвет Иконки и Текста */
 				/* ⚫⚫⚫ */
-				html[dark] yt-live-chat-text-message-renderer > div#content > div#before-content-buttons button[style *="background-color: rgb"][style *="123"][style *="62"][style *="219"] > div {
-					color: chat-msg_user-leaderboard-top1_text-color--d !important;
+				html[dark] yt-live-chat-text-message-renderer > div#content > div#before-content-buttons button[style *="background-color: rgb"][style *="221"][style *="152"][style *="255"] > div {
+					color: chat-msg_user-leaderboard-top_text-color--d !important;
 				}
 	
 				/* ⚪⚪⚪ */
-				html:not([dark]) yt-live-chat-text-message-renderer > div#content > div#before-content-buttons button[style *="background-color: rgb"][style *="123"][style *="62"][style *="219"] > div {
-					color: chat-msg_user-leaderboard-top1_text-color--l !important;
-				}
-	
-	
-		/* Чаттерс 👑 #2 / #3 */
-			/* Убрать иконку 👑 короны в кнопке */
-			if chat-msg_user-leaderboard-top2-3_icon_disable {
-				html yt-live-chat-text-message-renderer > div#content > div#before-content-buttons button[style *="background-color: rgb"][style *="54"][style *="0"][style *="140"] > div:nth-of-type(1) {
-					display: none !important;
-				}
-			}
-	
-			/* Убрать "#1" в кнопке */
-			if chat-msg_user-leaderboard-top2-3_text_disable {
-				html yt-live-chat-text-message-renderer > div#content > div#before-content-buttons button[style *="background-color: rgb"][style *="54"][style *="0"][style *="140"] > div:nth-of-type(2) {
-					display: none !important;
-				}
-			}
-	
-			/* Отключить оборажение этой кнпоки */
-			if chat-msg_user-leaderboard-top2-3_icon_disable and chat-msg_user-leaderboard-top2-3_text_disable {
-				html yt-live-chat-text-message-renderer > div#content > div#before-content-buttons:has(button[style *="background-color: rgb"][style *="54"][style *="0"][style *="140"]) {
-					display: none !important;
-				}
-			}
-	
-			/* Цвет кнопки */
-				/* ⚫⚫⚫ */
-				html[dark] yt-live-chat-text-message-renderer > div#content > div#before-content-buttons button[style *="background-color: rgb"][style *="54"][style *="0"][style *="140"] {
-					background-color: chat-msg_user-leaderboard-top2-3_btn-color--d !important;
-				}
-	
-				/* ⚪⚪⚪ */
-				html:not([dark]) yt-live-chat-text-message-renderer > div#content > div#before-content-buttons button[style *="background-color: rgb"][style *="54"][style *="0"][style *="140"] {
-					background-color: chat-msg_user-leaderboard-top2-3_btn-color--l !important;
-				}
-	
-			/* Цвет Иконки и Текста */
-				/* ⚫⚫⚫ */
-				html[dark] yt-live-chat-text-message-renderer > div#content > div#before-content-buttons button[style *="background-color: rgb"][style *="54"][style *="0"][style *="140"] > div {
-					color: chat-msg_user-leaderboard-top2-3_text-color--d !important;
-				}
-	
-				/* ⚪⚪⚪ */
-				html:not([dark]) yt-live-chat-text-message-renderer > div#content > div#before-content-buttons button[style *="background-color: rgb"][style *="54"][style *="0"][style *="140"] > div {
-					color: chat-msg_user-leaderboard-top2-3_text-color--l !important;
+				html:not([dark]) yt-live-chat-text-message-renderer > div#content > div#before-content-buttons button[style *="background-color: rgb"][style *="221"][style *="152"][style *="255"] > div {
+					color: chat-msg_user-leaderboard-top_text-color--l !important;
 				}
 	}
 	
@@ -2744,6 +2757,11 @@ purple3=#9048FF
 			border-radius: 2px;
 		}
 	
+		/* ⚫ (HyperChat) ⚫ */
+		html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight.mention {
+			border-left: 3px solid chat-msg_mention_vertical-line--d;
+		}
+	
 		/* ⚪ Когда я обычный зритель ⚪ */
 		html:not([dark]) div#items yt-live-chat-text-message-renderer:has(span#message-container span.mention):before,
 		/* ⚪ Когда я модератор ⚪ */
@@ -2758,6 +2776,11 @@ purple3=#9048FF
 			width: 4px;
 			box-sizing: border-box;
 			border-radius: 2px;
+		}
+	
+		/* ⚪ (HyperChat) ⚪ */
+		html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight.mention {
+			border-left: 3px solid chat-msg_mention_vertical-line--l;
 		}
 	}
 	
@@ -2818,6 +2841,167 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("youtube.com"), domain("www.youtube.com"), domain("studio.youtube.com") {
+/* ######################################################################################## */
+/* ##### Чат - 💲 Системные сообщения: О спонсорстве канала пользователем💲 (member) ##### */
+/* ######################################################################################## */
+	
+	/* Добавление вертикальной палочки, в сообщение которое удалено ⬛/⬜ */
+	if chat-msg_become-member_vertical-line_toggle {
+		/* ⚫ Когда я обычный зритель ⚫ */
+		html[dark] div#items yt-live-chat-membership-item-renderer:before,
+		/* ⚫ Когда я модератор ⚫ */
+		html[dark] div#items:has(div#inline-action-button-container > div#inline-action-buttons > yt-button-renderer) yt-live-chat-membership-item-renderer:before {
+			background: chat-msg_become-member_vertical-line--d;
+			content: "";
+			position: absolute;
+			display: block;
+			left: 8px;
+			top: 4px;
+			bottom: 4px;
+			width: 4px;
+			box-sizing: border-box;
+			border-radius: 2px;
+		}
+	
+		/* ⚫ (HyperChat) ⚫ */
+		html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight:has(> div[style *="background-color:"][style *="15"][style *="157"][style *="88"]) {
+			border-left: 3px solid chat-msg_become-member_vertical-line--d;
+		}
+	
+	
+		/* ⚪ Когда я обычный зритель ⚪ */
+		html:not([dark]) div#items yt-live-chat-membership-item-renderer:before,
+		/* ⚪ Когда я модератор ⚪ */
+		html:not([dark]) div#items:has(div#inline-action-button-container > div#inline-action-buttons > yt-button-renderer) yt-live-chat-membership-item-renderer:before {
+			background: chat-msg_become-member_vertical-line--l;
+			content: "";
+			position: absolute;
+			display: block;
+			left: 8px;
+			top: 4px;
+			bottom: 4px;
+			width: 4px;
+			box-sizing: border-box;
+			border-radius: 2px;
+		}
+	
+		/* ⚪ (HyperChat) ⚪ */
+		html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight:has(> div[style *="background-color:"][style *="15"][style *="157"][style *="88"]) {
+			border-left: 3px solid chat-msg_become-member_vertical-line--l;
+		}
+	}
+	
+	
+	/* Фон плашки внутри сообщения о покупке пользователем платной подписки ⬛/⬜ */
+	if chat-msg_become-member_bg_toggle {
+		/* ⚫ дефолт ⚫ */
+		html[dark] yt-live-chat-membership-item-renderer > div#card > div#header,
+		/* ⚫ (HyperChat) ⚫ */
+		html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight > div[style *="background-color:"][style *="15"][style *="157"][style *="88"] {
+			background-color: chat-msg_become-member_bg_color--d !important;
+		}
+	
+		/* ⚪ дефолт ⚪ */
+		html:not([dark]) yt-live-chat-membership-item-renderer > div#card > div#header,
+		/* ⚪ (HyperChat) ⚪ */
+		html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight > div[style *="background-color:"][style *="15"][style *="157"][style *="88"] {
+			background-color: chat-msg_become-member_bg_color--l !important;
+		}
+	}
+	
+	
+	/* Отображение "⏲️ Времини отправки сообщения в чат" «Платного подписчика 💲» (HyperChat) */
+		if chat-msg_become-member_timestamp_select is default {
+			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight > div[style *="background-color:"][style *="15"][style *="157"][style *="88"] > div > span:nth-of-type(1) {
+				display: auto !important;
+			}
+		}
+	
+		if chat-msg_become-member_timestamp_select is on {
+			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight > div[style *="background-color:"][style *="15"][style *="157"][style *="88"] > div > span:nth-of-type(1) {
+				display: inline !important;
+			}
+		}
+	
+		if chat-msg_become-member_timestamp_select is off {
+			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight > div[style *="background-color:"][style *="15"][style *="157"][style *="88"] > div > span:nth-of-type(1) {
+				display: none !important;
+			}
+		}
+	
+	
+	/* Цвет "⏲️ Времини отправки сообщения в чат" «Платного подписчика 💲» (HyperChat) ⬛/⬜ */
+		/* ⚫⚫⚫ */
+		html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight > div[style *="background-color:"][style *="15"][style *="157"][style *="88"] > div > span:nth-of-type(1) {
+			color: chat-msg_become-member_timestamp_color--d !important;
+		}
+
+		/* ⚪⚪⚪ */
+		html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight > div[style *="background-color:"][style *="15"][style *="157"][style *="88"] > div > span:nth-of-type(1) {
+			color: chat-msg_become-member_timestamp_color--l !important;
+		}
+	
+	
+	/* Имя пользователя в плашке, купившего подписку ⬛/⬜ */
+	if chat-msg_become-member_username_toggle {
+		/* ⚫ дефолт ⚫ */
+		html[dark] yt-live-chat-membership-item-renderer > div#card > div#header yt-live-chat-author-chip span#author-name,
+		/* ⚫ (HyperChat) ⚫ */
+		html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight > div[style *="background-color:"][style *="15"][style *="157"][style *="88"] > div > span:nth-of-type(2) {
+			color: chat-msg_become-member_username_color--d;
+		}
+	
+		/* ⚪ дефолт ⚪ */
+		html:not([dark]) yt-live-chat-membership-item-renderer > div#card > div#header yt-live-chat-author-chip span#author-name,
+		/* ⚪ (HyperChat) ⚪ */
+		html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight > div[style *="background-color:"][style *="15"][style *="157"][style *="88"] > div > span:nth-of-type(2) {
+			color: chat-msg_become-member_username_color--l;
+		}
+	}
+	
+	
+	/* Сообщение в плашке, о покупке определённого тира подписки ⬛/⬜ */
+	if chat-msg_become-member_text_toggle {
+		/* ⚫ дефолт ⚫ */
+		html[dark] yt-live-chat-membership-item-renderer > div#card > div#header div#header-subtext {
+			color: chat-msg_become-member_text_color--d;
+		}
+	
+		/* ⚫ (HyperChat) ⚫ */
+		html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight > div[style *="background-color:"][style *="15"][style *="157"][style *="88"] > div > span:nth-of-type(3) {
+			color: chat-msg_become-member_text_color--d;
+    		float: left;
+		}
+	
+	
+		/* ⚪ дефолт ⚪ */
+		html:not([dark]) yt-live-chat-membership-item-renderer > div#card > div#header div#header-subtext {
+			color: chat-msg_become-member_text_color--l;
+		}
+	
+		/* ⚪ (HyperChat) ⚪ */
+		html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight > div[style *="background-color:"][style *="15"][style *="157"][style *="88"] > div > span:nth-of-type(3) {
+			color: chat-msg_become-member_text_color--l;
+   			float: left;
+		}
+	}
+	
+	
+	/* Выделение плашки, когда курсор на блоке сообщения ⬛/⬜ */
+	if chat-msg_become-member_hover_toggle {
+		/* ⚫⚫⚫ */
+		html[dark] yt-live-chat-membership-item-renderer > div#card > div#header > div#menu {
+			background: linear-gradient(to right, transparent, chat-msg_become-member_hover_color--d 100%) !important;
+		}
+	
+		/* ⚪⚪⚪ */
+		html:not([dark]) yt-live-chat-membership-item-renderer > div#card > div#header > div#menu {
+			background: linear-gradient(to right, transparent, chat-msg_become-member_hover_color--l 100%) !important;
+		}
+	}
+}
+	
+@-moz-document domain("youtube.com"), domain("www.youtube.com"), domain("studio.youtube.com") {
 /* ######################################## */
 /* ##### Чат - 🗑 Удалённые сообщения ##### */
 /* ######################################## */
@@ -2872,6 +3056,11 @@ purple3=#9048FF
 			border-radius: 2px;
 		}
 	
+		/* ⚫ (HyperChat) ⚫ */
+		html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight:has(div > span[class *="text-deleted"]) {
+			border-left: 3px solid chat-msg_deleted_vertical-line--d;
+		}
+	
 		/* ⚪ Когда я обычный зритель ⚪ */
 		html:not([dark]) div#items yt-live-chat-text-message-renderer[is-deleted]:before,
 		/* ⚪ Когда я модератор ⚪ */
@@ -2886,6 +3075,11 @@ purple3=#9048FF
 			width: 4px;
 			box-sizing: border-box;
 			border-radius: 2px;
+		}
+	
+		/* ⚪ (HyperChat) ⚪ */
+		html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight:has(div > span[class *="text-deleted"]) {
+			border-left: 3px solid chat-msg_deleted_vertical-line--l;
 		}
 	}
 	
@@ -3176,7 +3370,7 @@ purple3=#9048FF
 	
 @-moz-document domain("youtube.com"), domain("www.youtube.com"), domain("studio.youtube.com") {
 /* ########################################################################## */
-/* ##### Чат - 🤖 Системные сообщения: О выполненом действии модератора ##### */
+/* ##### Чат - 🛠 Системные сообщения: О выполненом действии модератора ##### */
 /* ########################################################################## */
 	
 	/* Всплывающее уведомление в низу чата — выдан таймач/бан/модерка, сделан закреп, итд ⬛/⬜ */
@@ -3205,7 +3399,7 @@ purple3=#9048FF
 	
 @-moz-document domain("youtube.com"), domain("www.youtube.com"), domain("studio.youtube.com") {
 /* ################################################################### */
-/* ##### Чат - 🤖 Системные сообщения: Ошибка подключения к чату ##### */
+/* ##### Чат - ⚠️ Системные сообщения: Ошибка подключения к чату ##### */
 /* ################################################################### */
 	
 	/* Сообщение о ошибке подключения к чату ⬛/⬜ */
@@ -3313,7 +3507,7 @@ purple3=#9048FF
 		}
 	
 		/* ⚪⚪⚪ */
-		html[dark] yt-live-chat-server-error-message > span#message.yt-live-chat-server-error-message {
+		html:not([dark]) yt-live-chat-server-error-message > span#message.yt-live-chat-server-error-message {
 			color: chat-server-error-msg_text_color--l;
 		}
 	}
@@ -3329,14 +3523,18 @@ purple3=#9048FF
 		/* Свой фон кнопки */
 		if chat_context-menu-btn_bg_select is default {
 			/* ⚫⚫⚫ */
-			html[dark] yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button > yt-icon[icon="more_vert"], /* дефолт */
+			html[dark] yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате */
+			html[dark] yt-live-chat-membership-item-renderer > div#card > div#header > div#menu button#button > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате о подписке */
+			html[dark] yt-live-chat-banner-manager div#header div#menu > yt-button-renderer#menu-button > yt-button-shape > button > yt-touch-feedback-shape, /* дефолт - закреплённое сообщение */
 			html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div > div.context-menu div[slot="activator"].opacity-100 /* (HyperChat) */ {
 				background-color: inherit !important;
 				background-image: inherit !important;
 			}
 
 			/* ⚪⚪⚪ */
-			html:not([dark]) yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button > yt-icon[icon="more_vert"], /* дефолт */
+			html:not([dark]) yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате */
+			html:not([dark]) yt-live-chat-membership-item-renderer > div#card > div#header > div#menu button#button > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате о подписке */
+			html:not([dark]) yt-live-chat-banner-manager div#header div#menu > yt-button-renderer#menu-button > yt-button-shape > button > yt-touch-feedback-shape, /* дефолт - закреплённое сообщение */
 			html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div > div.context-menu div[slot="activator"].opacity-100 /* (HyperChat) */ {
 				background-color: inherit !important;
 				background-image: inherit !important;
@@ -3345,14 +3543,18 @@ purple3=#9048FF
 
 		if chat_context-menu-btn_bg_select is color {
 			/* ⚫⚫⚫ */
-			html[dark] yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button > yt-icon[icon="more_vert"], /* дефолт */
+			html[dark] yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате */
+			html[dark] yt-live-chat-membership-item-renderer > div#card > div#header > div#menu button#button > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате о подписке */
+			html[dark] yt-live-chat-banner-manager div#header div#menu > yt-button-renderer#menu-button > yt-button-shape > button > yt-touch-feedback-shape, /* дефолт - закреплённое сообщение */
 			html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div > div.context-menu div[slot="activator"].opacity-100 /* (HyperChat) */ {
 				background-color: chat_context-menu-btn_bg_color--d !important;
 				background-image: none !important;
 			}
 
 			/* ⚪⚪⚪ */
-			html:not([dark]) yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button > yt-icon[icon="more_vert"], /* дефолт */
+			html:not([dark]) yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате */
+			html:not([dark]) yt-live-chat-membership-item-renderer > div#card > div#header > div#menu button#button > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате о подписке */
+			html:not([dark]) yt-live-chat-banner-manager div#header div#menu > yt-button-renderer#menu-button > yt-button-shape > button > yt-touch-feedback-shape, /* дефолт - закреплённое сообщение */
 			html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div > div.context-menu div[slot="activator"].opacity-100 /* (HyperChat) */ {
 				background-color: chat_context-menu-btn_bg_color--l !important;
 				background-image: none !important;
@@ -3361,55 +3563,72 @@ purple3=#9048FF
 
 		if chat_context-menu-btn_bg_select is gradient {
 			/* ⚫⚫⚫ */
-			html[dark] yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button > yt-icon[icon="more_vert"], /* дефолт */
+			html[dark] yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате */
+			html[dark] yt-live-chat-membership-item-renderer > div#card > div#header > div#menu button#button > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате о подписке */
+			html[dark] yt-live-chat-banner-manager div#header div#menu > yt-button-renderer#menu-button > yt-button-shape > button > yt-touch-feedback-shape, /* дефолт - закреплённое сообщение */
 			html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div > div.context-menu div[slot="activator"].opacity-100 /* (HyperChat) */ {
 				background-color: #53535F61 !important;
 				background-image: linear-gradient(0deg, #1E1E235C 7%, #46464959 40%, #46464973 70%, #53535FB8 90%) !important;
 			}
 
 			/* ⚪⚪⚪ */
-			html:not([dark]) yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button > yt-icon[icon="more_vert"], /* дефолт */
+			html:not([dark]) yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате */
+			html:not([dark]) yt-live-chat-membership-item-renderer > div#card > div#header > div#menu button#button > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате о подписке */
+			html:not([dark]) yt-live-chat-banner-manager div#header div#menu > yt-button-renderer#menu-button > yt-button-shape > button > yt-touch-feedback-shape, /* дефолт - закреплённое сообщение */
 			html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div > div.context-menu div[slot="activator"].opacity-100 /* (HyperChat) */ {
 				background-color: #53535F61 !important;
-				background-image: linear-gradient(0deg, #1E1E235C 7%, #46464959 40%, #46464973 70%, #53535FB8 90%) !important;
+				background-image: linear-gradient(0deg, #8F8F8F5C 7%, #C0C0C05C 40%, #CDCDCD5C 70%, #FFFFFF5C 90%) !important;
 			}
 		}
 	
 	
 		/* Форма и размер кнопки */
 		if chat_context-menu-btn_rounded_toggle {
-			html yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button > yt-icon[icon="more_vert"], /* дефолт */
+			html yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате */
+			html yt-live-chat-membership-item-renderer > div#card > div#header > div#menu button#button > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате о подписке */
 			html[it-pathname *="hyperchat_embed"] body div.hyperchat-root div.hover-highlight div > div.context-menu div[slot="activator"].opacity-100 /* (HyperChat) */ {
 				border-radius: 1em;
 				width: 1.5em;
 				height: 1.5em;
+			}
+	
+			yt-live-chat-banner-manager div#header yt-live-chat-banner-header-renderer:has(div#menu yt-button-renderer yt-button-shape button yt-touch-feedback-shape) /* дефолт - закреплённое сообщение */ {
+				border-radius: 1.3em;
 			}
 		}
 			
 	
 		/* Без наведения курсора */
 			/* ⚫⚫⚫ */
-			html[dark] yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button > yt-icon[icon="more_vert"], /* дефолт */
+			html[dark] yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате */
+			html[dark] yt-live-chat-membership-item-renderer > div#card > div#header > div#menu button#button > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате о подписке */
+			html[dark] yt-live-chat-banner-manager div#header > yt-live-chat-banner-header-renderer > div#menu > yt-button-renderer > yt-button-shape > button, /* дефолт - закреплённое сообщение */
 			html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div > div.context-menu div[slot="activator"] /* (HyperChat) */ {
 				color: chat_context-menu-btn_color--d;
 			}
 	
 			/* ⚪⚪⚪ */
-			html:not([dark]) yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button > yt-icon[icon="more_vert"], /* дефолт */
+			html:not([dark]) yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате */
+			html:not([dark]) yt-live-chat-membership-item-renderer > div#card > div#header > div#menu button#button > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате о подписке */
+			html:not([dark]) yt-live-chat-banner-manager div#header > yt-live-chat-banner-header-renderer > div#menu > yt-button-renderer > yt-button-shape > button, /* дефолт - закреплённое сообщение */
 			html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div > div.context-menu div[slot="activator"] /* (HyperChat) */ {
 				color: chat_context-menu-btn_color--l;
 			}
 	
 		/* При наведении курсора */
 			/* ⚫⚫⚫ */
-			html[dark] yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button:hover > yt-icon[icon="more_vert"], /* дефолт */
+			html[dark] yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button:hover > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате */
+			html[dark] yt-live-chat-membership-item-renderer > div#card > div#header > div#menu button#button:hover > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате о подписке */
+			html[dark] yt-live-chat-banner-manager div#header > yt-live-chat-banner-header-renderer:has(> div#menu yt-button-renderer yt-button-shape button):hover, /* дефолт - закреплённое сообщение */
 			html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div > div.context-menu div[slot="activator"]:hover /* (HyperChat) */ {
 				filter: drop-shadow(0px 0px 4px chat_context-menu-btn_color--d) !important;
 				outline: solid 1px chat_context-menu-btn_color--d;
 			}
 	
 			/* ⚪⚪⚪ */
-			html:not([dark]) yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button:hover > yt-icon[icon="more_vert"], /* дефолт */
+			html:not([dark]) yt-live-chat-text-message-renderer div#menu yt-icon-button#menu-button button#button:hover > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате */
+			html:not([dark]) yt-live-chat-membership-item-renderer > div#card > div#header > div#menu button#button:hover > yt-icon[icon="more_vert"], /* дефолт - сообщение в чате о подписке */
+			html:not([dark]) yt-live-chat-banner-manager div#header > yt-live-chat-banner-header-renderer:has(> div#menu yt-button-renderer yt-button-shape button):hover, /* дефолт - закреплённое сообщение */
 			html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div > div.context-menu div[slot="activator"]:hover /* (HyperChat) */ {
 				filter: drop-shadow(0px 0px 4px chat_context-menu-btn_color--l) !important;
 				outline: solid 1px chat_context-menu-btn_color--l;
@@ -3705,10 +3924,98 @@ purple3=#9048FF
 		}
 	
 	
+		/* 🎗️ Стать спонсором ⬛/⬜ */
+		if chat_context-menu-btn_memberships_toggle {
+			/* Смещение кнопки */
+			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:has(yt-icon span div[style *="memberships"]) {
+				order: chat_context-menu-btn_memberships_order !important;
+			}
+	
+			/* Без наведения курсора */
+				/* ⚫⚫⚫ */
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:has(yt-icon span div[style *="memberships"]) tp-yt-paper-item > yt-formatted-string,
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer yt-icon span:has(> div[style *="memberships"]) {
+					color: chat_context-menu-btn_memberships_color--d;
+					transition: all 0.2s ease-in-out !important;
+				}
+	
+				/* ⚪⚪⚪ */
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:has(yt-icon span div[style *="memberships"]) tp-yt-paper-item > yt-formatted-string,
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer yt-icon span:has(> div[style *="memberships"]) {
+					color: chat_context-menu-btn_memberships_color--l;
+					transition: all 0.2s ease-in-out !important;
+				}
+	
+			/* При наведении курсора */
+				/* ⚫⚫⚫ */
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:has(yt-icon span div[style *="memberships"]):hover tp-yt-paper-item > yt-formatted-string,
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:hover yt-icon span:has(> div[style *="memberships"]) {
+					filter: drop-shadow(0px 0px 4px chat_context-menu-btn_memberships_color--d) !important;
+					padding-inline-start: .2em;
+				}
+	
+				/* ⚪⚪⚪ */
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:has(yt-icon span div[style *="memberships"]):hover tp-yt-paper-item > yt-formatted-string,
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:hover yt-icon span:has(> div[style *="memberships"]) {
+					filter: drop-shadow(0px 0px 4px chat_context-menu-btn_memberships_color--l) !important;
+					padding-inline-start: .2em;
+				}
+		} else {
+			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:has(yt-icon span div[style *="memberships"]) {
+				display: none !important;
+			}
+		}
+	
+	
+		/* ❌ Открепить закреплённое сообщение ⬛/⬜ */
+		if chat_context-menu-btn_hide-pined_toggle {
+			/* Смещение кнопки */
+			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 110 18.001A9 9 0 0112 3Zm2.793 4.793L12 10.586 9.207 7.793a1 1 0 10-1.414 1.414L10.586 12l-2.793 2.793a1 1 0 101.414 1.414L12 13.414l2.793 2.793a1 1 0 101.414-1.414L13.414 12l2.793-2.793a1 1 0 10-1.414-1.414Z"]) {
+				order: chat_context-menu-btn_hide-pined_order !important;
+			}
+	
+	
+			/* Без наведения курсора */
+				/* ⚫⚫⚫ */
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 110 18.001A9 9 0 0112 3Zm2.793 4.793L12 10.586 9.207 7.793a1 1 0 10-1.414 1.414L10.586 12l-2.793 2.793a1 1 0 101.414 1.414L12 13.414l2.793 2.793a1 1 0 101.414-1.414L13.414 12l2.793-2.793a1 1 0 10-1.414-1.414Z"]) div > yt-formatted-string,
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer yt-icon span:has(path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 110 18.001A9 9 0 0112 3Zm2.793 4.793L12 10.586 9.207 7.793a1 1 0 10-1.414 1.414L10.586 12l-2.793 2.793a1 1 0 101.414 1.414L12 13.414l2.793 2.793a1 1 0 101.414-1.414L13.414 12l2.793-2.793a1 1 0 10-1.414-1.414Z"]) {
+					color: chat_context-menu-btn_hide-pined_color--d;
+					transition: all 0.2s ease-in-out !important;
+				}
+	
+				/* ⚪⚪⚪ */
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 110 18.001A9 9 0 0112 3Zm2.793 4.793L12 10.586 9.207 7.793a1 1 0 10-1.414 1.414L10.586 12l-2.793 2.793a1 1 0 101.414 1.414L12 13.414l2.793 2.793a1 1 0 101.414-1.414L13.414 12l2.793-2.793a1 1 0 10-1.414-1.414Z"]) div > yt-formatted-string,
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer yt-icon span:has(path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 110 18.001A9 9 0 0112 3Zm2.793 4.793L12 10.586 9.207 7.793a1 1 0 10-1.414 1.414L10.586 12l-2.793 2.793a1 1 0 101.414 1.414L12 13.414l2.793 2.793a1 1 0 101.414-1.414L13.414 12l2.793-2.793a1 1 0 10-1.414-1.414Z"]) {
+					color: chat_context-menu-btn_hide-pined_color--l;
+					transition: all 0.2s ease-in-out !important;
+				}
+	
+	
+			/* При наведении курсора */
+				/* ⚫⚫⚫ */
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 110 18.001A9 9 0 0112 3Zm2.793 4.793L12 10.586 9.207 7.793a1 1 0 10-1.414 1.414L10.586 12l-2.793 2.793a1 1 0 101.414 1.414L12 13.414l2.793 2.793a1 1 0 101.414-1.414L13.414 12l2.793-2.793a1 1 0 10-1.414-1.414Z"]):hover div > yt-formatted-string,
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:hover yt-icon span:has(path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 110 18.001A9 9 0 0112 3Zm2.793 4.793L12 10.586 9.207 7.793a1 1 0 10-1.414 1.414L10.586 12l-2.793 2.793a1 1 0 101.414 1.414L12 13.414l2.793 2.793a1 1 0 101.414-1.414L13.414 12l2.793-2.793a1 1 0 10-1.414-1.414Z"]) {
+					filter: drop-shadow(0px 0px 4px chat_context-menu-btn_hide-pined_color--d) !important;
+					padding-inline-start: .2em;
+				}
+	
+				/* ⚪⚪⚪ */
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 110 18.001A9 9 0 0112 3Zm2.793 4.793L12 10.586 9.207 7.793a1 1 0 10-1.414 1.414L10.586 12l-2.793 2.793a1 1 0 101.414 1.414L12 13.414l2.793 2.793a1 1 0 101.414-1.414L13.414 12l2.793-2.793a1 1 0 10-1.414-1.414Z"]):hover div > yt-formatted-string,
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:hover yt-icon span:has(path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 110 18.001A9 9 0 0112 3Zm2.793 4.793L12 10.586 9.207 7.793a1 1 0 10-1.414 1.414L10.586 12l-2.793 2.793a1 1 0 101.414 1.414L12 13.414l2.793 2.793a1 1 0 101.414-1.414L13.414 12l2.793-2.793a1 1 0 10-1.414-1.414Z"]) {
+					filter: drop-shadow(0px 0px 4px chat_context-menu-btn_hide-pined_color--l) !important;
+					padding-inline-start: .2em;
+				}
+		} else {
+			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 110 18.001A9 9 0 0112 3Zm2.793 4.793L12 10.586 9.207 7.793a1 1 0 10-1.414 1.414L10.586 12l-2.793 2.793a1 1 0 101.414 1.414L12 13.414l2.793 2.793a1 1 0 101.414-1.414L13.414 12l2.793-2.793a1 1 0 10-1.414-1.414Z"]) {
+				display: none !important;
+			}
+		}
+	
+	
 		/* 🗑 Удалить ⬛/⬜ */
 		if chat_context-menu-btn_delete_toggle {
 			/* Смещение кнопки */
-			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(path[d="M19 3h-4V2a1 1 0 00-1-1h-4a1 1 0 00-1 1v1H5a2 2 0 00-2 2h18a2 2 0 00-2-2ZM6 19V7H4v12a4 4 0 004 4h8a4 4 0 004-4V7h-2v12a2 2 0 01-2 2H8a2 2 0 01-2-2Zm4-11a1 1 0 00-1 1v8a1 1 0 102 0V9a1 1 0 00-1-1Zm4 0a1 1 0 00-1 1v8a1 1 0 002 0V9a1 1 0 00-1-1Z"]) {
+			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:has(path[d="M19 3h-4V2a1 1 0 00-1-1h-4a1 1 0 00-1 1v1H5a2 2 0 00-2 2h18a2 2 0 00-2-2ZM6 19V7H4v12a4 4 0 004 4h8a4 4 0 004-4V7h-2v12a2 2 0 01-2 2H8a2 2 0 01-2-2Zm4-11a1 1 0 00-1 1v8a1 1 0 102 0V9a1 1 0 00-1-1Zm4 0a1 1 0 00-1 1v8a1 1 0 002 0V9a1 1 0 00-1-1Z"]) {
 				order: chat_context-menu-btn_delete_order !important;
 			}
 	
@@ -4302,7 +4609,7 @@ purple3=#9048FF
 			/* ⚪⚪⚪ */
 			html:not([dark]) yt-live-chat-text-message-renderer div#inline-action-buttons > yt-button-renderer button:has(path[d="M19 3h-4V2a1 1 0 00-1-1h-4a1 1 0 00-1 1v1H5a2 2 0 00-2 2h18a2 2 0 00-2-2ZM6 19V7H4v12a4 4 0 004 4h8a4 4 0 004-4V7h-2v12a2 2 0 01-2 2H8a2 2 0 01-2-2Zm4-11a1 1 0 00-1 1v8a1 1 0 102 0V9a1 1 0 00-1-1Zm4 0a1 1 0 00-1 1v8a1 1 0 002 0V9a1 1 0 00-1-1Z"]) {
 				background-color: #53535F61;
-				background-image: linear-gradient(0deg, #1E1E235C 7%, #46464959 40%, #46464973 70%, #53535FB8 90%);
+				background-image: linear-gradient(0deg, #8F8F8F5C 7%, #C0C0C05C 40%, #CDCDCD5C 70%, #FFFFFF5C 90%);
 			}
 		}
 	
@@ -4421,7 +4728,7 @@ purple3=#9048FF
 			/* ⚪⚪⚪ */
 			html:not([dark]) yt-live-chat-text-message-renderer div#inline-action-buttons > yt-button-renderer button:has(path[d="M5 1H4a1 1 0 000 2h1v3.175A7 7 0 008.119 12 7 7 0 005 17.826V21H4a1 1 0 000 2h16a1 1 0 000-2h-1v-3.174A7 7 0 0015.881 12 7 7 0 0019 6.175V3h1a1 1 0 100-2H5Zm12 2v3.175a5 5 0 01-2.35 4.24l-1.18.737a1 1 0 000 1.696l1.18.738a5 5 0 012.35 4.24V21H7v-3.175a5 5 0 012.35-4.24l1.18-.737a1 1 0 000-1.696l-1.18-.737A5 5 0 017 6.175V3h10ZM9 7a3 3 0 106 0H9Zm2 10a3 3 0 00-3 3h8a3 3 0 00-3-3h-2Z"]) {
 				background-color: #53535F61;
-				background-image: linear-gradient(0deg, #1E1E235C 7%, #46464959 40%, #46464973 70%, #53535FB8 90%);
+				background-image: linear-gradient(0deg, #8F8F8F5C 7%, #C0C0C05C 40%, #CDCDCD5C 70%, #FFFFFF5C 90%);
 			}
 		}
 	
@@ -4540,7 +4847,7 @@ purple3=#9048FF
 			/* ⚪⚪⚪ */
 			html:not([dark]) yt-live-chat-text-message-renderer div#inline-action-buttons > yt-button-renderer button:has(path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 110 18.001A9 9 0 0112 3Zm4 8H8a1 1 0 000 2h8a1 1 0 000-2Z"]) {
 				background-color: #53535F61;
-				background-image: linear-gradient(0deg, #1E1E235C 7%, #46464959 40%, #46464973 70%, #53535FB8 90%);
+				background-image: linear-gradient(0deg, #8F8F8F5C 7%, #C0C0C05C 40%, #CDCDCD5C 70%, #FFFFFF5C 90%);
 			}
 		}
 	

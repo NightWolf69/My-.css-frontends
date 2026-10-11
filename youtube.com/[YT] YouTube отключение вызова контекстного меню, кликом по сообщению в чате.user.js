@@ -1,8 +1,9 @@
 // ==UserScript==
-// @name         YouTube no [whole-message-clickable] any more
+// @name         [YT] YouTube disable {whole-message-clickable} function in chat
 // @namespace    https://github.com/NightWolf69
-// @version      1.0.0
-// @description  Отключает функцию "whole-message-clickable" у сообщений в чате, которая вызывала контекстное меню, по нажатию в любой точке
+// @version      1.0.1
+// @description  Disable script function, that opens context menu if you click in any oint in chat
+// @description:ru  Отключает скрипт вызывающий контекстное меню, если кликнуть в любую часть чата
 // @homepageURL  https://github.com/NightWolf69/My-.css-frontends
 // @downloadURL  https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/youtube.com/%5BYT%5D%20YouTube%20disable%20'whole-message-clickable'.user.js
 // @updateURL    https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/youtube.com/%5BYT%5D%20YouTube%20disable%20'whole-message-clickable'.user.js
@@ -22,7 +23,7 @@
     // Глобально перехватываем клики в области чата
     document.addEventListener('click', function(e) {
         // Находим, было ли нажатие внутри элемента сообщения
-        const messageElement = e.target.closest('yt-live-chat-text-message-renderer');
+        const messageElement = e.target.closest('yt-live-chat-text-message-renderer, yt-live-chat-membership-item-renderer');
 
         // Если кликнули на сообщение, но НЕ на имя автора, аватарку, текст или кнопку меню модератора
         if (messageElement && !e.target.closest('a#show-original, a[target="_blank"], a.ytd-menu-navigation-item-renderer, #menu, #before-content-buttons, #contentWrapper, yt-button-renderer, ytd-menu-navigation-item-renderer, ytd-menu-service-item-renderer')) {
