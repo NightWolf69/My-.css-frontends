@@ -1,20 +1,20 @@
 // ==UserScript==
-// @name         [YT] YouTube disable {whole-message-clickable} function in chat
-// @namespace    https://github.com/NightWolf69
-// @version      1.0.1
-// @description  Disable script function, that opens context menu if you click in any oint in chat
-// @description:ru  Отключает скрипт вызывающий контекстное меню, если кликнуть в любую часть чата
-// @homepageURL  https://github.com/NightWolf69/My-.css-frontends
-// @downloadURL  https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/youtube.com/%5BYT%5D%20YouTube%20disable%20'whole-message-clickable'.user.js
-// @updateURL    https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/youtube.com/%5BYT%5D%20YouTube%20disable%20'whole-message-clickable'.user.js
-// @supportURL   https://github.com/NightWolf69/My-.css-frontends/issues
-// @icon         https://www.google.com/s2/favicons?domain=youtube.com
-// @match        https://www.youtube.com/live_chat*
-// @match        https://www.youtube.com/live_chat_replay*
-// @match        https://studio.youtube.com/live_chat*
-// @match        https://studio.youtube.com/live_chat_replay*
-// @run-at       document-start
-// @grant        none
+// @name			[YT] YouTube disable {whole-message-clickable} function in chat
+// @namespace		https://github.com/NightWolf69
+// @version			1.0.1
+// @icon			https://www.google.com/s2/favicons?domain=youtube.com
+// @description		Disable script function, that opens context menu if you click in any oint in chat
+// @description:ru	Отключает скрипт вызывающий контекстное меню, если кликнуть в любую часть чата
+// @author			NightWolf_69
+// @homepageURL		https://github.com/NightWolf69/My-.css-frontends
+// @downloadURL		https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/youtube.com/%5BYT%5D%20YouTube%20disable%20'whole-message-clickable'.user.js
+// @updateURL		https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/youtube.com/%5BYT%5D%20YouTube%20disable%20'whole-message-clickable'.user.js
+// @supportURL		https://github.com/NightWolf69/My-.css-frontends/issues
+// @license			AGPL-3.0
+// @match			https://www.youtube.com/*
+// @match			https://studio.youtube.com/*
+// @run-at			document-start
+// @grant			none
 // ==/UserScript==
 
 (function() {
