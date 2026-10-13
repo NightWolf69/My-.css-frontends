@@ -38,7 +38,7 @@
 
 # Как установить `.user.css` и/или `.user.js`?
 <!-- KICK -->
-+ <a href="https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/kick.com/%5BKK%5D%20Kick%20Enhancment.user.css" title="KICK.com" target="kick"><img src="https://kick.com/img/kick-logo.svg" alt="KICK" width="64"></a> — <a href="https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/kick.com/%5BKK%5D%20Kick%20Enhancment.user.css" title="KICK.com" target="kick">Установить</a> `.user.css` <code>v2.3.11</code>
++ <a href="https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/kick.com/%5BKK%5D%20Kick%20Enhancment.user.css" title="KICK.com" target="kick"><img src="https://kick.com/img/kick-logo.svg" alt="KICK" width="64"></a> — <a href="https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/kick.com/%5BKK%5D%20Kick%20Enhancment.user.css" title="KICK.com" target="kick">Установить</a> `.user.css` <code>v2.3.12</code>
 > [!NOTE]
 > Совместимо со следующими аддонами:
 > 
