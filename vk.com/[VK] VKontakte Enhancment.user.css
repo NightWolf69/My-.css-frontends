@@ -1,11 +1,12 @@
 /* ==UserStyle==
 @name           [VK] VKontakte Enhancment
 @namespace      https://github.com/NightWolf69
-@version        1.0.5-beta
+@version        1.0.6-beta
 @description    Правки внешнего вида для ВК
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
 @supportURL     https://github.com/NightWolf69/My-.css-frontends/issues
+@license		AGPL-3.0
 @preprocessor   stylus
 
 @var	number  	header-VK											"╔══════════════════════ VK ════════════════════════╗"							[0,0,0]
