@@ -6,6 +6,7 @@
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
 @supportURL     https://github.com/NightWolf69/My-.css-frontends/issues
+@license		AGPL-3.0
 @preprocessor   stylus
 
 @var	select  	header-0-start												"╔════════════════════ ВЕРХНЯЯ ПАНЕЛЬ САЙТА ═════════════════════╗" 							{" ":"divider"}
@@ -1254,9 +1255,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("youtube.com"), domain("www.youtube.com"), domain("studio.youtube.com") {
-/* #################################### */
-/* ##### Чат - Верхняя часть чата ##### */
-/* #################################### */
+/* #############@@@####################### */
+/* ##### Чат - 🛖 Верхняя часть чата ##### */
+/* #############@@@####################### */
 	
 	/* Отключить отображение кнопки «⚙️ Enable/Disable HyperChat» */
 	if chat-header_hyperchat-on-off_disable {
@@ -2332,7 +2333,7 @@ purple3=#9048FF
 	
 @-moz-document domain("youtube.com"), domain("www.youtube.com"), domain("studio.youtube.com") {
 /* ##################################### */
-/* ##### Чат - 🗒 Сообщения в чате ##### */
+/* ##### Чат - 💬 Сообщения в чате ##### */
 /* ##################################### */
 	
 	/* Закраска фона сообщений через один ⬛/⬜ */
@@ -4885,9 +4886,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("youtube.com"), domain("www.youtube.com"), domain("studio.youtube.com") {
-/* ####################################################### */
-/* ##### Нижняя часть чата - Область ввода сообщения ##### */
-/* ####################################################### */
+/* ########################################################## */
+/* ##### Нижняя часть чата - ✍️ Область ввода сообщения ##### */
+/* ########################################################## */
 	
 	/* Кнопка открытия меню смайлов 😡 bttv */
 	if chat_input-area_btn_bttv-emoji-menu_toggle {
