@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        2.3.11
+@version        2.3.12
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов Enhancer, 7tv, Mo'Kick и NipahTV (использование этих аддонов опционально)
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -9,62 +9,62 @@
 @preprocessor   stylus
 
 //Цветовые акценты
-@var	number  		header-0-start													"╔════════════════ ЦВЕТОВЫЕ АКЦЕНТЫ САЙТА ══════════════════╗"							[0,0,0]
+@var	select  		header-0-start													"╔════════════════ ЦВЕТОВЫЕ АКЦЕНТЫ САЙТА ══════════════════╗"							{" ":"divider"}
 @var	checkbox			top_site_bar_bg_toggle										"╠    Изменение фонового цвета верхней панеле сайта:"									1
 @var	color				top_site_bar_bg_color										"╠═        Фоновый цвет верхней панеле сайта:"											#1D1D1D
-@var	number  		header-0-line-divider-0											"║"														 								[0,0,0]
+@var	select  		header-0-line-divider-0											"║"														 								{" ":"divider"}
 @var	checkbox			left_side_menu_bg_toggle									"╠    Изменение фонового цвета левого бокового меню:"									1
 @var	color				left_side_menu_bg_color										"╠═        Фоновый цвет левого бокового меню:"											#161616
-@var	number  		header-0-line-divider-1											"║"														 								[0,0,0]
+@var	select  		header-0-line-divider-1											"║"														 								{" ":"divider"}
 @var	checkbox			main-body_bg_color_toggle									"╠    Изменение фонового цвета центральной части сайта:"								1
 @var	color				main-body_bg_color											"╠═        Фоновый цвет центральной части сайта:"										rgba(11, 11, 12, 1)
-@var	number  		header-0-line-divider-2											"║"														 								[0,0,0]
+@var	select  		header-0-line-divider-2											"║"														 								{" ":"divider"}
 @var	checkbox			channel_description_bg_toggle								"╠    Изменение фонового цвета у плашки «Информация о пользователе»:"					1
 @var	color				channel_description_bg_color								"╠═        Фоновый цвет у плашки «Информация о пользователе»:"							rgba(23, 26, 28, 1)
-@var	number  		header-0-line-divider-3											"║"														 								[0,0,0]
+@var	select  		header-0-line-divider-3											"║"														 								{" ":"divider"}
 @var	checkbox			mod-main-body_bg_color_toggle								"╠    Изменение фонового цвета центральной части сайта в 🛠 Модерке:"					1
 @var	color				mod-main-body_bg_color										"╠═        Фоновый цвет центральной части сайта:"										rgba(11, 11, 12, 1)
-@var	number  		header-0-line-divider-4											"║"														 								[0,0,0]
+@var	select  		header-0-line-divider-4											"║"														 								{" ":"divider"}
 @var	checkbox			mod-wedget-body_bg_color_toggle								"╠    Изменение цвета виджетов в 🛠 Модерке:"											1
 @var	color				mod-wedget-header_bg_color									"╠═        Фоновый цвет заголовка виджета:"												rgba(23, 26, 28, 1)
 @var	color				mod-wedget-body_bg_color									"╠═        Фоновый цвет тела виджета:"													rgba(23, 26, 28, 1)
-@var	number  		header-0-line-divider-5											"║"														 								[0,0,0]
+@var	select  		header-0-line-divider-5											"║"														 								{" ":"divider"}
 @var	checkbox			chat_header_and_input_bg_toggle								"╠    Изменение фонового цвета верхней и нижней части чат:"								1
 @var	color				chat_header_and_input_bg_color								"╠═        Фоновый цвет верхней и нижней части чат:"									#161616
-@var	number  		header-0-line-divider-6											"║"														 								[0,0,0]
+@var	select  		header-0-line-divider-6											"║"														 								{" ":"divider"}
 @var	checkbox			main-body_bg_color_toggle									"╠    Изменение фонового цвета центральной части сайта:"								1
 @var	color				main-body_bg_color_color									"╠═        Фоновый цвет центральной части сайта:"										rgba(11, 11, 12, 1)
-@var	number  		header-0-line-divider-7											"║"														 								[0,0,0]
+@var	select  		header-0-line-divider-7											"║"														 								{" ":"divider"}
 @var	checkbox			chat_messages_bg_toggle										"╠    Изменение фонового цвета чата:"													1
 @var	color				chat_messages_bg_color										"╠═        Фоновый цвет чата:"															#0D0D0D
-@var	number  		header-0-line-divider-8											"║"														 								[0,0,0]
+@var	select  		header-0-line-divider-8											"║"														 								{" ":"divider"}
 @var	checkbox			draggable_window_bg_type_toggle								"╠    Типа фонового цвет перетаскиваемых окон [Заливка / Градиент]:"					0
 @var	color				draggable_window_upper-bg-fade_color						"╠═        Цвет верхнего градиента:"													#202020
 @var	color				draggable_window_lower-bg-fade_color						"╠═        Цвет нижнего градиента:"														#101010
 @var	color				draggable_window_bg_color									"╠═        Цвет фоновый заливки:"														#171A1C
 @var	color				draggable_window_glow_color									"╠═        Цвет внешнего свечения:"														lightgreen
-@var	number  		header-0-line-divider-9											"║"														 								[0,0,0]
+@var	select  		header-0-line-divider-9											"║"														 								{" ":"divider"}
 @var	checkbox			site_links-hover_toggle										"╠    Выделять ссылки цветом и подчёркиванием, при наведении курсора:"					1
 @var	color				site_links-hover_color										"╠═        Цвет выделения ссылки:"														#53FC18
-@var	number  		header-0-line-divider-10										"║"														 								[0,0,0]
+@var	select  		header-0-line-divider-10										"║"														 								{" ":"divider"}
 @var	checkbox			site_scrollbar_toggle										"╠    Заменить цвет скролбаров (полосок прокрутки):"									1
 @var	color				site_scrollbar_color										"╠═        Цвет выделения ссылки:"														#53FC189E
-@var	number  		header-0-line-divider-11										"║"														 								[0,0,0]
+@var	select  		header-0-line-divider-11										"║"														 								{" ":"divider"}
 @var	checkbox			site_tooltip_disable_toggle									"╠    Отключить все всплывающие 💭 tooltip баблы:"										0
 @var	checkbox			site_tooltip_chat-reply_forse_toggle						"╠═        Включает 💭 tooltip баблы у сообщений-ответов в чате:"						1
-@var	number  		header-0-end													"╚═══════════════════════════════════════════════════════╝" 							[0,0,0]
+@var	select  		header-0-end													"╚═══════════════════════════════════════════════════════╝" 							{" ":"divider"}
 
-@var	number  		empty0															"" 																						[0,0,0]
+@var	select  		empty0															"" 																						{" ":"divider"}
 
 //Эллементы верхней панеле сайта
-@var	number  		header-1-start													"╔═════════════ ЭЛЛЕМЕНТЫ ВЕРХНЕЙ ПАНЕЛИ САЙТА ══════════════╗"							[0,0,0]
+@var	select  		header-1-start													"╔═════════════ ЭЛЛЕМЕНТЫ ВЕРХНЕЙ ПАНЕЛИ САЙТА ══════════════╗"							{" ":"divider"}
 @var	checkbox			top_site_bar_btn_togg_side_menu_toggle						"╠    Изменение кнопки Свернуть/Развернуть боковое меню:"								1
 @var	color				top_site_bar_btn_togg_side_menu_color						"╠═        Цвет внешнего свечения кнопки:"												#A0FF48
-@var	number  		header-1-line-divider-0											"║"														 								[0,0,0]
+@var	select  		header-1-line-divider-0											"║"														 								{" ":"divider"}
 @var	checkbox			top_site_bar_btn_enhancer_toggle							"╠    Изменение кнопки вызова настроек аддона Enhancer:"								1
 @var	checkbox			top_site_bar_btn_enhancer_disable							"╠═       Отключить отображение кнопки:"												0
 @var	color				top_site_bar_btn_enhancer_color								"╠═        Цвет внешнего свечения кнопки:"												rebeccapurple
-@var	number  		header-1-line-divider-1											"║"														 								[0,0,0]
+@var	select  		header-1-line-divider-1											"║"														 								{" ":"divider"}
 @var	checkbox			top_site_bar_btn_claim-reward_toggle						"╠    Изменение кнопки 📦 Получения награды:"											1
 @var	checkbox			top_site_bar_btn_claim-reward_disable						"╠═       Отключить отображение кнопки:"												0
 @var	checkbox			top_site_bar_btn_claim-reward_ready-to-claim_toggle			"╠═       Особый фон кнопки, если есть награда к получению:"							1
@@ -77,56 +77,56 @@
 @var	color				top_site_bar_btn_claim-reward_color2						"╠══               Цвет нижнего левого угла иконки:"									lightgreen
 @var	color				top_site_bar_btn_claim-reward_color3						"╠══               Цвет верхней и нижней правой части иконки:"							#53FC18
 @var	color				top_site_bar_btn_claim-reward_glow-color					"╠═        Цвет внешнего свечения кнопки:"												rgb(83, 252, 24)
-@var	number  		header-1-line-divider-2											"║"														 								[0,0,0]
+@var	select  		header-1-line-divider-2											"║"														 								{" ":"divider"}
 @var	checkbox			top_site_bar_btn_mo-kick_toggle								"╠    Изменение кнопки вызова настроек аддона Mo'Kick:"									1
 @var	checkbox			top_site_bar_btn_mo-kick_disable							"╠═       Отключить отображение кнопки:"												0
 @var	color				top_site_bar_btn_mo-kick_color								"╠═        Цвет внешнего свечения кнопки:"												#53FC18
-@var	number  		header-1-line-divider-3											"║"														 								[0,0,0]
+@var	select  		header-1-line-divider-3											"║"														 								{" ":"divider"}
 @var	checkbox			top_site_bar_btn_lang_toggle								"╠    Изменение кнопка 🌐 Отображаемый язык:"											1
 @var	color				top_site_bar_btn_lang_color									"╠═        Цвет кнопки:"																turquoise
 @var	checkbox			top_site_bar_btn_lang_bg_toggle								"╠═       Свой цвет фона кнопки:"														1
 @var	color				top_site_bar_btn_lang_bg_color								"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-1-line-divider-4											"║"														 								[0,0,0]
+@var	select  		header-1-line-divider-4											"║"														 								{" ":"divider"}
 @var	checkbox			top_site_bar_btn_log-in_toggle								"╠    Изменение кнопка 🔑 Вход:"														1
 @var	color				top_site_bar_btn_log-in_color								"╠═        Цвет кнопки:"																#53FC18
 @var	checkbox			top_site_bar_btn_log-in_bg_toggle							"╠═       Свой цвет фона кнопки:"														1
 @var	color				top_site_bar_btn_log-in_bg_color							"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-1-line-divider-5											"║"														 								[0,0,0]
+@var	select  		header-1-line-divider-5											"║"														 								{" ":"divider"}
 @var	checkbox			top_site_bar_btn_sign-up_toggle								"╠    Изменение кнопка 🔑 Регистрация:"													1
 @var	color				top_site_bar_btn_sign-up_color								"╠═        Цвет кнопки:"																#53FC18
 @var	checkbox			top_site_bar_btn_sign-up_bg_toggle							"╠═       Свой цвет фона кнопки:"														1
 @var	color				top_site_bar_btn_sign-up_bg_color							"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-1-line-divider-6											"║"														 								[0,0,0]
+@var	select  		header-1-line-divider-6											"║"														 								{" ":"divider"}
 @var	checkbox			top_site_bar_btn_browse_toggle								"╠    Изменение кнопка 📺 Навигация (когда окно браузера маленькое):"					1
 @var	color				top_site_bar_btn_browse_color								"╠═        Цвет кнопки:"																#53FC18
 @var	checkbox			top_site_bar_btn_browse_bg_toggle							"╠═       Свой цвет фона кнопки:"														1
 @var	color				top_site_bar_btn_browse_bg_color							"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-1-line-divider-7											"║"														 								[0,0,0]
+@var	select  		header-1-line-divider-7											"║"														 								{" ":"divider"}
 @var	checkbox			top_site_bar_btn_following_toggle							"╠    Изменение кнопка 💜 Отслеживаемое (когда окно браузера маленькое):"				1
 @var	color				top_site_bar_btn_following_color							"╠═        Цвет кнопки:"																magenta
 @var	checkbox			top_site_bar_btn_following_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				top_site_bar_btn_following_bg_color							"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-1-line-divider-8											"║"														 								[0,0,0]
+@var	select  		header-1-line-divider-8											"║"														 								{" ":"divider"}
 @var	checkbox			top_site_bar_btn_drops_toggle								"╠    Изменение кнопка 🏠 Дропы и вознаграждение (когда окно браузера маленькое):"		1
 @var	color				top_site_bar_btn_drops_color								"╠═        Цвет кнопки:"																yellow
 @var	checkbox			top_site_bar_btn_drops_bg_toggle							"╠═       Свой цвет фона кнопки:"														1
 @var	color				top_site_bar_btn_drops_bg_color								"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-1-line-divider-9											"║"														 								[0,0,0]
+@var	select  		header-1-line-divider-9											"║"														 								{" ":"divider"}
 @var	checkbox			top_site_bar_btn_navbar-search_toggle						"╠    Изменение кнопка 🔍 Поиск (когда окно браузера маленькое):"						1
 @var	color				top_site_bar_btn_navbar-search_color						"╠═        Цвет кнопки:"																lightyellow
 @var	checkbox			top_site_bar_btn_navbar-search_bg_toggle					"╠═       Свой цвет фона кнопки:"														1
 @var	color				top_site_bar_btn_navbar-search_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-1-line-divider-10										"║"														 								[0,0,0]
+@var	select  		header-1-line-divider-10										"║"														 								{" ":"divider"}
 @var	checkbox			top_site_bar_btn_buy_kicks_toggle							"╠    Изменение кнопки вызова меню покупки KICKs:"										1
 @var	checkbox			top_site_bar_btn_buy_kicks_disable							"╠═       Отключить отображение кнопки:"												0
 @var	color				top_site_bar_btn_buy_kicks_color							"╠═        Цвет внешнего свечения кнопки:"												#53FC18
-@var	number  		header-1-line-divider-11										"║"														 								[0,0,0]
-@var	number  		header-1-divider												"╠══════════ ТОЛЬКО В РЕЖИМЕ МОДЕРАТОРА ИЛИ АВТОРА ═══════════╣" 						[0,0,0]
-@var	number  		header-1-line-divider-12										"║"														 								[0,0,0]
+@var	select  		header-1-line-divider-11										"║"														 								{" ":"divider"}
+@var	select  		header-1-divider												"╠══════════ ТОЛЬКО В РЕЖИМЕ МОДЕРАТОРА ИЛИ АВТОРА ═══════════╣" 						{" ":"divider"}
+@var	select  		header-1-line-divider-12										"║"														 								{" ":"divider"}
 @var	checkbox			top_site_bar_btn_new_cnl_prof_toggle						"╠    Изменение кнопки вызова меню New Channel Profile (Mo'Kick):"						1
 @var	checkbox			top_site_bar_btn_new_cnl_prof_disable						"╠═       Отключить отображение кнопки:"												0
 @var	color				top_site_bar_btn_new_cnl_prof_color							"╠═        Цвет, и внешнее свечение кнопки:"											orange
-@var	number  		header-1-line-divider-13										"║"														 								[0,0,0]
+@var	select  		header-1-line-divider-13										"║"														 								{" ":"divider"}
 @var	checkbox			top_site_bar_btn_go-live_toggle								"╠    Изменение кнопки Выйти в эфир:"													1
 @var	checkbox			top_site_bar_btn_go-live_disable							"╠═       Отключить отображение кнопки:"												0
 @var	checkbox			top_site_bar_btn_go-live_bg_toggle							"╠═       Свой цвет фона кнопки:"														0
@@ -134,66 +134,66 @@
 @var	checkbox			top_site_bar_btn_go-live_text_disable						"╠═       Убрать текст в кнопке:"														1
 @var	color				top_site_bar_btn_go-live_color								"╠═        Цвет текста:"																#000
 @var	color				top_site_bar_btn_go-live_glow_color							"╠═        Цвет внешнего свечения кнопки:"												#53FC18
-@var	number  		header-1-line-divider-14										"║"														 								[0,0,0]
+@var	select  		header-1-line-divider-14										"║"														 								{" ":"divider"}
 @var	checkbox			top_site_bar_btn_create_profile_fix_toggle					"╠    Фикс кислотной кнопки в меню New Channel Profile (Mo'Kick):"						1
-@var	number  		header-1-end													"╚═══════════════════════════════════════════════════════╝" 							[0,0,0]
+@var	select  		header-1-end													"╚═══════════════════════════════════════════════════════╝" 							{" ":"divider"}
 
-@var	number  		empty1															"" 																						[0,0,0]
+@var	select  		empty1															"" 																						{" ":"divider"}
 
 //Левое боковое меню
-@var	number  		header-2-start													"╔═════════════════════ БОКОВОЫЕ МЕНЮ ════════════════════╗"							[0,0,0]
+@var	select  		header-2-start													"╔═════════════════════ БОКОВОЫЕ МЕНЮ ════════════════════╗"							{" ":"divider"}
 @var	checkbox  			header-2-WIP												"║ Планируется реализовать в будущем..."				 								0
-@var	number  		header-2-line-divider-0											"║"														 								[0,0,0]
-@var	number  		header-2-divider-0												"╠══════════ ТОЛЬКО В РЕЖИМЕ МОДЕРАТОРА ИЛИ АВТОРА ═══════════╣" 						[0,0,0]
-@var	number  		header-2-line-divider-1											"║"														 								[0,0,0]
+@var	select  		header-2-line-divider-0											"║"														 								{" ":"divider"}
+@var	select  		header-2-divider-0												"╠══════════ ТОЛЬКО В РЕЖИМЕ МОДЕРАТОРА ИЛИ АВТОРА ═══════════╣" 						{" ":"divider"}
+@var	select  		header-2-line-divider-1											"║"														 								{" ":"divider"}
 @var	checkbox  			header-2-WIP-2												"║ Планируется реализовать в будущем..."				 								0
-@var	number  		header-2-line-divider-2											"║"														 								[0,0,0]
-@var	number  		header-2-end													"╚═══════════════════════════════════════════════════════╝" 							[0,0,0]
+@var	select  		header-2-line-divider-2											"║"														 								{" ":"divider"}
+@var	select  		header-2-end													"╚═══════════════════════════════════════════════════════╝" 							{" ":"divider"}
 
-@var	number  		empty2															"" 																						[0,0,0]
+@var	select  		empty2															"" 																						{" ":"divider"}
 
 //Кнопки в плеере
-@var	number  		header-3-start													"╔═════════════════════════ ПЛЕЕР ════════════════════════╗"							[0,0,0]
+@var	select  		header-3-start													"╔═════════════════════════ ПЛЕЕР ════════════════════════╗"							{" ":"divider"}
 @var	checkbox			player_btn_header_and_backgrount_img_toggle					"╠    Изменение кнопки ✏️ Изменить баннер:"												1
 @var	color				player_btn_header_and_backgrount_img_color					"╠═        Цвет кнопкит:"																#C39BFF
 @var	checkbox			player_btn_header_and_backgrount_img_bg_toggle				"╠═       Свой цвет фона кнопки:"														1
 @var	color				player_btn_header_and_backgrount_img_bg_color				"╠══               Цвет фона кнопки:"													rgba(23, 26, 28, 1)
-@var	number  		header-3-line-divider-0											"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-0											"║"														 								{" ":"divider"}
 @var	color				player_upper_gradient_color									"╠    Градиент под названием клипа:"													rgba(0, 0, 0, 0.8)
 @var	checkbox			player_upper_info_readability_toggle						"╠    Улучшить видимость текста с инфой вверху плеера:"									1
 @var	color				player_upper_info_readability_category_color				"╠═       Цвет названия категории клипа:"												lightgreen
 @var	color				player_upper_info_readability_clip-maker_color				"╠═       Цвет имени пользователя сделавшего клип:"										#53FC18
 @var	color				player_lower_gradient_color									"╠    Градиент под кнопками плеера:"													rgba(0, 0, 0, 0.8)
 @var	checkbox			player_lower_info_readability_toggle						"╠    Улучшить видимость текста с инфой внизу плеера:"									1
-@var	number  		header-3-line-divider-1											"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-1											"║"														 								{" ":"divider"}
 @var	checkbox			player_stream-recorder_and_stats-4-nerds_widget_toggle		"╠    Компактный вид виджетов «Stream Recorder» и «Stats For Nerds» (Mo'Kick):"			1
-@var	number  		header-3-line-divider-2											"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-2											"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_rewind-10-30_toggle								"╠    Изменение кнопок ↩️ ← 10 и ↩️ ← 30:"												1
 @var	color				player_btn_rewind-10-30_color								"╠═       Цвет кнопки:"																	#C39BFF
-@var	number  		header-3-line-divider-3											"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-3											"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_goto-prev-page_toggle							"╠    Изменение кнопки 🔽 Вернутьсяна прошлую страницу:"								1
 @var	checkbox			player_btn_goto-prev-page_disable							"╠═        Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"					1
 @var	color				player_btn_goto-prev-page_color								"╠═       Цвет кнопки:"																	#53FC18
-@var	number  		header-3-line-divider-4											"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-4											"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_rewind_toggle									"╠    Изменение кнопки ⏪ Rewind аддона Mo'Kick:"										1
 @var	checkbox			player_btn_rewind_disable									"╠═        Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"					0
 @var	checkbox			player_in_mod_btn_rewind_disable							"╠═        Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	color				player_btn_rewind_color										"╠═       Цвет кнопки:"																	#C39BFF
-@var	number  		header-3-line-divider-5											"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-5											"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_watch-again_toggle								"╠    Изменение кнопки 🔄 Повторное воспроизведение:"									1
 @var	color				player_btn_watch-again_color								"╠═        Цвет кнопки:"																#53FC18
-@var	number  		header-3-line-divider-6											"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-6											"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_pause-play_toggle								"╠    Изменение кнопки ⏯ Пауза/Воспроизвести:"											1
 @var	color				player_btn_pause-play_color									"╠═        Цвет кнопки:"																#A970FF
-@var	number  		header-3-line-divider-7											"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-7											"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_fast-forward-10-30_toggle						"╠    Изменение кнопки ↪️ → 10 и ↩️ → 30:"												1
 @var	color				player_btn_fast-forward-10-30_color							"╠═       Цвет кнопки:"																	#C39BFF
-@var	number  		header-3-line-divider-8											"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-8											"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_fast-forward_toggle								"╠    Изменение кнопки ⏩ Fast Forward аддона Mo'Kick:"									1
 @var	checkbox			player_btn_fast-forward_disable								"╠═        Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"					0
 @var	checkbox			player_in_mod_btn_fast-forward_disable						"╠═        Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	color				player_btn_fast-forward_color								"╠═       Цвет кнопки:"																	#C39BFF
-@var	number  		header-3-line-divider-9											"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-9											"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_mute-unmute_toggle								"╠    Изменение кнопки 🔈 Отключить звук / 🔇 Отменить отключение звука:"				1
 @var	checkbox			player_btn_mute-unmute_disable								"╠═        Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"					0
 @var	checkbox			player_in_mod_btn_mute-unmute_disable						"╠═        Отключить отображение кнопки в 🛠 плеере Модерки:"							0
@@ -201,84 +201,84 @@
 @var	checkbox			player_clip_btn_mute-unmute_disable							"╠═        Отключить отображение кнопки в 🎞 плеере Просмотра клипа:"					0
 @var	color				player_btn_unmuted_color									"╠═        Цвет кнопки, когда звук 🔈 Включен:"											#A0FF48
 @var	color				player_btn_muted_color										"╠═        Цвет кнопки, когда звук 🔇 Отключен:"										#FF6262
-@var	number  		header-3-line-divider-10										"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-10										"║"														 								{" ":"divider"}
 @var	checkbox			player_volume-slider_fix									"╠    Фикс перекрытия 🎚 Ползунока регулировки громкости, шкалой перемотки:"			1
 @var	checkbox			player_volume-slider_force									"╠    🎚 Ползунок регулировки громкости всегда видно в ▶️ плеере Стрима и VOD'а:"		1
 @var	checkbox			player_in_mod_volume-slider_force							"╠    🎚 Ползунок регулировки громкости всегда видно в 🛠 плеере Модерки:"				1
 @var	checkbox			player_in-tab_volume-slider_force							"╠    🎚 Ползунок регулировки громкости всегда видно в 📌 плеере In-Tab (Mo'Kick):"		1
 @var	checkbox			player_clip_volume-slider_force								"╠    🎚 Ползунок регулировки громкости всегда видно в 🎞 плеере Просмотра клипа:"		1
-@var	number  		header-3-line-divider-11										"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-11										"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_stream-record_toggle								"╠    Изменение кнопки 🎥 Stream Record аддона Mo'Kick:"								1
 @var	checkbox			player_btn_stream-record_disable							"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_stream-record_disable						"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_stream-record_order								"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-4,-10,10]
 @var	number				player_in_mod_btn_stream-record_order						"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[-4,-10,10]
 @var	color				player_btn_stream-record_color								"╠═        Цвет кнопки:"																#FF6262
-@var	number  		header-3-line-divider-12										"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-12										"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_screenshot_toggle								"╠    Изменение кнопки 📸 Instant Screenshot аддона Mo'Kick:"							1
 @var	checkbox			player_btn_screenshot_disable								"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_screenshot_disable						"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							0
 @var	number				player_btn_screenshot_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[3,-10,10]
 @var	number				player_in_mod_btn_screenshot_order							"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[3,-10,10]
 @var	color				player_btn_screenshot_color									"╠═        Цвет кнопки:"																#FF6262
-@var	number  		header-3-line-divider-13										"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-13										"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_filters_toggle									"╠    Изменение кнопки ✨ Filters аддона Mo'Kick:"										1
 @var	checkbox			player_btn_filters_disable									"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_filters_disable							"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_filters_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-2,-10,10]
 @var	number				player_in_mod_btn_filters_order								"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[-2,-10,10]
 @var	color				player_btn_filters_color									"╠═        Цвет внешнего свечения кнопки:"												yellow
-@var	number  		header-3-line-divider-14										"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-14										"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_speed_toggle										"╠    Изменение кнопки 🎛 Playback Speed аддона Mo'Kick:"								1
 @var	checkbox			player_btn_speed_disable									"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_speed_disable								"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_speed_order										"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[1,-10,10]
 @var	number				player_in_mod_btn_speed_order								"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[1,-10,10]
 @var	color				player_btn_speed_color										"╠═        Цвет кнопки:"																cyan
-@var	number  		header-3-line-divider-15										"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-15										"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_statistics_toggle								"╠    Изменение кнопки 📊 Statistics аддона Mo'Kick:"									1
 @var	checkbox			player_btn_statistics_disable								"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_statistics_disable						"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_statistics_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[0,-10,10]
 @var	number				player_in_mod_btn_statistics_order							"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[0,-10,10]
 @var	color				player_btn_statistics_color									"╠═        Цвет кнопки:"																#C39BFF
-@var	number  		header-3-line-divider-16										"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-16										"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_pip_toggle										"╠    Изменение кнопки 🪟 Картинка в картинке:"											1
 @var	checkbox			player_btn_pip_disable										"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						1
 @var	checkbox			player_in_mod_btn_pip_disable								"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_pip_order										"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-1,-10,10]
 @var	number				player_in_mod_btn_pip_order									"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[-1,-10,10]
 @var	color				player_btn_pip_color										"╠═        Цвет кнопки:"																#578FFE
-@var	number  		header-3-line-divider-17										"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-17										"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_report_toggle									"╠    Изменение кнопки 🔔Пожаловаться:"													1
 @var	checkbox			player_btn_report_disable									"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	number				player_btn_report_order										"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-4,-10,10]
 @var	color				player_btn_report_color										"╠═        Цвет кнопки:"																yellow
-@var	number  		header-3-line-divider-18										"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-18										"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_clip_toggle										"╠    Изменение кнопки 🎬 Clip:"														1
 @var	checkbox			player_btn_clip_disable										"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_clip_disable								"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_clip_order										"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-4,-10,10]
 @var	number				player_in_mod_btn_clip_order								"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[-4,-10,10]
 @var	color				player_btn_clip_color										"╠═        Цвет кнопки:"																#A0FF48
-@var	number  		header-3-line-divider-19										"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-19										"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_share_toggle										"╠    Изменение кнопки 🔗 Поделиться:"													1
 @var	checkbox			player_btn_share_disable									"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	number				player_btn_share_order										"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-4,-10,10]
 @var	color				player_btn_share_color										"╠═        Цвет кнопки:"																cyan
-@var	number  		header-3-line-divider-20										"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-20										"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_captions_toggle									"╠    Изменение кнопки 📟 Captions:"													1
 @var	checkbox			player_btn_captions_disable									"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	number				player_btn_captions_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[1,-10,10]
 @var	color				player_btn_captions_color									"╠═        Цвет кнопки:"																rgb(69, 173, 252)
-@var	number  		header-3-line-divider-21										"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-21										"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_theatre_toggle									"╠    Изменение кнопки 🔛 Театральный режим:"											1
 @var	checkbox			player_btn_theatre_disable									"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_theatre_disable							"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
 @var	number				player_btn_theatre_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[2,-10,10]
 @var	number				player_in_mod_btn_theatre_order								"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[2,-10,10]
 @var	color				player_btn_theatre_color									"╠═        Цвет кнопки:"																#A970FF
-@var	number  		header-3-line-divider-22										"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-22										"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_fullscreen_toggle								"╠    Изменение кнопки ↗️ Полный экран:"												1
 @var	checkbox			player_btn_fullscreen_disable								"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_fullscreen_disable						"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							1
@@ -287,95 +287,95 @@
 @var	number				player_btn_fullscreen_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[4,-10,10]
 @var	number				player_in_mod_btn_fullscreen_order							"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[4,-10,10]
 @var	color				player_btn_fullscreen_color									"╠═        Цвет кнопки:"																#9048FF
-@var	number  		header-3-line-divider-23										"║"														 								[0,0,0]
+@var	select  		header-3-line-divider-23										"║"														 								{" ":"divider"}
 @var	checkbox			player_btn_quality_toggle									"╠    Изменение кнопки ⚙️ Качество:"													1
 @var	checkbox			player_btn_quality_disable									"╠═       Отключить отображение кнопки в ▶️ плеере Стрима и VOD'а:"						0
 @var	checkbox			player_in_mod_btn_quality_disable							"╠═       Отключить отображение кнопки в 🛠 плеере Модерки:"							0
 @var	number				player_btn_quality_order									"╠═       Смещение кнопки в ▶️ плеере Стрима и VOD'а:"									[-3,-10,10]
 @var	number				player_in_mod_btn_quality_order								"╠═       Смещение кнопки в 🛠 плеере Модерки:"											[-3,-10,10]
 @var	color				player_btn_quality_color									"╠═        Цвет кнопки:"																orange
-@var	number  		header-3-line-divider-24										"║"														 								[0,0,0]
-@var	number  		header-3-end													"╚═══════════════════════════════════════════════════════╝" 							[0,0,0]
+@var	select  		header-3-line-divider-24										"║"														 								{" ":"divider"}
+@var	select  		header-3-end													"╚═══════════════════════════════════════════════════════╝" 							{" ":"divider"}
 
-@var	number  		empty3															"" 																						[0,0,0]
+@var	select  		empty3															"" 																						{" ":"divider"}
 
 //Под плеером
-@var	number  		header-4-start													"╔══════════════ ПОД ПЛЕЕРОМ СТРИМА, VOD'а, КЛИПА ═════════════╗"						[0,0,0]
+@var	select  		header-4-start													"╔══════════════ ПОД ПЛЕЕРОМ СТРИМА, VOD'а, КЛИПА ═════════════╗"						{" ":"divider"}
 @var	checkbox			channel_info_channelname_toggle								"╠    Изменение кликабельного имени канала:"											1
 @var	color				channel_info_channelname_color								"╠═        Цвет имени канала"															#53FC18
-@var	number  		header-4-line-divider-0											"║"														 								[0,0,0]
+@var	select  		header-4-line-divider-0											"║"														 								{" ":"divider"}
 @var	checkbox			channel_info_btn_expand_toggle								"╠    Изменение кнопки 🔽 Равернуть и 🔼 Свернуть в названии Стрима/VOD'а/Клипа:"		1
 @var	color				channel_info_btn_expand_color								"╠═        Цвет иконки"																	lightgreen
-@var	number  		header-4-line-divider-1											"║"														 								[0,0,0]
+@var	select  		header-4-line-divider-1											"║"														 								{" ":"divider"}
 @var	checkbox			channel_info_btn_note_toggle								"╠    Изменение кнопки 🗒 Notes (Mo'Kick):"												1
 @var	checkbox			channel_info_btn_note_disable								"╠═       Отключить отображение кнопки"													0
 @var	color				channel_info_btn_note_color									"╠═        Цвет кнопки"																	lightpink
 @var	checkbox			channel_info_btn_note_bg_toggle								"╠═       Свой цвет фона кнопки"														1
 @var	color				channel_info_btn_note_bg_color								"╠══               Цвет фона кнопки"													rgba(66, 71, 77, .2)
-@var	number  		header-4-line-divider-2											"║"														 								[0,0,0]
+@var	select  		header-4-line-divider-2											"║"														 								{" ":"divider"}
 @var	checkbox			channel_info_btn_notification_toggle						"╠    Изменение кнопки 🔔 Уведомления:"													1
 @var	color				channel_info_btn_notification_color							"╠═        Цвет кнопки"																	skyblue
 @var	checkbox			channel_info_btn_notification_bg_toggle						"╠═       Свой цвет фона кнопки"														1
 @var	color				channel_info_btn_notification_bg_color						"╠══               Цвет фона кнопки"													rgba(66, 71, 77, .2)
-@var	number  		header-4-line-divider-3											"║"														 								[0,0,0]
+@var	select  		header-4-line-divider-3											"║"														 								{" ":"divider"}
 @var	checkbox			channel_info_btn_follow_toggle								"╠    Изменение кнопки 💜 Отслеживать:"													1
 @var	checkbox			channel_info_btn_follow_text_disable						"╠═       Убрать текст в кнопке:"														1
 @var	color				channel_info_btn_follow_color								"╠═        Цвет кнопки"																	magenta
 @var	checkbox			channel_info_btn_follow_bg_toggle							"╠═       Свой цвет фона кнопки"														1
 @var	color				channel_info_btn_follow_bg_color							"╠══               Цвет фона кнопки"													rgba(66, 71, 77, .2)
-@var	number  		header-4-line-divider-4											"║"														 								[0,0,0]
+@var	select  		header-4-line-divider-4											"║"														 								{" ":"divider"}
 @var	checkbox			channel_info_btn_gift-sub_toggle							"╠    Изменение кнопки 🎁 Подарить подписку:"											1
 @var	checkbox			channel_info_btn_gift-sub_text_disable						"╠═        Убрать текст в кнопке:"														1
 @var	color				channel_info_btn_gift-sub_color								"╠═        Цвет кнопки"																	gold
 @var	checkbox			channel_info_btn_gift-sub_bg_toggle							"╠═       Свой цвет фона кнопки"														1
 @var	color				channel_info_btn_gift-sub_bg_color							"╠══               Цвет фона кнопки"													rgba(66, 71, 77, .2)
-@var	number  		header-4-line-divider-5											"║"														 								[0,0,0]
+@var	select  		header-4-line-divider-5											"║"														 								{" ":"divider"}
 @var	checkbox			channel_info_btn_sub_toggle									"╠    Изменение кнопки ✨ Подписаться:"													1
 @var	checkbox			channel_info_btn_sub_text_disable							"╠═        Убрать текст в кнопке:"														1
 @var	color				channel_info_btn_sub_color									"╠═        Цвет кнопки"																	#53FC18
 @var	checkbox			channel_info_btn_sub_bg_toggle								"╠═       Свой цвет фона кнопки"														1
 @var	color				channel_info_btn_sub_bg_color								"╠══               Цвет фона кнопки"													rgba(66, 71, 77, .2)
-@var	number  		header-4-line-divider-6											"║"														 								[0,0,0]
+@var	select  		header-4-line-divider-6											"║"														 								{" ":"divider"}
 @var	checkbox			channel_info_btn_download_no-wmark_toggle					"╠    Изменение кнопки ⬇️ Download No Watermark (Mo'Kick):"								1
 @var	checkbox			channel_info_btn_download_no-wmark_text_disable				"╠═        Убрать текст в кнопке:"														1
 @var	color				channel_info_btn_download_no-wmark_color					"╠═        Цвет кнопки"																	lightgreen
 @var	checkbox			channel_info_btn_download_no-wmark_bg_toggle				"╠═       Свой цвет фона кнопки"														1
 @var	color				channel_info_btn_download_no-wmark_bg_color					"╠══               Цвет фона кнопки"													rgba(66, 71, 77, .2)
-@var	number  		header-4-line-divider-7											"║"														 								[0,0,0]
+@var	select  		header-4-line-divider-7											"║"														 								{" ":"divider"}
 @var	checkbox			channel_info_viewers_toggle									"╠    Изменение 👨‍👦 Счётчика зрителей/онлайна:"											1
 @var	color				channel_info_viewers_color									"╠═        Цвет иконки"																	#FF6262
-@var	number  		header-4-line-divider-8											"║"														 								[0,0,0]
+@var	select  		header-4-line-divider-8											"║"														 								{" ":"divider"}
 @var	checkbox			channel_info_chatters_toggle								"╠    Изменение 💬 Chatters In Avg. (Mo'Kick):"											1
 @var	color				channel_info_chatters_color									"╠═        Цвет иконки"																	lightyellow
-@var	number  		header-4-line-divider-9											"║"														 								[0,0,0]
+@var	select  		header-4-line-divider-9											"║"														 								{" ":"divider"}
 @var	checkbox			channel_info_participation_toggle							"╠    Изменение 📊 % Participation (Mo'Kick):"											1
 @var	color				channel_info_participation_color							"╠═        Цвет иконки"																	#C39BFF
-@var	number  		header-4-line-divider-10										"║"														 								[0,0,0]
+@var	select  		header-4-line-divider-10										"║"														 								{" ":"divider"}
 @var	checkbox			channel_info_btn_share_toggle								"╠    Изменение кнопки 🔗 Поделиться ссылкой на канал:"									1
 @var	color				channel_info_btn_share_color								"╠═        Цвет кнопки"																	cyan
 @var	checkbox			channel_info_btn_share_bg_toggle							"╠═       Свой цвет фона кнопки"														1
 @var	color				channel_info_btn_share_bg_color								"╠══               Цвет фона кнопки"													rgba(66, 71, 77, .2)
-@var	number  		header-4-line-divider-11										"║"														 								[0,0,0]
+@var	select  		header-4-line-divider-11										"║"														 								{" ":"divider"}
 @var	checkbox			channel_info_btn_download_toggle							"╠    Изменение кнопки ⬇️ Скачать:"														1
 @var	color				channel_info_btn_download_color								"╠═        Цвет кнопки"																	lightgreen
 @var	checkbox			channel_info_btn_download_bg_toggle							"╠═       Свой цвет фона кнопки"														1
 @var	color				channel_info_btn_download_bg_color							"╠══               Цвет фона кнопки"													rgba(66, 71, 77, .2)
-@var	number  		header-4-line-divider-12										"║"														 								[0,0,0]
+@var	select  		header-4-line-divider-12										"║"														 								{" ":"divider"}
 @var	checkbox			channel_info_btn_report_toggle								"╠    Изменение кнопки ⚠️ Пожаловаться:"												1
 @var	color				channel_info_btn_report_color								"╠═        Цвет кнопки"																	yellow
 @var	checkbox			channel_info_btn_report_bg_toggle							"╠═       Свой цвет фона кнопки"														1
 @var	color				channel_info_btn_report_bg_color							"╠══               Цвет фона кнопки"													rgba(66, 71, 77, .2)
-@var	number  		header-4-line-divider-13										"║"														 								[0,0,0]
+@var	select  		header-4-line-divider-13										"║"														 								{" ":"divider"}
 @var	checkbox			channel_info_btn_wath_full-or-live_toggle					"╠    Изменение кнопок ↗️ Смотреть прямую трансляцию и ↗️ Смотреть полное видео:"		1
 @var	color				channel_info_btn_wath_full-or-live_color					"╠═        Цвет кнопки"																	lightgreen
 @var	checkbox			channel_info_btn_wath_full-or-live_bg_toggle				"╠═       Свой цвет фона кнопки"														1
 @var	color				channel_info_btn_wath_full-or-live_bg_color					"╠══               Цвет фона кнопки"													rgba(66, 71, 77, .2)
-@var	number  		header-4-line-divider-14										"║"														 								[0,0,0]
+@var	select  		header-4-line-divider-14										"║"														 								{" ":"divider"}
 @var	checkbox			channel_info_btn_mods-page_toggle							"╠    Изменение кнопки 🛠 Открыть панель модератора:"									1
 @var	color				channel_info_btn_mods-page_color							"╠═        Цвет кнопки"																	lightgreen
 @var	checkbox			channel_info_btn_mods-page_bg_toggle						"╠═       Свой цвет фона кнопки"														1
 @var	color				channel_info_btn_mods-page_bg_color							"╠══               Цвет фона кнопки"													rgba(66, 71, 77, .2)
-@var	number  		header-4-line-divider-15										"║"														 								[0,0,0]
+@var	select  		header-4-line-divider-15										"║"														 								{" ":"divider"}
 @var	checkbox			channel_info_btn_context-menu_toggle						"╠    Изменение кнопки [⋮] Открытия контекстного меню:"									1
 @var	color				channel_info_btn_context-menu_color							"╠═        Цвет иконки"																	#53FC18
 @var	checkbox			channel_info_btn_context-menu_bg_toggle						"╠═       Свой цвет фона кнопки"														1
@@ -383,56 +383,59 @@
 @var	color				channel_info_btn_context-menu_report_color					"╠═        ► Цвет пункта меню - ⚠️ Пожаловаться:"										yellow
 @var	color				channel_info_btn_context-menu_delete_color					"╠═        ► Цвет пункта меню - 🗑 Удалить:"											#F30
 @var	color				channel_info_btn_context-menu_download_color				"╠═        ► Цвет пункта меню - ⬇️ Скачать:"											lightgreen
-@var	number  		header-4-line-divider-16										"║"														 								[0,0,0]
+@var	select  		header-4-line-divider-16										"║"														 								{" ":"divider"}
 @var	checkbox			channel_info_btn_about_toggle								"╠    Изменение кнопки ✏️ Обо мне:"														1
 @var	color				channel_info_btn_about_color								"╠═        Цвет кнопкит"																#C39BFF
 @var	checkbox			channel_info_btn_about_bg_toggle							"╠═       Свой цвет фона кнопки"														1
 @var	color				channel_info_btn_about_bg_color								"╠══               Цвет фона кнопки"													rgba(66, 71, 77, .2)
-@var	number  		header-4-line-divider-17										"║"														 								[0,0,0]
+@var	select  		header-4-line-divider-17										"║"														 								{" ":"divider"}
 @var	checkbox			channel_info_btn_edit-panel_toggle							"╠    Изменение кнопки ✏️ Редактировать панель:"										1
 @var	color				channel_info_btn_edit-panel_color							"╠═        Цвет кнопкит"																#C39BFF
 @var	checkbox			channel_info_btn_edit-panel_bg_toggle						"╠═       Свой цвет фона кнопки"														1
 @var	color				channel_info_btn_edit-panel_bg_color						"╠══               Цвет фона кнопки"													rgba(23, 26, 28, 1)
-@var	number  		header-4-line-divider-18										"║"														 								[0,0,0]
-@var	number  		header-4-end													"╚═══════════════════════════════════════════════════════╝" 							[0,0,0]
+@var	select  		header-4-line-divider-18										"║"														 								{" ":"divider"}
+@var	select  		header-4-end													"╚═══════════════════════════════════════════════════════╝" 							{" ":"divider"}
 
-@var	number  		empty4															"" 																						[0,0,0]
+@var	select 		empty4																"" 																						{" ":"divider"}
 
 //Чат
-@var	number  		header-5-start													"╔═══════════════════ ВЕРХНАЯЯ ЧАСТЬ ЧАТА ═══════════════════╗"							[0,0,0]
+@var	select  		header-5-start													"╔═══════════════════ ВЕРХНАЯЯ ЧАСТЬ ЧАТА ═══════════════════╗"							{" ":"divider"}
+@var	checkbox			chat-minimized_compact-header_toggle						"╠    Отключить минимизацию верхней части чата, когда окно браузера маленькое:"			1
+@var	select  		header-5-line-divider-0											"║"														 								{" ":"divider"}
 @var	checkbox			chat_btn_collapse-expand_toggle								"╠    Изменение кнопки ▶️ Свернуть / ◀️ Развернуть чат:"								1
 @var	color				chat_btn_collapse-expand_color								"╠═        Цвет кнопки ▶️ Свернуть / ◀️ Развернуть чат"									lightgreen
 @var	checkbox			chat_btn_collapse-expand_bg_toggle							"╠═       Свой цвет фона кнопки"														1
 @var	color				chat_btn_collapse_bg_color									"╠══               Цвет фона кнопки ▶️ Свернуть чат"									rgba(66, 71, 77, .2)
 @var	color				chat_btn_expand_bg_color									"╠══               Цвет фона кнопки ◀️ Развернуть чат"									rgba(23, 26, 28, 1)
 @var	color				in_player_chat_btn_expand_bg_color							"╠══               Цвет фона кнопки ◀️ Развернуть чат в 🎞 плеере Просмотра клипа"		rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-0											"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-1											"║"														 								{" ":"divider"}
 @var	number				chat_head_enhancer-latency_pos								"╠    Изменение позиции отображения задержки (Enhancer):"								[50,30,60]
-@var	number  		header-5-line-divider-1											"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-2											"║"														 								{" ":"divider"}
 @var	checkbox			chat_btn_chat-size_toggle									"╠    Изменение кнопки ⬅️ Change Chat Size (Mo'Kick):"									1
 @var	color				chat_btn_chat-size_color									"╠═        Цвет кнопки"																	lightgreen
 @var	checkbox			chat_btn_chat-size_bg_toggle								"╠═       Свой цвет фона кнопки"														1
 @var	color				chat_btn_chat-size_bg_color									"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-2											"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-3											"║"														 								{" ":"divider"}
 @var	checkbox			chat_btn_back-to-chat_toggle								"╠    Изменение кнопки [<] Вернуться в чат (Mo'Kick):"									1
 @var	number				chat_btn_back-to-chat_order									"╠═       Смещение кнопки:"																[0,-2,2]
 @var	color				chat_btn_back-to-chat_color									"╠═        Цвет кнопки:"																lightgreen
 @var	checkbox			chat_btn_back-to-chat_bg_toggle								"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_btn_back-to-chat_bg_color								"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-3											"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-4											"║"														 								{" ":"divider"}
 @var	checkbox			chat_btn_active-chatters_toggle								"╠    Кнопка 👨‍👦 Активные чаттеры:"														1
 @var	checkbox			chat_btn_active-chatters_in-channel_disable					"╠═        Отключить отображение кнопки в чате 🔴 Стрима:"								0
+@var	checkbox			chat-minimized_btn_active-chatters_in-channel_disable		"╠═        Отключить отображение кнопки в чате, когда окно браузера маленькое:"			0
 @var	number				chat_btn_active-chatters_order								"╠═        Смещение кнопки:"															[0,-4,4]
 @var	color				chat_btn_active-chatters_color								"╠═        Цвет кнопки:"																cyan
 @var	checkbox			chat_btn_active-chatters_bg_toggle							"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_btn_active-chatters_bg_color							"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-4											"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-5											"║"														 								{" ":"divider"}
 @var	checkbox			chat_btn_return-to-chat_toggle								"╠    Кнопка выхода из Активные чаттеры назад в чат 💬:"									1
 @var	number				chat_btn_return-to-chat_order								"╠═        Смещение кнопки:"															[0,-4,4]
 @var	color				chat_btn_return-to-chat_color								"╠═        Цвет кнопки:"																lightyellow
 @var	checkbox			chat_btn_return-to-chat_bg_toggle							"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_btn_return-to-chat_bg_color							"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-5											"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-6											"║"														 								{" ":"divider"}
 @var	checkbox			chat_btn_active-chatters_mo-kick_toggle						"╠    Кнопка 👨‍👦 Active chatters (Mo'Kick):"												1
 @var	checkbox			chat_btn_active-chatters_in-channel_mo-kick_disable			"╠═        Отключить отображение кнопки в чате 🔴 Стрима:"								0
 @var	checkbox			chat_btn_active-chatters_in-vod_mo-kick_disable				"╠═        Отключить отображение кнопки в чате ⚫️ VOD'а:"								1
@@ -440,13 +443,13 @@
 @var	color				chat_btn_active-chatters_mo-kick_color						"╠═        Цвет кнопки:"																cyan
 @var	checkbox			chat_btn_active-chatters_mo-kick_bg_toggle					"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_btn_active-chatters_mo-kick_bg_color					"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-6											"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-7											"║"														 								{" ":"divider"}
 @var	checkbox			chat_btn_return-to-chat_mo-kick_toggle						"╠    Кнопка выхода из Active chatters назад в чат 💬 (Mo'Kick):"						1
 @var	number				chat_btn_return-to-chat_mo-kick_order						"╠═        Смещение кнопки:"															[0,-4,4]
 @var	color				chat_btn_return-to-chat_mo-kick_color						"╠═        Цвет кнопки:"																lightyellow
 @var	checkbox			chat_btn_return-to-chat_mo-kick_bg_toggle					"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_btn_return-to-chat_mo-kick_bg_color					"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-7											"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-8											"║"														 								{" ":"divider"}
 @var	checkbox			chat_btn_mod-logs-style_toggle								"╠    Кнопка Moderation Logs (Mo'Kick):"												1
 @var	checkbox			chat_btn_mod-logs-style_in-channel_disable					"╠═        Отключить отображение кнопки в чате 🔴 Стрима:"								0
 @var	checkbox			chat_btn_mod-logs-style_in-mod_disable						"╠═        Отключить отображение кнопки в чате 🛠 Модерки:"								0
@@ -454,7 +457,7 @@
 @var	color				chat_btn_mod-logs-style_color								"╠═        Цвет кнопки:"																#9048FF
 @var	checkbox			chat_btn_mod-logs-style_bg_toggle							"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_btn_mod-logs-style_bg_color							"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-8											"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-9											"║"														 								{" ":"divider"}
 @var	checkbox			chat_btn_context-menu_toggle								"╠    Изменение кнопки […] Открытия контекстного меню:"									1
 @var	checkbox			chat_btn_context-menu_in-channel_disable					"╠═        Отключить отображение кнопки в чате 🔴 Стрима и VOD'а:"						0
 @var	checkbox			chat_btn_context-menu_in-mod_disable						"╠═        Отключить отображение кнопки в чате 🛠 Модерки:"								0
@@ -489,12 +492,12 @@
 @var	checkbox			chat_btn_context-menu_chat-log_toggle						"╠═        ► Пункт контекстного меню - 📤 Chat Log:"									1
 @var	number				chat_btn_context-menu_chat-log_order						"╠══               Смещение кнопки:"													[5,-8,8]
 @var	color				chat_btn_context-menu_chat-log_color						"╠══               Цвет кнопки:"														darkorange
-@var	number  		header-5-line-divider-9											"║"														 								[0,0,0]
-@var	number  		header-5-divider-1												"╠══════════════ ФУНКЦИОНАЛЬНЫЕ КНОПКИ (Mo'Kick) ══════════════╣" 						[0,0,0]
-@var	number  		header-5-line-divider-10										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-10										"║"														 								{" ":"divider"}
+@var	select  		header-5-divider-1												"╠══════════════ ФУНКЦИОНАЛЬНЫЕ КНОПКИ (Mo'Kick) ══════════════╣" 						{" ":"divider"}
+@var	select  		header-5-line-divider-11										"║"														 								{" ":"divider"}
 @var	checkbox			chat_mo-kick_all_btn_in-channel_disable						"╠    Отключить панели со всеми кнопками в чате 🔴 Стрима:"								0
 @var	checkbox			chat_mo-kick_all_btn_in-mod_disable							"╠    Отключить панели со всеми кнопками в чате 🛠 Модерки:"							0
-@var	number  		header-5-line-divider-11										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-12										"║"														 								{" ":"divider"}
 @var	checkbox			chat_mo-kick_btn_moderation-log_toggle						"╠    Функциональная кнопка 🔨 Moderation Log (Mo'Kick):"								1
 @var	checkbox			chat_mo-kick_btn_moderation-log_in-context_disable			"╠═        Отключить отображение кнопки в чате 🔴 Стрима:"								0
 @var	checkbox			chat_mo-kick_btn_chat-clears_in-context_disable				"╠═        Отключить отображение кнопки в контекстном меню Moderation Logs:"			0
@@ -503,7 +506,7 @@
 @var	color				chat_mo-kick_btn_moderation-log_color						"╠═        Цвет кнопки:"																#F30
 @var	checkbox			chat_mo-kick_btn_moderation-log_bg_toggle					"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_mo-kick_btn_moderation-log_bg_color					"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-12										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-13										"║"														 								{" ":"divider"}
 @var	checkbox			chat_mo-kick_btn_message-log_toggle							"╠    Функциональная кнопка 🗑 Message Log (Mo'Kick):"									1
 @var	checkbox			chat_mo-kick_btn_message-log_in-channel_disable				"╠═        Отключить отображение кнопки в чате 🔴 Стрима:"								0
 @var	checkbox			chat_mo-kick_btn_message-log_in-mod_disable					"╠═        Отключить отображение кнопки в чате 🛠 Модерки:"								0
@@ -513,7 +516,7 @@
 @var	color				chat_mo-kick_btn_message-log_color							"╠═        Цвет кнопки:"																lightgreen
 @var	checkbox			chat_mo-kick_btn_message-log_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_mo-kick_btn_message-log_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-13										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-14										"║"														 								{" ":"divider"}
 @var	checkbox			chat_mo-kick_btn_chat-clears_toggle							"╠    Функциональная кнопка 💬 Chat Clears (Mo'Kick):"									1
 @var	checkbox			chat_mo-kick_btn_chat-clears_in-channel_disable				"╠═        Отключить отображение кнопки в чате 🔴 Стрима:"								0
 @var	checkbox			chat_mo-kick_btn_chat-clears_in-mod_disable					"╠═        Отключить отображение кнопки в чате 🛠 Модерки:"								0
@@ -523,7 +526,7 @@
 @var	color				chat_mo-kick_btn_chat-clears_color							"╠═        Цвет кнопки:"																lightyellow
 @var	checkbox			chat_mo-kick_btn_chat-clears_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_mo-kick_btn_chat-clears_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-14										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-15										"║"														 								{" ":"divider"}
 @var	checkbox			chat_mo-kick_btn_active-timeouts_toggle						"╠    Функциональная кнопка ⏳ Active Timeouts (Mo'Kick):"								1
 @var	checkbox			chat_mo-kick_btn_active-timeouts_in-channel_disable			"╠═        Отключить отображение кнопки в чате 🔴 Стрима:"								0
 @var	checkbox			chat_mo-kick_btn_active-timeouts_in-mod_disable				"╠═        Отключить отображение кнопки в чате 🛠 Модерки:"								0
@@ -533,64 +536,64 @@
 @var	color				chat_mo-kick_btn_active-timeouts_color						"╠═        Цвет кнопки:"																#9048FF
 @var	checkbox			chat_mo-kick_btn_active-timeouts_bg_toggle					"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_mo-kick_btn_active-timeouts_bg_color					"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-15										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-16										"║"														 								{" ":"divider"}
 @var	checkbox			chat_top-sub-gifters_in-top_disable							"╠    Отключить список «Лучшие KICKеры/дарители» вверху чата:"							0
-@var	number  		header-5-line-divider-16										"║"														 								[0,0,0]
-@var	number  		header-5-divider-2												"╠════════════════ ЗАКРЕПЛЁННОЕ СООБЩЕНИЕ ═════════════════╣" 							[0,0,0]
-@var	number  		header-5-line-divider-17										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-17										"║"														 								{" ":"divider"}
+@var	select  		header-5-divider-2												"╠════════════════ ЗАКРЕПЛЁННОЕ СООБЩЕНИЕ ═════════════════╣" 							{" ":"divider"}
+@var	select  		header-5-line-divider-18										"║"														 								{" ":"divider"}
 @var	checkbox			pinned-msg_in-channel_disable								"╠    Отключить отображение 📌 Закреплённого сообщения в чате 🔴 Стрима:"				0
 @var	checkbox			pinned-msg_in-mod_disable									"╠    Отключить отображение 📌 Закреплённого сообщения в чате 🛠 Модерки:"				0
-@var	number  		header-5-line-divider-18										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-19										"║"														 								{" ":"divider"}
 @var	checkbox			pinned-msg_custom_border_toggle								"╠    Совй цвет внешней обводки у 📌 Закреплённого сообщения:"							1
 @var	color				pinned-msg_custom_border_color								"╠═        Цвет обводки:"																orange
-@var	number  		header-5-line-divider-19										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-20										"║"														 								{" ":"divider"}
 @var	checkbox			pinned-msg_btn_show_pinned_toggle							"╠    Изменение кнопки 📌 Показать скрытое закреплённое сообщение:"						1
 @var	checkbox			pinned-msg_btn_show_pinned_compact_toggle					"╠═        Сделать кнопку более компактной:"											0
 @var	color				pinned-msg_btn_show_pinned_color							"╠═        Цвет кнопки:"																orange
 @var	color				pinned-msg_btn_show_pinned_bg_color							"╠═        Цвет фона кнопки:"															rgba(35, 38, 41, .6)
 @var	color				pinned-msg_btn_show_pinned_hover_bg_color					"╠═        Цвет фона кнопки при наведении курсора:"										rgba(35, 38, 41, 1)
-@var	number  		header-5-line-divider-20										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-21										"║"														 								{" ":"divider"}
 @var	checkbox			pinned-msg_username-underline_toggle						"╠    Подчёркивать имя пользователя, чьё сообщение закрепленопри наведении курсора:"	1
-@var	number  		header-5-line-divider-21										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-22										"║"														 								{" ":"divider"}
 @var	checkbox			pinned-msg_btn_unpin_toggle									"╠    Изменение кнопки 📌 Снять закрепление:"											1
 @var	color				pinned-msg_btn_unpin_color									"╠═        Цвет кнопки:"																#F30
 @var	checkbox			pinned-msg_btn_unpin_bg_toggle								"╠═       Свой цвет фона кнопки:"														1
 @var	color				pinned-msg_btn_unpin_bg_color								"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-22										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-23										"║"														 								{" ":"divider"}
 @var	checkbox			pinned-msg_btn_context-menu_toggle							"╠    Изменение кнопки [⋮] Открытия контекстного меню:"									1
 @var	color				pinned-msg_btn_context-menu_color							"╠═        Цвет кнопки:"																#53FC18
 @var	checkbox			pinned-msg_btn_context-menu_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				pinned-msg_btn_context-menu_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
 @var	color				pinned-msg_btn_context-menu_hide_color						"╠═        ► Пункт контекстного меню - 👁 Скрыть:"										lightgreen
-@var	number  		header-5-line-divider-23										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-24										"║"														 								{" ":"divider"}
 @var	checkbox			pinned-msg_btn_hide_toggle									"╠    Изменение кнопки 👁 Скрыть:"														1
 @var	color				pinned-msg_btn_hide_color									"╠═        Цвет кнопки:"																lightgreen
 @var	checkbox			pinned-msg_btn_hide_bg_toggle								"╠═       Свой цвет фона кнопки:"														1
 @var	color				pinned-msg_btn_hide_bg_color								"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-24										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-25										"║"														 								{" ":"divider"}
 @var	checkbox			pinned-msg_btn_expand_toggle								"╠    Изменение кнопки 🔽 Равернуть и 🔼 Свернуть:"										1
 @var	color				pinned-msg_btn_expand_color									"╠═        Цвет кнопки:"																lightgreen
 @var	checkbox			pinned-msg_btn_expand_bg_toggle								"╠═       Свой цвет фона кнопки:"														1
 @var	color				pinned-msg_btn_expand_bg_color								"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-25										"║"														 								[0,0,0]
-@var	number  		header-5-divider-3												"╠══════════════════════ ОПРОС ЧАТА ═══════════════════════╣" 							[0,0,0]
-@var	number  		header-5-line-divider-26										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-26										"║"														 								{" ":"divider"}
+@var	select  		header-5-divider-3												"╠══════════════════════ ОПРОС ЧАТА ═══════════════════════╣" 							{" ":"divider"}
+@var	select  		header-5-line-divider-27										"║"														 								{" ":"divider"}
 @var	checkbox			poll-msg_in-channel_disable									"╠    Отключить отображение 📊 Опросов в чате 🔴 Стрима:"								0
 @var	checkbox			poll-msg_in-mod_disable										"╠    Отключить отображение 📊 Опросов в чате 🛠 Модерки:"								0
-@var	number  		header-5-line-divider-27										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-28										"║"														 								{" ":"divider"}
 @var	checkbox			poll-msg_custom_border_toggle								"╠    Совй цвет внешней обводки у 📊 Опроса:"											1
 @var	color				poll-msg_custom_border_color								"╠═        Цвет обводки:"																#C39BFF
-@var	number  		header-5-line-divider-28										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-29										"║"														 								{" ":"divider"}
 @var	checkbox			poll-msg_btn_delete_toggle									"╠    Изменение кнопки 🗑 Удалить опрос:"												1
 @var	color				poll-msg_btn_delete_color									"╠═        Цвет кнопки:"																#F30
 @var	checkbox			poll-msg_btn_delete_bg_toggle								"╠═       Свой цвет фона кнопки:"														1
 @var	color				poll-msg_btn_delete_bg_color								"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-29										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-30										"║"														 								{" ":"divider"}
 @var	checkbox			poll-msg_btn_expand_toggle									"╠    Изменение кнопки 🔽 Равернуть и 🔼 Свернуть опрос:"								1
 @var	color				poll-msg_btn_expand_color									"╠═        Цвет кнопки:"																lightgreen
 @var	checkbox			poll-msg_btn_expand_bg_toggle								"╠═       Свой цвет фона кнопки:"														1
 @var	color				poll-msg_btn_expand_bg_color								"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-30										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-31										"║"														 								{" ":"divider"}
 @var	checkbox			poll-msg_btn_lines_toggle									"╠    Изменение пунктов с ответами в 📊 Опросе :"										1
 @var	color				poll-msg_btn_lines_not-vote-yet_bg_color					"╠═        Вариант(ы) за который(е) я ещё не проголосовал - Цвет фона:"					rgba(66, 71, 77, .3)
 @var	color				poll-msg_btn_lines_not-vote-yet_color						"╠═        Вариант(ы) за который(е) я ещё не проголосовал - Цвет текста:"				white
@@ -600,51 +603,51 @@
 @var	color				poll-msg_btn_lines_that-i-vote_glow_color					"╠═        Вариант за который я проголосовал - Цвет внешнего свечения:"					lightgreen
 @var	color				poll-msg_btn_lines_that-win-in-voting_bg_and_glow_color		"╠═        Вариант который победил в опросе - Цвет фона:"								#53FC18
 @var	color				poll-msg_btn_lines_that-win-in-voting_text_color			"╠═        Вариант который победил в опросе - Цвет текста:"								#0b0b0c
-@var	number  		header-5-line-divider-31										"║"														 								[0,0,0]
-@var	number  		header-5-divider-4												"╠═════════════════ СТАВКИ ЗА БАЛЛЫ КАНАЛА ══════════════════╣" 						[0,0,0]
-@var	number  		header-5-line-divider-32										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-32										"║"														 								{" ":"divider"}
+@var	select  		header-5-divider-4												"╠═════════════════ СТАВКИ ЗА БАЛЛЫ КАНАЛА ══════════════════╣" 						{" ":"divider"}
+@var	select  		header-5-line-divider-33										"║"														 								{" ":"divider"}
 @var	checkbox			prediction-msg_in-channel_disable							"╠    Отключить отображение 🎰 Ставок в чате 🔴 Стрима:"								0
 @var	checkbox			prediction-msg_in-mod_disable								"╠    Отключить отображение 🎰 Ставок в чате 🛠 Модерки:"								0
-@var	number  		header-5-line-divider-33										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-34										"║"														 								{" ":"divider"}
 @var	checkbox			prediction-msg_btn_settings-and-resoults_toggle				"╠    Изменение кнопок Управление и Смотреть подробности:"								1
 @var	color				prediction-msg_btn_settings-and-resoults_color				"╠═        Цвет кнопки:"																lightgreen
 @var	checkbox			prediction-msg_btn_settings-and-resoults_bg_toggle			"╠═       Свой цвет фона кнопки:"														1
 @var	color				prediction-msg_btn_settings-and-resoults_bg_color			"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-34										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-35										"║"														 								{" ":"divider"}
 @var	checkbox			prediction-msg_btn_context-menu_toggle						"╠    Изменение кнопки [⋮] Открытия контекстного меню:"									1
 @var	color				prediction-msg_btn_context-menu_color						"╠═        Цвет кнопки:"																#53FC18
 @var	checkbox			prediction-msg_btn_context-menu_bg_toggle					"╠═       Свой цвет фона кнопки:"														1
 @var	color				prediction-msg_btn_context-menu_bg_color					"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
 @var	color				prediction-msg_btn_context-menu_info_color					"╠═        ► Пункт контекстного меню - ℹ️ Узнать больше:"								#53FC18
 @var	color				prediction-msg_btn_context-menu_hide_color					"╠═        ► Пункт контекстного меню - 👁 Скрыть:"										#F30
-@var	number  		header-5-line-divider-35										"║"														 								[0,0,0]
-@var	number  		header-5-divider-5												"╠═══════════════════ СООБЩЕНИЯ В ЧАТЕ ═════════════════════╣" 							[0,0,0]
-@var	number  		header-5-line-divider-36										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-36										"║"														 								{" ":"divider"}
+@var	select  		header-5-divider-5												"╠═══════════════════ СООБЩЕНИЯ В ЧАТЕ ═════════════════════╣" 							{" ":"divider"}
+@var	select  		header-5-line-divider-37										"║"														 								{" ":"divider"}
 @var	checkbox			chat-msg-bg_every2_toggle									"╠    Цвет фона у сообщений, через один (в шахматном порядке):"							1
 @var	color				chat-msg-bg_every2_bg_color									"╠═        Цвет текста:"																#C3C3C310
-@var	number  		header-5-line-divider-37										"║"														 								[0,0,0]
-@var	number  		header-5-line-divider-38										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-38										"║"														 								{" ":"divider"}
+@var	select  		header-5-line-divider-39										"║"														 								{" ":"divider"}
 @var	checkbox			chat-msg_toggle												"╠    Изменение внешнего вида текстовых сообщений в чате:"								1
 @var	color				chat-msg_color												"╠═        Цвет текста:"																white
 @var	color				chat-msg_glow_color											"╠═        Цвет свечения у текста:"														#FFFFFF22
-@var	number  		header-5-line-divider-39										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-40										"║"														 								{" ":"divider"}
 @var	checkbox			chat_first-msg_toggle										"╠    Выделение 1го сообщения от пользователя в чате (Mo'Kick) + (NipahTV):"			1
 @var	color				chat_first-msg_title_color									"╠═        Цвет надписи First Message in Section:"										magenta
 @var	color				chat_first-msg_bg_color										"╠═        Цвет фона у сообщения:"														#C832C830
-@var	number  		header-5-line-divider-40										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-41										"║"														 								{" ":"divider"}
 @var	checkbox			chat_msg-hover_toggle										"╠    Выделение сообщения в чате, при наведении на него курсора:"						1
 @var	color				chat_msg-hover_bg_color										"╠═        Цвет фона у сообщения:"														rgba(35, 38, 41, .4)
-@var	number  		header-5-line-divider-41										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-42										"║"														 								{" ":"divider"}
 @var	checkbox			chat-msg_mention_underline_toggle							"╠    Подчёркивать имена пользователей, тегнутых в сообщении через @ (Mo'Kick):"		1
-@var	number  		header-5-line-divider-42										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-43										"║"														 								{" ":"divider"}
 @var	checkbox			chat_mo-kick_connecting_toggle								"╠    Статус 🔃 Mo'Kick Connecting to the Chatroom... (Mo'Kick):"						1
 @var	color				chat_mo-kick_connecting_process_color						"╠═        ► 🔃 Процесса подключения:"													orange
 @var	color				chat_mo-kick_connecting_success_color						"╠═        ► ✅ Успешного подключения:"													lightgreen
 @var	color				chat_mo-kick_connecting_failed_color						"╠═        ► ⚠️ Ошибки подключения:"													red
-@var	number  		header-5-line-divider-43										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-44										"║"														 								{" ":"divider"}
 @var	checkbox			chat_mo-kick_chat-history_toggle							"╠    Статус 🕒 Your Session Restored! (Mo'Kick):"										1
 @var	color				chat_mo-kick_chat-history_success_color						"╠═        ► 🕒 Сессия чата восстановлена:"												cyan
-@var	number  		header-5-line-divider-44										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-45										"║"														 								{" ":"divider"}
 @var	checkbox			chat_bnt_scroll_paused_toggle								"╠    Кнопка ⏸ приостановки прокрутки чата:"											1
 @var	checkbox			chat_bnt_scroll_paused_hide-txt_toggle						"╠═        Убрать весь текст в кнопке:"													1
 @var	checkbox			chat_bnt_scroll_paused_compact-size_toggle					"╠═        Сделать кнопку компактнее по размеру:"										1
@@ -652,30 +655,30 @@
 @var	color				chat_bnt_scroll_paused_hover_color							"╠═        Цвет кнопки, при наведении курсора:"											orange
 @var	checkbox			chat_bnt_scroll_paused_bg_toggle							"╠═        Свой цвет фона кнопки:"														1
 @var	color				chat_bnt_scroll_paused_bg_color								"╠══               Цвет фона кнопки:"													#151515
-@var	number  		header-5-line-divider-45										"║"														 								[0,0,0]
-@var	number  		header-5-divider-6												"╠══════════ ОТВЕТЫ В ВЕТКУ, И СИСТЕМНЫЕ СООБЩЕНИЯ ═══════════╣" 						[0,0,0]
-@var	number  		header-5-line-divider-46										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-46										"║"														 								{" ":"divider"}
+@var	select  		header-5-divider-6												"╠══════════ ОТВЕТЫ В ВЕТКУ, И СИСТЕМНЫЕ СООБЩЕНИЯ ═══════════╣" 						{" ":"divider"}
+@var	select  		header-5-line-divider-47										"║"														 								{" ":"divider"}
 @var	checkbox			chat_context_mo-kick_btn_active-timeouts_timeleft_toggle	"╠    Цвет оставшегося времени отстранения в ⏳ Active Timeouts (Mo'Kick):"				1
 @var	color				chat_context_mo-kick_btn_active-timeouts_timeleft_color		"╠═        Цвет таймера:"																#53FC18
-@var	number  		header-5-line-divider-47										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-48										"║"														 								{" ":"divider"}
 @var	checkbox			chat_reply-icon_in_reply-messages_toggle					"╠    Изменение иконки ↩️ ответа на сообщение:"											1
 @var	color				chat_reply-icon_in_reply-messages_color						"╠═        Цвет иконки:"																skyblue
-@var	number  		header-5-line-divider-48										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-49										"║"														 								{" ":"divider"}
 @var	checkbox			chat_reply-and-system_messages_username_toggle				"╠    Изменение цвета имени пользователя в сообщениях-ответах, и системных-сообщениях:"	1
 @var	color				chat_reply-and-system_messages_username_color				"╠═        Цвет имени пользователя:"													lightgrey
 @var	color				chat_reply-and-system_messages_username_hover_color			"╠═        Цвет имени пользователя при наведении курсора:"								#53FC18
-@var	number  		header-5-line-divider-49										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-50										"║"														 								{" ":"divider"}
 @var	checkbox			chat_reply_preview_text_toggle								"╠    Изменение цвета текста, на которое отвечают в сообщении-ответе:"					1
 @var	color				chat_reply_preview_text_color								"╠═        Цвет текста:"																grey
 @var	color				chat_reply_preview_text-hover_color							"╠═        Цвет текста при наведении курсора:"											skyblue
-@var	number  		header-5-line-divider-50										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-51										"║"														 								{" ":"divider"}
 @var	checkbox			chat_deleted_message_toggle									"╠    Изменение удалённого модератором сообщения:"										1
 @var	checkbox			chat_deleted_message_text_strike_disable					"╠═        Убрать зачёркивание текста у удалённого сообщения:"							1
 @var	color				chat_deleted_message_text_color								"╠═        Цвет текста у удалённого сообщения:"											darkgrey
 @var	checkbox			chat_deleted_message_bg_toggle								"╠═        Свой цвет фон у удалённого сообщения:"										1
 @var	color				chat_deleted_message_bg_color								"╠══               Цвет фона:"															#FF000020
 @var	color				chat_deleted_message_type_color								"╠═        Цвет текста у (Deleted/Timed Out/Banned/Hate) у удалённого сообщения:"		#53FC18
-@var	number  		header-5-line-divider-51										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-52										"║"														 								{" ":"divider"}
 @var	checkbox			chat_system_message_toggle									"╠    Изменение системного сообщения:"													1
 @var	color				chat_system_message_raid_color								"╠═        ► Иконка 🥳️ Рейд:"															cyan
 @var	color				chat_system_message_clear-chat_color						"╠═        ► Иконка 🗑 Очистка чата:"													lightgrey
@@ -690,9 +693,9 @@
 @var	color				chat_system_message_revive_color							"╠═        ► Иконка ⤴️ Снятие Отстранения/Бана с пользователя:"							#53FC18
 @var	checkbox			chat_system_message_bg_toggle								"╠═        Свой цвет фон у системного сообщения:"										1
 @var	color				chat_system_message_bg_color								"╠══               Цвет фона:"															#00FF0020
-@var	number  		header-5-line-divider-52										"║"														 								[0,0,0]
-@var	number  		header-5-divider-7												"╠══════════════ HOVER КНОПКИ ВЗАИМОДЕЙСТВИЯ ═══════════════╣" 							[0,0,0]
-@var	number  		header-5-line-divider-53		 								"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-53										"║"														 								{" ":"divider"}
+@var	select  		header-5-divider-7												"╠══════════════ HOVER КНОПКИ ВЗАИМОДЕЙСТВИЯ ═══════════════╣" 							{" ":"divider"}
+@var	select  		header-5-line-divider-54		 								"║"														 								{" ":"divider"}
 @var	checkbox			chat_hover_btn_toggle										"╠    Изменения плашки и кнопок, появляющейся при наведении курсора на сообщение:"		1
 @var	checkbox			chat_hover_btn_edge-radius									"╠═        Скругление углов плашки:"													1
 @var	checkbox			chat_hover_btn_bg_toggle									"╠═        Свой цвет фон у плашки:"														1
@@ -746,115 +749,115 @@
 @var	number				chat_hover_btn_msg-time_order								"╠══               Смещение кнопки:"													[-1,-6,6]
 @var	checkbox			chat_hover_btn_msg-time_bg_toggle							"╠══               Свой цвет фон у кнопки:"												1
 @var	color				chat_hover_btn_msg-time_bg_color							"╠═══                       Цвет фона:"													rgba(66, 71, 77, .6)
-@var	number  		header-5-line-divider-54										"║"														 								[0,0,0]
-@var	number  		header-5-divider-8												"╠═══════════════ КНОПКИ ДЕЙСТВИЙ МОДЕРАТОРА ════════════════╣" 						[0,0,0]
-@var	number  		header-5-line-divider-55										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-55										"║"														 								{" ":"divider"}
+@var	select  		header-5-divider-8												"╠═══════════════ КНОПКИ ДЕЙСТВИЙ МОДЕРАТОРА ════════════════╣" 						{" ":"divider"}
+@var	select  		header-5-line-divider-56										"║"														 								{" ":"divider"}
 @var	checkbox			chat_moderator_btn_delete-msg_toggle						"╠    Изменение иконки 🗑 Удалить сообщение:"											1
 @var	checkbox			chat_moderator_btn_delete-msg_hide-4-mod					"╠═        Спрятать кнопку по отношению к 🛠 Модератору:"								0
 @var	number				chat_moderator_btn_delete-msg_order							"╠═        Смещение кнопки:"															[1,-1,1]
 @var	color				chat_moderator_btn_delete-msg_color							"╠═        Цвет кнопки:"																lightgreen
 @var	checkbox			chat_moderator_btn_delete-msg_bg_toggle						"╠═       Свой цвет фона кнопки:"														0
 @var	color				chat_moderator_btn_delete-msg_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-56										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-57										"║"														 								{" ":"divider"}
 @var	checkbox			chat_moderator_btn_timeout-user_toggle						"╠    Изменение иконки ⏳ Отстранить пользователя на 5 минут:"							1
 @var	checkbox			chat_moderator_btn_timeout-user_hide-4-mod					"╠═        Спрятать кнопку по отношению к 🛠 Модератору:"								1
 @var	number				chat_moderator_btn_timeout-user_order						"╠═        Смещение кнопки:"															[0,-1,1]
 @var	color				chat_moderator_btn_timeout-user_color						"╠═        Цвет кнопки:"																#9048FF
 @var	checkbox			chat_moderator_btn_timeout-user_bg_toggle					"╠═       Свой цвет фона кнопки:"														0
 @var	color				chat_moderator_btn_timeout-user_bg_color					"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-57										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-58										"║"														 								{" ":"divider"}
 @var	checkbox			chat_moderator_btn_ban-user_toggle							"╠    Изменение иконки 🔨 Забанить пользователя:"										1
 @var	checkbox			chat_moderator_btn_ban-user_hide-4-mod						"╠═        Спрятать кнопку по отношению к 🛠 Модератору:"								1
 @var	number				chat_moderator_btn_ban-user_order							"╠═        Смещение кнопки:"															[-1,-1,1]
 @var	color				chat_moderator_btn_ban-user_color							"╠═        Цвет кнопки:"																#F30
 @var	checkbox			chat_moderator_btn_ban-user_bg_toggle						"╠═       Свой цвет фона кнопки:"														0
 @var	color				chat_moderator_btn_ban-user_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-58										"║"														 								[0,0,0]
-@var	number  		header-5-divider-9												"╠══════════════ ОБЛАСТЬ ВВОДА СООБЩЕНИЯ В ЧАТ ══════════════╣" 						[0,0,0]
-@var	number  		header-5-line-divider-59										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-59										"║"														 								{" ":"divider"}
+@var	select  		header-5-divider-9												"╠══════════════ ОБЛАСТЬ ВВОДА СООБЩЕНИЯ В ЧАТ ══════════════╣" 						{" ":"divider"}
+@var	select  		header-5-line-divider-60										"║"														 								{" ":"divider"}
 @var	checkbox			chat_restriction-msg_toggle									"╠    Обозначение ограничения чата (Только подписчики/фолловеры/эмотиконы итд):"		1
 @var	color				chat_restriction-msg_above_input-area_color					"╠═        Цвет текста с типом ограничения чата, над полем для ввода сообщения:"		#F30
 @var	color				chat_restriction-input-area_text_color						"╠═        Цвет текста с типом ограничения чата, в поле для ввода сообщения:"			lightgrey
 @var	color				chat_restriction-input-area_bg_color						"╠═        Цвет фона у поля для ввода сообщения, с ограничением чата:"					darkred
-@var	number  		header-5-line-divider-60										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-61										"║"														 								{" ":"divider"}
 @var	checkbox			chat_input-area_btn_identity_toggle							"╠    Изменение кнопки «🛡️ Chat Identity»:"											1
 @var	checkbox			chat_input-area_btn_identity_disable						"╠═       Отключить отображение кнопки:"												0
 @var	color				chat_input-area_btn_identity_color1							"╠═        Цвет кнопки (внешний):"														#53FC18
 @var	color				chat_input-area_btn_identity_color2							"╠═        Цвет кнопки (внутренний):"													cyan
-@var	number  		header-5-line-divider-61										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-62										"║"														 								{" ":"divider"}
 @var	checkbox			chat_input-area_btn_7tv-emoji-menu_toggle					"╠    Изменение кнопки вызова меню смайлов 7tv:"										1
 @var	checkbox			chat_input-area_btn_7tv-emoji-menu_disable					"╠═       Отключить отображение кнопки:"												0
 @var	color				chat_input-area_btn_7tv-emoji-menu_color					"╠═        Цвет кнопки:"																darkcyan
-@var	number  		header-5-line-divider-62										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-63										"║"														 								{" ":"divider"}
 @var	checkbox			chat_input-area_btn_emoji-menu_toggle						"╠    Изменение кнопки 😀 вызова меню смайлов:"											1
 @var	checkbox			chat_input-area_btn_emoji-menu_disable						"╠═       Отключить отображение кнопки:"												0
 @var	checkbox			chat_input-area_btn_emoji-menu_disable_if-7tv				"╠═       Отключить отображение кнопки, если есть кнопка смайлов от 7tv:"				0
 @var	color				chat_input-area_btn_emoji-menu_color						"╠═        Цвет кнопки:"																yellow
-@var	number  		header-5-line-divider-63										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-64										"║"														 								{" ":"divider"}
 @var	checkbox			chat_under-input-area_btn_channel-points-menu_toggle		"╠    Изменение кнопки ✨ открытия меню Очков канала (ttv: баллы канала):"				1
 @var	checkbox			chat_under-input-area_btn_channel-points-menu_disable		"╠═       Отключить отображение кнопки:"												0
 @var	color				chat_under-input-area_btn_channel-points-menu_color			"╠═        Цвет кнопки:"																rgb(24, 251, 176)
 @var	checkbox			chat_under-input-area_btn_channel-points-menu_bg_toggle		"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_under-input-area_btn_channel-points-menu_bg_color		"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-64										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-65										"║"														 								{" ":"divider"}
 @var	checkbox			chat_under-input-area_btn_KICKs-shop-menu_toggle			"╠    Изменение кнопки 🏠 Магазин подарков (ttv: Bits / Chears):"						1
 @var	checkbox			chat_under-input-area_btn_KICKs-shop-menu_disable			"╠═       Отключить отображение кнопки:"												0
 @var	color				chat_under-input-area_btn_KICKs-shop-menu_color				"╠═        Цвет кнопки:"																#53FC18
 @var	checkbox			chat_under-input-area_btn_KICKs-shop-menu_bg_toggle			"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_under-input-area_btn_KICKs-shop-menu_bg_color			"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-65										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-66										"║"														 								{" ":"divider"}
 @var	checkbox			chat_under-input-area_btn_drops-panel_toggle				"╠    Изменение кнопки 🏠 Доступные дропы:"												1
 @var	checkbox			chat_under-input-area_btn_drops-panel_disable				"╠═       Отключить отображение кнопки:"												0
 @var	color				chat_under-input-area_btn_drops-panel_color					"╠═        Цвет кнопки:"																#53FC18
 @var	checkbox			chat_under-input-area_btn_drops-panel_bg_toggle				"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_under-input-area_btn_drops-panel_bg_color				"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-66										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-67										"║"														 								{" ":"divider"}
 @var	checkbox			chat_under-input-area_btn_context-menu_toggle				"╠    Изменение кнопки [⋮] Открытия контекстного меню (Mo'Kick):"						1
 @var	color				chat_under-input-area_btn_context-menu_color				"╠═        Цвет кнопки:"																#53FC18
 @var	checkbox			chat_under-input-area_btn_context-menu_bg_toggle			"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_under-input-area_btn_context-menu_bg_color				"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-67										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-68										"║"														 								{" ":"divider"}
 @var	checkbox			chat_under-input-area_btn_toggle-chatting_toggle			"╠    Изменение кнопки 💬 Toggle Chatting (Mo'Kick):"									1
 @var	checkbox			chat_under-input-area_btn_toggle-chatting_disable			"╠═       Отключить отображение кнопки:"												0
 @var	color				chat_under-input-area_btn_toggle-chatting_color				"╠═        Цвет кнопки:"																lightyellow
 @var	checkbox			chat_under-input-area_btn_toggle-chatting_bg_toggle			"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_under-input-area_btn_toggle-chatting_bg_color			"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-68										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-69										"║"														 								{" ":"divider"}
 @var	checkbox			chat_under-input-area_btn_find-user_toggle					"╠    Изменение кнопки 🔍 Find User (Mo'Kick):"											1
 @var	checkbox			chat_under-input-area_btn_find-user_disable					"╠═       Отключить отображение кнопки (только под input полем чата):"					0
 @var	color				chat_under-input-area_btn_find-user_color					"╠═        Цвет кнопки (только под input полем чата):"									lightyellow
 @var	checkbox			chat_under-input-area_btn_find-user_bg_toggle				"╠═       Свой цвет фона кнопки (только под input полем чата):"							1
 @var	color				chat_under-input-area_btn_find-user_bg_color				"╠══               Цвет фона кнопки (только под input полем чата):"						rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-69										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-70										"║"														 								{" ":"divider"}
 @var	checkbox			chat_under-input-area_btn_mention_toggle					"╠    Изменение кнопки 📧 Mention (Mo'Kick):"											1
 @var	checkbox			chat_under-input-area_btn_mention_disable					"╠═       Отключить отображение кнопки (только под input полем чата):"					0
 @var	color				chat_under-input-area_btn_mention_color						"╠═        Цвет кнопки (только под input полем чата):"									magenta
 @var	checkbox			chat_under-input-area_btn_mention_bg_toggle					"╠═       Свой цвет фона кнопки (только под input полем чата):"							1
 @var	color				chat_under-input-area_btn_mention_bg_color					"╠══               Цвет фона кнопки (только под input полем чата):"						rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-70										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-71										"║"														 								{" ":"divider"}
 @var	checkbox			chat_under-input-area_btn_settings_toggle					"╠    Изменение кнопки ⚙️ Настройки чата:"												1
 @var	checkbox			chat_under-input-area_btn_settings_disable					"╠═       Отключить отображение кнопки:"												0
 @var	color				chat_under-input-area_btn_settings_color					"╠═        Цвет кнопки:"																orange
 @var	checkbox			chat_under-input-area_btn_settings_bg_toggle				"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_under-input-area_btn_settings_bg_color					"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-71										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-72										"║"														 								{" ":"divider"}
 @var	checkbox			chat_under-input-area_btn_nipahtv_emoji-menu_toggle			"╠    Изменение кнопки 🙂 Меню смайлов (NipahTV):"										1
 @var	checkbox			chat_under-input-area_btn_nipahtv_emoji-menu_disable		"╠═       Отключить отображение кнопки:"												0
 @var	color				chat_under-input-area_btn_nipahtv_emoji-menu_glow_color		"╠═        Цвет внешнего свечения:"														deeppink
 @var	checkbox			chat_under-input-area_btn_nipahtv_emoji-menu_bg_toggle		"╠═       Свой цвет фона кнопки:"														1
 @var	color				chat_under-input-area_btn_nipahtv_emoji-menu_bg_color		"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-72										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-73										"║"														 								{" ":"divider"}
 @var	checkbox			chat_under-input-area_btn_send-message_toggle				"╠    Изменение кнопки Отправки сообщения в чат:"										1
 @var	color				chat_under-input-area_btn_send-message_color				"╠═        Цвет кнопки:"																#53FC18
 @var	color				chat_under-input-area_btn_send-message_text_color			"╠═        Цвет текста в кнопке:"														#0b0b0c
-@var	number  		header-5-line-divider-73										"║"														 								[0,0,0]
-@var	number  		header-5-divider-10												"╠══════════════════ МЕНЮ: ОЧКОВ КАНАЛА ═══════════════════╣" 							[0,0,0]
-@var	number  		header-5-line-divider-74										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-74										"║"														 								{" ":"divider"}
+@var	select  		header-5-divider-10												"╠══════════════════ МЕНЮ: ОЧКОВ КАНАЛА ═══════════════════╣" 							{" ":"divider"}
+@var	select  		header-5-line-divider-75										"║"														 								{" ":"divider"}
 @var	checkbox			channel-points-menu_btn_info_toggle							"╠    Изменение кнопки ℹ️ Узнать больше:"												1
 @var	color				channel-points-menu_btn_info_color							"╠═        Цвет кнопки:"																#53FC18
 @var	checkbox			channel-points-menu_btn_info_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				channel-points-menu_btn_info_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-5-line-divider-75										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-76										"║"														 								{" ":"divider"}
 @var	checkbox			channel-points-menu_btn_prediction_toggle					"╠    Изменение плашки Активной/Завершенной ставки за баллы канала:"					1
 @var	checkbox			channel-points-menu_btn_prediction_grid_toggle				"╠═        Расположить содержимое внутри плашки, по людски:"							1
 @var	color				channel-points-menu_btn_prediction_hat-icon_color			"╠═        Цвет иконки шляпы:"															magenta
@@ -865,239 +868,239 @@
 @var	checkbox			channel-points-menu_btn_prediction_bg_toggle				"╠═       Свой цвет фона плашки:"														1
 @var	color				channel-points-menu_btn_prediction_bg_color					"╠══               Цвет фона плашки:"													rgba(35, 38, 41, 1)
 @var	color				channel-points-menu_btn_prediction_hover_bg_color			"╠══               Цвет фона плашки, при наведении курсора:"							rgba(40, 43, 46, 1)
-@var	number  		header-5-line-divider-76										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-77										"║"														 								{" ":"divider"}
 @var	checkbox			channel-points-menu_btns_grid_edge-glow_toggle				"╠    Сделать отступы по краям, для корректного отображения свечения:"					1
 @var	color				channel-points-menu_btns_grid_edge-glow_color				"╠═       Цвет внешнего свечения у покупаемых плиток с наградой:"						rgba(24, 251, 176, .4)
-@var	number  		header-5-line-divider-77										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-78										"║"														 								{" ":"divider"}
 @var	checkbox			channel-points-menu_btns_grid_compact_toggle				"╠    Сделать кнопки с наградами за баллы канала, компактнее:"							1
-@var	number  		header-5-line-divider-78										"║"														 								[0,0,0]
-@var	number  		header-5-divider-11												"╠════════════════ МЕНЮ: МАГАЗИН ПОДАРКОВ ═════════════════╣" 							[0,0,0]
-@var	number  		header-5-line-divider-79										"║"														 								[0,0,0]
+@var	select  		header-5-line-divider-79										"║"														 								{" ":"divider"}
+@var	select  		header-5-divider-11												"╠════════════════ МЕНЮ: МАГАЗИН ПОДАРКОВ ═════════════════╣" 							{" ":"divider"}
+@var	select  		header-5-line-divider-80										"║"														 								{" ":"divider"}
 @var	checkbox  			header-5-WIP												"║ Планируется реализовать в будущем..."				 								0
-@var	number  		header-5-line-divider-80										"║"														 								[0,0,0]
-@var	number  		header-5-end													"╚═══════════════════════════════════════════════════════╝" 							[0,0,0]
+@var	select  		header-5-line-divider-81										"║"														 								{" ":"divider"}
+@var	select  		header-5-end													"╚═══════════════════════════════════════════════════════╝" 							{" ":"divider"}
 
-@var	number  		empty5															"" 																						[0,0,0]
+@var	select  		empty5															"" 																						{" ":"divider"}
 
 //Всплывающие окна
-@var	number  		header-6-start													"╔══════════ ВСПЛЫВАЮЩИЕ ОКНА: ОБЩЕЕ ═══════════╗"										[0,0,0]
-@var	number  		header-6-line-divider-0											"║"														 								[0,0,0]
+@var	select  		header-6-start													"╔══════════ ВСПЛЫВАЮЩИЕ ОКНА: ОБЩЕЕ ═══════════╗"										{" ":"divider"}
+@var	select  		header-6-line-divider-0											"║"														 								{" ":"divider"}
 @var	checkbox			prediction-window_compact_toggle							"╠    Уменьщает у всплывающих окон, отступ по краю:"									1
-@var	number  		header-6-line-divider-1											"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-1											"║"														 								{" ":"divider"}
 @var	checkbox			pop-up-windows_btn_close_toggle								"╠    Изменение кнопки ❌ Закрыть:"														1
 @var	color				pop-up-windows_btn_close_color								"╠═        Цвет кнопки:"																#F30
 @var	checkbox			pop-up-windows_btn_close_bg_toggle							"╠═       Свой цвет фона кнопки:"														1
 @var	color				pop-up-windows_btn_close_bg_color							"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-2											"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-2											"║"														 								{" ":"divider"}
 @var	checkbox			pop-up-windows_btn_back_toggle								"╠    Изменение кнопки ◀️ Назад:"														1
 @var	color				pop-up-windows_btn_back_color								"╠═        Цвет кнопки:"																lightgreen
 @var	checkbox			pop-up-windows_btn_back_bg_toggle							"╠═       Свой цвет фона кнопки:"														1
 @var	color				pop-up-windows_btn_back_bg_color							"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-3											"║"														 								[0,0,0]
-@var	number  		header-6-divider-1												"╠══════════ ВСПЛЫВАЮЩЕЕ ОКНО: СОЗДАНИЕ КЛИПА ═════════════╣" 							[0,0,0]
-@var	number  		header-6-line-divider-4											"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-3											"║"														 								{" ":"divider"}
+@var	select  		header-6-divider-1												"╠══════════ ВСПЛЫВАЮЩЕЕ ОКНО: СОЗДАНИЕ КЛИПА ═════════════╣" 							{" ":"divider"}
+@var	select  		header-6-line-divider-4											"║"														 								{" ":"divider"}
 @var	checkbox			create_clip_window_size_padding_toggle						"╠    Уменьшить отступ по краям окна:"													1
 @var	number				create_clip_window_size										"╠    Изминение размера окна создания клипа:"											[45,20,70]
 @var	checkbox			create_clip_window_avatar-username_toggle					"╠    Убрать Аватарку и Никнейм меня, делающего клип, из окна создания клипа:"			1
 @var	checkbox			create_clip_window_player-name_gap_toggle					"╠    Убрать вертикальный отступ между плееро и полем для ввода названия клипа:"		1
 @var	checkbox			create_clip_window_avatar-name_inone_line_toggle			"╠    Перенести Аватарку, Поле названия клипа, и Кол-во символов, в одну строку:"		1
-@var	number  		header-6-line-divider-5											"║"														 								[0,0,0]
-@var	number  		header-6-divider-2												"╠══════════ ВСПЛЫВАЮЩЕЕ ОКНО: ЛИЧНАЯ КАРТОЧКА ПОЛЬЗОВАТЕЛЯ ═══════════╣" 				[0,0,0]
-@var	number  		header-6-line-divider-6											"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-5											"║"														 								{" ":"divider"}
+@var	select  		header-6-divider-2												"╠══════════ ВСПЛЫВАЮЩЕЕ ОКНО: ЛИЧНАЯ КАРТОЧКА ПОЛЬЗОВАТЕЛЯ ═══════════╣" 				{" ":"divider"}
+@var	select  		header-6-line-divider-6											"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_username_toggle							"╠    Выделять имя пользователя, при наведении курсора:"								1
 @var	color				user-profile-card_username_color							"╠═        Цвет имени пользователя:"													#53FC18
-@var	number  		header-6-line-divider-7											"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-7											"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_copy-username_toggle					"╠    Изменение кнопки 📋 Copy Username (Mo'Kick):"										1
 @var	color				user-profile-card_btn_copy-username_color					"╠═        Цвет кнопки:"																#53FC18
 @var	checkbox			user-profile-card_btn_copy-username_bg_toggle				"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_copy-username_bg_color				"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-8											"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-8											"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_notes_toggle							"╠    Изменение кнопки 🗒 Notes (Mo'Kick):"												1
 @var	color				user-profile-card_btn_notes_color							"╠═        Цвет кнопки:"																lightpink
 @var	checkbox			user-profile-card_btn_notes_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_notes_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-9											"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-9											"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_technical-details_toggle				"╠    Изменение кнопки ⚡️ Technical Details (Mo'Kick):"									1
 @var	color				user-profile-card_btn_technical-details_color				"╠═        Цвет кнопки:"																yellow
 @var	checkbox			user-profile-card_btn_technical-details_bg_toggle			"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_technical-details_bg_color			"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-10										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-10										"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_socials_toggle						"╠    Изменение кнопки 📧 Socials (Mo'Kick):"											1
 @var	color				user-profile-card_btn_socials_color							"╠═        Цвет кнопки:"																magenta
 @var	checkbox			user-profile-card_btn_socials_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_socials_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-11										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-11										"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_messages_toggle						"╠    Изменение кнопки 💬 Messages (Mo'Kick):"											1
 @var	color				user-profile-card_btn_messages_color						"╠═        Цвет кнопки:"																lightyellow
 @var	checkbox			user-profile-card_btn_messages_bg_toggle					"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_messages_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-12										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-12										"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_moderation_toggle						"╠    Изменение кнопки 🔨 Moderation (Mo'Kick):"										1
 @var	color				user-profile-card_btn_moderation_color						"╠═        Цвет кнопки:"																#F30
 @var	checkbox			user-profile-card_btn_moderation_bg_toggle					"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_moderation_bg_color					"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-13										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-13										"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_advanced-profile-card_toggle			"╠    Изменение кнопки 📌 Advanced Pinned Card (Mo'Kick):"								1
 @var	color				user-profile-card_btn_advanced-profile-card_color			"╠═        Цвет кнопки:"																orange
 @var	checkbox			user-profile-card_btn_advanced-profile-card_bg_toggle		"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_advanced-profile-card_bg_color		"╠══               Цвет фона кнопки:"													rgba(23, 26, 28, 1)
-@var	number  		header-6-line-divider-14										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-14										"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_edit-badges_toggle					"╠    Изменение кнопки ✏️ Edit Badges (Mo'Kick):"										1
 @var	color				user-profile-card_btn_edit-badges_color						"╠═        Цвет кнопки:"																#A970FF
 @var	checkbox			user-profile-card_btn_edit-badges_bg_toggle					"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_edit-badges_bg_color					"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-15										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-15										"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_follow_toggle							"╠    Изменение кнопки 💜 Фолов/Анфолов:"												1
 @var	color				user-profile-card_btn_follow_color							"╠═        Цвет кнопки:"																magenta
 @var	checkbox			user-profile-card_btn_follow_text_disable					"╠═       Убрать текст в кнопке:"														1
 @var	checkbox			user-profile-card_btn_follow_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_follow_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-16										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-16										"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_gift-sub_toggle						"╠    Изменение кнопки 🎁 Подарить подписку:"											1
 @var	checkbox			user-profile-card_btn_gift-sub_text_disable					"╠═       Убрать текст в кнопке:"														1
 @var	color				user-profile-card_btn_gift-sub_color						"╠═        Цвет кнопки:"																gold
 @var	checkbox			user-profile-card_btn_gift-sub_bg_toggle					"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_gift-sub_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-17										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-17										"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_channel_toggle						"╠    Изменение кнопки 📺 Смотреть канал в Миниатюрная карточке пользователя:"			1
 @var	color				user-profile-card_btn_channel_color							"╠═        Цвет кнопки:"																#53FC18
 @var	checkbox			user-profile-card_btn_channel_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_channel_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-18										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-18										"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_add-to-priority_toggle				"╠    Изменение кнопки 👨‍👦 Add To Priority (Mo'Kick):"									1
 @var	checkbox			user-profile-card_btn_add-to-priority_text_disable			"╠═       Убрать текст в кнопке:"														1
 @var	color				user-profile-card_btn_add-to-priority_color					"╠═        Цвет кнопки:"																lightgreen
 @var	checkbox			user-profile-card_btn_add-to-priority_bg_toggle				"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_add-to-priority_bg_color				"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-19										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-19										"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_reveal-unreveal-msg_toggle			"╠    Изменение кнопки 👁 Reveal/Unreveal Message (Mo'Kick):"							1
 @var	color				user-profile-card_btn_reveal-unreveal-msg_color				"╠═        Цвет кнопки:"																skyblue
 @var	color				user-profile-card_btn_reveal-unreveal-msg-hide_color		"╠═        Цвет кнопки Reveal:"															#FF6262
 @var	color				user-profile-card_btn_reveal-unreveal-msg-show_color		"╠═        Цвет кнопки Unreveal:"														lightgreen
 @var	checkbox			user-profile-card_btn_reveal-unreveal-msg_bg_toggle			"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_reveal-unreveal-msg_bg_color			"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-20										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-20										"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_ignore_toggle							"╠    Изменение кнопки 🎙 Игнорировать/Удалить из игнорируемых:"						1
 @var	color				user-profile-card_btn_ignore-hide_color						"╠═        Цвет кнопки Игнорировать:"													#FF6262
 @var	color				user-profile-card_btn_ignore-show_color						"╠═        Цвет кнопки Удалить из Игнорируемых:"										lightgreen
 @var	checkbox			user-profile-card_btn_ignore_text_disable					"╠═       Убрать текст в кнопке:"														1
 @var	checkbox			user-profile-card_btn_ignore_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_ignore_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-21										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-21										"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_reply_toggle							"╠    Изменение кнопки ↩️ Ответить в Миниатюрная карточке пользователя:"				1
 @var	color				user-profile-card_btn_reply_color							"╠═        Цвет кнопки:"																skyblue
 @var	checkbox			user-profile-card_btn_reply_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_reply_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-22										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-22										"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_block_toggle							"╠    Изменение кнопки 🚫 Block/Unblock Highlight (Mo'Kick):"							1
 @var	color				user-profile-card_btn_block-hide_color						"╠═        Цвет кнопки Заблокировать:"													#FF6262
 @var	color				user-profile-card_btn_block-show_color						"╠═        Цвет кнопки Разблокировать:"													lightgreen
 @var	checkbox			user-profile-card_btn_block_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_block_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-23										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-23										"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_ban_toggle							"╠    Изменение Кнопки/Переключателя выдачи 🔨 Бана:"									1
 @var	color				user-profile-card_btn_ban_color								"╠═        Цвет кнопки/переключателя Заблокировать:"									#FF6262
 @var	checkbox			user-profile-card_btn_ban_bg_toggle							"╠═       Свой цвет фона кнопки (Mo'Kick):"												1
 @var	color				user-profile-card_btn_ban_bg_color							"╠══               Цвет фона кнопки:"													#4D4242
 @var	checkbox			user-profile-card-mini_btn_ban_bg_toggle					"╠═       Свой цвет фона кнопки в миниатюрном профиле пользователя:"					1
 @var	color				user-profile-card-mini_btn_ban_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-24										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-24										"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_timeout_toggle						"╠    Изменение Кнопки/Переключателя выдачи ⏳ Таймача:"									1
 @var	color				user-profile-card_btn_timeout_color							"╠═        Цвет кнопки/переключателя Отстранить:"										#9048FF
 @var	checkbox			user-profile-card_btn_timeout_bg_toggle						"╠═       Свой цвет фона кнопки (Mo'Kick):"												1
 @var	color				user-profile-card_btn_timeout_bg_color						"╠══               Цвет фона кнопки:"													#48424D
 @var	checkbox			user-profile-card-mini_btn_timeout_bg_toggle				"╠═       Свой цвет фона кнопки в миниатюрном профиле пользователя:"					1
 @var	color				user-profile-card-mini_btn_timeout_bg_color					"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-25										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-25										"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_unban-untimeout_toggle				"╠    Изменение Кнопки ⤴️ Unban (Mo'Kick):"												1
 @var	color				user-profile-card_btn_unban-untimeout_color					"╠═        Цвет кнопки/переключателя Отстранить:"										lightgreen
 @var	checkbox			user-profile-card_btn_unban-untimeout_bg_toggle				"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_unban-untimeout_bg_color				"╠══               Цвет фона кнопки:"													#424D45
-@var	number  		header-6-line-divider-26										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-26										"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_vip-user_toggle						"╠    Изменение Кнопки 👑 Vip/UnVip (NipahTV):"											1
 @var	color				user-profile-card_btn_vip-user_color						"╠═        Цвет кнопки Выдать VIP:"														gold
 @var	color				user-profile-card_btn_unvip-user_color						"╠═        Цвет кнопки Снять VIP:"														#F30
-@var	number  		header-6-line-divider-27										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-27										"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_mod-user_toggle						"╠    Изменение Кнопки 🛡️ Mod/UnMod (NipahTV):"										1
 @var	color				user-profile-card_btn_mod-user_color						"╠═        Цвет кнопки/переключателя Отстранить:"										deepskyblue
 @var	color				user-profile-card_btn_unmod-user_color						"╠═        Цвет кнопки/переключателя Отстранить:"										#F30
-@var	number  		header-6-line-divider-28										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-28										"║"														 								{" ":"divider"}
 @var	checkbox			user-profile-card_btn_chat-history_toggle					"╠    Изменение кнопки История чата в мини карточке пользователя, в низу экрана:"		1
 @var	color				user-profile-card_btn_chat-history_color					"╠═        Цвет кнопки:"																lightblue
 @var	checkbox			user-profile-card_btn_chat-history_bg_toggle				"╠═       Свой цвет фона кнопки:"														1
 @var	color				user-profile-card_btn_chat-history_bg_color					"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-29										"║"														 								[0,0,0]
-@var	number  		header-6-divider-3												"╠══════════ ВСПЛЫВАЮЩЕЕ ОКНО: СТАВКА ═══════════╣" 									[0,0,0]
-@var	number  		header-6-line-divider-30										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-29										"║"														 								{" ":"divider"}
+@var	select  		header-6-divider-3												"╠══════════ ВСПЛЫВАЮЩЕЕ ОКНО: СТАВКА ═══════════╣" 									{" ":"divider"}
+@var	select  		header-6-line-divider-30										"║"														 								{" ":"divider"}
 @var	checkbox			prediction-window_choise_toggle								"╠    Изменение Плашек с вариантами для ставок:"										1
 @var	color				prediction-window_choise_bg_color							"╠═        Фоновый цвет плашекь:"														rgba(66, 71, 77, .2)
 @var	color				prediction-window_choise_glow_color							"╠═        Фоновый цвет плашеки, при наведении курсора для выбора победишвего варианта:"lightgreen
 @var	color				prediction-window_choise_check_color						"╠═        Цвет галочки ✔️ при выборе победившего варианта:"							#53FC18
-@var	number  		header-6-line-divider-31										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-31										"║"														 								{" ":"divider"}
 @var	checkbox			prediction-window_time-left_toggle							"╠    Изменение Полоски и Таймера оставшегося времени для приёма ставок:"				1
 @var	color				prediction-window_time-left_color							"╠═        Цвет Полоски и Таймера:"														#53FC18
 @var	color				prediction-window_time-left_bg_color						"╠═        Фоновый цвет плашекь:"														rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-32										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-32										"║"														 								{" ":"divider"}
 @var	checkbox			prediction-window_btn_cancel_toggle							"╠    Изменение Кнопок «Отмена», «Удалить» и «Назад»:"									1
 @var	color				prediction-window_btn_cancel_color							"╠═        Цвет кнопки/переключателя Отстранить:"										orange
 @var	checkbox			prediction-window_btn_cancel_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				prediction-window_btn_cancel_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-33										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-33										"║"														 								{" ":"divider"}
 @var	checkbox			prediction-window_btn_submit_toggle							"╠    Изменение Кнопок «Начать игру на предсказание» и «Выберете результат»:"			1
 @var	color				prediction-window_btn_submit_color							"╠═        Цвет кнопки/переключателя Отстранить:"										#53FC18
 @var	checkbox			prediction-window_btn_submit_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				prediction-window_btn_submit_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-34										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-34										"║"														 								{" ":"divider"}
 @var	checkbox			prediction-window_btn_abort_toggle							"╠    Изменение Кнопок «Завершить отправку» и «Удалить и вернуть очки»:"				1
 @var	color				prediction-window_btn_abort_color							"╠═        Цвет кнопки/переключателя Отстранить:"										#F30
 @var	checkbox			prediction-window_btn_abort_bg_toggle						"╠═       Свой цвет фона кнопки:"														1
 @var	color				prediction-window_btn_abort_bg_color						"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-6-line-divider-35										"║"														 								[0,0,0]
-@var	number  		header-6-divider-4												"╠══════════ ВСПЛЫВАЮЩЕЕ ОКНО: МЕНЮ Mo'Kick ═══════════╣" 								[0,0,0]
-@var	number  		header-6-line-divider-36										"║"														 								[0,0,0]
+@var	select  		header-6-line-divider-35										"║"														 								{" ":"divider"}
+@var	select  		header-6-divider-4												"╠══════════ ВСПЛЫВАЮЩЕЕ ОКНО: МЕНЮ Mo'Kick ═══════════╣" 								{" ":"divider"}
+@var	select  		header-6-line-divider-36										"║"														 								{" ":"divider"}
 @var	checkbox  			header-6-WIP												"║ Планируется реализовать в будущем..."				 								0
-@var	number  		header-6-line-divider-37										"║"														 								[0,0,0]
-@var	number  		header-6-end													"╚═══════════════════════════════════════════════════════╝" 							[0,0,0]
+@var	select  		header-6-line-divider-37										"║"														 								{" ":"divider"}
+@var	select  		header-6-end													"╚═══════════════════════════════════════════════════════╝" 							{" ":"divider"}
 
-@var	number  		empty6															"" 																						[0,0,0]
+@var	select  		empty6															"" 																						{" ":"divider"}
 
 //Панеи управления Модератора и/или Автора
-@var	number  		header-7-start													"╔═════════ ПАНЕЛЬ УПРАВЛЕНИЯ: МОДЕРАТОРА ИЛИ АВТОРА ══════════╗"						[0,0,0]
+@var	select  		header-7-start													"╔═════════ ПАНЕЛЬ УПРАВЛЕНИЯ: МОДЕРАТОРА ИЛИ АВТОРА ══════════╗"						{" ":"divider"}
 @var	checkbox			mod-dashboard_right-sidemenu_toggle							"╠    Изменение правой Боковой панели:"													1
 @var	checkbox			mod-dashboard_right-sidemenu_compact_toggle					"╠═       Сделать правое меню компактным, и выпадающим при наведении куросора:"			1
 @var	color				mod-dashboard_right-sidemenu_compact_color					"╠═       Цвет правого выпадающего меню, в компактном виде:"							#53FC18A8
-@var	number  		header-7-line-divider-0											"║"														 								[0,0,0]
+@var	select  		header-7-line-divider-0											"║"														 								{" ":"divider"}
 @var	checkbox			mod-dashboard_right-sidemenu_btn_hint_toggle				"╠    ► Изменение Кнопки ℹ️ Подсказка:"													1
 @var	color				mod-dashboard_right-sidemenu_btn_hint_color					"╠═        Цвет кнопки:"																yellow
 @var	checkbox			mod-dashboard_right-sidemenu_btn_hint_bg_toggle				"╠═       Свой цвет фона кнопки:"														1
 @var	color				mod-dashboard_right-sidemenu_btn_hint_bg_color				"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-7-line-divider-1											"║"														 								[0,0,0]
+@var	select  		header-7-line-divider-1											"║"														 								{" ":"divider"}
 @var	checkbox			mod-dashboard_right-sidemenu_btn_edit_toggle				"╠    ► Изменение Кнопки ✏️ Редактировать:"												1
 @var	color				mod-dashboard_right-sidemenu_btn_edit_color					"╠═        Цвет кнопки:"																#C39BFF
 @var	checkbox			mod-dashboard_right-sidemenu_btn_edit_bg_toggle				"╠═       Свой цвет фона кнопки:"														1
 @var	color				mod-dashboard_right-sidemenu_btn_edit_bg_color				"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-7-line-divider-2											"║"														 								[0,0,0]
+@var	select  		header-7-line-divider-2											"║"														 								{" ":"divider"}
 @var	checkbox			mod-dashboard_right-sidemenu_btn_save_toggle				"╠    ► Изменение Кнопки ✅ Сохранить:"													1
 @var	color				mod-dashboard_right-sidemenu_btn_save_color					"╠═        Цвет кнопки:"																#53FC18
 @var	checkbox			mod-dashboard_right-sidemenu_btn_save_bg_toggle				"╠═       Свой цвет фона кнопки:"														1
 @var	color				mod-dashboard_right-sidemenu_btn_save_bg_color				"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-7-line-divider-3											"║"														 								[0,0,0]
+@var	select  		header-7-line-divider-3											"║"														 								{" ":"divider"}
 @var	checkbox			mod-dashboard_right-sidemenu_btn_reset_toggle				"╠    ► Изменение Кнопки 🧩️ Сбросить до макета по умолчанию:"							1
 @var	color				mod-dashboard_right-sidemenu_btn_reset_color				"╠═        Цвет кнопки:"																skyblue
 @var	checkbox			mod-dashboard_right-sidemenu_btn_reset_bg_toggle			"╠═       Свой цвет фона кнопки:"														1
 @var	color				mod-dashboard_right-sidemenu_btn_reset_bg_color				"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-7-line-divider-4											"║"														 								[0,0,0]
+@var	select  		header-7-line-divider-4											"║"														 								{" ":"divider"}
 @var	checkbox			mod-dashboard_right-sidemenu_btn_cancel_toggle				"╠    ► Изменение Кнопки ❌ Отмена:"														1
 @var	color				mod-dashboard_right-sidemenu_btn_cancel_color				"╠═        Цвет кнопки:"																#F30
 @var	checkbox			mod-dashboard_right-sidemenu_btn_cancel_bg_toggle			"╠═       Свой цвет фона кнопки:"														1
 @var	color				mod-dashboard_right-sidemenu_btn_cancel_bg_color			"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-7-line-divider-5											"║"														 								[0,0,0]
+@var	select  		header-7-line-divider-5											"║"														 								{" ":"divider"}
 @var	checkbox			mod-dashboard_widgets-window_btn_cancel_toggle				"╠    Изменение Кнопки 🏯 Фильтр, в верху окна виджита:"								1
 @var	number				mod-dashboard_widgets-window_btn_cancel_order				"╠═        Смещение кнопки:"															[-2,-2,2]
 @var	color				mod-dashboard_widgets-window_btn_cancel_color				"╠═        Цвет кнопки:"																lightgrey
 @var	checkbox			mod-dashboard_widgets-window_btn_cancel_bg_toggle			"╠═       Свой цвет фона кнопки:"														1
 @var	color				mod-dashboard_widgets-window_btn_cancel_bg_color			"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-7-line-divider-6											"║"														 								[0,0,0]
+@var	select  		header-7-line-divider-6											"║"														 								{" ":"divider"}
 @var	checkbox			mod-dashboard_widgets-window_btn_open-in_new-tab_toggle		"╠    Изменение Кнопки ↗️ Открыть панель в отдельном окне, в верху окна виджита:"		1
 @var	checkbox			mod-dashboard_widgets-window_btn_in-row_toggle				"╠═        Выравнивание кнопок вверху виджета чата, горизонтально (Mo'Kick):"			1
 @var	checkbox			mod-dashboard_widgets-window_btn_chat-visible_force			"╠══               Вернуть отображение Кнопки ↗️ Открыть панель в отдельном окне, чату (Mo'Kick):"	1
@@ -1105,23 +1108,23 @@
 @var	color				mod-dashboard_widgets-window_btn_open-in_new-tab_color		"╠═        Цвет кнопки:"																lightgreen
 @var	checkbox			mod-dashboard_widgets-window_btn_open-in_new-tab_bg_toggle	"╠═       Свой цвет фона кнопки:"														1
 @var	color				mod-dashboard_widgets-window_btn_open-in_new-tab_bg_color	"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-7-line-divider-7											"║"														 								[0,0,0]
+@var	select  		header-7-line-divider-7											"║"														 								{" ":"divider"}
 @var	checkbox			mod-dashboard_widgets-window_btn_edit_toggle				"╠    Изменение Кнопки ✏️ Редактирования, в верху окна виджита:"						1
 @var	number				mod-dashboard_widgets-window_btn_edit_order					"╠═        Смещение кнопки:"															[-1,-2,2]
 @var	color				mod-dashboard_widgets-window_btn_edit_color					"╠═        Цвет кнопки:"																#C39BFF
 @var	checkbox			mod-dashboard_widgets-window_btn_edit_bg_toggle				"╠═       Свой цвет фона кнопки:"														1
 @var	color				mod-dashboard_widgets-window_btn_edit_bg_color				"╠══               Цвет фона кнопки:"													rgba(66, 71, 77, .2)
-@var	number  		header-7-line-divider-8											"║"														 								[0,0,0]
+@var	select  		header-7-line-divider-8											"║"														 								{" ":"divider"}
 @var	checkbox			mod-dashboard_widgets-window_stream_toggle					"╠    Изменение Виджета 📺 Предпросмотр трансляции:"									1
 @var	color				mod-dashboard_widgets-window_stream_color					"╠═        Цвет иконки виджета:"														magenta
-@var	number  		header-7-line-divider-9											"║"														 								[0,0,0]
+@var	select  		header-7-line-divider-9											"║"														 								{" ":"divider"}
 @var	checkbox			mod-dashboard_widgets-window_activity-feed_toggle			"╠    Изменение Виджета ⚡️ Лента активности:"											1
 @var	color				mod-dashboard_widgets-window_activity-feed_color			"╠═        Цвет иконки виджета:"														yellow
 @var	color				mod-dashboard_widgets-window_activity-feed_follow_color		"╠══               ► 💜 Фолов:"															magenta
 @var	color				mod-dashboard_widgets-window_activity-feed_first-msg_color	"╠══               ► 💬 Впервые написал в чат:"											lightyellow
 @var	color				mod-dashboard_widgets-window_activity-feed_raid_color		"╠══               ► 🚪 Рейд:"															cyan
 @var	color				mod-dashboard_widgets-window_activity-feed_reward_color		"╠══               ► ✨ Заказ награды за баллы канала:"									rgb(24, 251, 176)
-@var	number  		header-7-line-divider-10										"║"														 								[0,0,0]
+@var	select  		header-7-line-divider-10										"║"														 								{" ":"divider"}
 @var	checkbox			mod-dashboard_widgets-window_mods-action_toggle				"╠    Изменение Виджета 🗒 Действия модератороа:"											1
 @var	color				mod-dashboard_widgets-window_mods-action_color				"╠═        Цвет иконки виджета:"														skyblue
 @var	color				mod-dashboard_widgets-window_mods-action_ban_color			"╠══               ► 🔨 Бан:"															#F30
@@ -1138,23 +1141,23 @@
 @var	color				mod-dashboard_widgets-window_mods-action_follow-mod_color	"╠══               ► 💜 Фоловмод:"														magenta
 @var	color				mod-dashboard_widgets-window_mods-action_sub-mode_color		"╠══               ► 🎁 Сабмод:"														gold
 @var	color				mod-dashboard_widgets-window_mods-action_smile-mod_color	"╠══               ► 🙂 Смайлмод:"														yellow
-@var	number  		header-7-line-divider-11										"║"														 								[0,0,0]
+@var	select  		header-7-line-divider-11										"║"														 								{" ":"divider"}
 @var	checkbox			mod-dashboard_widgets-window_chat_toggle					"╠    Изменение Виджета 💬 Чат:"														1
 @var	color				mod-dashboard_widgets-window_chat_color						"╠═        Цвет иконки виджета:"														lightyellow
-@var	number  		header-7-line-divider-12										"║"														 								[0,0,0]
+@var	select  		header-7-line-divider-12										"║"														 								{" ":"divider"}
 @var	checkbox			mod-dashboard_widgets-window_session-info_toggle			"╠    Изменение Виджета 🔴 Информация о сессмм:"										1
 @var	color				mod-dashboard_widgets-window_session-info_color				"╠═        Цвет иконки виджета:"														red
-@var	number  		header-7-line-divider-13										"║"														 								[0,0,0]
+@var	select  		header-7-line-divider-13										"║"														 								{" ":"divider"}
 @var	checkbox			mod-dashboard_widgets-window_channel-actions_toggle			"╠    Изменение Виджета 📹 Действия на канале:"											1
 @var	color				mod-dashboard_widgets-window_channel-actions_color			"╠═        Цвет иконки виджета:"														#53FC18
-@var	number  		header-7-line-divider-14										"║"														 								[0,0,0]
+@var	select  		header-7-line-divider-14										"║"														 								{" ":"divider"}
 @var	checkbox			mod-dashboard_widgets-window_stream-info_toggle				"╠    Изменение Виджета 🔧 Информация о трансляции:"									1
 @var	color				mod-dashboard_widgets-window_stream-info_color				"╠═        Цвет иконки виджета:"														#A970FF
-@var	number  		header-7-line-divider-15										"║"														 								[0,0,0]
+@var	select  		header-7-line-divider-15										"║"														 								{" ":"divider"}
 @var	checkbox			mod-dashboard_widgets-window_reward-request-queue_toggle	"╠    Изменение Виджета ✨ Очередь на получение вознаграждения:"							1
 @var	color				mod-dashboard_widgets-window_reward-request-queue_color		"╠═        Цвет иконки виджета:"														rgb(24, 251, 176)
-@var	number  		header-7-line-divider-16										"║"														 								[0,0,0]
-@var	number  		header-7-end													"╚═══════════════════════════════════════════════════════╝" 							[0,0,0]
+@var	select  		header-7-line-divider-16										"║"														 								{" ":"divider"}
+@var	select  		header-7-end													"╚═══════════════════════════════════════════════════════╝" 							{" ":"divider"}
 
 
 
@@ -1388,9 +1391,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
-/* ############################### */
-/* ##### Верхняя панел сайта ##### */
-/* ############################### */
+/* ################################## */
+/* ##### 🎩 Верхняя панел сайта ##### */
+/* ################################## */
 	
 	/* Кнопка Свернуть/Развернуть боковое меню */
 	if top_site_bar_btn_togg_side_menu_toggle {
@@ -1811,9 +1814,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("dashboard.kick.com") {
-/* ################################################################## */
-/* ##### Верхняя панел сайта, на странице модератора или автора ##### */
-/* ################################################################## */
+/* ############################################################################ */
+/* ##### 🎩 Верхняя панел сайта, на странице 🛠 Модератора или 🔴 Автора ##### */
+/* ############################################################################ */
 	
 	/* Кнопка New Channel Profile (Mo'Kick) */
 	if top_site_bar_btn_new_cnl_prof_toggle {
@@ -1899,9 +1902,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
-/* ################# */
-/* ##### Плеер ##### */
-/* ################# */
+/* #################### */
+/* ##### 📺 Плеер ##### */
+/* #################### */
 	
 	/* Кнопка "✏️ Изменить баннер" вверхней части плеера*/
 	if player_btn_header_and_backgrount_img_toggle {
@@ -3210,9 +3213,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("kick.com") {
-/* ############################################ */
-/* ##### Под плеером Стрима, VOD'а, Клипа ##### */
-/* ############################################ */
+/* ############################################### */
+/* ##### 📝 Под плеером Стрима, VOD'а, Клипа ##### */
+/* ############################################### */
 	
 	/* Имя канала */
 	if channel_info_channelname_toggle {
@@ -3971,9 +3974,23 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
-/* ################################################################# */
-/* ##### Верхняя часть чата - Область кастомных кнопок Mo'Kick ##### */
-/* ################################################################# */
+/* ########################################################### */
+/* ##### 🛖 Верх чата - Область кастомных кнопок Mo'Kick ##### */
+/* ########################################################### */
+	
+	/* Сделать верхнюю часть чата, когда окно браузера маленькое, компактнее */
+	if chat-minimized_compact-header_toggle {
+		div#channel-chatroom div > section > header:has(button[type="button"]) /* Просмотр чата */
+		div#channel-chatroom div > div > header:has(button[type="button"]) /* Просмотр "Ативных чаттеров" */ {
+			height: unset !important;
+		}
+	} else {
+		div#channel-chatroom div > section > header:has(button[type="button"]) /* Просмотр чата */
+		div#channel-chatroom div > div > header:has(button[type="button"]) /* Просмотр "Ативных чаттеров" */ {
+			padding-block: unset !important;
+		}
+	}
+	
 	
 	/* Кнопка "> Свернуть" / "< Развернуть" чат */
 	if chat_btn_collapse-expand_toggle {
@@ -4113,11 +4130,20 @@ purple3=#9048FF
 			}
 		}
 	
+		/* Отключение кнопки - В миниатюрном плеере (когда окно браузера маленькое) */
+		if chat-minimized_btn_active-chatters_in-channel_disable {
+			div#channel-chatroom div.contents > div > div > header > button:has(svg[data-ds-icon="PeopleGroup"]) {
+				display: none !important;
+			}
+		}
+	
 	
 		/* Свой фон кнопки */
 		if chat_btn_active-chatters_bg_toggle {
 			/* В чате 🔴 Стрима и отдельном 🪟 Окне чата */
-			div#channel-chatroom div.contents > div > button:has(svg[data-ds-icon="PeopleGroup"]):nth-of-type(1) {
+			div#channel-chatroom div.contents > div > button:has(svg[data-ds-icon="PeopleGroup"]):nth-of-type(1),
+ 			/* В миниатюрном плеере (когда окно браузера маленькое) */
+			div#channel-chatroom div.contents > div > div > header > button:has(svg[data-ds-icon="PeopleGroup"]) {
 				background-color: chat_btn_active-chatters_bg_color !important;
 				background-image: none !important;
 			}
@@ -4132,9 +4158,20 @@ purple3=#9048FF
 			}
 	
 	
+		/* Если header чата минимизирован, уменьшает размер кнопки, чтоб она не вылезала за границы самого header'а */
+		if not chat-minimized_compact-header_toggle {
+			div#channel-chatroom div.contents > div > div > header > button:has(svg[data-ds-icon="PeopleGroup"]) {
+				height: 1.6em;
+				width: 1.6em;
+			}
+		}
+	
+	
 		/* Без наведения курсора */
 			/* В чате 🔴 Стрима и отдельном 🪟 Окне чата */
-			div#channel-chatroom div.contents > div > button:has(svg[data-ds-icon="PeopleGroup"]):nth-of-type(1) {
+			div#channel-chatroom div.contents > div > button:has(svg[data-ds-icon="PeopleGroup"]):nth-of-type(1),
+ 			/* В миниатюрном плеере (когда окно браузера маленькое) */
+			div#channel-chatroom div.contents > div > div > header > button:has(svg[data-ds-icon="PeopleGroup"]) {
 				color: chat_btn_active-chatters_color !important;
 				order: chat_btn_active-chatters_order !important;
 				z-index: 2 !important;
@@ -4142,7 +4179,9 @@ purple3=#9048FF
 	
 		/* При наведении курсора */
 			/* В чате 🔴 Стрима и отдельном 🪟 Окне чата */
-			div#channel-chatroom div.contents > div > button:has(svg[data-ds-icon="PeopleGroup"]):nth-of-type(1):hover {
+			div#channel-chatroom div.contents > div > button:has(svg[data-ds-icon="PeopleGroup"]):nth-of-type(1):hover,
+ 			/* В миниатюрном плеере (когда окно браузера маленькое) */
+			div#channel-chatroom div.contents > div > div > header > button:has(svg[data-ds-icon="PeopleGroup"]):hover {
 				filter: drop-shadow(0px 0px 4px chat_btn_active-chatters_color) !important;
 			}
 	}
@@ -4153,7 +4192,9 @@ purple3=#9048FF
 		/* Свой фон кнопки */
 		if chat_btn_return-to-chat_bg_toggle {
 			/* В чате 🔴 Стрима и ⚫️ VOD'а */
-			div#channel-chatroom div.contents > div button:has(svg[data-ds-icon="ChatOutline"]) {
+			div#channel-chatroom div.contents > div button:has(svg[data-ds-icon="ChatOutline"]),
+ 			/* В миниатюрном плеере (когда окно браузера маленькое) */
+			div#channel-chatroom div > section > header > button:has(svg[data-ds-icon="ChatOutline"]) {
 				background-color: chat_btn_return-to-chat_bg_color !important;
 				background-image: none !important;
 			}
@@ -4167,16 +4208,29 @@ purple3=#9048FF
 		}
 	
 	
+		/* Если header чата минимизирован, уменьшает размер кнопки, чтоб она не вылезала за границы самого header'а */
+		if not chat-minimized_compact-header_toggle {
+			div#channel-chatroom div > section > header > button:has(svg[data-ds-icon="ChatOutline"]) {
+				height: 1.6em;
+				width: 1.6em;
+			}
+		}
+	
+	
 		/* Без наведения курсора */
 			/* В чате 🔴 Стрима и ⚫️ VOD'а */
-			div#channel-chatroom div.contents > div button:has(svg[data-ds-icon="ChatOutline"]) {
+			div#channel-chatroom div.contents > div button:has(svg[data-ds-icon="ChatOutline"]),
+ 			/* В миниатюрном плеере (когда окно браузера маленькое) */
+			div#channel-chatroom div > section > header > button:has(svg[data-ds-icon="ChatOutline"]) {
 				color: chat_btn_return-to-chat_color !important;
 				order: chat_btn_return-to-chat_order !important;
 			}
 	
 		/* При наведении курсора */
 			/* В чате 🔴 Стрима и ⚫️ VOD'а */
-			div#channel-chatroom div.contents > div button:has(svg[data-ds-icon="ChatOutline"]):hover {
+			div#channel-chatroom div.contents > div button:has(svg[data-ds-icon="ChatOutline"]):hover,
+ 			/* В миниатюрном плеере (когда окно браузера маленькое) */
+			div#channel-chatroom div > section > header > button:has(svg[data-ds-icon="ChatOutline"]):hover {
 				filter: drop-shadow(0px 0px 4px chat_btn_return-to-chat_color) !important;
 			}
 	}
@@ -4884,9 +4938,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
-/* ################################################# */
-/* ##### Область чата - Закреплённое сообщение ##### */
-/* ################################################# */
+/* ########################################### */
+/* ##### Чат - 📌 Закреплённое сообщение ##### */
+/* ########################################### */
 	
 	/* Отключить отображение 📌 Закреплённого сообщения в чате 🔴 Стрима */
 	if pinned-msg_in-channel_disable {
@@ -5084,9 +5138,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
-/* ################################ */
-/* ##### Область чата - Опрос ##### */
-/* ################################ */
+/* ########################## */
+/* ##### Чат - 📊 Опрос ##### */
+/* ########################## */
 	
 	/* Отключить отображение 📊 Опроса в чате 🔴 Стрима */
 	if poll-msg_in-channel_disable {
@@ -5220,9 +5274,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
-/* ################################################# */
-/* ##### Область чата - Ставка за баллы канала ##### */
-/* ################################################# */
+/* ########################################### */
+/* ##### Чат - ✨ Ставка за баллы канала ##### */
+/* ########################################### */
 	
 	/* Отключить отображение 🎰 Ставки в чате 🔴 Стрима */
 	if prediction-msg_in-channel_disable {
@@ -5315,9 +5369,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
-/* #################################### */
-/* ##### Область чата - Сообщения ##### */
-/* #################################### */
+/* ############################## */
+/* ##### Чат - 💬 Сообщения ##### */
+/* ############################## */
 	
 	/* Закраска фона сообщений через один */
 	if chat-msg-bg_every2_toggle {
@@ -5491,9 +5545,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
-/* ############################################## */
-/* ##### Область чата - Ответы на сообщения ##### */
-/* ############################################## */
+/* ######################################## */
+/* ##### Чат - ↩️ Ответы на сообщения ##### */
+/* ######################################## */
 	
 	
 	/* Краткий текст сообщения, на которое ↩️ отвечают в ветке сообщений*/
@@ -5581,9 +5635,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
-/* ############################################## */
-/* ##### Область чата - Системные сообщения ##### */
-/* ############################################## */
+/* ######################################## */
+/* ##### Чат - 🤖 Системные сообщения ##### */
+/* ######################################## */
 	
 	/* Цвет таймера оставшегося время отстранения, в функциональном меню ⏳ "Active Timeouts" (Mo'Kick) */
 	if chat_context_mo-kick_btn_active-timeouts_timeleft_toggle {
@@ -5913,9 +5967,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
-/* ########################################################################################################### */
-/* ##### Облсать чата - hover Кнопки, (при наведении курсора на сообщение - "Ответить", "Закрепить" итд) ##### */
-/* ########################################################################################################### */
+/* #################################################################### */
+/* ##### Чат - hover Кнопки ("↩️ Ответить", "📌 Закрепить", итд) ##### */
+/* #################################################################### */
 	
 	if chat_hover_btn_toggle {
 		/* Скругление hover кнопок */
@@ -6619,9 +6673,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
-/* ################################################### */
-/* ##### Область чата - Кнопки модератора канала ##### */
-/* ################################################### */
+/* #################################################### */
+/* ##### Чат - Кнопки 🗑/⏳/🚫 модератора канала ##### */
+/* #################################################### */
 	
 	/* Кнопка модерации сообщения: 🗑 УДАЛИТЬ СООБЩЕНИЕ */
 	if chat_moderator_btn_delete-msg_toggle {
@@ -6743,9 +6797,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
-/* ####################################################### */
-/* ##### Нижняя часть чата - Область ввода сообщения ##### */
-/* ####################################################### */
+/* ################################################# */
+/* ##### Ниp чата - ✍️ Область ввода сообщения ##### */
+/* ################################################# */
 	
 	/* Индикация, что в чат нельзя писать из-за каких-либо ограничительных режимов(Только подписчики/фолловеры/эмотиконы/Медленный режим) */
 	if chat_restriction-msg_toggle {
@@ -7220,9 +7274,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
-/* ################################################## */
-/* ##### Нижняя часть чата - Меню баллов канала ##### */
-/* ################################################## */
+/* ############################################ */
+/* ##### Низ чата - ✨ Меню баллов канала ##### */
+/* ############################################ */
 	
 	/* Кнопка "ℹ️ Узнать больше" */
 	if channel-points-menu_btn_info_toggle {
@@ -7526,9 +7580,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
-/* ############################################ */
-/* ##### Всплывающее Окно: Создание клипа ##### */
-/* ############################################ */
+/* ############################################### */
+/* ##### Всплывающее Окно: 🎬 Создание клипа ##### */
+/* ############################################### */
 	
 	/* Уменьшение отступ под надписью "Создать клип", и вокруг всего окна покругу */
 	if create_clip_window_size_padding_toggle {
@@ -7593,9 +7647,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
-/* ########################################################## */
-/* ##### Всплывающее Окно: Личная Карточка Пользователя ##### */
-/* ########################################################## */
+/* ############################################################# */
+/* ##### Всплывающее Окно: 👨‍ Личная Карточка Пользователя ##### */
+/* ############################################################# */
 	
 	/* Ник пользователя в его карточке пользователя */
 	if user-profile-card_username_toggle {
@@ -8575,9 +8629,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
-/* ####################################################### */
-/* ##### Всплывающее Окно: Управление предсказаниями ##### */
-/* ####################################################### */
+/* ########################################################## */
+/* ##### Всплывающее Окно: 📊 Управление предсказаниями ##### */
+/* ########################################################## */
 	
 	/* Фоновые плашки под "Вариантами" */
 	if user-profile-card_btn_ban_toggle {
@@ -8704,7 +8758,7 @@ purple3=#9048FF
 	
 @-moz-document domain("dashboard.kick.com") {
 /* ########################################################## */
-/* ##### Панель управления 🛠 Модератора или 🔴 Автора ##### */
+/* ##### ПУ: 🛠 Модератора или 🔴 Автора ##### */
 /* ########################################################## */
 	
 	/* Правая боковая панель с кнопками виджитов */
