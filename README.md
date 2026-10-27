@@ -39,7 +39,7 @@
 # Установка `.user.css` и/или `.user.js`:
 <!-- KICK -->
 ### <a href="https://github.com/NightWolf69/My-.css-frontends/edit/main/README.md#-httpkickcom" title="KICK.com" target="kick"><img src="https://kick.com/img/kick-logo.svg" alt="KICK" width="128"></a>
-+ <a href="https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/kick.com/%5BKK%5D%20Kick%20Enhancment.user.css" title="KICK.com" target="kick">Установить</a> `.user.css` <code>v2.3.13</code>
++ <a href="https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/kick.com/%5BKK%5D%20Kick%20Enhancment.user.css" title="KICK.com" target="kick">Установить</a> `.user.css` <code>v2.3.14</code>
 > [!NOTE]
 > Просмотреть <a href="https://github.com/NightWolf69/My-.css-frontends/blob/main/kick.com/README.md" title="Узнать подробнее о том, какие изменения будут привнесены относительно базовой версии сайта" target="_blank">подробный</a> список изменений.
 
