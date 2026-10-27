@@ -16,9 +16,9 @@
 > Использование `js` скриптов не обязательно и не необходимо. По этому, это чисто на ваше усмотрение.
 
 # Что для этого нужно?
-Для того чтобы использовать мои `.user.css` и `.user.js` вам понадобятся аддоны на браузер, для загрузки кастомного `.css` и `.js` кода соответственно
-* Для `.user.css` — «[![Stylus](https://avatars.githubusercontent.com/u/29350089?s=16&v=4) Stylus](https://github.com/openstyles/stylus)»
-* Для `.user.js` «[![Tampermonkey](https://avatars.githubusercontent.com/u/13335464?s=16&v=4) Tampermonkey](https://github.com/Tampermonkey/tampermonkey)» или «[![Violentmonkey](https://avatars.githubusercontent.com/u/13635071?s=16&v=4) Violentmonkey](https://github.com/violentmonkey/violentmonkey)»
+Для того чтобы использовать мои `.user.css` и `.user.js` вам понадобятся аддоны на браузер, для загрузки кастомного `.css` и `.js` кода соответственно:
+* Для `.user.css` — «[![Stylus](https://avatars.githubusercontent.com/u/29350089?s=16&v=4) Stylus](https://github.com/openstyles/stylus)».
+* Для `.user.js` «[![Tampermonkey](https://avatars.githubusercontent.com/u/13335464?s=16&v=4) Tampermonkey](https://github.com/Tampermonkey/tampermonkey)» или «[![Violentmonkey](https://avatars.githubusercontent.com/u/13635071?s=16&v=4) Violentmonkey](https://github.com/violentmonkey/violentmonkey)».
 
 ### Установка аддона на браузер для использование `.user.css`:
 + <a href="https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne" title="Google Chrome" target="_blank"><img src="https://www.google.com/chrome/static/images/favicons/favicon-32x32.png" alt="Chrome" width="24px"> Chrome</a>
