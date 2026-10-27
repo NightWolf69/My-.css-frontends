@@ -80,7 +80,7 @@
 <hr width="69%">
 
 <!-- VK & VKPLAYVIDEOLIVE -->
-### <a href="https://github.com/NightWolf69/My-.css-frontends/edit/main/README.md#-2" title="VK.com" target="vk"><img src="https://vk.ru/favicon.ico" alt="VK" width="128"></a> <div style=">e</div> <a href="https://github.com/NightWolf69/My-.css-frontends/edit/main/README.md#-2" title="live.VKvideo.ru" target="vk"><img src="https://live.vkvideo.ru/favicon.ico" alt="VK" width="128"></a>
+### <a href="https://github.com/NightWolf69/My-.css-frontends/edit/main/README.md#-2" title="VK.com" target="vk"><img src="https://vk.ru/favicon.ico" alt="VK" width="128"></a> <a href="https://github.com/NightWolf69/My-.css-frontends/edit/main/README.md#-2" title="live.VKvideo.ru" target="vk"><img src="https://live.vkvideo.ru/favicon.ico" alt="VK" width="128"></a>
 + <a href="https://github.com/NightWolf69/My-.css-frontends/raw/refs/heads/main/vk.com/%5BVK%5D%20VKontakte%20Enhancment.user.css" title="VK.com и live.VKvideo.ru" target="vk">Установить</a> `user.css` <code>v1.0.6-beta</code>
 > [!NOTE]
 > Просмотреть <a href="https://github.com/NightWolf69/My-.css-frontends/blob/main/vk.com/README.md" title="Узнать подробнее о том, какие изменения будут привнесены относительно базовой версии сайта" target="_blank">подробный</a> список изменений.
