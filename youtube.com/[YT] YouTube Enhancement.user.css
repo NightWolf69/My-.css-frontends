@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [YT] YouTube Enhancement
 @namespace      https://github.com/NightWolf69
-@version        1.0.7
+@version        1.0.8
 @description    Улучшения, исправления, кастомизация, и прочие полезности для "YouTube", "YouTube Shorts" и "YouTube Streams"
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -3699,41 +3699,41 @@ purple3=#9048FF
 		/* 📊 Действия на канале ⬛/⬜ */
 		if chat_context-menu-btn_history_toggle {
 			/* Смещение кнопки */
-			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="history"]) {
+			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M8.76 1.487a11 11 0 11-7.54 12.706 1 1 0 011.96-.4 9 9 0 0014.254 5.38A9 9 0 0016.79 4.38 9 9 0 004.518 7H7a1 1 0 010 2H1V3a1 1 0 012 0v2.678a11 11 0 015.76-4.192ZM12 6a1 1 0 00-1 1v5.58l.504.288 3.5 2a1 1 0 10.992-1.736L13 11.42V7a1 1 0 00-1-1Z"]) {
 				order: chat_context-menu-btn_history_order !important;
 			}
 	
 			/* Без наведения курсора */
 				/* ⚫⚫⚫ */
-				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="history"]) div > yt-formatted-string,
-				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer yt-icon span:has(> div[style *="history"]) {
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M8.76 1.487a11 11 0 11-7.54 12.706 1 1 0 011.96-.4 9 9 0 0014.254 5.38A9 9 0 0016.79 4.38 9 9 0 004.518 7H7a1 1 0 010 2H1V3a1 1 0 012 0v2.678a11 11 0 015.76-4.192ZM12 6a1 1 0 00-1 1v5.58l.504.288 3.5 2a1 1 0 10.992-1.736L13 11.42V7a1 1 0 00-1-1Z"]) div > yt-formatted-string,
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer yt-icon span:has(path[d="M8.76 1.487a11 11 0 11-7.54 12.706 1 1 0 011.96-.4 9 9 0 0014.254 5.38A9 9 0 0016.79 4.38 9 9 0 004.518 7H7a1 1 0 010 2H1V3a1 1 0 012 0v2.678a11 11 0 015.76-4.192ZM12 6a1 1 0 00-1 1v5.58l.504.288 3.5 2a1 1 0 10.992-1.736L13 11.42V7a1 1 0 00-1-1Z"]) {
 					color: chat_context-menu-btn_history_color--d;
 					transition: all 0.2s ease-in-out !important;
 				}
 	
 				/* ⚪⚪⚪ */
-				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="history"]) div > yt-formatted-string,
-				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer yt-icon span:has(> div[style *="history"]) {
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M8.76 1.487a11 11 0 11-7.54 12.706 1 1 0 011.96-.4 9 9 0 0014.254 5.38A9 9 0 0016.79 4.38 9 9 0 004.518 7H7a1 1 0 010 2H1V3a1 1 0 012 0v2.678a11 11 0 015.76-4.192ZM12 6a1 1 0 00-1 1v5.58l.504.288 3.5 2a1 1 0 10.992-1.736L13 11.42V7a1 1 0 00-1-1Z"]) div > yt-formatted-string,
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer yt-icon span:has(path[d="M8.76 1.487a11 11 0 11-7.54 12.706 1 1 0 011.96-.4 9 9 0 0014.254 5.38A9 9 0 0016.79 4.38 9 9 0 004.518 7H7a1 1 0 010 2H1V3a1 1 0 012 0v2.678a11 11 0 015.76-4.192ZM12 6a1 1 0 00-1 1v5.58l.504.288 3.5 2a1 1 0 10.992-1.736L13 11.42V7a1 1 0 00-1-1Z"]) {
 					color: chat_context-menu-btn_history_color--l;
 					transition: all 0.2s ease-in-out !important;
 				}
 	
 			/* При наведении курсора */
 				/* ⚫⚫⚫ */
-				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="history"]):hover div > yt-formatted-string,
-				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:hover yt-icon span:has(> div[style *="history"]) {
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M8.76 1.487a11 11 0 11-7.54 12.706 1 1 0 011.96-.4 9 9 0 0014.254 5.38A9 9 0 0016.79 4.38 9 9 0 004.518 7H7a1 1 0 010 2H1V3a1 1 0 012 0v2.678a11 11 0 015.76-4.192ZM12 6a1 1 0 00-1 1v5.58l.504.288 3.5 2a1 1 0 10.992-1.736L13 11.42V7a1 1 0 00-1-1Z"]):hover div > yt-formatted-string,
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:hover yt-icon span:has(path[d="M8.76 1.487a11 11 0 11-7.54 12.706 1 1 0 011.96-.4 9 9 0 0014.254 5.38A9 9 0 0016.79 4.38 9 9 0 004.518 7H7a1 1 0 010 2H1V3a1 1 0 012 0v2.678a11 11 0 015.76-4.192ZM12 6a1 1 0 00-1 1v5.58l.504.288 3.5 2a1 1 0 10.992-1.736L13 11.42V7a1 1 0 00-1-1Z"]) {
 					filter: drop-shadow(0px 0px 4px chat_context-menu-btn_history_color--d) !important;
 					padding-inline-start: .2em;
 				}
 	
 				/* ⚪⚪⚪ */
-				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="history"]):hover div > yt-formatted-string,
-				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:hover yt-icon span:has(> div[style *="history"]) {
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M8.76 1.487a11 11 0 11-7.54 12.706 1 1 0 011.96-.4 9 9 0 0014.254 5.38A9 9 0 0016.79 4.38 9 9 0 004.518 7H7a1 1 0 010 2H1V3a1 1 0 012 0v2.678a11 11 0 015.76-4.192ZM12 6a1 1 0 00-1 1v5.58l.504.288 3.5 2a1 1 0 10.992-1.736L13 11.42V7a1 1 0 00-1-1Z"]):hover div > yt-formatted-string,
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:hover yt-icon span:has(path[d="M8.76 1.487a11 11 0 11-7.54 12.706 1 1 0 011.96-.4 9 9 0 0014.254 5.38A9 9 0 0016.79 4.38 9 9 0 004.518 7H7a1 1 0 010 2H1V3a1 1 0 012 0v2.678a11 11 0 015.76-4.192ZM12 6a1 1 0 00-1 1v5.58l.504.288 3.5 2a1 1 0 10.992-1.736L13 11.42V7a1 1 0 00-1-1Z"]) {
 					filter: drop-shadow(0px 0px 4px chat_context-menu-btn_history_color--l) !important;
 					padding-inline-start: .2em;
 				}
 		} else {
-			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="history"]) {
+			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M8.76 1.487a11 11 0 11-7.54 12.706 1 1 0 011.96-.4 9 9 0 0014.254 5.38A9 9 0 0016.79 4.38 9 9 0 004.518 7H7a1 1 0 010 2H1V3a1 1 0 012 0v2.678a11 11 0 015.76-4.192ZM12 6a1 1 0 00-1 1v5.58l.504.288 3.5 2a1 1 0 10.992-1.736L13 11.42V7a1 1 0 00-1-1Z"]) {
 				display: none !important;
 			}
 		}
@@ -3804,41 +3804,41 @@ purple3=#9048FF
 		/* 📌 Закрепить ⬛/⬜ */
 		if chat_context-menu-btn_pin_toggle {
 			/* Смещение кнопки */
-			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="pin"]) {
+			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M21.007 6.298 11.7.924l-.077-.04a.85.85 0 00-.772 1.51l.735.425-3.394 5.878-1.718.46a1.5 1.5 0 00-.91.698l-1.012 1.753a.75.75 0 00.274 1.024l9.479 5.473a.75.75 0 001.024-.275l1.01-1.752a1.501 1.501 0 00.15-1.14l-.46-1.715 3.395-5.88.734.425a.85.85 0 00.849-1.47Zm-11.083 3.4 3.243-5.617 4.373 2.525-3.242 5.616a2 2 0 00-.2 1.518l.407 1.517-.283.49-7.313-4.22.283-.49 1.518-.41a2 2 0 001.214-.93ZM7.15 21.814l3.395-5.88-1.96-1.13-3.393 5.879-.152 2.525 2.11-1.394Z"]) {
 				order: chat_context-menu-btn_pin_order !important;
 			}
 	
 			/* Без наведения курсора */
 				/* ⚫⚫⚫ */
-				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="pin"]) div > yt-formatted-string,
-				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer yt-icon span:has(> div[style *="pin"]) {
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M21.007 6.298 11.7.924l-.077-.04a.85.85 0 00-.772 1.51l.735.425-3.394 5.878-1.718.46a1.5 1.5 0 00-.91.698l-1.012 1.753a.75.75 0 00.274 1.024l9.479 5.473a.75.75 0 001.024-.275l1.01-1.752a1.501 1.501 0 00.15-1.14l-.46-1.715 3.395-5.88.734.425a.85.85 0 00.849-1.47Zm-11.083 3.4 3.243-5.617 4.373 2.525-3.242 5.616a2 2 0 00-.2 1.518l.407 1.517-.283.49-7.313-4.22.283-.49 1.518-.41a2 2 0 001.214-.93ZM7.15 21.814l3.395-5.88-1.96-1.13-3.393 5.879-.152 2.525 2.11-1.394Z"]) div > yt-formatted-string,
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer yt-icon span:has(path[d="M21.007 6.298 11.7.924l-.077-.04a.85.85 0 00-.772 1.51l.735.425-3.394 5.878-1.718.46a1.5 1.5 0 00-.91.698l-1.012 1.753a.75.75 0 00.274 1.024l9.479 5.473a.75.75 0 001.024-.275l1.01-1.752a1.501 1.501 0 00.15-1.14l-.46-1.715 3.395-5.88.734.425a.85.85 0 00.849-1.47Zm-11.083 3.4 3.243-5.617 4.373 2.525-3.242 5.616a2 2 0 00-.2 1.518l.407 1.517-.283.49-7.313-4.22.283-.49 1.518-.41a2 2 0 001.214-.93ZM7.15 21.814l3.395-5.88-1.96-1.13-3.393 5.879-.152 2.525 2.11-1.394Z"]) {
 					color: chat_context-menu-btn_pin_color--d;
 					transition: all 0.2s ease-in-out !important;
 				}
 	
 				/* ⚪⚪⚪ */
-				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="pin"]) div > yt-formatted-string,
-				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer yt-icon span:has(> div[style *="pin"]) {
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M21.007 6.298 11.7.924l-.077-.04a.85.85 0 00-.772 1.51l.735.425-3.394 5.878-1.718.46a1.5 1.5 0 00-.91.698l-1.012 1.753a.75.75 0 00.274 1.024l9.479 5.473a.75.75 0 001.024-.275l1.01-1.752a1.501 1.501 0 00.15-1.14l-.46-1.715 3.395-5.88.734.425a.85.85 0 00.849-1.47Zm-11.083 3.4 3.243-5.617 4.373 2.525-3.242 5.616a2 2 0 00-.2 1.518l.407 1.517-.283.49-7.313-4.22.283-.49 1.518-.41a2 2 0 001.214-.93ZM7.15 21.814l3.395-5.88-1.96-1.13-3.393 5.879-.152 2.525 2.11-1.394Z"]) div > yt-formatted-string,
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer yt-icon span:has(path[d="M21.007 6.298 11.7.924l-.077-.04a.85.85 0 00-.772 1.51l.735.425-3.394 5.878-1.718.46a1.5 1.5 0 00-.91.698l-1.012 1.753a.75.75 0 00.274 1.024l9.479 5.473a.75.75 0 001.024-.275l1.01-1.752a1.501 1.501 0 00.15-1.14l-.46-1.715 3.395-5.88.734.425a.85.85 0 00.849-1.47Zm-11.083 3.4 3.243-5.617 4.373 2.525-3.242 5.616a2 2 0 00-.2 1.518l.407 1.517-.283.49-7.313-4.22.283-.49 1.518-.41a2 2 0 001.214-.93ZM7.15 21.814l3.395-5.88-1.96-1.13-3.393 5.879-.152 2.525 2.11-1.394Z"]) {
 					color: chat_context-menu-btn_pin_color--l;
 					transition: all 0.2s ease-in-out !important;
 				}
 	
 			/* При наведении курсора */
 				/* ⚫⚫⚫ */
-				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="pin"]):hover div > yt-formatted-string,
-				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:hover yt-icon span:has(> div[style *="pin"]) {
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M21.007 6.298 11.7.924l-.077-.04a.85.85 0 00-.772 1.51l.735.425-3.394 5.878-1.718.46a1.5 1.5 0 00-.91.698l-1.012 1.753a.75.75 0 00.274 1.024l9.479 5.473a.75.75 0 001.024-.275l1.01-1.752a1.501 1.501 0 00.15-1.14l-.46-1.715 3.395-5.88.734.425a.85.85 0 00.849-1.47Zm-11.083 3.4 3.243-5.617 4.373 2.525-3.242 5.616a2 2 0 00-.2 1.518l.407 1.517-.283.49-7.313-4.22.283-.49 1.518-.41a2 2 0 001.214-.93ZM7.15 21.814l3.395-5.88-1.96-1.13-3.393 5.879-.152 2.525 2.11-1.394Z"]):hover div > yt-formatted-string,
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:hover yt-icon span:has(path[d="M21.007 6.298 11.7.924l-.077-.04a.85.85 0 00-.772 1.51l.735.425-3.394 5.878-1.718.46a1.5 1.5 0 00-.91.698l-1.012 1.753a.75.75 0 00.274 1.024l9.479 5.473a.75.75 0 001.024-.275l1.01-1.752a1.501 1.501 0 00.15-1.14l-.46-1.715 3.395-5.88.734.425a.85.85 0 00.849-1.47Zm-11.083 3.4 3.243-5.617 4.373 2.525-3.242 5.616a2 2 0 00-.2 1.518l.407 1.517-.283.49-7.313-4.22.283-.49 1.518-.41a2 2 0 001.214-.93ZM7.15 21.814l3.395-5.88-1.96-1.13-3.393 5.879-.152 2.525 2.11-1.394Z"]) {
 					filter: drop-shadow(0px 0px 4px chat_context-menu-btn_pin_color--d) !important;
 					padding-inline-start: .2em;
 				}
 	
 				/* ⚪⚪⚪ */
-				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="pin"]):hover div > yt-formatted-string,
-				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:hover yt-icon span:has(> div[style *="pin"]) {
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M21.007 6.298 11.7.924l-.077-.04a.85.85 0 00-.772 1.51l.735.425-3.394 5.878-1.718.46a1.5 1.5 0 00-.91.698l-1.012 1.753a.75.75 0 00.274 1.024l9.479 5.473a.75.75 0 001.024-.275l1.01-1.752a1.501 1.501 0 00.15-1.14l-.46-1.715 3.395-5.88.734.425a.85.85 0 00.849-1.47Zm-11.083 3.4 3.243-5.617 4.373 2.525-3.242 5.616a2 2 0 00-.2 1.518l.407 1.517-.283.49-7.313-4.22.283-.49 1.518-.41a2 2 0 001.214-.93ZM7.15 21.814l3.395-5.88-1.96-1.13-3.393 5.879-.152 2.525 2.11-1.394Z"]):hover div > yt-formatted-string,
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:hover yt-icon span:has(path[d="M21.007 6.298 11.7.924l-.077-.04a.85.85 0 00-.772 1.51l.735.425-3.394 5.878-1.718.46a1.5 1.5 0 00-.91.698l-1.012 1.753a.75.75 0 00.274 1.024l9.479 5.473a.75.75 0 001.024-.275l1.01-1.752a1.501 1.501 0 00.15-1.14l-.46-1.715 3.395-5.88.734.425a.85.85 0 00.849-1.47Zm-11.083 3.4 3.243-5.617 4.373 2.525-3.242 5.616a2 2 0 00-.2 1.518l.407 1.517-.283.49-7.313-4.22.283-.49 1.518-.41a2 2 0 001.214-.93ZM7.15 21.814l3.395-5.88-1.96-1.13-3.393 5.879-.152 2.525 2.11-1.394Z"]) {
 					filter: drop-shadow(0px 0px 4px chat_context-menu-btn_pin_color--l) !important;
 					padding-inline-start: .2em;
 				}
 		} else {
-			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="pin"]) {
+			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M21.007 6.298 11.7.924l-.077-.04a.85.85 0 00-.772 1.51l.735.425-3.394 5.878-1.718.46a1.5 1.5 0 00-.91.698l-1.012 1.753a.75.75 0 00.274 1.024l9.479 5.473a.75.75 0 001.024-.275l1.01-1.752a1.501 1.501 0 00.15-1.14l-.46-1.715 3.395-5.88.734.425a.85.85 0 00.849-1.47Zm-11.083 3.4 3.243-5.617 4.373 2.525-3.242 5.616a2 2 0 00-.2 1.518l.407 1.517-.283.49-7.313-4.22.283-.49 1.518-.41a2 2 0 001.214-.93ZM7.15 21.814l3.395-5.88-1.96-1.13-3.393 5.879-.152 2.525 2.11-1.394Z"]) {
 				display: none !important;
 			}
 		}
@@ -4254,22 +4254,22 @@ purple3=#9048FF
 		/* 🛠 Назначить Модером ⬛/⬜ */
 		if chat_context-menu-btn_add-mod_toggle {
 			/* Смещение кнопки */
-			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="shield_add"]) {
+			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M19 5.697V13h2V4.998a1 1 0 00-.656-.938L12 1 3.656 4.06A1 1 0 003 4.998v9.857a6 6 0 003.365 5.39L12 23v-2.226l-4.757-2.326A4 4 0 015 14.855V5.697l7-2.567 7 2.567ZM19 16a1 1 0 00-2 0v2h-2a1 1 0 000 2h2v2a1 1 0 002 0v-2h2a1 1 0 000-2h-2v-2Z"]) {
 				order: chat_context-menu-btn_add-mod_order !important;
 			}
 	
 	
 			/* Без наведения курсора */
 				/* ⚫⚫⚫ */
-				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="shield_add"]) div > yt-formatted-string,
-				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer yt-icon span:has(> div[style *="shield_add"]) {
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M19 5.697V13h2V4.998a1 1 0 00-.656-.938L12 1 3.656 4.06A1 1 0 003 4.998v9.857a6 6 0 003.365 5.39L12 23v-2.226l-4.757-2.326A4 4 0 015 14.855V5.697l7-2.567 7 2.567ZM19 16a1 1 0 00-2 0v2h-2a1 1 0 000 2h2v2a1 1 0 002 0v-2h2a1 1 0 000-2h-2v-2Z"]) div > yt-formatted-string,
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer yt-icon span:has(path[d="M19 5.697V13h2V4.998a1 1 0 00-.656-.938L12 1 3.656 4.06A1 1 0 003 4.998v9.857a6 6 0 003.365 5.39L12 23v-2.226l-4.757-2.326A4 4 0 015 14.855V5.697l7-2.567 7 2.567ZM19 16a1 1 0 00-2 0v2h-2a1 1 0 000 2h2v2a1 1 0 002 0v-2h2a1 1 0 000-2h-2v-2Z"]) {
 					color: chat_context-menu-btn_add-mod_color--d;
 					transition: all 0.2s ease-in-out !important;
 				}
 	
 				/* ⚪⚪⚪ */
-				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="shield_add"]) div > yt-formatted-string,
-				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer yt-icon span:has(> div[style *="shield_add"]) {
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M19 5.697V13h2V4.998a1 1 0 00-.656-.938L12 1 3.656 4.06A1 1 0 003 4.998v9.857a6 6 0 003.365 5.39L12 23v-2.226l-4.757-2.326A4 4 0 015 14.855V5.697l7-2.567 7 2.567ZM19 16a1 1 0 00-2 0v2h-2a1 1 0 000 2h2v2a1 1 0 002 0v-2h2a1 1 0 000-2h-2v-2Z"]) div > yt-formatted-string,
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer yt-icon span:has(path[d="M19 5.697V13h2V4.998a1 1 0 00-.656-.938L12 1 3.656 4.06A1 1 0 003 4.998v9.857a6 6 0 003.365 5.39L12 23v-2.226l-4.757-2.326A4 4 0 015 14.855V5.697l7-2.567 7 2.567ZM19 16a1 1 0 00-2 0v2h-2a1 1 0 000 2h2v2a1 1 0 002 0v-2h2a1 1 0 000-2h-2v-2Z"]) {
 					color: chat_context-menu-btn_add-mod_color--l;
 					transition: all 0.2s ease-in-out !important;
 				}
@@ -4277,20 +4277,20 @@ purple3=#9048FF
 	
 			/* При наведении курсора */
 				/* ⚫⚫⚫ */
-				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="shield_add"]):hover div > yt-formatted-string,
-				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:hover yt-icon span:has(> div[style *="shield_add"]) {
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M19 5.697V13h2V4.998a1 1 0 00-.656-.938L12 1 3.656 4.06A1 1 0 003 4.998v9.857a6 6 0 003.365 5.39L12 23v-2.226l-4.757-2.326A4 4 0 015 14.855V5.697l7-2.567 7 2.567ZM19 16a1 1 0 00-2 0v2h-2a1 1 0 000 2h2v2a1 1 0 002 0v-2h2a1 1 0 000-2h-2v-2Z"]):hover div > yt-formatted-string,
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:hover yt-icon span:has(path[d="M19 5.697V13h2V4.998a1 1 0 00-.656-.938L12 1 3.656 4.06A1 1 0 003 4.998v9.857a6 6 0 003.365 5.39L12 23v-2.226l-4.757-2.326A4 4 0 015 14.855V5.697l7-2.567 7 2.567ZM19 16a1 1 0 00-2 0v2h-2a1 1 0 000 2h2v2a1 1 0 002 0v-2h2a1 1 0 000-2h-2v-2Z"]) {
 					filter: drop-shadow(0px 0px 4px chat_context-menu-btn_add-mod_color--d) !important;
 					padding-inline-start: .2em;
 				}
 	
 				/* ⚪⚪⚪ */
-				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="shield_add"]):hover div > yt-formatted-string,
-				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:hover yt-icon span:has(> div[style *="shield_add"]) {
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M19 5.697V13h2V4.998a1 1 0 00-.656-.938L12 1 3.656 4.06A1 1 0 003 4.998v9.857a6 6 0 003.365 5.39L12 23v-2.226l-4.757-2.326A4 4 0 015 14.855V5.697l7-2.567 7 2.567ZM19 16a1 1 0 00-2 0v2h-2a1 1 0 000 2h2v2a1 1 0 002 0v-2h2a1 1 0 000-2h-2v-2Z"]):hover div > yt-formatted-string,
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:hover yt-icon span:has(path[d="M19 5.697V13h2V4.998a1 1 0 00-.656-.938L12 1 3.656 4.06A1 1 0 003 4.998v9.857a6 6 0 003.365 5.39L12 23v-2.226l-4.757-2.326A4 4 0 015 14.855V5.697l7-2.567 7 2.567ZM19 16a1 1 0 00-2 0v2h-2a1 1 0 000 2h2v2a1 1 0 002 0v-2h2a1 1 0 000-2h-2v-2Z"]) {
 					filter: drop-shadow(0px 0px 4px chat_context-menu-btn_add-mod_color--l) !important;
 					padding-inline-start: .2em;
 				}
 		} else {
-			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="shield_add"]) {
+			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M19 5.697V13h2V4.998a1 1 0 00-.656-.938L12 1 3.656 4.06A1 1 0 003 4.998v9.857a6 6 0 003.365 5.39L12 23v-2.226l-4.757-2.326A4 4 0 015 14.855V5.697l7-2.567 7 2.567ZM19 16a1 1 0 00-2 0v2h-2a1 1 0 000 2h2v2a1 1 0 002 0v-2h2a1 1 0 000-2h-2v-2Z"]) {
 				display: none !important;
 			}
 		}
@@ -4299,22 +4299,22 @@ purple3=#9048FF
 		/* 🛠 Удалить из списка модераторов ⬛/⬜ */
 		if chat_context-menu-btn_unmod_toggle {
 			/* Смещение кнопки */
-			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="shield_slash"]) {
+			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M20.345 4.06h.001L12 1 4.24 3.845l2.203 1.322L12 3.13l7 2.567v7.004l2 1.2V4.998a1 1 0 00-.655-.938ZM1.142 5.485a1 1 0 00.343 1.372L3 7.765v7.09a6 6 0 003.364 5.39L12 23l5.636-2.755a6 6 0 002.458-2.222l1.391.834a1.001 1.001 0 001.03-1.715l-20-12a1 1 0 00-1.373.343ZM5 14.855V8.966l13.377 8.026a4 4 0 01-1.62 1.456L12 20.773l-4.757-2.325A4 4 0 015 14.855Z"]) {
 				order: chat_context-menu-btn_unmod_order !important;
 			}
 	
 	
 			/* Без наведения курсора */
 				/* ⚫⚫⚫ */
-				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="shield_slash"]) div > yt-formatted-string,
-				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer yt-icon span:has(> div[style *="shield_slash"]) {
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M20.345 4.06h.001L12 1 4.24 3.845l2.203 1.322L12 3.13l7 2.567v7.004l2 1.2V4.998a1 1 0 00-.655-.938ZM1.142 5.485a1 1 0 00.343 1.372L3 7.765v7.09a6 6 0 003.364 5.39L12 23l5.636-2.755a6 6 0 002.458-2.222l1.391.834a1.001 1.001 0 001.03-1.715l-20-12a1 1 0 00-1.373.343ZM5 14.855V8.966l13.377 8.026a4 4 0 01-1.62 1.456L12 20.773l-4.757-2.325A4 4 0 015 14.855Z"]) div > yt-formatted-string,
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer yt-icon span:has(path[d="M20.345 4.06h.001L12 1 4.24 3.845l2.203 1.322L12 3.13l7 2.567v7.004l2 1.2V4.998a1 1 0 00-.655-.938ZM1.142 5.485a1 1 0 00.343 1.372L3 7.765v7.09a6 6 0 003.364 5.39L12 23l5.636-2.755a6 6 0 002.458-2.222l1.391.834a1.001 1.001 0 001.03-1.715l-20-12a1 1 0 00-1.373.343ZM5 14.855V8.966l13.377 8.026a4 4 0 01-1.62 1.456L12 20.773l-4.757-2.325A4 4 0 015 14.855Z"]) {
 					color: chat_context-menu-btn_unmod_color--d;
 					transition: all 0.2s ease-in-out !important;
 				}
 	
 				/* ⚪⚪⚪ */
-				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="shield_slash"]) div > yt-formatted-string,
-				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer yt-icon span:has(> div[style *="shield_slash"]) {
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M20.345 4.06h.001L12 1 4.24 3.845l2.203 1.322L12 3.13l7 2.567v7.004l2 1.2V4.998a1 1 0 00-.655-.938ZM1.142 5.485a1 1 0 00.343 1.372L3 7.765v7.09a6 6 0 003.364 5.39L12 23l5.636-2.755a6 6 0 002.458-2.222l1.391.834a1.001 1.001 0 001.03-1.715l-20-12a1 1 0 00-1.373.343ZM5 14.855V8.966l13.377 8.026a4 4 0 01-1.62 1.456L12 20.773l-4.757-2.325A4 4 0 015 14.855Z"]) div > yt-formatted-string,
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer yt-icon span:has(path[d="M20.345 4.06h.001L12 1 4.24 3.845l2.203 1.322L12 3.13l7 2.567v7.004l2 1.2V4.998a1 1 0 00-.655-.938ZM1.142 5.485a1 1 0 00.343 1.372L3 7.765v7.09a6 6 0 003.364 5.39L12 23l5.636-2.755a6 6 0 002.458-2.222l1.391.834a1.001 1.001 0 001.03-1.715l-20-12a1 1 0 00-1.373.343ZM5 14.855V8.966l13.377 8.026a4 4 0 01-1.62 1.456L12 20.773l-4.757-2.325A4 4 0 015 14.855Z"]) {
 					color: chat_context-menu-btn_unmod_color--l;
 					transition: all 0.2s ease-in-out !important;
 				}
@@ -4322,20 +4322,20 @@ purple3=#9048FF
 	
 			/* При наведении курсора */
 				/* ⚫⚫⚫ */
-				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="shield_slash"]):hover div > yt-formatted-string,
-				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:hover yt-icon span:has(> div[style *="shield_slash"]) {
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M20.345 4.06h.001L12 1 4.24 3.845l2.203 1.322L12 3.13l7 2.567v7.004l2 1.2V4.998a1 1 0 00-.655-.938ZM1.142 5.485a1 1 0 00.343 1.372L3 7.765v7.09a6 6 0 003.364 5.39L12 23l5.636-2.755a6 6 0 002.458-2.222l1.391.834a1.001 1.001 0 001.03-1.715l-20-12a1 1 0 00-1.373.343ZM5 14.855V8.966l13.377 8.026a4 4 0 01-1.62 1.456L12 20.773l-4.757-2.325A4 4 0 015 14.855Z"]):hover div > yt-formatted-string,
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:hover yt-icon span:has(path[d="M20.345 4.06h.001L12 1 4.24 3.845l2.203 1.322L12 3.13l7 2.567v7.004l2 1.2V4.998a1 1 0 00-.655-.938ZM1.142 5.485a1 1 0 00.343 1.372L3 7.765v7.09a6 6 0 003.364 5.39L12 23l5.636-2.755a6 6 0 002.458-2.222l1.391.834a1.001 1.001 0 001.03-1.715l-20-12a1 1 0 00-1.373.343ZM5 14.855V8.966l13.377 8.026a4 4 0 01-1.62 1.456L12 20.773l-4.757-2.325A4 4 0 015 14.855Z"]) {
 					filter: drop-shadow(0px 0px 4px chat_context-menu-btn_unmod_color--d) !important;
 					padding-inline-start: .2em;
 				}
 	
 				/* ⚪⚪⚪ */
-				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="shield_slash"]):hover div > yt-formatted-string,
-				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:hover yt-icon span:has(> div[style *="shield_slash"]) {
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M20.345 4.06h.001L12 1 4.24 3.845l2.203 1.322L12 3.13l7 2.567v7.004l2 1.2V4.998a1 1 0 00-.655-.938ZM1.142 5.485a1 1 0 00.343 1.372L3 7.765v7.09a6 6 0 003.364 5.39L12 23l5.636-2.755a6 6 0 002.458-2.222l1.391.834a1.001 1.001 0 001.03-1.715l-20-12a1 1 0 00-1.373.343ZM5 14.855V8.966l13.377 8.026a4 4 0 01-1.62 1.456L12 20.773l-4.757-2.325A4 4 0 015 14.855Z"]):hover div > yt-formatted-string,
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:hover yt-icon span:has(path[d="M20.345 4.06h.001L12 1 4.24 3.845l2.203 1.322L12 3.13l7 2.567v7.004l2 1.2V4.998a1 1 0 00-.655-.938ZM1.142 5.485a1 1 0 00.343 1.372L3 7.765v7.09a6 6 0 003.364 5.39L12 23l5.636-2.755a6 6 0 002.458-2.222l1.391.834a1.001 1.001 0 001.03-1.715l-20-12a1 1 0 00-1.373.343ZM5 14.855V8.966l13.377 8.026a4 4 0 01-1.62 1.456L12 20.773l-4.757-2.325A4 4 0 015 14.855Z"]) {
 					filter: drop-shadow(0px 0px 4px chat_context-menu-btn_unmod_color--l) !important;
 					padding-inline-start: .2em;
 				}
 		} else {
-			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span div[style *="shield_slash"]) {
+			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-service-item-renderer:has(yt-icon span path[d="M20.345 4.06h.001L12 1 4.24 3.845l2.203 1.322L12 3.13l7 2.567v7.004l2 1.2V4.998a1 1 0 00-.655-.938ZM1.142 5.485a1 1 0 00.343 1.372L3 7.765v7.09a6 6 0 003.364 5.39L12 23l5.636-2.755a6 6 0 002.458-2.222l1.391.834a1.001 1.001 0 001.03-1.715l-20-12a1 1 0 00-1.373.343ZM5 14.855V8.966l13.377 8.026a4 4 0 01-1.62 1.456L12 20.773l-4.757-2.325A4 4 0 015 14.855Z"]) {
 				display: none !important;
 			}
 		}
