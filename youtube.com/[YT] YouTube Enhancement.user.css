@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [YT] YouTube Enhancement
 @namespace      https://github.com/NightWolf69
-@version        1.0.8
+@version        1.0.9
 @description    Улучшения, исправления, кастомизация, и прочие полезности для "YouTube", "YouTube Shorts" и "YouTube Streams"
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -882,11 +882,12 @@ purple3=#9048FF
 	
 	/* Принудительно всегда отображать полоску перемотки видео */
 	if shorts-player_progress-bar_force-display_toggle {
+		div:has(> yt-progress-bar),
 		yt-progress-bar,
 		yt-progress-bar > div[role="slider"],
-		yt-progress-bar > div[role="slider"] div[class *="ProgressBar"],
+		yt-progress-bar > div[role="slider"] div[class *="ProgressBar"], /* белая часть остатка видео */
  		yt-progress-bar > div[role="slider"] yt-progress-bar-line {
-   			opacity: unset !important;
+   			opacity: 1 !important;
 		}
 	}
 }
