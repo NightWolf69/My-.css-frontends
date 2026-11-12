@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [YT] YouTube Enhancement
 @namespace      https://github.com/NightWolf69
-@version        1.0.9
+@version        1.0.10
 @description    Улучшения, исправления, кастомизация, и прочие полезности для "YouTube", "YouTube Shorts" и "YouTube Streams"
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -1256,9 +1256,9 @@ purple3=#9048FF
 }
 	
 @-moz-document domain("youtube.com"), domain("www.youtube.com"), domain("studio.youtube.com") {
-/* #############@@@####################### */
+/* ####################################### */
 /* ##### Чат - 🛖 Верхняя часть чата ##### */
-/* #############@@@####################### */
+/* ####################################### */
 	
 	/* Отключить отображение кнопки «⚙️ Enable/Disable HyperChat» */
 	if chat-header_hyperchat-on-off_disable {
@@ -4106,7 +4106,7 @@ purple3=#9048FF
 		if chat_context-menu-btn_ignor_toggle {
 			/* Смещение кнопки */
 				/* дефолт */
-				div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:has(path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 018.246 12.605L4.755 6.661A8.99 8.99 0 0112 3ZM3.754 8.393l15.491 8.944A9 9 0 013.754 8.393Z"]),
+				div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:has(div[style *="circle_slash"]),
 				/* (HyperChat) */
 				html[it-pathname *="hyperchat_embed"] div.hyperchat-root div.hover-highlight div ul.undefined.rounded > li:nth-of-type(1) {
 					order: chat_context-menu-btn_ignor_order !important;
@@ -4114,8 +4114,8 @@ purple3=#9048FF
 	
 			/* Без наведения курсора */
 				/* ⚫ дефолт ⚫ */
-				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:has(yt-icon span path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 018.246 12.605L4.755 6.661A8.99 8.99 0 0112 3ZM3.754 8.393l15.491 8.944A9 9 0 013.754 8.393Z"]) tp-yt-paper-item > yt-formatted-string,
-				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer yt-icon span:has(path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 018.246 12.605L4.755 6.661A8.99 8.99 0 0112 3ZM3.754 8.393l15.491 8.944A9 9 0 013.754 8.393Z"]),
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:has(yt-icon span div[style *="circle_slash"]) tp-yt-paper-item > yt-formatted-string,
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer yt-icon span:has(div[style *="circle_slash"]),
 				/* ⚫ (HyperChat) ⚫ */
 				html[it-pathname *="hyperchat_embed"] body.mode-dark div.hyperchat-root div.hover-highlight div ul.undefined.rounded > li:nth-of-type(1) {
 					color: chat_context-menu-btn_ignor_color--d;
@@ -4123,8 +4123,8 @@ purple3=#9048FF
 				}
 	
 				/* ⚪ дефолт ⚪ */
-				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:has(yt-icon span path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 018.246 12.605L4.755 6.661A8.99 8.99 0 0112 3ZM3.754 8.393l15.491 8.944A9 9 0 013.754 8.393Z"]) tp-yt-paper-item > yt-formatted-string,
-				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer yt-icon span:has(path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 018.246 12.605L4.755 6.661A8.99 8.99 0 0112 3ZM3.754 8.393l15.491 8.944A9 9 0 013.754 8.393Z"]),
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:has(yt-icon span div[style *="circle_slash"]) tp-yt-paper-item > yt-formatted-string,
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer yt-icon span:has(div[style *="circle_slash"]),
 				/* ⚪ (HyperChat) ⚪ */
 				html[it-pathname *="hyperchat_embed"] body:not(.mode-dark) div.hyperchat-root div.hover-highlight div ul.undefined.rounded > li:nth-of-type(1) {
 					color: chat_context-menu-btn_ignor_color--l;
@@ -4134,8 +4134,8 @@ purple3=#9048FF
 	
 			/* При наведении курсора */
 				/* ⚫ дефолт ⚫ */
-				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:has(yt-icon span path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 018.246 12.605L4.755 6.661A8.99 8.99 0 0112 3ZM3.754 8.393l15.491 8.944A9 9 0 013.754 8.393Z"]):hover tp-yt-paper-item > yt-formatted-string,
-				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:hover yt-icon span:has(path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 018.246 12.605L4.755 6.661A8.99 8.99 0 0112 3ZM3.754 8.393l15.491 8.944A9 9 0 013.754 8.393Z"]) {
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:has(yt-icon span div[style *="circle_slash"]):hover tp-yt-paper-item > yt-formatted-string,
+				html[dark] div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:hover yt-icon span:has(div[style *="circle_slash"]) {
 					filter: drop-shadow(0px 0px 4px chat_context-menu-btn_ignor_color--d) !important;
 					padding-inline-start: .2em;
 				}
@@ -4145,8 +4145,8 @@ purple3=#9048FF
 				}
 	
 				/* ⚪ дефолт ⚪ */
-				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:has(yt-icon span path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 018.246 12.605L4.755 6.661A8.99 8.99 0 0112 3ZM3.754 8.393l15.491 8.944A9 9 0 013.754 8.393Z"]):hover tp-yt-paper-item > yt-formatted-string,
-				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:hover yt-icon span:has(path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 018.246 12.605L4.755 6.661A8.99 8.99 0 0112 3ZM3.754 8.393l15.491 8.944A9 9 0 013.754 8.393Z"]) {
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:has(yt-icon span div[style *="circle_slash"]):hover tp-yt-paper-item > yt-formatted-string,
+				html:not([dark]) div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:hover yt-icon span:has(div[style *="circle_slash"]) {
 					filter: drop-shadow(0px 0px 4px chat_context-menu-btn_ignor_color--l) !important;
 					padding-inline-start: .2em;
 				}
@@ -4156,7 +4156,7 @@ purple3=#9048FF
 				}
 		} else {
 			/* дефолт */
-			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:has(path[d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 018.246 12.605L4.755 6.661A8.99 8.99 0 0112 3ZM3.754 8.393l15.491 8.944A9 9 0 013.754 8.393Z"]),
+			div#contentWrapper > ytd-menu-popup-renderer[slot="dropdown-content"] ytd-menu-navigation-item-renderer:has(div[style *="circle_slash"]),
 			/* (HyperChat) */
 			html[it-pathname *="hyperchat_embed"] div.hyperchat-root div.hover-highlight div ul.undefined.rounded > li:nth-of-type(1) {
 				display: none !important;
