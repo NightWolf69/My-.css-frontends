@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           [KK] Kick Enhancment
 @namespace      https://github.com/NightWolf69
-@version        2.3.14
+@version        2.3.15
 @description    Набор мелких улучшений/исправлений/дополнений для kick.com и для аддонов Enhancer, 7tv, Mo'Kick и NipahTV (использование этих аддонов опционально)
 @author         NightWolf_69
 @homepageURL    https://github.com/NightWolf69/My-.css-frontends
@@ -5866,16 +5866,24 @@ purple3=#9048FF
 		}
 	
 	
-	/* 🚪 Иконка действия другого стримера в чате - "Рейд" */
+	/* 🚪 Иконка действия другого стримера в чате - "Рейд на канал" */
 		/* Без наведения курсора */
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] div[class *="surface"]:has(span) > svg:has(path[d="M27.11 4.78C25.93 3.61001 24.3 2.88 22.51 2.88C18.91 2.88 16 5.79001 16 9.39001C16 5.79001 13.09 2.88 9.48998 2.88C5.88998 2.88 2.97998 5.79001 2.97998 9.39001V22.61C2.97998 26.2 5.89998 29.12 9.48998 29.12C11.29 29.12 12.92 28.39 14.1 27.21C15.27 26.03 16 24.4 16 22.61C16 26.2 18.91 29.12 22.51 29.12C26.11 29.12 29.02 26.2 29.02 22.61V9.39001C29.02 7.59 28.29 5.96 27.11 4.78ZM18.91 21.01V18.68H13V22.61C13 24.54 11.43 26.12 9.48998 26.12C7.54998 26.12 5.97998 24.54 5.97998 22.61V9.39001C5.97998 7.45001 7.55998 5.88 9.48998 5.88C11.42 5.88 13 7.45001 13 9.39001V13.32H18.91V10.99L26.03 16L18.91 21.01Z"]) > path {
+			div#channel-chatroom div[data-index] div[class *="surface"]:has(span) > svg[data-ds-icon="Relocate"] path,
+			/* В 🪟 Окне просмотра 💬 Ветки ответов "Thread" */
+			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span) > svg[data-ds-icon="Relocate"] path,
+			/* В функциональном 🪟 Окне ⏳ "Active Timeouts" */
+			div[data-state="open"] div[class *="surface"] svg[data-ds-icon="Relocate"] path {
 				fill: chat_system_message_raid_color !important;
 			}
 	
 		/* При наведении куросора */
 			/* В чате 🔴 Стрима и 🛠 Модерки */
-			div#channel-chatroom div[data-index] div[class *="surface"]:has(span):hover > svg:has(path[d="M27.11 4.78C25.93 3.61001 24.3 2.88 22.51 2.88C18.91 2.88 16 5.79001 16 9.39001C16 5.79001 13.09 2.88 9.48998 2.88C5.88998 2.88 2.97998 5.79001 2.97998 9.39001V22.61C2.97998 26.2 5.89998 29.12 9.48998 29.12C11.29 29.12 12.92 28.39 14.1 27.21C15.27 26.03 16 24.4 16 22.61C16 26.2 18.91 29.12 22.51 29.12C26.11 29.12 29.02 26.2 29.02 22.61V9.39001C29.02 7.59 28.29 5.96 27.11 4.78ZM18.91 21.01V18.68H13V22.61C13 24.54 11.43 26.12 9.48998 26.12C7.54998 26.12 5.97998 24.54 5.97998 22.61V9.39001C5.97998 7.45001 7.55998 5.88 9.48998 5.88C11.42 5.88 13 7.45001 13 9.39001V13.32H18.91V10.99L26.03 16L18.91 21.01Z"]) {
+			div#channel-chatroom div[data-index] div[class *="surface"]:has(span):hover > svg[data-ds-icon="Relocate"],
+			/* В 🪟 Окне просмотра 💬 Ветки ответов "Thread" */
+			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span):hover > svg[data-ds-icon="Relocate"],*/
+			/* В функциональном 🪟 Окне ⏳ "Active Timeouts" */
+			div[data-state="open"] div[class *="surface"]:hover svg[data-ds-icon="Relocate"]) {
 				filter: drop-shadow(0px 0px 4px chat_system_message_raid_color) !important;
 			}
 	
@@ -6010,7 +6018,7 @@ purple3=#9048FF
 			/* В чате 🔴 Стрима и 🛠 Модерки */
 			div#channel-chatroom div[data-index] div[class *="surface"]:has(span) > svg[data-ds-icon="UnbanRequest"] path,
 			div#channel-chatroom div[data-index] div[class *="surface"]:has(span) > svg:has(path[d="M16 3.43994C12.45 3.43994 9.25 4.90994 6.96 7.27994L3.44 3.75994V13.4999H13.18L12.29 12.6099L9.8 10.1199C11.35 8.46994 13.56 7.43994 16 7.43994C20.71 7.43994 24.55 11.2799 24.55 15.9999C24.55 17.8299 23.97 19.5399 22.97 20.9299L16.95 14.9099L15.94 15.9299L14.13 17.7399L14.19 17.8099L19.96 23.5699C18.77 24.1999 17.43 24.5499 16 24.5499C13.64 24.5499 11.51 23.5899 9.96 22.0399L7.13 24.8699C9.4 27.1499 12.53 28.5499 16 28.5499C22.93 28.5499 28.55 22.9299 28.55 15.9999C28.55 9.06994 22.93 3.43994 16 3.43994Z"]), /* old */
-			/* В 🪟 Окне просмотра 💬 Ветки ответов "Thread" */
+			/* В 🪟 Окне просмотра 💬 Ветки ответов "Thread" */ /* тут Насоение на модерку */
 			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span) > svg[data-ds-icon="UnbanRequest"] path,
 			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span) > svg:has(path[d="M16 3.43994C12.45 3.43994 9.25 4.90994 6.96 7.27994L3.44 3.75994V13.4999H13.18L12.29 12.6099L9.8 10.1199C11.35 8.46994 13.56 7.43994 16 7.43994C20.71 7.43994 24.55 11.2799 24.55 15.9999C24.55 17.8299 23.97 19.5399 22.97 20.9299L16.95 14.9099L15.94 15.9299L14.13 17.7399L14.19 17.8099L19.96 23.5699C18.77 24.1999 17.43 24.5499 16 24.5499C13.64 24.5499 11.51 23.5899 9.96 22.0399L7.13 24.8699C9.4 27.1499 12.53 28.5499 16 28.5499C22.93 28.5499 28.55 22.9299 28.55 15.9999C28.55 9.06994 22.93 3.43994 16 3.43994Z"]), /* old */
 			/* В функциональном 🪟 Окне 🔨 "Moderation Log" */
@@ -6023,7 +6031,7 @@ purple3=#9048FF
 			/* В чате 🔴 Стрима и 🛠 Модерки */
 			div#channel-chatroom div[data-index] div[class *="surface"]:has(span):hover > svg[data-ds-icon="UnbanRequest"],
 			div#channel-chatroom div[data-index] div[class *="surface"]:has(span):hover > svg:has(path[d="M16 3.43994C12.45 3.43994 9.25 4.90994 6.96 7.27994L3.44 3.75994V13.4999H13.18L12.29 12.6099L9.8 10.1199C11.35 8.46994 13.56 7.43994 16 7.43994C20.71 7.43994 24.55 11.2799 24.55 15.9999C24.55 17.8299 23.97 19.5399 22.97 20.9299L16.95 14.9099L15.94 15.9299L14.13 17.7399L14.19 17.8099L19.96 23.5699C18.77 24.1999 17.43 24.5499 16 24.5499C13.64 24.5499 11.51 23.5899 9.96 22.0399L7.13 24.8699C9.4 27.1499 12.53 28.5499 16 28.5499C22.93 28.5499 28.55 22.9299 28.55 15.9999C28.55 9.06994 22.93 3.43994 16 3.43994Z"]), /* old */
-			/* В 🪟 Окне просмотра 💬 Ветки ответов "Thread" */
+			/* В 🪟 Окне просмотра 💬 Ветки ответов "Thread" */ /* тут Насоение на модерку */
 			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span):hover > svg[data-ds-icon="UnbanRequest"],
 			div:has(div#chatroom-messages) div[data-index] div[class *="surface"]:has(span):hover > svg:has(path[d="M16 3.43994C12.45 3.43994 9.25 4.90994 6.96 7.27994L3.44 3.75994V13.4999H13.18L12.29 12.6099L9.8 10.1199C11.35 8.46994 13.56 7.43994 16 7.43994C20.71 7.43994 24.55 11.2799 24.55 15.9999C24.55 17.8299 23.97 19.5399 22.97 20.9299L16.95 14.9099L15.94 15.9299L14.13 17.7399L14.19 17.8099L19.96 23.5699C18.77 24.1999 17.43 24.5499 16 24.5499C13.64 24.5499 11.51 23.5899 9.96 22.0399L7.13 24.8699C9.4 27.1499 12.53 28.5499 16 28.5499C22.93 28.5499 28.55 22.9299 28.55 15.9999C28.55 9.06994 22.93 3.43994 16 3.43994Z"]), /* old */
 			/* В функциональном 🪟 Окне 🔨 "Moderation Log" */
@@ -6866,7 +6874,7 @@ purple3=#9048FF
 	
 @-moz-document domain("kick.com"), domain("dashboard.kick.com") {
 /* ################################################# */
-/* ##### Ниp чата - ✍️ Область ввода сообщения ##### */
+/* ##### Низ чата - ✍️ Область ввода сообщения ##### */
 /* ################################################# */
 	
 	/* Индикация, что в чат нельзя писать из-за каких-либо ограничительных режимов(Только подписчики/фолловеры/эмотиконы/Медленный режим) */
@@ -9183,12 +9191,12 @@ purple3=#9048FF
 	
 		/* 🚪 Рейд */
 			/* Без наведения курсора */
-			div[data-type="activity-feed"] div. > svg[data-ds-icon="RAID"] path {
+			div[data-type="activity-feed"] div > svg[data-ds-icon="Relocate"] path {
 				fill: mod-dashboard_widgets-window_activity-feed_raid_color !important;
 			}
 	
 			/* При наведении курсора */
-			div[data-type="activity-feed"] div:hover > svg[data-ds-icon="RAID"] {
+			div[data-type="activity-feed"] div:hover > svg[data-ds-icon="Relocate"] {
 				filter: drop-shadow(0px 0px 4px mod-dashboard_widgets-window_activity-feed_raid_color) !important;
 			}
 	
@@ -9235,6 +9243,18 @@ purple3=#9048FF
 			/* В виджете */
 			div[data-type="mod-actions"]:hover > div > div > div svg[data-ds-icon="Mods"] {
 				filter: drop-shadow(0px 0px 4px mod-dashboard_widgets-window_mods-action_color) !important;
+			}
+	
+	
+		/* ⤴️ Запрос на разбан */
+			/* Без наведения курсора */
+			div[data-type="mod-actions"] div svg[data-ds-icon="UnbanRequest"] path {
+				fill: mod-dashboard_widgets-window_mods-action_ban_color !important;
+			}
+	
+			/* При наведении курсора */
+			div[data-type="mod-actions"] div:hover > svg[data-ds-icon="UnbanRequest"] {
+				filter: drop-shadow(0px 0px 4px mod-dashboard_widgets-window_mods-action_ban_color) !important;
 			}
 	
 	
